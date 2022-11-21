@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Bree</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Cheese It!</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.166666666666667</ResetTime>
+    <ConfigFile>BreeCheeseBoss</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What's got you so rattled?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Cheese It!,4/I hate this place. HATE it. I wish I hadn't been assigned by Lord British to take on this sodding job!So many frightful beasts - I just can't cope!                          "Just silly cheese monsters," they said. "Just take your butter knife -you'll be fine." they said. And now look at me! Whatever am I going to do???;I could always help you.;Okay;I've had ny fill of cheese monsters today, no thanks. ;No.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Cheese It!/titlestring/Cheese It!/notestring/Bree The Unbrave wants you to solve a little problem for her, since she's not quite up to the task herself./Objective1/Go to the Beach./Description1/Go to the Beach in the North/ Objective2/KILLNAMED,Sonoma Jack,1/Description2/Summon and kill Sonoma Jack/Objective3/KILLNAMED,Colby Jack/Description3/Summon the foul demon overlord, Colby Jack and kill him./autoreward/true/Canseereward/False/Rewardstring/@bag/ADD/RewardScrollDeed/ADD/RewardScrollDeed/ADD/RewardScrollDeed/ADD,0.1/&lt;Decorativeshield11/Hue/1360/Name/Blessed Shield of Munster/movable/true&gt;/ADD,0.1/&lt;fork/ITEMID/8785/Name/Head of Colby Jack/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Cheese It,0/ That's very kind of you! Well, I won't lie to you, it's not easy - I certainly can't do it, anyway! We've managed to beat back those foul summoners into the woods. But that's not the problem. It seems they've succeeded in opening the rift to the Cheese Moloch realm. I was supposed to lead a squadron to take them down, but, well, we were completely decimated by the two Demon overlords. Colby and Sonoma Jack. I think you could do it, though. Word of warning, need to grab the Unholy Flame of Munster from those darned Necromatic Cheese Rippers, first.. </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>You didn't look up to the task, anyway.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>*cowers*</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

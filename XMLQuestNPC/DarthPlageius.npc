@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Darth Plageius</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Sith Holocron</TriggerOnCarried>
+    <NoTriggerOnCarried>The Price of Admittance | Attachment,The Price of Admittance,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DarthPlageius</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Ah, I see we have fresh meat...</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes Master?</Keywords>
+    <Action>SET,0x40024499/Visible/True ; SET,0x400247AB/Visible/True</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Darth Plageius,4/So you've declared yourself as a Sith Apprentice. How very interesting. It's been a long time since I've felt such power from an apprentice. We shall see if you have what it takes. You will find various masters throughout this facility and each will ask you to perform different tasks. if you fail to complete a task, your path towards the darkside will falter. You do not want to fail me, or any other master, as we will kill you. In the next room are some officers from the Blackstar Syndicate. You must decide if they should live or die. Before you ask, I'm not going to tell you if they are guilty of anything or not. Your role as a member of the Sith is not to show compassion, remorse, or empathy. All you need to know is that they are standing in the way of your progression along the dark path.;I understand Master Plageius.;Okay;I will  not kill for your pleasure!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Use Kinesis on the lever to let the acid flow into the room.</Text>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/The Price of Admittance/titlestring/The Price of Admittance/notestring/Step into the room and use Force Kinesis on the lever to open the door which will allow the acid to flow into the smaller room. If you operate the lever on the far wall, it will open a different door and drain the acid out of the building./Objective1/Trial of Deception/Description1/Complete the Trial of Deception/AddJournalEntry/Choice 1:Use Force Kinesis on the lever near the Acid to open the door and allow the acid to flow into the smaller room with the Blackstar Syndicate Members/AddJournalEntry/Choice 2:Use Force Kinesis on the lever against the far wall to drain the acid out of the building/repeatable/false/Autoreward/true/CanSeeReward/false/Difficulty/1/Rewardstring/@bag/ADD/FearDisc/ADD/DarkProjectionDisc&gt; ; SET,0x4005C945/DoReset/True/Running/True</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Many more responses like that and you shall die most horribly.</Text>
+    <Keywords>No</Keywords>
+    <Action>GIVE/ATTACH/XmlAddKarma,1000</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Dark Council Member</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Subvert and Sabotage | Mysterious Package</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DarkCouncil1</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>I wish to render my services.</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Subvert and Sabotage,4/ The Dark Council has a vested interest in keeping the populace in the Lost Lands subdued and malleable. Contact the Pale Stranger with the ruins outside of Papua and give to him this package. What it is, you need not know - now go.;I obey.;Yes;I am unsure of this, I must refuse.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Fork/ITEMID/3710/Name/Mysterious Package&gt; ; GIVE/&lt;Questholder/name/Subvert and Sabotage/Titlestring/Subvert and Sabotage/Notestring/The Dark Council has tasked you to deliver a mysterious to the Pale Stranger in the swamp ruins of Papua./Objective1/GIVENAMED,Pale Stranger,Mysterious Package,fork,1/Description1/Deliver the mysterious package to the Pale Stranger in the ruins near Papua./Objective2/Return to the Sith Academy and see the Quuartermaster for your reward/Description2/Return to the Sith Academy and see the Quartermaster for your reward./Autoreward/True/CanSeeReward/false/RewardString/@bag/ADD/RewardScroll/ADD,0.1/&lt;Decorativeshield7/Hue/1761/Name/Blessed Shield of Sang/movable/true/&gt;/</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>You DARE defy the will of the Dark Council? Suffer - fool!</Text>
+    <Keywords>No</Keywords>
+    <Action>POISON,2,5,PlayerOnly ; SOUND,517</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

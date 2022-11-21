@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<names>
+	<namelist type="dat_Facet">
+		Felucca,Trammel,Ilshenar,Malas,Tokuno
+	</namelist>
+	<namelist type="dat_TownRegion">
+		Cove,Britain,Jhelom,Minoc,Ocllo,Trinsic,Vesper,Yew,Wind,Serpent's Hold,
+		Skara Brae,Nujel'm,Moonglow,Magincia,Buccaneer's Den,Delucia,
+		Papua,Haven,Gargoyle City,Montor,Ancient Citadel,Alexandretta's Bowl,
+		Lenmir Anfinmotas,Reg Volon,Lake Shire,Bet-Lem Reg,Mistas,Luna,Umbra,
+		Zento
+	</namelist>
+	<namelist type="dat_DungeonRegion">
+		Covetous,Deceit,Despise,Destard,Hythloth,Khaldun,Shame,Wrong,
+		Terathan Keep,Fire,Ice,Misc Dungeons,Orc Cave,Rock Dungeon,
+		Spider Cave,Spectre Dungeon,Blood Dungeon,Ankh Dungeon,Wisp Dungeon,
+		Exodus Dungeon,Sorcerer's Dungeon,Ancient Lair,Doom,Doom Gauntlet,
+		Yomotsu Mines,Fan Dancer's Dojo
+	</namelist>
+	<namelist type="dat_NoHousingRegion">
+		Britain Graveyard,Jhelom Islands,Wrong Entrance,Covetous Entrance,
+		Despise Entrance,Despise Passage,Haven Island,Crystal Cave Entrance,
+		Protected Island,Grand Arena,Fan Dancer's Dojo,Bushido Dojo
+	</namelist>
+	<namelist type="dat_Other">
+		Jail,Green Acres,Britain Mine,Minoc Cave,Minoc Mine,Avatar Isle Cave,
+		Ice Isle Cave,North Territory Cave,Yew Cave,North Territory Mine,
+		Mt Kendall,Covetous Mine,A Cotton Field in Moonglow,
+		Wheatfield in Skara Brae,Carrot Field in Skara Brae,
+		Onion Field in Skara Brae,Cabbage Field in Skara Brae,
+		Cotton Field in Skara Brae,Cave,Pormir Harm,Pormir Felwis,Cyclops Temple,
+		Rat Fort,Rat Fort Cellar,Entrance to Central Ilshenar,Nox Tereg,
+		Entrance Ancient Lair,Gypsy Camp,Juka Camp,Lord Blackthorn's Ilshenar Castle,
+		Pass of Karnaugh,Vinculum Inn,Orc Fortress,Hanse's Hostel,
+		Ninja Cave,Beetlescape
+	</namelist>
+	<namelist type="dat_Shrine">
+		Shrine of Valor,Chaos Shrine,Shrine of Sacrifice,Shrine of Honesty,
+		Shrine of Compassion,Shrine of Spirituality,Shrine of Humility,
+		Shrine of Honor,Shrine of the Virtues
+	</namelist>
+	<namelist type="dat_article">
+		a,an,any,the,some, one
+	</namelist>
+	<namelist type="dat_noun">
+		bird,ancient lich,balron,darknight creeper,impaler,demon knight,shadow knight,
+		fire gargoyle,gargoyle vendor,centaur,ethereal warrior,pixie,savage,
+		savage rider,savage shaman,golem controller,daemon,evil mage lord,
+		evil mage,ratman,lizardman,orc,female,male,tokuno male,tokuno female
+	</namelist>
+	<namelist type="dat_verb">
+		abide,alight,arise,awake,bear,beat,become,begin,behold,be,bend,bet,bid,
+		bind,bite,bleed,blow,break,breed,bring,broadcast,build,burn,burst,bust,
+		buy,cast,catch,choose,clap,cling,clothe,come,cost,creep,cut,dare,deal,
+		dig,dive,do,draw,dream,drink,drive,dwell,eat,fall,feed,feel,fight,find,
+		fit,flee,fling,fly,forbid,forecast,forget,foresee,foretell,forgive,
+		forsake,freeze,frostbite,get,give,go,grind,grow,handwrite,hang,have,
+		hear,hide,hit,hold,hurt,inlay,input,interlay,keep,kneel,knit,know,lay,
+		lead,lean,leap,learn,leave,lend,let,light,lose,lie,make,mean,meet,melt,
+		mislead,mistake,misunderstand,miswed,mow,overdraw,overhear,overtake,pay,
+		preset,prove,put,quit,read,re-prove,rid,ride,ring,rise,rive,run,saw,say,
+		see,seek,sell,send,set,sew,shake,shave,shear,shed,shine,shoe,shoot,show,
+		shrink,shut,sing,sink,sit,slay,sleep,slide,sling,slink,slit,smell,sneak,
+		soothsay,sow,speak,speed,spell,spend,spill,spin,spit,split,spoil,spread,
+		spring,stand,steal,stick,sting,stink,stride,strike,string,strip,strive,
+		sublet,sunburn,swear,sweat,sweep,swell,swim,swing,take,teach,tear,tell,
+		think,thrive,throw,thrust,tread,undergo,understand,undertake,upset,vex,
+		wake,wear,weave,wed,weep,wend,wet,wind,win,withdraw,withhold,withstand,
+		wring,write,zinc
+	</namelist>
+	<namelist type="dat_verbing">
+		abiding,alighting,arising,awaking,bearing,beating,becoming,beginning,
+		beholding,being,bending,betting,bidding,binding,biting,bleeding,blowing,
+		breaking,breeding,bring,broadcasting,building,burning,bursting,busting,
+		buying,casting,catching,choosing,clapping,cling,clothing,coming,costing,
+		creeping,cutting,daring,dealing,digging,diving,doing,drawing,dreaming,
+		drinking,driving,dwelling,eating,falling,feeding,feeling,fighting,
+		finding,fitting,fleeing,fling,flying,forbidding,forecasting,foregetting,
+		foreseeing,foretelling,forgiving,forsaking,freezing,frostbiting,getting,
+		giving,going,grinding,growing,handwriting,hanging,having,hearing,hiding,
+		hitting,holding,hurting,inlaying,inputting,interlaying,keeping,kneeling,
+		knitting,knowing,laying,leading,leaning,leaping,learning,leaving,lending,
+		letting,lighting,losing,lying,making,meaning,meeting,melting,misleading,
+		mistaking,misunderstanding,miswedding,mowing,overdrawing,overhearing,
+		overtaking,paying,presetting,proving,putting,quitting,reading,re-proving,
+		ridding,riding,ring,rising,riving,running,sawing,saying,seeing,seeking,
+		selling,sending,setting,sewing,shaking,shaving,shearing,shedding,shining,
+		shoeing,shooting,showing,shrinking,shutting,sing,sinking,sitting,slaying,
+		sleeping,sliding,sling,slinking,slitting,smelling,sneaking,soothsaying,
+		sowing,speaking,speeding,spelling,spending,spilling,spinning,spitting,
+		splitting,spoiling,spreading,spring,standing,stealing,sticking,sting,
+		stinking,striding,striking,string,stripping,striving,subletting,
+		sunburning,swearing,sweating,sweeping,swelling,swimming,swing,taking,
+		teaching,tearing,telling,thinking,thriving,throwing,thrusting,treading,
+		undergoing,understanding,undertaking,upsetting,vexing,waking,wearing,
+		weaving,wedding,weeping,wending,wetting,winding,winning,withdrawing,
+		withholding,withstanding,wring,writing,zincking
+	</namelist>
+	<namelist type="dat_verb3rd">
+		abides,alights,arises,awakes,bears,beats,becomes,begins,beholds,is,bends,
+		bets,bids,binds,bites,bleeds,blows,breaks,breeds,brings,broadcasts,builds,
+		burns,bursts,busts,buys,casts,catches,chooses,claps,clings,clothes,comes,
+		costs,creeps,cuts,dares,deals,digs,dives,does,draws,dreams,drinks,drives,
+		dwells,eats,falls,feeds,feels,fights,finds,fits,flees,flings,flies,
+		forbids,forecasts,forgets,foresees,foretells,forgives,forsakes,freezes,
+		frostbites,gets,gives,goes,grinds,grows,handwrites,hangs,has,hears,hides,
+		hits,holds,hurts,inlays,inputs,interlays,keeps,kneels,knits,knows,lays,
+		leads,leans,leaps,learns,leaves,lends,lets,lights,loses,lies,makes,means,
+		meets,melts,misleads,mistake,misunderstands,misweds,mows,overdraws,
+		overhears,overtakes,pays,prests,proves,puts,quits,reads,re-proves,rids,
+		rides,rings,rises,rives,runs,saws,says,sees,seeks,sells,sends,sets,sews,
+		shakes,shaves,shears,sheds,shines,shoes,shoots,shows,shrinks,shuts,sings,
+		sinks,sits,slays,sleeps,slides,slings,slinks,slits,smells,sneaks,
+		soothsays,sows,speaks,speeds,spells,spends,spills,spins,spits,splits,
+		spoils,spreads,springs,stands,steals,sticks,stings,stinks,strides,strikes,
+		strings,strips,strives,sublets,sunburns,swears,sweats,sweeps,swells,
+		swims,swings,takes,teaches,tears,tells,thinks,thrives,throws,thrusts,
+		treads,undergoes,understands,undertakes,upsets,vexes,wakes,wears,weaves,
+		weds,weeps,wends,wets,winds,wins,withdraws,withholds,withstands,wrings,
+		writes,zincs
+	</namelist>
+	<namelist type="dat_verbed">
+		abided,alighted,arose,awoke,bore,beat,became,began,beheld,was,bent,bet,
+		bid,bound,bit,bled,blew,broke,bred,brought,broadcasted,built,burnt,burst,
+		bust,bought,cast,caught,chose,clapt,clung,clothed,came,cost,crept,cut,
+		dared,dealt,dug,dove,did,drew,dreamt,drank,drove,dwelt,ate,fell,fed,felt,
+		fought,found,fitted,fled,flung,flew,forbade,forecasted,forgot,foresaw,
+		foretold,forgave,forsook,froze,frostbit,got,gave,went,ground,grew,
+		handwrote,hung,had,heard,hid,hit,held,hurt,inlaid,input,interlaid,kept,
+		knelt,knitted,knew,laid,led,leant,leaped,learnt,left,lent,let,lit,lost,
+		lay,made,meant,met,melted,misled,mistook,misunderstood,miswed,mowed,
+		overdrew,overheard,overtook,paid,preset,proved,put,quit,read,re-proved,
+		rid,rode,rang,rose,rived,ran,sawed,said,saw,sought,sold,sent,set,sewed,
+		shook,shaved,shore,shed,shone,shod,shot,showed,shrank,shut,sang,sank,sat,
+		slew,slept,slid,slung,slunk,slit,smelt,snuck,soothsaid,sowed,spoke,sped,
+		spelt,spent,spilt,spun,spit,split,spoiled,spread,sprang,stood,stole,
+		stuck,stung,stank,strode,struck,strung,stripped,strove,sublet,sunburned,
+		swore,sweat,swept,swelled,swam,swung,took,taught,tore,told,thought,
+		thrived,threw,thrust,trod,underwent,understood,undertook,upset,vexed,
+		woke,wore,wove,wedded,wept,went,wetted,wound,won,withdrew,withheld,
+		withstood,wrung,wrote,zinced
+	</namelist>
+	<namelist type="dat_preposition">
+		about,behind,from,on,toward,above,below,in,ontopof,under,across,beneath,
+		infrontof,onto,underneath,after,beside,inside,outof,until,against,between,
+		insteadof,outside,up,along,by,into,over,upon,among,down,like,past,with,
+		around,during,near,since,within,at,except,of,through,without,before,for,
+		off,to
+	</namelist>
+	<namelist type="dat_adj">
+		small,large,tiny,yellow,scary,icky,retarded,pale,slow,smart,silky,hot,
+		ugly,wrinkly,far,fat,tall,odd,lovely,impressive,interesting,old,striped,
+		wooden,nice,huge,hideous,boldfaced,petit,amusing,blue,square,complicated,
+		short,sorry,right,hard,equal,big,high,intelligent,pretty,evil,full,
+		polite,next,powerful,deaf,sure,agreeable,calm,disagreeable,difficult,
+		easy,fantastic,loyal,formidable,yellowish,free,magnificent,thin,modern,
+		necessary,poor,fast,dirty,orange,ivory,bitter,expensive,last,hauty,light,
+		first,uneasy,discreet,ancient,good,italian,low,fatty,weary,mute,clean,
+		clear-cut,foolish,similar,soft,in love,curious,furious,happy,jealous,
+		marvelous,fearful,serious,active,brief,false,wrong,reddish-brown,sharp,
+		high-pitched,white,favorite,fresh,candid,rank,greek,long,better,
+		flattering,deceptive,mocking,deceitful,creative,protective,conservative,
+		beautiful,midieval,royal,overdue,bald-faced,clumsy,calorific,catching,
+		cathartic,catholic,jewish,caustic,cautious,cerulean,cheap,
+		chicken-hearted,childish,purple,naked,nude,copacetic,cordless,windy,
+		winsome,veinless,oddball,parietal,paranormal,machiaveilian,magnetic,
+		amazing,mesolethic,mighty,normal,abnormal,moron,stodgy,stocky,stoned,
+		strenuous,bald,hairless,armless,brainless,dumb,literate,illeterate,
+		tired,chrome,smooth,rigid,internal,external,mild,mystical,prayerful,
+		adjacent,fuzzy,green,unhealthy,creamy,cute,famous,historic,young,bad,
+		funny,proud,warm,brown,muddy,rich,sweet,handsome,contagious,hopeful,
+		helpful,burnt,dry,nerdy,geeky,pist off,fake,neon green,neon blue,
+		brittle,drugy,tough,wimpy,strong,depressed,supressed,raged,insane,
+		wacky,wacked out,insane in the midbrain,unfortunate,betrayed,lost,
+		new,colorless,bright,bent,glow-n-the-dark,fatal,deadly,christian,radical,
+		outgoing,shy,blunt,nefarious,thrilling,sky high,poopy face,dumb head,
+		internal booger,pimp,gay,stupid face,forgotten,fun,arcane,captious,
+		berserk,clandestine,covert,diffused,limpid,impervious,manifest,cool,
+		perciptable,perfidious,scrupulous,spurious,torpid,transitory,unremmiting,
+		reject,smelly,not pretty,dark,shiny,magical,mysterious,identical,
+		mathematical,editable,irrestible,nasty,delicious,bronze,colorful,
+		negative,slimy,courageous,real,honest,sticky,attractive,disgusting,
+		morbid,dead,lifeless,living,blind,fearless,brave,fit,gross,tight,loose,
+		perfect,loud,easy to use,hard to understand,logical,underestimated,
+		dangerous,round,foriegn,plastic,gray,red,black,clear,invisible,
+		indivisible,destructive,humanly,rough,tasteful,soggy,pink,content,lucky,
+		pleased,glad,joyful,cheerful,blissful,exultant,ecsatic,delighted,cheery,
+		jovial,disease-carring,lame,dried up,bloated,half-baked,spiteful,
+		egotistical,ungrateful,stupid,mornic,puny,insignificant,blithering,
+		worthless,blundering,useless,obnoxious,subhuman,unspeakable,sick,
+		good-for-nothing,mentally-deficient,creepy,sloppy,pompous,pathetic,
+		friendless,revolting,defective,funky,moldy,damp,deranged,malignant,
+		noxious,reeky,mutilated,gruesome,sloshy,spoiled,rancid,rotting,sexist,
+		sleepy,ferocious,cranky,chinese,communist,soviet,iranian,iraqi,boring,
+		cheerless,cruel,depressing,desolate,despicable,devilish,dreary,dull,
+		harsh,heartless,lonely,mean,miserable,monotonous,pitiful,relentless,
+		savage,tediouis,satanic,annoying,cold,satisfied,unsatisfied
+	</namelist>
+	<namelist type="dat_Greeting">
+		Hi,Sup,Aight,Aloha,Alright,Ayup,Cheers,Ciao,Dude,Eh up,
+		ello,G-day Mate,G-day,Good afternoon,Good Day,Good Evening,
+		Good morning,Good Night,Greetings and Salutations,Greetings,Hail,
+		Halloa,Halloo,Hello,Hey baby,Hey there,Hey ya,Hey,Hi hi,Hiya,
+		How are you,How do you do,How YOU doing,Hows it going,Howdy,
+		Howzit,Hullo,Hulloo,Nice to meet you,Peace,Salutations,Shalom,
+		Top of the morning to ya,Wassup,Welcome,Whats going down,
+		Whats happening,Whats new,Whats shakin,Whats the good word,
+		Whats the haps,Whats up,Whattup,Whazzzzzzzzzzzzup,Word,Yo,
+		Yoo hoo,Yoyoyo
+	</namelist>
+	<namelist type="dat_Language">
+		al,ar,bar,ben,brel,con,clew,cral,cel,cor,
+		dur,dun,en,el,ereth,er,ear,fal,ffan,frey,
+		flam,for,gal,gor,ghel,glam,glen,gron,gog,groth,
+		har,hel,hew,hroth,il,im,ing,ja,jen,jalar,
+		kel,kew,kar,kof,kus,len,lor,laral,mar,mir,
+		mel,math,mew,nor,nal,og,orin,owen,os,par,
+		pel,pyr,plan,qual,rog,rew,rys,rhon,rud,sil,
+		sur,sun,shar,shan,sten,scar,scan,skag,skew,spel,
+		tar,tan,thor,tril,teg,tal,tor,ul,ur,val,
+		ven,varal,wen,wil,war,yr,ylen,yron,yth,yn,
+		agg,ith,an,am,ap,af,ax,em,ew,ey,
+		gwen,gwar,glar,ghor,gren,brand,rand,rol,olam,alen,
+		cher,clor,r,s,f,col,tall,espal,her,gy,
+		weth,thul,pen,cuth,aen,hol,tran,myr,mord,skew,
+		tral,krel,roth,mor,way,flim,dwar,eld,haer,jar,
+		gon,yan,sel,aim,gash,rosh,mwyn,sher,resh,ker,
+		bar,ayer,brian,yun,dun,yb,tur,gal,mil,ryg,
+		kal,kel,then,rath,illis,tor,mer,bil,gil,orl
+		a,e,i,o,u,oon,eel,een,oure,ayne,
+		ar,al,ath,ale,alen,alar,aroch,and,ald,agh,
+		an,awen,lar,la,ga,lach,alf,affe,aglar,ax,
+		e,egh,elen,eren,erre,en,end,le,lew,ne,
+		lew,len,neth,ness,leth,ren,rew,red,se,ce,
+		i,il,in,ind,ith,is,lin,min,cith,ir,
+		iel,ion,ioth,iron,imar,iol,iach,iwell,grim,staff,
+		o,owen,owan,low,rog,rock,lock,loff,off,or,
+		ur,und,uth,unn,uril,lur,nugh,gur,gul,hu,
+		awn,eyn,ene,ick,arn,org,land,ure,ase,ares,
+		ace,ance,ay,oax,ault,eme,lon,ing,eille,ard,
+		cay,ander,uren,mord,on,iya,owyn,weth,ama,ellen,
+		yn,esha,ea,lea,mea,icia,yh,ox,ean,ang,
+		ere,agh,itt,en,ior,and,eymir,oreth,elion,imiel,
+		moth,air,orm,athan,old,aera,orr,erith,immar,ail
+	</namelist>
+	<namelist type="dat_Armor">
+		ArmorOfFortune,GauntletsOfNobility,HelmOfInsight,HolyKnightsBreastplate,
+		InquisitorsResolution,JackalsCollar,LeggingsOfBane,MidnightBracers,
+		OrnateCrownOfTheHarrower,ShadowDancerLeggings,TunicOfFire,
+		VoiceOfTheFallenKing,BoneArms,BoneChest,BoneGloves,BoneLegs,BoneHelm,
+		ChainChest,ChainLegs,ChainCoif,DaemonArms,DaemonChest,DaemonGloves,
+		DaemonLegs,DaemonHelm,DragonArms,DragonChest,DragonGloves,DragonLegs,
+		DragonHelm,Bascinet,CloseHelm,Helmet,NorseHelm,OrcHelm,LeatherArms,
+		LeatherBustierArms,LeatherChest,LeatherGloves,LeatherGorget,LeatherLegs,
+		LeatherShorts,LeatherSkirt,LeatherCap,PlateArms,PlateChest,PlateGloves,
+		PlateGorget,PlateLegs,PlateHelm,RangerArms,RangerChest,RangerGloves,
+		RangerGorget,RangerLegs,RingmailArms,RingmailChest,RingmailGloves,
+		RingmailLegs,StuddedArms,StuddedBustierArms,StuddedChest,StuddedGloves,
+		StuddedGorget,StuddedLegs
+	</namelist>
+	<namelist type="dat_Creature">
+		Champion,Harrower,Silvani,HarrowerTentacles,Guard,
+		ShieldGuard,Vendor,Guildmaster,Creature,Gorilla,Walrus,Alligator,Llama,
+		PackLlama,PackHorse,BullFrog,GiantToad,Hind,GreatHart,DireWolf,GreyWolf,TimberWolf,WhiteWolf,HellHound,
+		Dog,GrizzlyBear,PolarBear,BlackBear,BrownBear,Bull,Cow,Bird,Eagle,Chicken,
+		Boar,Pig,Rabbit,JackRabbit,Rat,SewerRat,GiantRat,Goat,MountainGoat,Sheep,
+		Panther,PredatorHellCat,HellCat,SnowLeopard,Cougar,Cat,Mount,Mounts,
+		Mount,WarHorses,WarHorse,Birds,Fowl,Bird,Eagle,Chicken,Bovines,Bull,
+		Cow,Bruins,GrizzlyBear,PolarBear,BlackBear,BrownBear,Canines,DireWolf,
+		GreyWolf,TimberWolf,WhiteWolf,HellHound,Dog,Deer,Hind,GreatHart,Felines,
+		Panther,PredatorHellCat,HellCat,SnowLeopard,Cougar,Cat,Frogs,Toads,
+		BullFrog,GiantToad,Lizards,Alligator,Rodent,Rabbit,JackRabbit,Rat,
+		SewerRat,GiantRat,Porcines,Boar,Pig,Ruminants,Goat,MountainGoat,Sheep,
+		Gorilla,Walrus,Ants,RedSolenWorker,RedSolenWarrior,RedSolenQueen,
+		RedSolenInfiltratorQueen,RedSolenInfiltratorWarrior,
+		BlackSolenWorker,BlackSolenWarrior,BlackSolenQueen,
+		BlackSolenInfiltratorQueen,BlackSolenInfiltratorWarrior,
+		Elemental,DullCopperElemental,ShadowIronElemental,CopperElemental,
+		BronzeElemental,GoldenElemental,AgapiteElemental,VeriteElemental,
+		ValoriteElemental,AirElemental,BloodElemental,FireElemental,IceElemental,
+		WaterElemental,PoisonElemental,ToxicElemental,EarthElemental,
+		SnowElemental,OreElementals,DullCopperElemental,ShadowIronElemental,
+		CopperElemental,BronzeElemental,GoldenElemental,AgapiteElemental,
+		VeriteElemental,ValoriteElemental,Marine,Dolphin,SeaSerpent,
+		DeepSeaSerpent,Good,Pixie,Wisp,EtherealWarrior,Centaur,Evil,Creature,
+		AgeofShadows,FleshGolem,Gibberling,GoreFiend,Ravager,SkitteringHopper,
+		Treefellow,VampireBat,WailingBanshee,AbysmalHorror,BoneDemon,
+		CrystalElemental,DarknightCreeper,DemonKnight,Devourer,FleshRenderer,
+		Impaler,MoundOfMaggots,PatchworkSkeleton,ShadowKnight,WandererOfTheVoid,
+		ChaosDaemon,HordeMinion,Daemon,IceFiend,Balron,Daemon,
+		Dragon,WhiteWyrm,SerpentineDragon,AncientWyrm,ShadowWyrm,SkeletalDragon,
+		Drake,Wyvern,Gargoyles,Gargoyle,FireGargoyle,StoneGargoyle,Harpies,
+		Harpy,StoneHarpy,Humans,EvilMage,EvilMageLord,Betrayer,Brigand,
+		Executioner,Guardian,KhaldunSummoner,KhaldunZealot,Lizards,LavaLizard,
+		Lizardman,Mongbats,Imps,HeadlessOnes,Mongbat,StrongMongbat,Imp,
+		HeadlessOne,Ogres,Ettins,Trolls,Cyclopses,Titan,Cyclops,Ettin,
+		FrostTroll,Ogre,Troll,ArcticOgreLord,OgreLord,Ophidians,OphidianMage,
+		OphidianArchmage,OphidianMatriarch,OphidianWarrior,OphidianKnight,Orcs,
+		OrcishMage,Orc,OrcishLord,OrcBomber,OrcCaptain,OrcishLord,OrcBrute,
+		PlagueBeasts,BogThings,Slimes,Jwilson,FrostOoze,Slime,Plague
+	</namelist>
+	<namelist type="dat_Room">
+		bed room, kitchen, dinning room, bathroom, stable, dungeon
+	</namelist>
+	<namelist type="dat_Furniture">
+		bed, chair, table, stove
+	</namelist>
+	<namelist type="dat_Liquid">
+		water, milk, ink, ale
+	</namelist>
+	<namelist type="dat_Number">
+		1,2,3,4,5,6,7,8,9
+	</namelist>
+</names>

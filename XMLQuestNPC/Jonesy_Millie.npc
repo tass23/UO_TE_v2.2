@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Millie Scots</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>The Palace of Gloom,0</TriggerOnCarried>
+    <NoTriggerOnCarried>The Palace of Gloom,1 | ATTACHMENT,Spoiled Millie Scots,XmlQuestAttachment | Spoiled Millie Scots</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy_Millie</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>I'm starved! Nothing to eat but monkey brains!</Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>What's your problem?</Keywords>
+    <Action>TAKEBYTYPE,1,1/MillieBracelet</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Millie,4/Great, room service! Finally! I've been standing here waiting for someone to bring me some food for hours. Did you see that nasty food at the dinner table!? Slithering snakes, chilled monkey brains, bugs!? I don't know how these people have survived at all. Ugh! Now, why don't you be a good little servant and go find me something I can eat, then I can tell you where Jonesy went.;Lovely.;Okay;Geez! Get it yourself!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/Spoiled Millie Scots/titlestring/Millie's Servant/notestring/Millie wants you to bring her some food./Objective1/COLLECT,Ham,1/Description1/Find Millie a ham./Objective2/COLLECT,ribs,5/Description2/Find 5 ribs./Objective3/COLLECT,bottleofwine,1/Description3/Get Millie a Bottle of wine./Objective4/COLLECT,peach,3/Description4/Get Millie 3 peaches./Objective5/COLLECT,grapes,5/Description5/Millie also wants 5 bunches of grapes./addjournalentry/Get the following food for Millie: 1 Ham, 5 Ribs, 1 Bottle of hand-made Wine, 3 Peaches, and 5 bunches of grapes./autoreward/true/CanSeeReward/False/AttachmentString/XmlAddFaction,TriFords,50/rewardstring/@bag/ADD,0.1/&lt;Decorativeshield10/Hue/1580/Name/Blessed Shield of The Princess/movable/true&gt;/ADD/JonesyLantern&gt;/ ; SETONCARRIED,The Palace of Gloom/Completed1/true/addjournalentry/Millie tells you where Jonesy went: He was mumbling something about being attacked and statues, when he came barging into my room, ya know I thought he was after me, but no, he started fondling that statue over there. (Millie points to the statue against the West Wall.) Then he disappeared. ; SETONTRIGMOB/SENDMSG/Quest Objective Complete. New Journal Entry Added.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Milie,0/Now there's a good little servant. Why I should be tortured in this manner is beyond me. I would like; 1 ham, 5 ribs, 1 bottle of wine, 3 peaches, and 5 bunches of grapes. Now don't take too long. I've waited quite long enough.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Why I never! Get out of my room you barbarian!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,44 @@
+<Spawns>
+  <Points>
+    <Name>SilverStake</Name>
+    <UniqueId>5c5a8a33-9d60-48eb-b848-b6cf992b5240</UniqueId>
+    <Map>Trammel</Map>
+    <X>6285</X>
+    <Y>1460</Y>
+    <Width>10</Width>
+    <Height>10</Height>
+    <CentreX>6290</CentreX>
+    <CentreY>1465</CentreY>
+    <CentreZ>2</CentreZ>
+    <Range>5</Range>
+    <MaxCount>4</MaxCount>
+    <MinDelay>0</MinDelay>
+    <MaxDelay>0</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <NoItemTriggerName>a silver stake</NoItemTriggerName>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>True</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>True</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>TAKEBYTYPE,1,1,true/silverstakeunblessed:MX=1:SB=1:RT=0:TO=0:KL=0:RK=1:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=GIVE,1/SilverStake:MX=1:SB=2:RT=0:TO=0:KL=0:RK=1:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=SENDMSG/A shiny, silver stake appears in your backpack.:MX=1:SB=2:RT=0:TO=0:KL=0:RK=1:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=GOTO/1:MX=1:SB=2:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

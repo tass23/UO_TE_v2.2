@@ -1,0 +1,43 @@
+<Spawns>
+  <Points>
+    <Name>CastleShop</Name>
+    <UniqueId>d8855835-2657-454c-9402-7eda8094e9d6</UniqueId>
+    <Map>Tokuno</Map>
+    <X>448</X>
+    <Y>903</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <CentreX>448</CentreX>
+    <CentreY>903</CentreY>
+    <CentreZ>-5</CentreZ>
+    <Range>0</Range>
+    <MaxCount>15</MaxCount>
+    <MinDelay>59</MinDelay>
+    <MaxDelay>60</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0.5</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>-1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>False</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>metalchest/Moveable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/NAME/Computer Desk&gt;/X/435/Y/908/Z/-5:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Bonus Skill Ball +100&gt;/X/441/Y/900/Z/-5:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Bio Tool&gt;/X/457/Y/891/Z/-5:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Log Bag&gt;/X/452/Y/897/Z/15:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Evo Weapon&gt;/X/435/Y/891/Z/15:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Everlasting Sewing Kit&gt;/X/434/Y/911/Z/15:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Sleepable Futon&gt;/X/438/Y/917/Z/35:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Wishing Well&gt;/X/435/Y/913/Z/55:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Empty DNA Vial Set&gt;/X/440/Y/917/Z/75:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Ingot Bag&gt;/X/435/Y/908/Z/55:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Tiny Spider Wall Covering&gt;/X/435/Y/891/Z/35:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Tailor Supply Bag&gt;/X/459/Y/891/Z/35:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Blue Rainbow Mount Token&gt;/X/435/Y/895/Z/55:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Electric Guitar&gt;/X/446/Y/894/Z/-5:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=metalchest/Movable/False/Hue/{RND,1150,1173}/ADD/&lt;blankscroll/Name/Green Rainbow Mount Token&gt;/X/434/Y/895/Z/-5:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

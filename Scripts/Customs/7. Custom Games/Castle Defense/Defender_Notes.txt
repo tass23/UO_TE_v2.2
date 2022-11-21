@@ -1,0 +1,4 @@
+Defender Setup
+
+Waypoints must be added.
+Each Enemy spawner must have the Waypoint set to the new ones after installing.

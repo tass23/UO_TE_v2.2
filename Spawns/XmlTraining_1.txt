@@ -1,0 +1,66 @@
+<center><h3><basefont color=#007fff><u>Xml Training: Lesson One</u></basefont></h3></center>
+<br>
+   All spawners have a String, or text-based, entry system. Generally most will only use a mob-type as the spawn entry and nothing more, i.e. <i>Entry: Rat</i>, or <i>Entry: LavaSerpent</i>.
+<br>
+<br>
+   However, Xmlspawner is a lot more robust, allowing Staff to: change Properties in-game, create new objects, vendors, quests, and quest chains, use Xmlspawner Addons, and a bunch more. The list if quite extensive and this training program is meant to give you an overview of Xmlspawner and some of the things that can be done.
+<br>
+<br>
+   In order to access all these other features of Xmlspawner, <u><i>Keywords</i></u> are used in Spawn entry. Keywords are the <i>drivers</i> for the Xmlspawner system. Staff can find a display of the Keywords and their structure by using the <u><i>Help</i></u> button on any Xmlspawner or in any XmlDialog gump.
+<br>
+<br>
+   If you need to spawn a Mob, the "keyword" is simply the mob type, like Rat, or Lava Serpent. Specific <i>commands</i> are being taken advantage of when using Keywords on Xmlspawners. As examples, probably two of the most common used on UO-The Expanse are:<br>
+<u>SETONTRIGMOB</u><br>
+<u>SETONCARRIED</u>
+<br>
+<br>
+   Both of these Keywords are <i>setting</i> a Property on something: one is setting a Property on the Mob that triggered the Xmlspawner <u>(SETONTRIGMOB)</u>, and the other is setting a Property on something being carried by the Mob that triggered the Xmlspawner.
+<br>
+<br>
+   Triggering is a crucial aspect of this system. Almost everything that happens is based on something else <i>triggering</i> something else. A player conversing with an XmlQuestNPC is <i>triggering</i> that dialog.
+<br>
+<br>
+   Before jumping into complex spawn entries, make note of the <i>syntax</i> the system uses. Some "special characters" cannot be displayed anywhere, except when typing in a Spawn entry, like the <i>Forward Slash</i> and <i>Closing Tag</i>, a.k.a. <i>Greater Than</i>. Through this tutorial program, the <i>Greater Than</i> and <i>Less Than</i> symbols with be substituted with brackets [ ] in Spawn Entry examples only.
+<br>
+<br>
+   To build a Spawn Entry, forward slashes are used between Properties and Values and <i>Greater Than</i> and <i>Less Than</i> are used to surround and separate one item from a complex entry, like adding custom loot to a Mob.
+<br>
+<br>
+   It might be helpful to think of a Spawn Entry like a Container. You can change <i>all the Properties</i> of that Container, plus the Properties of <i>all the Objects inside</i>, as well. Each Xmlspawner is a stand-alone "Box" warehouse, with up to 60 "Boxes" of Entries, (4 Pages of 15 Entries each), and inside each "Box" could be one or more items.
+<br>
+<br>
+(Note: At this time, I am unaware of any limitations on items that can be Spawned from a <i>single entry</i>. Like adding 500 <i>different Bows</i> as Loot to a Mob, would work. As long as there is space to type in the Entry Book, which is up to 20 pages.)
+<br>
+<br>
+   Multiple Keywords can run together in one Spawn Entry, but usually it is best to split them across separate entries for <i>full control</i> over each one. Xmlspawner allows Spawn Entries to be <i>Grouped</i>, and <i>Sequenced</i>. The exception to this is using Keywords with Spawn Entries for XmlDialog. An example of a <i>Grouped</i> and <i>Sequenced</i> Xmlspawner, would be a Mini-Champ. (One can be found in the <u><i>New Player Dungeon</i></u> in the mountains outside of <u><i>New Haven</i></u>.)
+<br>
+<br>
+   Not every Property exists on every Object. Some Objects have a <i>Title</i>, some have <i>Engraved Text</i>, some have <i>Kills</i>. Even though an Object spawns in-game <i>without</i> a particular Property, does not mean it cannot be <i>added</i> in the Spawn Entry, like adding <i>Fire Resist</i> to a Mob, or <i>Fire Damage</i> to a Weapon. Knowing <i>what</i> the Object's Properties are and what is <i>available</i> to that type of Object, will help you construct the proper Spawn Entry.
+<br>
+<br>
+<center><h2><basefont color=#ffff00><u>How to use this Knowledge</u></basefont></h2></center>
+<br>
+<br>
+   Start simply with changing the name of a Mob. When doing so, a String is used, which is text <i>in between</i> Quotation marks, "This is a String.".
+<br>
+<br>
+(Note: The double period is not a typo, because you can include punctuation in a String.)
+<br>
+<br>
+   A name should be a single word, but could be more than one, like <i>Lord Blackthorn</i>, but just <i>Lord Blackthorn</i> will not work. Instead the Name should be enclosed in Quotes like this: "Lord Blackthorn".
+<br>
+<br>
+   If including a Title, that is a separate Keyword, but follows the same structure if the Title contains more than one word. In the above example the word "Lord" could be the Title, with "Blackthorn" being the Name.
+<br>
+<br>
+   Using multiple Properties in a single Spawn Entry is usually as easy as having a <i>Forward Slash</i> between each Property and Value set. As an example, the <u>Spawn Entry</u> would look like this for a Rat named Ralph:
+<center><h5><basefont color=#007fff><u>"Rat|Name|Ralph"</u></basefont></h5></center>
+<br>
+(Note: The | replaces the <i>Forward Slash</i> in these examples)
+<br>
+<br>
+   If Ralph needed a Title too, the <i>Forward Slash</i> separates the Name-Value from the Title-Value, just as it separates the Name-Title from each Value:
+<center><h5><basefont color=#007fff><u>Rat|Name|Ralph|Title|"the King Rat"</u></basefont></h5></center>
+<br>
+(Note: The Title "the King Rat" is enclosed in Quotation marks since it is a compound word.)
+<br>

@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Poor Boy Willie</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DoomWillie</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Wait! Hey, adventuring person! Come here please!</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Who me?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Poor Boy Willie the Cowardly Thief,4/Ah, yes, you will do nicely! Listen, I'm supposed to steal some artifacts from deep inside Doom, but I'm too terrified to make it beyond the staircase! You've got to help me! If I don't get one of those artifacts, Fat-Fingers Frankie is going to break my legs! Do you know how hard it will be to be a thief with broken legs?!;I will help you!;Yes;I will help Fat-Fingers Frankie break your legs!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Hooray! My legs won't get broken!</Text>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/A Thief By Any Other Name/titlestring/A Thief By Any Other Name/notestring/Poor Boy Willie has asked you to enter Doom and steal a special artifact from a secret room, or else Fat-Fingers Frankie will break his legs. Unfortunately, Willie dropped the remote switch that opened a hidden door into the secret room and a Bone Demon took it.                   Your task is to collect 2,000 Daemon Bones and the Remote Switch from the Bone Demon. Upon doing so, you will have access to the secret room./Objective1/COLLECT,DaemonBone,2000/Description1/Collect 2,000 Daemon Bones./Objective2/COLLECTNAMED,a remote switch,fork,1/Description2/Collect the remote switch./AddJournalEntry/Daemon Bones: Any of the monsters in Doom can drop Daemon Bones. Be sure to use the COLLECT button and target the Daemon Bones./AddJournalEntry/Remote Switch: The Bone Demon near Victoria the Sorceress has a chance to drop the Remote Switch as loot./AutoReward/True/CanSeeReward/False/RewardString/@bag/ADD/DoomSwitch ; SETONTRIGMOB,XmlQuestAttachment,A Thief By Any Other Name,86400</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Wonderful, I can't wait to be a crippled thief...you're so helpful</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

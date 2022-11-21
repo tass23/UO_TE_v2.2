@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Inquisitor Arrakis</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>A Piece of Their Mind | ATTACHMENT,A Piece of Their Mind,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Arrakis</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>I have some urgent business with you.</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>How can I assist you, Master?</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, A Piece of Their Mind,4/Ah, good. Perhaps you can gather what I need. I'm investigating the innate connection to the Force that certain creatures in the Valley of The Sith Lords appear to exhibit. I sent my apprentice to gather some samples some weeks ago and they have failed to return. I can only assume that they were too weak for the task and have met their demise. I still need those samples, however. Perhaps you could collect them instead?;Very well, what do you require?;Okay;This task is beneath me.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/Name/A Piece of Their Mind/titlestring/A Piece of Their Mind/Notestring/Inquistor Arrakis has asked you to explore the depths of the Valley of The Sith Lords. /Objective1/COLLECTNAMED,K'lor'slug Venom,GreenPowder,5/Description1/Collect some K'lor'slug Venom/Objective2/COLLECTNAMED,Sith Hound Brain,KirinBrains,2/Description2/Acquire two Sith Hound Brains./Objective3/KILLNAMED,Apprentice Gatiss,1/Description/Kill Apprentice Gatiss/Objective4/COLLECTNAMED,Field Data Holocron,Fireruby,1/Description4/Retrieve the Field Data Holocron/Objective5/Return to Inquisitor Arrakis/Description5/Return to Inquistor Arrakis/autoreward/true/CanSeeReward/False/Rewardstring/@Bag/ADD/RewardScrollDeed/ADD/&lt;Gold/Amount/5000&gt;/ADD,0.1/&lt;Decorativeshield4/Hue/1492/Name/Blessed Shield of The Innate/movable/true/&gt;</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, A Piece of Their Mind,0/ Good, hopefully you will prove to be more successful than my worthless apprentice. Go forth into the Mystic Portal at the North of this complex. From there, head into the deepest regions of the Valley of The Sith Lords and gather samples from the K'lor'slug and Sith Hound within. And should you find my worthless apprentice, kill him and retrieve the field data holocron from his corpse.                     </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Pathetic worm. Leave my presence.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

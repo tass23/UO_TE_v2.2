@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Melsy</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Search For Kitty | Kitty Treat</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>CrazyCatLady</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>Excuse me, have you lost your cat?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Search For Kitty,4/Oh, er, why YES - yes I have! I would be ever so grateful if you found her for me. My poor kitty is out there ALL alone with no way to defend herself. Poor, poor Kitty...                                        Stranger, I know this is much to ask of you, but could you pllllleeeease find Kitty for me. Pretty please!;My lady, of course.;Yes;No way, Jose.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/The Search For Kitty/Titlestring/The Search For Kitty/Notestring/Mistress Melsy has asked you find Kitty for her. She's somewhere in South-Eastern Forest of Yew near a big tree./NextRepeatable/00:30:00/Objective1/Find Kitty/Description1/Find Kitty/Objective2/GIVENAMED,Melsy,Kitty(Shrunk),fork,1/Description2/Deliver Kitty back to Melsy/autoreward/true/CanSeeReward/False/Rewardstring/@bag/ADD/&lt;gold/amount/500&gt;/ADD/rewardscroll/ADD/&lt;fork/ITEMID/{RND,7820,7823}/Name/Kitty Treat/&gt; ; GIVE/&lt;fork/ITEMID/2505/Name/Kitty Treat/Hue/31/&gt; ; ADD,0.1/&lt;Decorativeshield7/Hue/1475/Name/Blessed Shield of The Lost Kitty/movable/true/&gt;</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Search For Kitty,0/I could kiss you stranger! I lost her way out the forest. somewhere near a big Oak tree to the South-East. Please return her - shes the world to me! My poor cuddly wuddly Kitty....                                     Oh and should you have any problems - just use this Kitty Treat here. Sometimes she's a VERY bad Kitty, but she won't give you ANY difficulty, after that.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>BAD KITTY!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

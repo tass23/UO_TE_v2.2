@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Victor the Spellcrafter</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>SpellcrafterVictor</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Sire, I would talk to you about a grave danger.</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>About what, exactly?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Mondain's Legacy,4/My gratitude for taking time to listen to a grizzled old man such as I. I am Victor and, for my sins, I am a Spellcrafter.                                               Long ago, our order was formed our members the most powerful, wise and just mages of Britannia - save for one. You have heard of him, I'm sure. For his name was Mondain.                                     What remains is but a foul memory of a once noble order. Corrupted by Mondain, twisted and blackened by his foul magicks. The moment I saw the Gem in his hand, I knew it was over. T'was only my cowardice that saved me from such a fate. I hid, when my brave friends fought. And now...Well, I cannot bring myself to say more. They're gone, my friends - forever.                                                                Though Mondain too, has now perished. No divination can bring their souls back from the void whenst they were cast. Their soulless, angry husks that  remain are but a corruption filled with dark magick. One which has been dormant for a timeless age. But now, I fear something has stirred them again. I sense their presence contaminating the realm.                                          Hero - they present a danger like nothing Britannia has seen before! I know now, where they lurk but I am ancient and powerless old man. You must act on my behalf - before it too late!;Then I shall.;Yes;Mondain? I am not powerful enough for this.;No </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Mondain's Legacy/Titlestring/Mondain's Legacy/Notestring/An ancient spellcrafter has tasked you to remove the threat that the Spellcrafters now pose to Britannia. Venture in Shame and confront their leader./Objective1/Find the Spellcrafter's Fortress/Description1/Find the Spellcrafter's Fortress/Objective2/KILLNAMED,Nazrenax,1/Description2/Kill Nazrenax, Leader of the Spellcrafters./Objective3/Return to Victor to claim your reward./AddJournalEntry/Mondain's Legacy:The old mage said to speak the words "in astaroth's name" near the entrance to the fortress./Autoreward/True/CanSeeReward/False/RewardString/@bag/ADD/RewardScroll/ADD/&lt;SpellcraftJewel/CraftID/{RND,20,40}&gt;/ADD,0.1/&lt;Decorativeshield7/Hue/2130/Name/Blessed Shield of Spellcrafting/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Mondain's Legacy,0/Our time to speak wains. Hurry to the depths of Shame. You will find their fortress there.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Then all hope is lost...</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

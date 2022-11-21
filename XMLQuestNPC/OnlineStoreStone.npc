@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Link Stone</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>OnlineStoreStone</ConfigFile>
+    <SpeechEntries>0</SpeechEntries>
+  </NPC>
+</XmlQuestNPC>

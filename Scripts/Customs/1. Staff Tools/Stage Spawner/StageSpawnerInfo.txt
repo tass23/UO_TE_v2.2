@@ -1,0 +1,28 @@
+Stage Spawner Setup
+
+Region: 
+A 2DRectangle. simple chose the area you want the monster's to spawn in
+
+Spawn min/max delay: 
+Lets you chose how fast the monsters in an area spawn, allowing you to tailor it depending on your playerbase.
+
+To spawn 1 - 4: 
+This is a set of string's, simple type the monster name you want to spawn into the value and your done. an example is "earthelemental" not Earth elemental. type it as if you were using the "]Add mobilename" command. ToSpawn1 = Easy spawn, ToSpawn2 = Medium spawn, ToSpawn3 = Difficult spawn, ToSpawn4 = Boss.
+
+Spawn count 1 - 3: 
+This setting allows you to chose how many monster should spawn during each stage. this is to tailor the spawn count to meet the region's needs. if you have a large area, you will want higher spawn counts.
+
+Count to stage 2: 
+This is how many monsters must be killed before the spawn reaches it's second stage of spawn.
+
+Count to stage 3: 
+This is how many monsters must be killed before the spawn reaches it's third stage of spawn. the number you chose should be in addition to the second stage spawn. So if you want the spawn to change into the second stage at 100 kills, and then change to third after they kill 50, then you set this value to 150, not 50.
+
+Count to stage 3: 
+This is how many monsters must be killed before the spawn reaches it's forth ( boss ) stage of spawn. the number you chose should be in addition to the second and third stage spawn. So if you want the spawn to change into the second stage at 100 kills, and then change to third after they kill 50, and then into the boss after 25, then you set this value to 175, not 25.
+
+Active:
+This option is self explanitory. It lets you activate, and deactivate the spawner. It comes default as off, and I suggest leaving it that way till the spawner is fully set up.
+
+Added the ability to give spawning monster's special titles. So say you wanted to give a spawn a demonic theme, set the spawn title to something like "of the damned" and then spawn daemons. when it spawns, its name will be "Beelzebub of the damned".
+

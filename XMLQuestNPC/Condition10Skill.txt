@@ -1,0 +1,2 @@
+GETONTRIGMOB,[ATTACHMENT,XmlValue,EggTest,Value]<10 | GETONTRIGMOB, 
+[ATTACHMENT,XmlValue,EggTest,Value]=10

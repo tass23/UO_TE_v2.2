@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Master Kyle Kitarn</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Trial of Avoidance | ATTACHMENT,Trial of Avoidance,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>MasterKyleKitarn</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Ah, welcome young padawan. Luke has told me much about you.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Good day to you Master Kitarn.</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Master Kyle Kitarn,4/It's wonderful to see you again. I thought perhaps you were going to take that skiff from Mos Eisley and go with that bounty hunter to track down Jedi Exiles. I'm glad you've decided to train yourself in the ways of the Jedi instead. You will learn to let go of your fear and anger. To concentrate on the task at hand and let nothing distract you. To that end, we have a rather nastyKrayt Dragon across the room. He will come charging at you, but rather than fighting him, you must use Force Kinesis on that lever on the wall. That will raise another wall that the dragon will not be able to penetrate. You will learn that sometimes it is better to postpone a battle until you have the upper hand.;Very well Master Kitarn.;Okay;No, I'd rather fight the dragon and kill it!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/Trial of Avoidance/titlestring/Trial of Avoidance/notestring/Use Force Kinesis on the lever to activate the energy wall instead of fighting the Krayt Dragon to the death./Objective1/Complete the Trial of Avoidance/Description1/Complete the Trial of Avoidance./repeatable/false/Autoreward/true/canseereward/false/attachmentstring/XmlAddKarma,300/rewardstring/@bag/ADD/FoldSpaceDisc/ADD/RemembranceDisc&gt; ; SET,0x40152526/Running/true</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>That is not the answer I would expect from someone who wants to become a Jedi.</Text>
+    <Keywords>No</Keywords>
+    <Action>GIVE/ATTACH/XmlAddKarma,-300</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,99 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Chuckles</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Candy Capers</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>ChucklesHAlloween2</ConfigFile>
+    <SpeechEntries>6</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn />
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>Why, give it a good scare, of course!</Text>
+    <Keywords>How do you make a milk shake?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Candy Capers,4/Hello, hello! Tis' nice to meet you again, my jolly friend! Please do excuse poor Dupre over there, he's somewhat afflicted. It seems the wise and esteemed Nystul decided to try and play a  trick on the Trickster.;The Trickster?;Who</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Who</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Candy Capers,4/Why ME, of course!                                                          *Chuckles lets out a hearty laugh*                                         Seems Nystul was rather upset over my procurement of his Magical Pumpkin seeds. He hadn't quite intended them to sprout all around Britain. But, he should have mentioned their explosive nature, should he not? There I was listening to the lovable old gas-bag boast about his marvellously hued pumpkins. I thought I was doing him a favour by sprinkling a little colour around town!;I see...;Ok</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Ok</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Candy Capers,4/Yes, indeed. So, in fit a vengenace he sought to teach me a lesson. A lesson in the form of these magical candy treats. What he didn't take into account was my generous, benevolent nature, so rather than eat my fill of this delicious tasty treat, I opted to give good Sir Dupre as much as he liked. Alas, as you can see - they had an unfortunate side-effect.                                       *The Jester giggles and smirks to himself*                                       Of course, I feel the greatest of remorse. Poor Dupre! If only there were a way to make it up to him.....Hmmmmmmm......I know! What so you to gathering some delicious candy in the ChuckleOTron arena? T'would be so much fun! And Sir Dupre would be terribly appreciative of the gift of your kindness.                                            Do we have a deal?;I don't see why not.;Yes;No - I still don't trust you;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Dupre will be pleased! Hang in there - good friend!!!</Text>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Candy Capers/TitleString/Candy Capers/NoteString/Chuckles the Jester has embroiled you into collecting a significant amount of Halloween candy for his poor sick friend, Dupre. Head to The ChuckleAtron Arena and retrieve them from it's participants./Objective1/COLLECT,Candy,200/Description1/Collect 200 Halloween Candy treats for Dupre/Objective2/Return to Chuckles in New Haven/Description2/Return to Chuckles in New Haven/Autoreward/True/CantSeeReward/True/RewardString/@bag/ADD/&lt;RewardScroll/amount/3&gt;/ADD/&lt;Gold/Amount/4000&gt;/ADD,0.2/{RNDSTRLIST,BloodyTable,BlackCatStatue,MeatSkeleton,MeatSkeleton2,SkeletonEast,PumpkinScarecrow}/ADD/&lt;bag/hue/33/Name/Bag O' Halloween Candy/ADD/HalloweenCandy/ADD/HAlloweenCandy/ADD/HalloweenCandy&gt;/ADD/&lt;fork/ITEMID/5360/hue/143/Name/Happy Halloween!!! from The Expanse - 2014&gt;&gt;</Action>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>Suit yourself! Have a giggle on me!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,57 @@
+using System;
+using Server;
+
+namespace Server.Items
+{
+	[FlipableAttribute( 0x2B06, 0x2B07 )]
+	public class LegsOfTheDaemonWing : BaseArmor
+	{
+		public override SetItem SetID{ get{ return SetItem.DaemonWing; } }
+		public override int Pieces{ get{ return 5; } }
+		
+		public override int BasePhysicalResistance{ get{ return 8; } }
+		public override int BaseFireResistance{ get{ return 7; } }
+		public override int BaseColdResistance{ get{ return 10; } }
+		public override int BasePoisonResistance{ get{ return 7; } }
+		public override int BaseEnergyResistance{ get{ return 8; } }
+		
+		public override int ArtifactRarity{ get{ return 15; } }
+
+		public override int AosStrReq{ get{ return 70; } }
+		
+		public override ArmorMaterialType MaterialType{ get{ return ArmorMaterialType.Plate; } }
+		
+		public override int InitMinHits{ get{ return 255; } }
+		public override int InitMaxHits{ get{ return 255; } }
+
+		[Constructable]
+		public LegsOfTheDaemonWing() : base( 0x2B06 )
+		{
+			Name = "Mephisto's Plate Legs";
+			Hue = 1786;
+
+			FireBonus = Utility.RandomMinMax(8,16);
+			PoisonBonus = Utility.RandomMinMax(8,16);
+			
+			SetAttributes.BonusStr = 8;
+		}
+
+		public LegsOfTheDaemonWing( Serial serial ) : base( serial )
+		{
+		}
+
+		public override void Serialize( GenericWriter writer )
+		{
+			base.Serialize( writer );
+
+			writer.Write( (int) 0 );
+		}
+		
+		public override void Deserialize(GenericReader reader)
+		{
+			base.Deserialize( reader );
+
+			int version = reader.ReadInt();
+		}
+	}
+}

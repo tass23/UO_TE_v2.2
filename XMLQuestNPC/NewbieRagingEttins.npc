@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Buster</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Where The Red Fungus Grows | ATTACHMENT,Where The Red Fungus Grows,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>NewbieRagingEttins</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Hi adventurer!</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Buster?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Buster,4/Well hi there! Glad to see you. I've got a task for you if you're up for it. If you can complete it, I'll give you more than the shirt off my back, you can have my drawers! And some gold too of course. I'd like you to kill 10 Raging Ettins and 5 Buck Toothes, or is it Buck Teeth, I'm not sure, either way, kill the rat looking guys.;If you say so, I'll do it.;yep;I don't really want to.;nope</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>yep</Keywords>
+    <Action>GIVE/&lt;questholder/name/Where The Red Fungus Grows/titlestring/Where The Red Fungus Grows/notestring/Buster has asked you to kill 10 Raging Ettins and 5 Buck Toothes./objective1/KILLNAMED,a Raging Ettin,10/Description1/Kill 10 Raging Ettins./objective2/KILLNAMED,BuckTooth,5/Description2/Kill 5 BuckTooth./addjournalentry/Buster's Task: The Raging Ettins are in a western alcove as you walk towards where the Bones McCoys can be found. The Buck Tooths aren't far from where the Raging Ettins can be found./autoreward/true/canseereward/false/rewardstring/@bag/ADD/Gold,500/ADD/BusterDrawer ; SETONTRIGMOB/XmlQuestAttachment,Where The Red Fungus Grows,10080</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Come back when you change your mind.</Text>
+    <Keywords>nope</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

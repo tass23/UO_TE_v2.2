@@ -1,0 +1,267 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Lewis</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>10</ResetTime>
+    <ConfigFile>Xml_NPC_1a</ConfigFile>
+    <SpeechEntries>17</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>It looks clear?</Keywords>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One,4/   Does it now? You seem to have all the answers you do, young {GETONCARRIED,Access Level Stone,NextAccessLevel}.                                   &lt;br&gt;   What could you possibly need from me?;I wish to learn Xmlspawner, please.;learn1;I am ready to test my knowledge!;check1;Nothing, nevermind.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>check1</Keywords>
+    <Action>SET,XmlTrain_Exercise_1a,Xmlspawner/DoReset/True/Running/True</Action>
+    <Condition>GETONCARRIED,Lesson One Apple,Apple,Name="Lesson One Apple"</Condition>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-D,4/   I have opened two additional reference windows to better illustrate how Spawn Entries are constructed. &lt;br&gt;&lt;br&gt;   Place an Xmlspawner on the ground nearby. You do not need to change any Properties yet. Just open the Xmlspawner and then open the Spawn Entry book for Entry 1.&lt;br&gt;&lt;br&gt;   Remember that there are up to 20 pages for you to type in.&lt;br&gt;&lt;br&gt;   Let's begin. Go ahead and create the first entry. When complete, Respawn the Xmlspawner. Verify that you do indeed have a Rat, named Ralph and then move on to the second entry and make Ralph the King Rat.&lt;br&gt;&lt;br&gt;   Are you ready to try something more complex?;Yes, I believe I am ready!;yeah4;Wait, I changed my mind.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>learn1</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-B,4/   Okay then, good. Nice to see you staying humble, as you are going to make mistakes. Keeping your head will save you heartache later.&lt;br&gt;&lt;br&gt;   Now we are going to work on basic functions of Xmlspawners.&lt;br&gt;&lt;br&gt;   Most of the time you are going to be entering a MOB or an NPC into the window and that is where we begin, Spawn Entry. Some entries are simple, like- Rat&lt;br&gt;&lt;br&gt;   The complex entries things more exciting! Any THING that can be spawned has Properties and that is what Xmlspawner handles- Object Manipulation.&lt;br&gt;&lt;br&gt;   Since a Rat is a MOB, that means it has some default Properties that all MOBs have, like BodyValue. With a Spawn Entry, we can change a Rat into a Dragon, but remain a Rat. Changing the BodyValue in the Spawn Entry is all that is needed- Rat | BodyValue | 167&lt;br&gt;&lt;br&gt;   Our Rat remains a Rat, but looks like a Fire Dragon. The opposite could be done too, a Draogn that looks like a Rat.&lt;br&gt;&lt;br&gt;   However MOBs can still be further customized by changing Root values, like HitsMaxSeed and HitsMax to Increase or Decrease the Hit Points our Rat has and will spawn with when at full health.&lt;br&gt;&lt;br&gt;   Are you ready to give this a try?;Yeah, I think I understand!;yeah1;Wait, I changed my mind.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>yeah1</Keywords>
+    <Action>SETONTRIGMOB/ATTACH/XmlData,XmlT1,True</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-C,4/   Please read this text, and then switch back to {GETONCARRIED,Access Level Stone,NextAccessLevel} to complete the exercise.&lt;br&gt;&lt;br&gt;    Place an Xmlspawner on the ground &lt;i&gt;outside the training square&lt;/i&gt; and then open it.&lt;br&gt;&lt;br&gt;   Prepare Spawn Entry #1- &lt;center&gt;Rat | Name | Ralph&lt;/center&gt;&lt;br&gt;    Remember to replace the | with Forward Slash&lt;br&gt;&lt;br&gt;    Are you ready?;Yes, I am.;yeah3;Wait, I changed my mind.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>yeah3</Keywords>
+    <Action>SPAWN,XmlTrain_Exercise_1a,2</Action>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-D,4/   The next step is to add a Title to Ralph. Since a Title is just a Property most every Mob has, adding the Prop with a Value then adds the Property to the Mob (with that Value).&lt;br&gt;&lt;br&gt;   Ralph is the King of all Training Rats, and so Ralph's Title is "the King Rat".&lt;br&gt;&lt;br&gt;(Note: Ralph's Title is more than one word, so Quotation marks are needed on both sides of the phrase.)&lt;br&gt;&lt;br&gt;   Remember that there are up to 20 pages for you to type in.&lt;br&gt;&lt;br&gt;   Ready to try something more complex?;Yes, I believe so!;yeah4;Wait, I changed my mind.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Keywords>sword1</Keywords>
+    <Action>CAST,LightningSpell,20</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-B,4/   Oye! You will not want to make that mistake again.&lt;br&gt;&lt;br&gt;   Shall we try this again? Alright, which item were you given?&lt;br&gt;&lt;br&gt;(obviously it is &lt;b&gt;not a Sword&lt;/b&gt;, so try something else);a Sword;no3;a Chicken;chicken1;an Apple;check2;a Peach;peach1</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Keywords>chicken1</Keywords>
+    <Action>CAST,LightningSpell,20</Action>
+    <DependsOn>10,60</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-B,4/   A chicken!? Why would you have been given a chicken?&lt;br&gt;&lt;br&gt;   Shall we try this again? Okay, which item were you given?&lt;br&gt;&lt;br&gt;(obviously it is &lt;b&gt;not a Chicken&lt;/b&gt;, so try something else);a Sword;sword1;a Chicken;no3;an Apple;check2;a Peach;peach1</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Keywords>peach1</Keywords>
+    <Action>CAST,LightningSpell,20</Action>
+    <DependsOn>10,60,70</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-B,4/   Peach was a good guess...at least it is a food. Wrong, but still a good guess. You are wasting valuable time though.&lt;br&gt;&lt;br&gt;   Shall we try this again? Good. So, which item were you given?&lt;br&gt;&lt;br&gt;(obviously it is &lt;b&gt;not a Peach&lt;/b&gt;, so try something else);a Sword;sword1;a Chicken;chicken1;an Apple;check2;a Peach;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Keywords>check2</Keywords>
+    <Action>SET,XmlTrain_Exercise_1a,Xmlspawner/DoReset/True/Running/True</Action>
+    <DependsOn>10,60,70,80</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-B,4/   Ah yes, correct! Now we may continue!&lt;br&gt;&lt;br&gt;   Place an Xmlspawner on the ground nearby. You do not need to change any Properties yet. Just open the Xmlspawner and then open the Spawn Entry book for Entry 1.&lt;br&gt;&lt;br&gt;   Remember that there are up to 20 pages for you to type in.&lt;br&gt;&lt;br&gt;   Let's begin. Go ahead and create the first entry. When complete, Respawn the Xmlspawner. Verify that you do indeed have a Rat, named Ralph and then move on to the second entry and make Ralph the King Rat.&lt;br&gt;&lt;br&gt;   Are you ready to try something more complex?;Yes, I believe I am ready!;yeah4;Wait, I changed my mind.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Keywords>yeah4</Keywords>
+    <Action>GIVE/&lt;apple/name/Lesson One Apple&gt;</Action>
+    <DependsOn>10,50,90</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-B,4/   Very good, young {GETONCARRIED,Access Level Stone,NextAccessLevel}! I knew there was something amazing about you!&lt;br&gt;&lt;br&gt;   Moving into more complex entries means keeping very close track of your Data Sets, more importantly how they start and how they end.&lt;br&gt;&lt;br&gt;   You may have noticed that I have been referring to you by your Staff Level. In order to do that, it requires looking at the Properties of your Access Level Stone to see what your stored Access Level is and then render that Data Set within this conversation.&lt;br&gt;&lt;br&gt;   This time, rather than changing a Property of something, the idea is to &lt;b&gt;GET&lt;/b&gt; that Data in order to do something with it and in this case the Data is being used to refer to your character's Access Level.&lt;br&gt;&lt;br&gt;   Using the &lt;b&gt;GET&lt;/b&gt; Keyword means being able to grab Data from any Property on any particular thing.&lt;br&gt;&lt;br&gt;   There are a few different variations of GET, but most of the constructors are similar. Usually the Keyword is first, then the Target, and finally the Property. Using a Keyword like GETVAR means an exact Variable is being targeted, regardless of where the Variable is a Property, so the constructor just needs the VariableName, or VarName.&lt;br&gt;&lt;br&gt;   Are you ready to jump into using the &lt;b&gt;GET&lt;/b&gt; Keyword?;Absolutely!;yeah5;No wait, this seems too complex.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Keywords>no3</Keywords>
+    <Action>SETONTHIS/DoReset/True</Action>
+    <DependsOn>0,10,20,30,50,60,70,80,90,100,120,130</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>120</EntryNumber>
+    <ID>120</ID>
+    <Keywords>yeah5</Keywords>
+    <Action>GIVE/&lt;apple/name/Lesson Two Apple&gt;</Action>
+    <DependsOn>100</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-C,4/   One of the more common GET Keywords is &lt;b&gt;GETONTRIGMOB&lt;/b&gt;. When one player is the TriggerMob, using GETONTRIGMOB does make things much easier. There are instances when more than one player may be the TriggerMob though. For XmlQuestNPCs this is not an issue, as each dialog is handled within that player's client, but for other Mobs, each interaction is within the same instance. This is how two players can compete for the same Mob to tame, or Kill.&lt;br&gt;&lt;br&gt;   Yes, an XmlQuestNPC can attack a player and do direct damage, so in those situations where you might use a Rat, instead you could use an XmlQuestNPC even if the player had to Kill them.&lt;br&gt;&lt;br&gt;   A version of GET was created to target AccountTags even. In that situation, GETACCOUNTTAG is targeting the AccountTags of the TriggerMob, looking for the specific Tag, VarName, and the Value.&lt;br&gt;&lt;br&gt;   Big deal, so you can GET a Property from an object. Yay. How is that important?&lt;br&gt;&lt;br&gt;   If you are prepared for the answer to that question, then we will proceed to the next Lesson.;Absolutely!;yeah6;No wait, this seems too complex.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>130</EntryNumber>
+    <ID>130</ID>
+    <Keywords>yeah6</Keywords>
+    <Action>SET,XmlTrain_Exercise_2a,Xmlspawner/DoReset/True/Running/True</Action>
+    <DependsOn>120</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-D,4/   Just for fun, Ralph is going to look like you, young {GETONCARRIED,Access Level Stone,NextAccessLevel}.&lt;br&gt;&lt;br&gt;   Not entirely all of you, just your body...shape.&lt;br&gt;&lt;br&gt;   To do this, Ralph must be set up to GETONTRIGMOB,BodyValue. Then when the player triggers the Xmlspawner, Ralph, the King Rat, is spawned, but not with a Rat body!&lt;br&gt;&lt;br&gt;   Look at the reference window that is open and see how the Spawn Entry is created - Rat | Name | Ralph | Title | "the King Rat" | BodyValue | (GETONTRIGMOB,BodyValue)&lt;br&gt;(Note: The () are replaced by {})&lt;br&gt;&lt;br&gt;   Examine the reference window that is open. You will notice it contains two lines, with the GETONTRIGMOB BODYVALUE enclosed within Braces, or {}. This is actually one Spawn Entry. In times when the Spawn Entry exceeds one line, extra lines will be added, but the following line will always begin with a Forward Slash to indicate it is connected.&lt;br&gt;&lt;br&gt;   Since using GET brings Data from some Thing to be use by some Other Thing, the Keyword &lt;b&gt;SET&lt;/b&gt; sends Data from some Thing to change a Value on some Other Thing, or Value of Data for the Thing.&lt;br&gt;&lt;br&gt;   Are you ready to learn about the Keyword SET?;Yep, I got this!;yeah7;No wait, this seems too complex.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>140</EntryNumber>
+    <ID>140</ID>
+    <Keywords>yeah7</Keywords>
+    <Action>GIVE/&lt;apple/name/Lesson Three Apple&gt;</Action>
+    <DependsOn>130</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-E,4/   You are doing well, young {GETONCARRIED,Access Level Stone,NextAccessLevel}. Time to work with the Keyword &lt;b&gt;SET&lt;/b&gt;. When the GET Keyword is used, Data is being taken from one Thing and used somewhere else. However, using the SET Keyword, Data is being directly changed on a Thing.&lt;br&gt;&lt;br&gt;   These two Keywords can be used together. For instance, using the SET Keyword to target an Xmlspawner, the TriggerMob could be changed to a specific player by using GET to target that player.&lt;br&gt;&lt;br&gt;   Rather than SET a Value on Ralph in the next exercise, instead the Xmlspawner Ralph spawns from is the target. There are two ways to reference a target with SET, either by using the target's Serial, or the Name of the target. If using the Name of a target, it helps to include the ItemType to get the exact match. Otherwise it is possible to confuse Xmlspawner by having two Things with the same name.&lt;br&gt;&lt;br&gt;   It is not uncommon to have one Xmlspawner trigger another Xmlspawner or even several others. For the Castle Defense game, one Xmlspawner controls much of the event by triggering other Xmlspawners throughout the castle, in combination with XmlQuestNPCs.&lt;br&gt;&lt;br&gt;   When targeting more than one Xmlspawner, using a good Naming convention can be more helpful than using a Serial as reference, because if the Xmlspawners are Saved and Loaded onto another 'shard, the Serials will all be different. The Names would be the same though, so instead of using the Serial, targeting the Xmlspawner by the Name means that setup can be Loaded elsewhere and still work.&lt;br&gt;&lt;br&gt;   Shall we begin the SET exercise?;Yep, I am ready!;yeah8;No wait, this seems too complex.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>150</EntryNumber>
+    <ID>150</ID>
+    <Keywords>yeah8</Keywords>
+    <Action>SET,XmlTrain_Exercise_3a,Xmlspawner/DoReset/True/Running/True</Action>
+    <DependsOn>140</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-F,4/   The goal of this exercise is to target Ralph's Xmlspawner and Spawn it, from a second Xmlspawner.&lt;br&gt;&lt;br&gt;   Since Ralph's Xmlspawner is named Spawner by Default, the Name could be changed, but for this exercise the Serial will be used instead.&lt;br&gt;&lt;br&gt;   Switching from Serial to Name is just replacing that Serial with the Thing's Name, the reverse works to go from Name to Serial, so it is something that could be done afterwards too. For the sake of simplicity, the Serial is the best choice this time. When viewing a Serial, they are all constructed the same way, 0xBunchOfAlphaNumericCharacters.&lt;br&gt;&lt;br&gt;   Trying to remember a Serial might be easy for some, but thankfully there is a shortcut Keyword for this, GETSERIAL. This can also be used as a stand alone command. While out walking around in the world, you can use GETSERIAL and target a Thing to see the Serial.&lt;br&gt;&lt;br&gt;   Place a new Xmlspawner on the ground nearby the one for Ralph. Then use GETSERIAL and target Ralph's Xmlspawner. The Serial will be displayed and stored in the Journal. Open the Journal to reference the Serial.&lt;br&gt;&lt;br&gt;   Looking at the reference window, the structure for the Spawn Entry begins with the Keyword instead of a MobType. This is the flexibility of Xmlspawner compared to other Spawn systems. Keywords are handled like their own MobType. SET if the MobType, the SERIAL is the specific target MobType, followed by the Property or Properties being SET.&lt;br&gt;&lt;br&gt;   In this case Ralph's Xmlspawner is being SET to RUNNING | TRUE.&lt;br&gt;&lt;br&gt;   Are you ready for more?;Yes, no problem.;yeah9;No wait, this seems too complex.;no3</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>160</EntryNumber>
+    <ID>160</ID>
+    <Keywords>yeah9</Keywords>
+    <Action>GIVE/&lt;apple/name/Lesson Four Apple&gt;</Action>
+    <DependsOn>150</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson One-G,4/   Generally if using SET on another Xmlspawner for RUNNING | TRUE, it is also good practice to DORESET | TRUE | RUNNING | TRUE. This is a time where tracking Data and Value sets is critical. Using the Keyword DORESET turns the Xmlspawner OFF and resets it back to Spawn Entry 1, regardless of which Spawn Entry was last spawned. Yes, even 10 Spawn Entries into a Mini-Champ, if DORESET is used, the Xmlspawner will go all the way back to Spawn Entry 1.&lt;br&gt;&lt;br&gt;   The benefit of doing this ensures that each time that Xmlspawner is Triggered, it starts from the beginning. There are times when the Xmlspawner should just continue along that Spawn Entry Sequence, so DORESET is not used. Instead just using RUNNING | TRUE and RUNNING | FALSE would keep the Sequence going.&lt;br&gt;&lt;br&gt;   Like GET, the SET Keyword has several different variations. Besides targeting another Xmlspawner, SETONCARRIED could be used to target a Thing that is being Carried by the TriggerMob. This works out very well for Quests!&lt;br&gt;&lt;br&gt;   Setting up Xmlspawners to work with Quests usually means targeting the Quest Book the players are Carrying. As Objectives are completed, the Value of the Quest Book is Advanced. Each Quest Book begins with 0, then 1, 2, 3, up to the max number of Objectives for that Quest. That means the Xmlspawner can be SET to TRIGGERONCARRIED, based on the Value of the Quest Book. A player on Part 0 would not Trigger an Xmlspawner SET to TRIGGERONCARRIED for Part 3.&lt;br&gt;&lt;br&gt;   The next Lessons involve XmlQuestNPCs and advanced Xmlspawner usage. Are you ready for that, or have you learned enough?;Yes, I am ready for more advanced lessons!;yeah10;No, I think I have learned enough.;no4</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>170</EntryNumber>
+    <ID>170</ID>
+    <Text>Hope you enjoyed the lessons and the apples! Best of luck, young {GETONCARRIED,Access Level Stone,NextAccessLevel}!</Text>
+    <Keywords>yeah9</Keywords>
+    <Action>SET,Xml_Train_2/DoReset/True/Running/True</Action>
+    <DependsOn>160</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

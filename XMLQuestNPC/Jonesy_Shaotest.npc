@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Shao Che</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Nurhaci,3</TriggerOnCarried>
+    <NoTriggerOnCarried>Nurhaci,4</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy_Shaotest</ConfigFile>
+    <SpeechEntries>2</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>I have it.</Keywords>
+    <Action>TAKEBYTYPE,1,1,true/GoldenIdol ; SETONCARRIED,Nurhaci,4/Completed4/true/objective5/GIVENAMED,Village Elder,ElderLetter,1/Description5/Go to the  Indian village in NORTHWESTERN Nujel'm./addjournalentry/You have been given another task:Travel to Nujel'm and go to the NORTHWESTERN part of the city to look for the village elder./autoreward/true/canseereward/false/AttachmentString/XmlAddFaction,TriFords,200/rewardstring/@bag/ADD/RewardScroll/ADD/Gold,2000 ; SET,0x401A3F19/Running/True/</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Shao,0/Wonderful! And I have your reward as well. I do hope you enjoy it for the rest of your life. Lets have a drink, shall we?</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

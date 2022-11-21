@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Grant</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Museum Retrieval Specialist</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>grant</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Are you here about the thefts?</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Stolen Antiquities,4/Hello and welcome to the Vesper Museum. My name is Grant. If you're here about the recent thefts, I can allow you to go investigate them, but you'll have to wear this badge. It shows that you are an investigator for the museum. I heard the Crimson Raiders are responsible for what has been taken. Those guys are all over the place: skulking around in towns, hiding in the shadows and in the most reprehensible places. You'll need to try get hold of a Crimson Mark, though. They don't tend to reveal themselves to strangers. Here - take this scout's report, it has some clue to their whereabouts.  A word of advise - employ the utmost stealth when dealing with them,  they are nigh on invincible and hit hard. So, if you find one, hide. If you're light-fingered enough, perhaps you'll be able to steal the artifacts from their backpacks.                                         Any ancient artifacts you find, just hand those to Simon next door. As for the stolen museum items- just bring back here, I'll put them back in their rightful place.;Okay, thank you.;Okay;No, I don't have time for this.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;Questholder/name/A Scout's Report/titlestring/A Scout's Report/notesring/The Crimson Raiders are directly responsible for spate of artifact thefts in museum. You must locate their hideout in the Westernoutskirts of Britain. When inside search around for a Crimson Mark. It is most likely hidden in a trapped and locked container./Objective1/Infiltrate the Crimson Raider's hideout/Description1/Infiltrate the Crimson Raider's hideout./Autoreward/True/Difficulty/1/</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>If you should change your mind, just come see me again.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

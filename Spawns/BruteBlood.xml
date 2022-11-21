@@ -1,0 +1,43 @@
+<Spawns>
+  <Points>
+    <Name>Bruteblood Lycanthrope</Name>
+    <UniqueId>ace020fa-778b-41a6-a991-10b900bcd61c</UniqueId>
+    <Map>Felucca</Map>
+    <X>2567</X>
+    <Y>2188</Y>
+    <Width>10</Width>
+    <Height>10</Height>
+    <CentreX>2572</CentreX>
+    <CentreY>2193</CentreY>
+    <CentreZ>43</CentreZ>
+    <Range>5</Range>
+    <MaxCount>3</MaxCount>
+    <MinDelay>20</MinDelay>
+    <MaxDelay>30</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>-1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>False</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>Werewolf/BodyValue/1070/Name/BruteBlood Lycanthrope/ADD/&lt;WoodenChest/ADD/&lt;Gold/Amount/15000&gt;&gt;/ADD/SilverBeadNecklace/Name/Dog Tag 4:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=SETONTHIS/DoReset/True:MX=1:SB=3:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=SETONMOB,Bragga,Barkeeper/MSG/Time's up - you lose.:MX=1:SB=2:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Yoda</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Crystal Caves | ATTACHMENT,The Crystal Caves,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Yoda1</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>A disturbance in the Force I sense, yes.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What is it Master?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Action>SET,0x401205F4/DoReset/True/Running/True</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Yoda,4/A decision the council has reached. Find a new source of lightsaber crystals you must. Of the Force you must be mindful, lead the way it can. The town of Luna is where you must start at. Continue South along the road you shall. More I cannot say.;Yes master, I understand.;Okay;I'm not ready for this yet.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/The Crystal Caves/titlestring/The Crystal Caves/notestring/If you wish, you may see Master Cambur downstairs by the Lightsaber Forge to receive a crystal harvester. Then go to Luna and follow the road South. The Force will guide you along your path. Be careful, Sith allies are hunting for the Crystal Caves as well and will surely ambush an unsuspecting foe./Objective1/Locate the first Crystal Cave./Description1/Locate the First Crystal Cave./Objective2/Locate the second Crystal Cave./Description2/Locate the second Crystal Cave./AddJournalEntry/Advice from Yoda: Go to Luna and travel South along the road. The Force will guide you from there. Watch out for any ambushes by Blackstar Syndicate Members, Dark Jedi, Stormtroopers or worse a Sith./repeatable/false/autoreward/true/CanSeeReward/false/attachmentstring/XmlAddKarma,200/rewardstring/@bag/ADD/StabilizingRing/ADD/PowerCell/ADD/LightsaberHilt&gt;</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Try later you must...</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,141 @@
+Group Dungeon System 1.7 Final by -The Jedi-
+
+Summary
+
+This system is designed to offer what some call "raid" style, or "instance" dungeons. The basic premise is that you can build a dungeon and restrict entrance based on the number of players inside, the skills of the player, and much more. Also, entrance is restricted to parties only (if more than one player). It also resets fresh for every new group, kicks players for going afk, kicks a group if it "wipes" (everyone dies), kicks a group if they kill everything, and much more! Not to mention that everything you kill inside stays dead. This allows you to design a dungeon that has to be "cleared" by a group of friends and can be designed in a linear fashion, causing players to have to complete specific tasks, and even kill bosses! Many people find that this system adds a completely new dynamic to PvE encounters that you may never have had in UO. You may find yourself creating increasingly difficult dungeons and bosses, and therefore increasingly powerful loots! With a system such as Arte Gordon's XMLSpawner, the possibilities are endless. You can literally create an "end game raid system" for you players to race to conquer.
+
+Here's how it works.
+
+   1. Deco and spawn a dungeon (be mindful that the region is simply a square with the stone in the center. Make it so that the region is not accessable unless a teleporter is added somewhere.)
+   2. Add the Dungeon Control Stone ([add GroupDungeonStone - [add groupd) in the very center of the dungeon. (it will be hidden) ( i suggest lowering the 'z' property of the stone, allowing for less interferance. )
+   3. [Props the stone and change the name, size, max players, minimum skills (0 for disabled), maximum skills (66000 for disabled), and entrance locations. Make sure the entrance is NOT inside the dungeon itself. This is where players will be ejected. There are a few more features you can change here. Browse around.
+   4. Double click the stone to update the region. The dungeon is now nearly complete. Notice any spawners in the region have had their respawn times reset to the value defined in the files. (the dungeon IS finished, but there is no way to get there!)
+   5. Find a nice spot for a "portal" to your new dungeon. Make sure it is not actually IN the dungeon. Now [add GroupDungeonTeleporter - [add groupd (I like to add maybe "sparklies" above the port as well.) and set its teleport locations as usual to where you like in the dungeon.
+   6. Important: [props the entrance teleporter and set the "Stone" to the dungeon control stone for your new dungeon, or the system will not be initialized.
+   7. (Optional) Do now the same thing you just did, but inside the dungeon, and use the GroupDungeonExit teleporter instead. Make sure it is pointing somewhere outside the dungeon. (Note: the exit is not required. Players can recall out or be teleported out automatically.)
+   8. (Optional) Add a DungeonDoor and make a key spawn somewhere that will unlock it! (set the keyvalue properties on both the door and the key to the same number) [add dungeondoor <southcw, southccw, northcw, northccw, eastcw, eastccw, westcw, westccw> With XMLSpawner, just put /ADD/<key/name/Dungeon Key/keyvalue/####> at the end of the beast name, and where #### is a unique number that matches its door.
+   9. When in doubt, you can always double click the stone again to re-update the dungeon. (this will also respawn any and all mobs, so be careful!)
+
+And that should do it!
+
+Much of the power of this system comes in imagination and design. (I like to use mobs with movement speeds that nearly match player speeds, making it so that they can not skip a "pull" I have placed for them. This lends back to the linear design I spoke of. *activespeed = 0.1* ;) )
+
+Features
+
+# Dungeon is only accessable via a dungeon portal.
+# For more than one person to enter a dungeon, they must be in a group.
+# The dungeon will reset every time a player enters an empty dungeon. This includes wiping any corpses or trash.
+# The dungeon limits the amount of players, and the minimum and/or maximum skills allowed to enter. It also can restrict pet entry.
+# Everything that dies in the dungeon stays dead, unless it is a specifically planned spawn.
+# A dead player can not exit the instance. He must either wait to be resurrected, or wait for the other players to die.
+# If all players in the instance die, they are telported outside of the instance shortly after. Their corpses are also blessed and teleported as well as any pets they may have alive.
+# If all creatures in the instance die, the players are given 10 minutes to exit the dungeon by any means, or they will be teleported out.
+# This system protects against players logging out and back in in the dungeon.
+# This system protects against players going AFK inside the dungeon.
+# This system is neither campable nor exploitable. (unless your design lends it so ;) )
+# Some doors in the dungeons are locked and require "single use" keys that are found somwhere inside and will remain unlocked until the dungeon resets.
+
+
+Customizable Features (GroupDungeonRegion.cs)
+
+        private static TimeSpan m_RespawnDelay = TimeSpan.FromHours(3); // Default dungeon respawn timer is 3 hours.
+        private static TimeSpan m_RezTimer = TimeSpan.FromSeconds(30); //Default to kick the dead group is 30 seconds.
+        private static TimeSpan m_KickTimer = TimeSpan.FromMinutes(10); //Default to kick the winning group is 10 minutes.
+        private static bool m_UseRezTimer = true; //Default is to move the corpses. (true)
+        private static bool m_BlessCorpses = true; //Default is to bless the corpses of all dead players. (true)
+        private static bool m_UseGlobalRespawn = true; //Default is to set all spawners to the global spawn time. (true)
+        private static bool m_AllowPvP = false; //Default is pvp disabled. (false)
+
+
+
+Installation
+
+This code requires VERY MINOR distro modification. Due to the fact that logging in does not invoke the OnEnter() method for the dungeon region, in order to determine whether a player has logged into a dungeon, an addition must me made to the OnLogin() method of your playermobile.cs file.
+
+Drag the download into your customs folder first.
+
+Then open your playermobile.cs file, and find the OnLogin() method, like this:
+
+		private static void OnLogin( LoginEventArgs e )
+		{
+			Mobile from = e.Mobile;
+
+And then place the following code immediately after. (It has been marked in a seperate #region)
+
+            /////////////            
+            #region - Party Dungeon System Edits -
+                
+            if (from.AccessLevel == AccessLevel.Player)
+            {
+                Region reg = Region.Find(from.Location, from.Map);
+
+                if (reg is GroupDungeonRegion)
+                {
+                    GroupDungeonRegion dreg = (GroupDungeonRegion)reg;
+
+                    //dungeon full so kick
+                    if ( dreg.CountPlayers() > dreg.Stone.MaxPlayers)
+                    {
+                        from.SendMessage(34, "{0} is full right now. You are being teleported out.", dreg.Stone.DungeonName);
+                        Timer.DelayCall(TimeSpan.FromSeconds(5), new TimerStateCallback(Server.Regions.GroupDungeonRegion.KickCallBack), new object[] { from, dreg.Stone });
+                    }
+                    //dungeon empty so kick to allow for reset
+                    else if (dreg.CountPlayers() <= 1)
+                    {
+                        from.SendMessage(34, "You have logged into an empty dungeon. You are being teleported out.", dreg.Stone.DungeonName);
+                        Timer.DelayCall(TimeSpan.FromSeconds(5), new TimerStateCallback(Server.Regions.GroupDungeonRegion.KickCallBack), new object[] { from, dreg.Stone });
+                    }
+                    
+                        //not in the current party so kick
+
+                    else
+                    {
+                        bool isinparty = false;
+                        PlayerMobile pm = (PlayerMobile)from;
+                        Server.Engines.PartySystem.Party p = Server.Engines.PartySystem.Party.Get(pm);
+
+                        if (p != null)
+                        {
+                            foreach (Mobile mobs in dreg.Stone.GetMobilesInRange(dreg.Stone.Size))
+                            {
+                                if (p.Members.Contains(mobs))
+                                    isinparty = true;
+                            }
+                        }
+                        
+                        if (!isinparty)
+                        {
+                            from.SendMessage(34, "You must join the party inside to enter. You are being teleported out.");
+                            Timer.DelayCall(TimeSpan.FromSeconds(5), new TimerStateCallback(Server.Regions.GroupDungeonRegion.KickCallBack), new object[] { from, dreg.Stone });
+                        }
+                        else
+                            reg.OnLocationChanged(from, from.Location); //set up afk timer for this player
+                    }
+                }
+            }
+
+            #endregion 
+            /////////////
+            
+            
+To allow for XMLSpawner and/or PremiumSpawner global spawn support, uncomment the following in GroupDungeonRegion.cs
+
+					/*else if (s is XmlSpawner) //// comment out if XMLSpawner is not installed
+                    {
+                        XmlSpawner sp = (XmlSpawner)s;
+                        sp.MaxDelay = sp.MinDelay = m_RespawnDelay;
+                        sp.Respawn();
+                    }
+                    else if (s is PremiumSpawner) //// comment out if PremiumSpawner is not installed
+                    {
+                        PremiumSpawner sp = (PremiumSpawner)s;
+                        sp.MaxDelay = sp.MinDelay = m_RespawnDelay;
+                        sp.Respawn();
+                    }*/
+
+
+Just a note: I would TRULY love to experience some more in depth and intersting dungeons designed with this system, and would love to see it possibly be taken on for a 2.0 by someone more skilled than I. If you have anything to share, please please do let me know. :D
+
+Thanks, and good luck. 
+
+-The Jedi- phenika@adelphia.net

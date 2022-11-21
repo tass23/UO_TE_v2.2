@@ -1,0 +1,59 @@
+--------------------  Changes in Version 2.9 2/04/06 --------------------
+
++ ConfigParser no longer halts shard start-up when a bad value is found in the xml file.  Instead it displays the error on the console, leaving the default value untouched.
++ Added a ConfigParser option to halt the shard on bad values in the xml config file.
+
+--------------------  Changes in Version 2.8 1/14/06 --------------------
+
++ Players with top Spell Crafting skills have a chance to mark the item.
++ A number of parameters are available for configuration in the file SpellCraftConfig.xml (place this in your RunUO\Data directory).  This allows configuration parameters to be modified without code changes.
+
+--------------------  Changes in Version 2.7 5/27/05 --------------------
+
++ Fixed a botched scaling factor that caused some craft values to be inflated by a factor of 10.
+
+--------------------  Changes in Version 2.6 5/26/05 --------------------
+
++ Added the capability to drop magic jewels onto the book giving the book charges with which to spellcraft.  This feature can be enabled/disabled with a configuration variable.
++ Crafts and charges in the book are displayed as name properties making it easier to identify what is in the book making buying and selling of of books less risky.
++ Created more configuration variables for things that spawn on the mobiles, max skills and intensity ranges.
++ Fixed an off by one value that caused the Durability craft (the last one) never to spawn.
++ Added headers to all files giving credit to the original author of the system.
++ Reworded a few user strings.
+
+--------------------  Changes in Version 2.5 5/23/05 --------------------
+
++ Corrected a total skill value of 240 for alchemy + inscription, used to figure the skill scalar.  The value should have been 200 since 100 is the cap for both skills.
++ Placed a check in the gump code to validate a minimum skill before allowing a craft to be applied.
++ Fixed a rounding error in scale that made it difficult reaching 100% intensity on a property.
++ Added an array to allow setting of individualy, per craft, the magic jewel consumption.
++ Added showing of the magic jewel usage next to each craft name if the player is holding a lit candle when the book is opened.  In this mode all craft names are show with a distinctive tan hue denoting crafts not in the book.
++ Now checking that the book is in the player's backpack before allowing the book to be opened.
+
+ 
+--------------------  Changes in Version 2.4 4/22/05 -------------------- 
+
++ Hats are now supported for all the crafts that can be applied to armor.
++ Instruments can now be Spellcrafted with the Slayer craft.
++ Added the Night Sight craft and jewel.
++ Added the Slayer craft and jewel.  Applying this craft places a random Slayer on the instrument or weapon.  There is a chance between 1% and 10%, depending on skill, that a super Slayer will be placed on the item.
++ Added the durability craft and jewel.
++ Updated the Readme to reflect the new items and crafts in the craft table.
++ Percentage of maximum intensity for each craft is now linearly based on player skill - the higher the skill the higher the percentage of maximum intensity can be acheived.  At 24 combined alchemy and inscribe the best that can be acheived is 10% intensity, below 24 combined skill there will be no effect.  At 240 combined skill 100% intensity can be acheived.  For example, the maximum Hit Chance Increase for the low skilled player is 2% HCI (thats 10% of the maximum of 15, or 1.5 rounded up).  For the highly skilled player 15% would be the maximum HCI that can be acheived.  This change was the result of a fix to an old math bug in the code that accounted for player skill.
++ The book will now remain open at the page last viewed when using a craft.  Some pages and crafts were moved around in the book to facilitate this change.
++ Removed the somewhat gratuitous throw located directly inside and at the end of the try block in  each of the callbacks.  This was replaced with a string assignment and a subsequent check in the new finally block.
++ The book now displays the total Spellcrafts in the book as well as the total possible.  The book will now show the names of the missing Spellcrafts as well, if the player knows the secret to unlocking the hidden information...
+
+
+-------------------- Changes in Version 2.3 4/17/05 -------------------- 
+
++ Expanded the number of items that some of the crafts can be applied to (e.g. luck on shields).  See the README file for a complete table of crafts and items they apply to.
++ Explosive failures will now consume magic jewels.
++ When attempting to apply a craft to an item not supported by the craft, the player is given a message stating what items the craft does apply to.
++ Graphic and audio effects now occurr on Successful spellcrafting attmepts.
++ The spellcrafting book now remains open until the user dismisses it.  However it always resets to the first page upon spellcrafting attempts (still looking for a solution to this).
++ Some of the code and data has been factored resulting in a smaller assembly.
++ Added new configuration variable kScPenaltyChance.  This is the chance that adding spell channelling to a weapon may result in a penalty to casting.  See the README for a description of all the configuration variables.
++ Properties are no longer stackable due to many reports of players heavily stacking fc on items.
++ Changed the hue and image of the Spellcraft Jewels to make them easier to work with.
++ Changed the wording of many user messages.

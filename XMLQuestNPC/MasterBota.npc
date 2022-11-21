@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Master Bota</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Trial of Flesh | ATTACHMENT,Trial of Flesh,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>MasterBota</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Ah, welcome young padawan.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Good day to you Master Bota.</Keywords>
+    <Action>SET,0x401195FF/DoReset/True/Running/True</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Master Bota,4/I'm glad to see another friendly face wanting to join the ranks of the Jedi. The galaxy is always in need of those that will uphold galactic law and protect those that can't protect themselves. A Jedi seeks knowledge first and foremost. Knowledge of a given set of circumstances, knowledge of oneself, knowledge of the Force, knowledge of those around you and yes, even knowledge of your enemy. You have been chosen to receive Jedi training because you already have a strong alignment with the Force. Myself and the other masters within the proving grounds will teach you how to harness each ability a Jedi needs. To that end, you must learn the ability to cure and heal yourself. I shall teach you both powers by poisoning you. Use Force Cleanse to remove the poison and Jedi Grove to heal yourself.;I understand master.;Okay;I'll just use bandages.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/Trial of Flesh/titlestring/Trial of Flesh/notestring/Use Force Cleanse on yourself to remove the poison and use Jedi Grove to heal yourself if you've taken damage./Objective1/Use Force Cleanse on yourself./Description1/Use Force Cleanse on yourself./Objective2/Use Jedi Grove to heal yourself./Description2/Use Jedi Grove to heal yourself if needed./repeatable/false/Autoreward/true/CanSeeReward/false/Attachmentstring/XmlAddKarma,300/Rewardstring/@bag/ADD/ForceLightningDisc ; SETONTRIGMOB/POISON,3 ; SET,0x401195FF/Running/true</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>It saddens me to hear you say that young one...</Text>
+    <Keywords>No</Keywords>
+    <Action>SETONTRIGMOB/ATTACH/XmlAddKarma,-200</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

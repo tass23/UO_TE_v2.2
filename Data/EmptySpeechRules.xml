@@ -1,0 +1,345 @@
+<?xml version="1.0" standalone="yes"?>
+<dsSpeechRules xmlns="http://tempuri.org/SpeechRules.xsd">
+  <xs:schema id="dsSpeechRules" targetNamespace="http://tempuri.org/SpeechRules.xsd" xmlns:mstns="http://tempuri.org/SpeechRules.xsd" xmlns="http://tempuri.org/SpeechRules.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="dsSpeechRules" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="dtRules">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="index" msdata:AutoIncrement="true" msdata:Caption="Index" type="xs:int" />
+                <xs:element name="rule" msdata:Caption="Rule Name" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtTriggers">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="index" msdata:Caption="Rule Index" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="trigger" msdata:Caption="Speech Trigger" type="xs:string" />
+                <xs:element name="word" type="xs:boolean" default="false" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtResponses">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="index" msdata:Caption="Rule Index" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="response" msdata:Caption="Speech Response" type="xs:string" minOccurs="0" />
+                <xs:element name="npcName" msdata:Caption="NPC Name" type="xs:string" minOccurs="0" />
+                <xs:element name="npcRegion" msdata:Caption="NPC Region" type="xs:string" minOccurs="0" />
+                <xs:element name="playerGender" msdata:Caption="Player Gender" type="xs:int" default="0" />
+                <xs:element name="questObject" msdata:Caption="Quest Object" type="xs:string" minOccurs="0" />
+                <xs:element name="packObject" msdata:Caption="Pack Object" type="xs:string" minOccurs="0" />
+                <xs:element name="npcAttitude" type="xs:int" default="0" />
+                <xs:element name="npcAnimation" type="xs:int" default="0" />
+                <xs:element name="npcGender" type="xs:int" default="0" />
+                <xs:element name="questObjDelete" type="xs:boolean" default="false" />
+                <xs:element name="timeOfDay" msdata:Caption="Time of Day" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="npcReaction" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="npcTitle" type="xs:string" minOccurs="0" />
+                <xs:element name="objStatus" type="xs:int" default="0" minOccurs="0" />
+                <xs:element name="npcTag" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtGenderTypes">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="genderID" type="xs:int" />
+                <xs:element name="genderName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtAttitudeTypes">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="attitudeID" type="xs:int" />
+                <xs:element name="attitudeName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtAnimations">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="animateID" type="xs:int" />
+                <xs:element name="animateName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtGenderTypes1">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="genderID" type="xs:int" minOccurs="0" />
+                <xs:element name="genderName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtTimeOfDayTypes">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="timeID" type="xs:int" />
+                <xs:element name="timeName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtReactions">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="reactionID" type="xs:int" minOccurs="0" />
+                <xs:element name="reactionName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtObjStatusTypes">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="statusID" type="xs:int" minOccurs="0" />
+                <xs:element name="statusName" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="dtControl">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="index" type="xs:int" minOccurs="0" />
+                <xs:element name="dbVersion" type="xs:double" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="SpeechRulesIndex" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:dtRules" />
+        <xs:field xpath="mstns:index" />
+      </xs:unique>
+      <xs:unique name="SpeechRulesNameKey">
+        <xs:selector xpath=".//mstns:dtRules" />
+        <xs:field xpath="mstns:rule" />
+      </xs:unique>
+      <xs:unique name="SpeechTriggerKey">
+        <xs:selector xpath=".//mstns:dtTriggers" />
+        <xs:field xpath="mstns:trigger" />
+      </xs:unique>
+      <xs:unique name="GenderKey">
+        <xs:selector xpath=".//mstns:dtGenderTypes" />
+        <xs:field xpath="mstns:genderID" />
+      </xs:unique>
+      <xs:unique name="AttitudeKey">
+        <xs:selector xpath=".//mstns:dtAttitudeTypes" />
+        <xs:field xpath="mstns:attitudeID" />
+      </xs:unique>
+      <xs:unique name="AnimationKey">
+        <xs:selector xpath=".//mstns:dtAnimations" />
+        <xs:field xpath="mstns:animateID" />
+      </xs:unique>
+      <xs:unique name="Constraint1">
+        <xs:selector xpath=".//mstns:dtTimeOfDayTypes" />
+        <xs:field xpath="mstns:timeID" />
+      </xs:unique>
+      <xs:unique name="dtReactions_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//mstns:dtReactions" />
+        <xs:field xpath="mstns:reactionID" />
+      </xs:unique>
+      <xs:unique name="dtObjStatusTypes_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//mstns:dtObjStatusTypes" />
+        <xs:field xpath="mstns:statusID" />
+      </xs:unique>
+      <xs:unique name="dtControl_Constraint1" msdata:ConstraintName="Constraint1">
+        <xs:selector xpath=".//mstns:dtControl" />
+        <xs:field xpath="mstns:index" />
+      </xs:unique>
+      <xs:keyref name="RulesResponsesRelation" refer="SpeechRulesIndex" msdata:ConstraintOnly="true">
+        <xs:selector xpath=".//mstns:dtResponses" />
+        <xs:field xpath="mstns:index" />
+      </xs:keyref>
+      <xs:keyref name="RulesTriggersRelation" refer="SpeechRulesIndex">
+        <xs:selector xpath=".//mstns:dtTriggers" />
+        <xs:field xpath="mstns:index" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <dtRules>
+    <index>0</index>
+    <rule>{Default Rule}</rule>
+  </dtRules>
+  <dtTriggers>
+    <index>0</index>
+    <trigger>{*}</trigger>
+    <word>false</word>
+  </dtTriggers>
+  <dtResponses>
+    <index>0</index>
+    <response>ehh?</response>
+    <npcName />
+    <npcRegion />
+    <playerGender>0</playerGender>
+    <questObject />
+    <packObject />
+    <npcAttitude>0</npcAttitude>
+    <npcAnimation>0</npcAnimation>
+    <npcGender>0</npcGender>
+    <questObjDelete>false</questObjDelete>
+    <timeOfDay>0</timeOfDay>
+    <npcReaction>0</npcReaction>
+    <npcTitle />
+    <objStatus>0</objStatus>
+    <npcTag />
+  </dtResponses>
+  <dtGenderTypes>
+    <genderID>0</genderID>
+    <genderName>Either</genderName>
+  </dtGenderTypes>
+  <dtGenderTypes>
+    <genderID>1</genderID>
+    <genderName>Male</genderName>
+  </dtGenderTypes>
+  <dtGenderTypes>
+    <genderID>2</genderID>
+    <genderName>Female</genderName>
+  </dtGenderTypes>
+  <dtAttitudeTypes>
+    <attitudeID>0</attitudeID>
+    <attitudeName>Any</attitudeName>
+  </dtAttitudeTypes>
+  <dtAttitudeTypes>
+    <attitudeID>1</attitudeID>
+    <attitudeName>Good</attitudeName>
+  </dtAttitudeTypes>
+  <dtAttitudeTypes>
+    <attitudeID>2</attitudeID>
+    <attitudeName>Bad</attitudeName>
+  </dtAttitudeTypes>
+  <dtAttitudeTypes>
+    <attitudeID>3</attitudeID>
+    <attitudeName>Indifferent</attitudeName>
+  </dtAttitudeTypes>
+  <dtAnimations>
+    <animateID>0</animateID>
+    <animateName>Nothing</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>5</animateID>
+    <animateName>Shake Head</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>6</animateID>
+    <animateName>Nod Head</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>9</animateID>
+    <animateName>Slap/Swing</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>10</animateID>
+    <animateName>Punch</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>11</animateID>
+    <animateName>Pound</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>16</animateID>
+    <animateName>Cast Spell</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>17</animateID>
+    <animateName>Area Cast</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>32</animateID>
+    <animateName>Bow</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>33</animateID>
+    <animateName>Salute</animateName>
+  </dtAnimations>
+  <dtAnimations>
+    <animateID>34</animateID>
+    <animateName>Eat</animateName>
+  </dtAnimations>
+  <dtGenderTypes1>
+    <genderID>0</genderID>
+    <genderName>Either</genderName>
+  </dtGenderTypes1>
+  <dtGenderTypes1>
+    <genderID>1</genderID>
+    <genderName>Male</genderName>
+  </dtGenderTypes1>
+  <dtGenderTypes1>
+    <genderID>2</genderID>
+    <genderName>Female</genderName>
+  </dtGenderTypes1>
+  <dtTimeOfDayTypes>
+    <timeID>0</timeID>
+    <timeName>Any</timeName>
+  </dtTimeOfDayTypes>
+  <dtTimeOfDayTypes>
+    <timeID>1</timeID>
+    <timeName>Morning</timeName>
+  </dtTimeOfDayTypes>
+  <dtTimeOfDayTypes>
+    <timeID>2</timeID>
+    <timeName>Afternoon</timeName>
+  </dtTimeOfDayTypes>
+  <dtTimeOfDayTypes>
+    <timeID>3</timeID>
+    <timeName>Evening</timeName>
+  </dtTimeOfDayTypes>
+  <dtTimeOfDayTypes>
+    <timeID>4</timeID>
+    <timeName>Night</timeName>
+  </dtTimeOfDayTypes>
+  <dtTimeOfDayTypes>
+    <timeID>5</timeID>
+    <timeName>Daytime</timeName>
+  </dtTimeOfDayTypes>
+  <dtTimeOfDayTypes>
+    <timeID>6</timeID>
+    <timeName>Nighttime</timeName>
+  </dtTimeOfDayTypes>
+  <dtReactions>
+    <reactionID>0</reactionID>
+    <reactionName>Nothing</reactionName>
+  </dtReactions>
+  <dtReactions>
+    <reactionID>1</reactionID>
+    <reactionName>Attack</reactionName>
+  </dtReactions>
+  <dtReactions>
+    <reactionID>2</reactionID>
+    <reactionName>Flee</reactionName>
+  </dtReactions>
+  <dtReactions>
+    <reactionID>3</reactionID>
+    <reactionName>Criminal</reactionName>
+  </dtReactions>
+  <dtReactions>
+    <reactionID>4</reactionID>
+    <reactionName>Hide</reactionName>
+  </dtReactions>
+  <dtReactions>
+    <reactionID>5</reactionID>
+    <reactionName>Die</reactionName>
+  </dtReactions>
+  <dtReactions>
+    <reactionID>6</reactionID>
+    <reactionName>Delete</reactionName>
+  </dtReactions>
+  <dtObjStatusTypes>
+    <statusID>0</statusID>
+    <statusName>Ignored</statusName>
+  </dtObjStatusTypes>
+  <dtObjStatusTypes>
+    <statusID>1</statusID>
+    <statusName>Present</statusName>
+  </dtObjStatusTypes>
+  <dtObjStatusTypes>
+    <statusID>2</statusID>
+    <statusName>Absent</statusName>
+  </dtObjStatusTypes>
+  <dtControl>
+    <index>0</index>
+    <dbVersion>1.1</dbVersion>
+  </dtControl>
+</dsSpeechRules>

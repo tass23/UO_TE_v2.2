@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Darth Mog</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Gone Walkabout,1</TriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Darth Mog</ConfigFile>
+    <SpeechEntries>2</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>I have a message for you.</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,An Unwelcome Interruption,4/Worm - you had better have good cause to interupt my interrogation!If this is a waste of my time I will vaporize you where you stand.;My apologies, Master. Darth Maul asked me to give you this message;Okay</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Okay</Keywords>
+    <Action>TAKE/A Message for Darth Mog</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Half the Problem,4/The Sith Master scans the message briefly, before folding it back together and slipping into a grey, leather pouch on his waist.                                     "Darth Maul STILL thinks I've stolen his cybernetic legs, does he? Ha! I'm afraid he's sorely mistaken. Now, I did happen to see them taken, I just chose not to intervene. I tire of his false accusations and empty threats, however, and so I will tell you where you may find them. The cuplrit is busy using them as a chew toy near the Academy entrance, I believe.;My thanks, Master;Okay              </Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

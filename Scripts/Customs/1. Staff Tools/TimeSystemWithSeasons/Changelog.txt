@@ -1,0 +1,65 @@
+v1.1.12:
+
+*   Fixed a bug in setting the TIMEFORMAT or CLOCKTIMEFORMAT without specifying a value would result in a null reference exception.
+*   Added a [TS VERSION command to display the version of the time system.
+
+
+v1.1.11:
+
+*   Fixed the $nth$ format variable to now be either based off of day or month.  $nth$ can no longer be used.  It is now $nth-d$ for day and $nth-m$ for month.
+
+
+v1.1.1:
+
+*   Added a [TS APPEND command for appending to string variables.  If you use the command for non-string variables, it just sets them as it would with [TS SET.
+*   Fixed a bug when specifying a variable that does not exist, it would not notify you.
+
+
+v1.1.01:
+
+*   Changed some code in the Support.cs to allow customizing the names of your months in the m_MonthsList.
+
+
+v1.1.0:
+
+*   Fixed a bug that when specifying a number without a decimal point for the timerspeed, it would reject the attempt due to it being an int instead of a double.
+*   Added a [TS STOP, [TS START, and [TS RESTART commands which will stop, start, and restart the time system.  When stopping the system, it does not perform the calculations for light level and time.  It will display the day level until the system is started again.
+*   Added instructions for how to modify Spyclass.cs and Clocks.cs to reflect the moonphase and time.
+*   Added time zones with ability to configure them yourself based on how many location.X is considered 1 minute.  This was a huge overhaul to the system to be able to do this.  The default is 16 X is 1 minute and can be changed via [TS SET TIMEZONEXDIVISOR <number>
+*   You can disable using time zones by typing [TS SET USETIMEZONES false, in which the system will perform calculations on each tick of the timer only, and not each and every time a player moves.
+*   Added [BASETIME command that gamemaster's and above can use to check the system's base time, which is the time the system keeps track of basing it's time zones from.  Using [TIME will display the time in the current time zone.
+*   Changed the variable name m_UseItemLighting to m_UseAutoLighting which means you will type UseAutoLighting instead of UseItemLighting using [TS SET.
+*   Fixed a bug where changing the moonphaseday would not recalculate the light levels until the next timer tick.
+*   Added a [TS SETTIME <hh:mm> command to allow you to set the time a bit easier.
+*   Added a [TS QUERY command to query the time system to see if it is running, and if it is, how fast is it calculating time.
+*   Added a Support.cs script to assist the system as well as help move some methods out of the Time System.cs so that the file is not too big.
+*   Added custom formatting.  This was a huge update.  You will type [TS SET TIMEFORMAT <format> to set the formatting for the [TIME and [BASETIME commands.  You will type [TS SET CLOCKTIMEFORMAT <format> to set the format for when double clicking on clock items.
+
+
+v1.0.4:
+
+*   Fixed a bug when typing [TS it would not show the command list.
+
+
+v1.0.3:
+
+*   Fixed a bug when a managed light was deleted from the world and it was selected in PerformRandomLightOutage(), it would not check to see if it was deleted first.
+*   Made it so when the managed lights list was repopulated, it would check to see if the item was deleted or not before adding it to the list.
+*   Added a command called [TS REPOPLIGHTSLIST to force the list to be repopulated.  Use this command after adding/removing lights that are of the type that will be managed by the system (i.e. LampPost1, LampPost2, LampPost3).
+*   Typing [TS by itself will show a list of commands that can be used.
+
+
+v1.0.2:
+
+*   Fixed a bug in the code that was causing the time calculation to appear to occur one timer tick too slow.
+*   Fixed a bug that would cause the lights to come on after the m_LightsOnLevel, and not on it.
+*   Added UseRealTime variable in which by default is false.  When true, it will use your computer's date and time.
+*   Realized that my loading/saving method was not going to work, I had to make some slight changes in it which involves any pre v1.0.2 files to load "corrupt" and force the system to recreate the file using default values.
+*   Fixed a bug where setting the Hour or Minute variable would not recalculate the light levels, instead it would wait for the next timer tick.
+
+
+v1.0.1:
+
+*   Fixed a minor bug when using the [TS SET command when setting a boolean value, it would only accept lowercase true or false.
+*   Removed an unused method which was used to test how the light levels were handled in the distro.
+

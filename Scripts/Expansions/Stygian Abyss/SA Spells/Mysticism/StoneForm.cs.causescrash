@@ -1,0 +1,146 @@
+using Server;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using Server.Targeting;
+using Server.Network;
+using Server.Mobiles;
+using Server.Items;
+using Server.Spells;
+using Server.Spells.Seventh;
+using Server.Spells.Mystic;
+
+namespace Server.Spells.Mystic
+{
+	public class StoneFormSpell : MysticSpell
+    {
+        private static SpellInfo m_Info = new SpellInfo(
+                "Stone Form", "In Rel Ylem",
+                230,
+                9022,
+                Reagent.Bloodmoss,
+                Reagent.FertileDirt,
+                Reagent.Garlic
+            );
+
+        public override TimeSpan CastDelayBase { get { return TimeSpan.FromSeconds(2.0); } }
+
+        public override double RequiredSkill { get { return 33.0; } }
+        public override int RequiredMana { get { return 11; } }
+
+        private static Dictionary<Mobile, List<ResistanceMod>> m_Table = new Dictionary<Mobile, List<ResistanceMod>>();
+
+        public StoneFormSpell(Mobile caster, Item scroll)
+            : base(caster, scroll, m_Info)
+        {
+        }
+
+		public static bool HasEffect( Mobile m )
+        {
+            return m_Table.ContainsKey( m );
+		}
+
+		public static void RemoveEffect( Mobile m )
+            {
+			if ( !m_Table.ContainsKey( m ) )
+				return;
+
+			List<ResistanceMod> mods = m_Table[m];
+
+            for (int i = 0; i < m_Table[m].Count; i++)
+			{
+                m.RemoveResistanceMod(mods[i]);
+            }
+
+			Enhancement.SetValue( m, AosAttribute.CastSpeed, 2, "Stone Form" );
+			Enhancement.SetValue( m, AosAttribute.WeaponSpeed, 10, "Stone Form" );
+
+			m_Table.Remove( m );
+			m.EndAction( typeof( StoneFormSpell ) );
+            m.PlaySound(0x201);  
+            m.FixedParticles( 0x3728, 1, 13, 9918, 92, 3, EffectLayer.Head );
+			m.BodyMod = 0;
+		}
+
+		public override bool CheckCast()
+		{
+			if ( !base.CheckCast() )
+			{
+				return false;
+			}
+			else if ( !Caster.CanBeginAction( typeof( StoneFormSpell ) ) )
+			{
+				StoneFormSpell.RemoveEffect( Caster );
+                Caster.SendMessage( "You are no longer in Stone Form." );
+				return false;
+			}
+            else if( Caster.BodyMod != 0 )	
+			{
+				Caster.SendMessage( "You cannot transform while in that form." );
+				return false;
+            }
+			else if ( Caster.BodyMod == 183 || Caster.BodyMod == 184 )
+			{
+				Caster.SendMessage( "You cannot transform while wearing body paint." );
+				return false;
+			}
+			else if ( !Caster.CanBeginAction( typeof( PolymorphSpell ) ) )
+			{
+                Caster.SendMessage("You cannot transform while polymorphed.");
+                return false;
+        	}
+           /* else if ( !Caster.CanBeginAction( typeof( StoneFormSpell ) ) )
+        	{
+                StoneFormSpell.RemoveEffect( Caster );
+                Caster.SendMessage( "You are no longer in Stone Form." );
+				return false;
+			}*/
+
+			return true;
+		}		
+
+		public override void OnCast()
+        {
+			if ( CheckSequence() )
+			{
+				// Values
+                int bonus1 = 2 + (int)(Caster.Skills[SkillName.Mysticism].Value / 20);
+                int bonus = 1 + (int)(Caster.Skills[SkillName.Focus].Value / 20);
+
+				// Mount
+				IMount mount = Caster.Mount;
+
+				if ( mount != null )
+					mount.Rider = null;
+
+				// Resists
+				List<ResistanceMod> mods = new List<ResistanceMod>();
+				mods.Add( new ResistanceMod( ResistanceType.Physical, bonus1 + bonus ) );
+				mods.Add( new ResistanceMod( ResistanceType.Fire, bonus1 + bonus) );
+				mods.Add( new ResistanceMod( ResistanceType.Cold, bonus1 + bonus) );
+				mods.Add( new ResistanceMod( ResistanceType.Poison, bonus1 + bonus) );
+				mods.Add( new ResistanceMod( ResistanceType.Energy, bonus1 + bonus ) );
+
+                for (int i = 0; i < mods.Count; i++)
+					Caster.AddResistanceMod( mods[i] );
+
+				// Effects
+                Caster.BodyMod = 705;
+                Caster.PlaySound( 0x65A );
+                Caster.FixedParticles( 0x3728, 1, 13, 9918, 92, 3, EffectLayer.Head );
+
+				m_Table.Add( Caster, mods );
+
+				Enhancement.SetValue( Caster, AosAttribute.CastSpeed, -2, "Stone Form" );
+				Enhancement.SetValue( Caster, AosAttribute.WeaponSpeed, -10, "Stone Form" );
+
+                Caster.BeginAction(typeof(StoneFormSpell));
+            }
+
+            FinishSequence();
+        }
+    }
+}
+
+ 			
+		

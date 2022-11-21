@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Rumplestiltskin</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Always After Me Lucky Charms | ATTACHMENT,Always After Me Lucky Charms,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>NewbieBoneCrusher</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>*cough, cough* Hey</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Oh no, not you!</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Rumplestiltskin,4/No, I'm not that guy, err, person. My mother thought it was a funny joke. If you're done laughing, I have a task for you. I'd like you to kill Bone Crusher. If you complete this quest, I'll give you some gold and some of me luck charms.;I can do that for you.;yes;Forget it, I'll die over and over.;no thanks</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Goodluck!</Text>
+    <Keywords>yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/Always After Me Lucky Charms/titlestring/Always After Me Lucky Charms/notestring/Rumplestiltskin has asked you to kill Bone Crusher. You'll find him walking around in the dungeon./objective1/KILLNAMED,Bone Crusher,1/Description1/Kill Bone Crusher/addjournalentry/Rumplestiltskin's Task-Kill Bone Crusher: Bone Crusher can be found walking around the dungeon beyond the Mini Champion Spawn area to the North and East./autoreward/true/canseereward/false/rewardstring/@bag/ADD/Gold,1000/ADD/RumpleCharms ; SETONTRIGMOB/XmlQuestAttachment,Always After Me Lucky Charms,10080</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Come back when you change your mind.</Text>
+    <Keywords>no thanks</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

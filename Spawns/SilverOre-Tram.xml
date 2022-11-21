@@ -1,0 +1,45 @@
+<Spawns>
+  <Points>
+    <Name>SilverOre-Tram</Name>
+    <UniqueId>c3bfd098-3c9a-434a-9961-c240c55ed574</UniqueId>
+    <Map>Trammel</Map>
+    <X>5773</X>
+    <Y>1894</Y>
+    <Width>10</Width>
+    <Height>10</Height>
+    <CentreX>5778</CentreX>
+    <CentreY>1899</CentreY>
+    <CentreZ>19</CentreZ>
+    <Range>5</Range>
+    <MaxCount>10</MaxCount>
+    <MinDelay>5</MinDelay>
+    <MaxDelay>10</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>20</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <ProximityTriggerMessage>You have found some silver ore!</ProximityTriggerMessage>
+    <TriggerProbability>1</TriggerProbability>
+    <SkillTrigger>Mining,+,50,120</SkillTrigger>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>True</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>GIVE,1/silverore:MX=10:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

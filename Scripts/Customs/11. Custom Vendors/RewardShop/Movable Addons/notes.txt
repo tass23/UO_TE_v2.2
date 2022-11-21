@@ -1,0 +1,96 @@
+Movable Addons and Flying Carpets - developed by Fenn of BES Oasis shard
+=================================
+If you choose to use this or develop on this, please leave this file intact.
+
+
+Version:  Last Modified Wednesday, October 8, 2008
+========
+
+Changelog:
+==========
+
+-Version 2008-10-08
+	-fixed a crash bug when trying to place the carpet in a Multi (thanks Lord_Greywolf!)
+-Version 2008-10-07
+	-modified code a bit so this will work on RunUO 2.0 RC1 (thanks Gargouille!)
+
+
+
+Compatibility:
+--------------
+
+This was developed using a freshly downloaded RunUO 2.0 SVN server, and tweaked to run on a RunUO 2.0 RC1 server.
+
+-RunUO 2.0 SVN version 300 (downloaded October 7, 2008)
+-RunUO 2.0 RC1 (need to modify MovableAddon.cs for this to work on RC1 - instructions are provided in that file)
+
+Notes:
+------
+
+-Use of this package should require little understanding of how it works.
+
+-There are no server modifications required to run this.  Simply drop and run!
+
+Overview:
+-------------
+
+Movable addons are a collection of items that look and behave similar to the well-known Addon class.  A collection of component items
+define the movable addon, and when the addon moves, the components move with it like a unified body.  What distinguishes movable 
+addons from the traditional addons is that a "direction" is defined both in the movable addon and its components.  This direction
+is used to negotiate rotation considerations, as well as player control.  In a sense, a movable addon is almost like a hybrid between
+an addon and a boat.
+
+The main components of a movable addon include:
+-the movable addon object itself
+-the movable addon component pieces which make up the visible collection of items
+-a special "controller" movable addon component which watches for verbal commands, and is used for player control interfacing
+-a separate "key" item, which grants the player access to create, control, store, and customize their movable addon
+
+A movable addon in and of itself is not a functional object, but inherited classes can be defined to create a working object.  Currently,
+the only working example is the flying carpet.  Players can place a flying carpet, and use commands similar to a boat to drive.  
+In addition to boat commands, the commands "up", "down", "take off", and "land" allow the flying carpet to navigate the z-direction.  
+There is also the "fast" speed command, which can be used to specify a larger step size when travelling.  For example, boat drivers
+will be familiar with "forward", "forward slow", "forward one", but not "forward fast".  
+
+The key object for the flying carpet is a magic lamp (constructable item FlyingCarpetMagicLamp).  When this item is created, the 
+carpet design type is randomly selected.  The magic lamp allows the player to create their carpet, much like a ship deed, or drydocked ship.  
+When a player uses this item in their backpack, they are given a targeting cursor to place the carpet.  The user can also customize 
+their carpet layout and appearance by using the Customize context menu entry on the magic lamp.  Customization requires Magic thread 
+(constructable item MagicThread), and can only be performed when the flying carpet is "furled" or stored.  Double-clicking the magic 
+lamp while not riding the carpet will attempt to recall the user to the carpet.
+
+The controller object for the flying carpet is a "genie" which sits at the back of the carpet and chatters when the user speaks commands.
+The genie will only respond to the player who is carrying the corresponding magic lamp in their backpack.  As an alternate mode of 
+control, the user can can double click the genie while riding the carpet to bring up a navigation control panel.  Double-clicking the
+genie while not riding the carpet will attempt to "furl" the carpet.  When the user confirms this, the carpet ceases to exist, and 
+the user can customize the carpet.  The user can place the carpet again by double-clicking the lamp again.
+
+The Flying Carpet requires power crystals as an energy source, and will be usable for 24 hours for each provided piece.  The
+player can refuel the carpet through the navigation control panel, accessible by double clicking the genie while riding the carpet.  The
+carpet will not consume power when it is "furled".
+
+The carpet can by dyed through the use of a flying carpet dye tub (constructable item FlyingCarpetDyeTub).
+
+Various parameters are developer-configurable, such as the energy requirement, the resource required for customization, and so on.
+Other parameters, such as the restriction of carpet travel to certain maps and locations, are also set up and can be easily defined.
+
+Finally, there is no provision for how the magic lamp, carpet dye tub, or magic thread are implemented.  I leave it up to the 
+developer to determine their preferred method of distribution of these items to their players.
+
+
+
+Installation:
+-------------
+
+Basic installation:  Drop this entire folder somewhere in your Scripts Directory.  Be mindful of class name conflicts.
+
+Deinstallation:
+---------------
+
+Basic deinstallation: Remove this entire folder from your scripts directory.
+
+
+Contact:
+--------
+
+Questions, comments?  Contact me at the RunUO Forums under username Fenn.

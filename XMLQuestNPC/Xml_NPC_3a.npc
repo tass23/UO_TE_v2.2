@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Clark</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>10</ResetTime>
+    <ConfigFile>Xml_NPC_3a</ConfigFile>
+    <SpeechEntries>17</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>It looks clear?</Keywords>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Xml Training - Lesson Three,4/   Well now, congratulations on passing the Introductory Course to Xmlspawner Training, young {GETONCARRIED,Access Level Stone,NextAccessLevel}.&lt;br&gt;&lt;br&gt;   I imagine by now that little trick probably is not as nifty as it was before you learned how the magic was made? Should that be the case, you do not want to continue with this training program.&lt;br&gt;&lt;br&gt;   Lesson 4 begins working with Mobs, like myself, an XmlQuestNPC. Pleased to make your acquaintance! Unlike traditional NPCs that have a limited scope, XmlQuestNPCs can not only function as an typical Quest Giver-type, but also as Seekers of Adventure looking for unique destinations to explore! Or perhaps that large Dragon staring at you has a quest for you...or perhaps certain death! Beyond all that, XmlQuestNPCs are fully compatible with Xmlspawner and all the Addons installed on UO-The Expanse!&lt;br&gt;&lt;br&gt;   As an example of a creative use for an XmlQuestNPC, the Werewolf and Vampire Elders are all XmlQuestNPCs, using various NPC files to perform specific tasks, like repairing armor, or buying and selling racial merchandise.&lt;br&gt;&lt;br&gt; These NPC files can be attached to non-Mobs, as well! Yes, that sword, over there on the ground &lt;b&gt;could be a Quest Item&lt;/b&gt;! NPC files can be Loaded onto any Xmlspawner using a Spawn Entry, and they can be edited with any Text Editor program. Xmlspawners themselves can Load a config file too, but for Xmlspawner the Config file is an XML file with specific header information.&lt;br&gt;&lt;br&gt;   Anyone familiar with Raist/Tass Xmlspawner Tutorials should recognize the XmlQuest, &lt;b&gt;A Simple Quest: kill the Wolf prowling the fields&lt;/b&gt; that demonstrated how to set up a basic XmlQuest based on the Keyword KILL.&lt;br&gt;&lt;br&gt;   The various XmlQuest types are listed on Page 4 in the Help document, but they are: Kill, KillNamed,Give,GiveName,Collect,CollectName,Escort. However these are merely a guide. A quest can be whatever your imagination wants it to be.&lt;br&gt;&lt;br&gt;   But, this time your imagination is limited to this pre-designed Kill Quest. After that, the world is your oyster. If you cast the right fishing net.;Alright, going in feet first!;learn1;Nothing, nevermind.;no1</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

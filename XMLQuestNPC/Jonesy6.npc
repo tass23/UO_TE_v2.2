@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Jonesy Ford</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Holy Grail</TriggerOnCarried>
+    <NoTriggerOnCarried>The Final Journey,5</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy6</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>You have the grail! Quick bring it here!</Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yeah, I found it.</Keywords>
+    <Action>TAKEBYTYPE,1,1/HolyGrail ; SETONCARRIED,The Final Journey/objective4/ESCORT,Dr. Ford,Office/Description4/Take Jonesy's father to Jonesy's office in North Western Luna./addjournalentry/The Last Leg: Jonesy wants you to take his father back to his office in North Western Luna./autoreward/true/CanSeeReward/false/AttachmentString/XmlAddFaction,TriFords,100/rewardstring/@bag/ADD/RewardScroll/ADD/RewardScroll/ADD/HolyGrailDeco,ale&lt;name/The Holy Grail&gt;/ADD/FivekGoldDeed ; GIVE/FordLetter ; SETONCARRIED,The Grail Quest/Completed4/true</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Jonesy,0/Thank god you found it! My father's been shot and only the grail can heal him.</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

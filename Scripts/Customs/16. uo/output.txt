@@ -1,0 +1,8 @@
+ServerName=The Expanse
+ServerVersion=Ver : 7.0.12.0
+UpdateTime=9/22/2021 7:03:40 PM
+Guilds=0
+Items=481430
+Mobiles=54648
+Online=0
+UpTime=00:00:03:23

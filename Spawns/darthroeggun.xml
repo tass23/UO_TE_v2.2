@@ -1,0 +1,43 @@
+<Spawns>
+  <Points>
+    <Name>DarthRoeggun</Name>
+    <UniqueId>1fe0d4ac-6379-405b-aa44-aef42d94f068</UniqueId>
+    <Map>Malas</Map>
+    <X>612</X>
+    <Y>2012</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <CentreX>612</CentreX>
+    <CentreY>2012</CentreY>
+    <CentreZ>-80</CentreZ>
+    <Range>0</Range>
+    <MaxCount>1</MaxCount>
+    <MinDelay>5</MinDelay>
+    <MaxDelay>10</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>-1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>False</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>True</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>xmlquestnpc,0/name/Darth Roeggun/EQUIP/&lt;MonkRobe/Name/Sith Robe/hue/2021&gt;/EQUIP/&lt;Cloak/Name/Sith Cloak/ hue/2021&gt;/direction/South/talktext/What is thy bidding my master?/Configfile/DarthRoeggun/LoadConfig/True/Kills/666:MX=1:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

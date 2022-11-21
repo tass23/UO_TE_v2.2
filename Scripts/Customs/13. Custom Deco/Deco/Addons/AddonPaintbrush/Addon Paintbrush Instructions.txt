@@ -1,0 +1,26 @@
+Doubleclick the paintbrush, you get a target.
+
+One: 
+Target the paintbrush itself and you get a item at your feet. 
+This item is an addon and can be chopped etc.
+
+Two: 
+Target an ITEM (in your backpack, on the ground etc) Not a landtile or an addon piece! 
+The AddonPaintBrush changes it's own itemid, its name, and its hue to match the item you targeted.
+
+Three: 
+Target an addoncomponent (any tile in an addon or the item at your feet created earlier) 
+The addoncomponent selected changes it's itemid, name and hue to match the AddonPaintBrush.
+
+Four: 
+Target an addon that has the same itemid as the AddonPaintBrush and it will raise the addon by 1 z.
+
+In an open area add a premade addon. 
+Make the addon a region of it's own. 
+Create a region for each teams building area.
+Set a AddonPaintBrush for team 1's region and dupe it for the number of players on that team. (Or lock it down in the region)
+Do the same for each team. The AddonPaintBrush will not work outside of it's assigned region.
+
+Remember: The paintbrush will not copy the id's of an addon so they will have to scavenge the shard for a portable version of the item they want to place in their copy!
+
+First team to sucsessfully copy the the premade addon in their own area wins!

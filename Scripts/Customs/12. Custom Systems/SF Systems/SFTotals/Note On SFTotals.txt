@@ -1,0 +1,32 @@
+Notes on SFTotals:
+
+SFTotals is a character stats gump that can be called via the Player Context Menu, or just using the command [Totals in-game.
+
+In order to make use of the context menu version (i.e. clicking on your character), you must make the following edits:
+
+-----
+
+Around line 1789, add:
+
+#region SFTotals
+if (Alive)
+list.Add(new CallbackEntry( 6250, new ContextCallback(TotalsMenu)));
+#endregion
+
+-----
+
+Around line 1848, add:
+
+#region SFTotals
+private void TotalsMenu()
+{
+if (!CheckAlive())
+return;
+				
+this.SendGump( new SFTotalsGump(this) );
+}
+#endregion
+
+-----
+
+For support or general questions, please create a topic in Script Support, at AdaptUO.com

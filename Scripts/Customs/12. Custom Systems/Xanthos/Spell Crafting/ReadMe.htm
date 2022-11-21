@@ -1,0 +1,146 @@
+<html>
+	<body>
+	<h3>SpellCrafting version 3.0, by Xanthos</h3>
+	<h4>Introduction</h4>
+	<p>SpellCrafting is the ability to create magics that can be used to affix properties to an item. The system uses two types of jewels, Spellcrafting Jewels and Magic Jewels. The former provide for a specific property to be affixed to an item (i.e., faster casting). The latter provide the charges that affix one of the Spellcrafting properties to an item. Spellcraft Jewels are added to a Book of Spellcrafting, just like scrolls with a spellbook, by dropping them onto the book. There are 50 different Spellcraft Jewels, each with a property that it can affix to items. Magic Jewels are required to affix a property to an item and can be kept in a players backpack or dropped on the book as charges. Holding a lit candle while opening the book allows this "hidden writing" to be displayed. Provided with the system are the Guardian Of The Magics - this npc is a high hp caster that has a small chance to drop a random spellcraft and/or book and magic jewels. There is also a Spellcraft Vendor for those who would rather be able to buy the spellcraft items.</p>
+	<h4>Commands:</h4>
+		<ul>
+			<li>[AllCrafts</li></ul>
+		<h4>Installation</h4>
+	<p>Unzip the Xanthos folder into your customs folder. Copy SpellcraftConfig.xml to your <strong>RunUO\Data</strong> folder if you wish to modify configuration parameters.</p>
+		<h4>Configuration</h4>
+		<p>The file SpellcraftConfig.xml contains the values that configure the system. Thisfile must be placed in your <strong>RunUO\Data</strong> folder to take effect. Some of the configuration parameters are listed below:</p>
+		<ul>
+			<li>MaxPropsAllowed - all items must have aos props totalling less than or equal to this value. The default is 5, so if an item has 5 magic attributes, additional properties may not be spellcrafted onto it. Existing properties may be modified with Spellcrafting however. Armor Resistance Bonuses and Lower Stat Requirements are excluded from this limitation.</li>
+			<li>ExplodeChance - the chance that the craft attempt will backfire and deal damage to the crafter.</li>
+			<li>DestroyChance - the chance that, during a backfire, the item that was trying to be crafted on will be destroyed.</li>
+			<li>ExplodeMinDmg - the minimum damage the backfire explosion does to the crafter.</li>
+			<li>ExplodeMaxDmg - the maximum damage the backfire explosion does to the crafter.</li>
+			<li>ArtifactCraftable - determines whether or not artifact items may be spellcrafted.</li>
+			<li>BaceletsRingsOnly - if true, of all the jewelry, only bracelets and rings may be spellcafted.</li>
+			<li>ScPenaltyChance - the chance that one will be subtracted from the fc of the item when spell channeling is applied to it. FC will never go below -1.</li>
+			<li>MinimumInscription - minimum skill needed to use the book (default is 50).</li>
+			<li>MinimumAlchemy - minimum skill needed to use the book (default is 50).</li>
+			<li>bool[] Enabled - this array contains boolean values that determine whether or not a craft is enabled. If the craft is enabled, players can apply it to items and if it disabled, a message will inform the crafter that it has been disabled.</li>
+			<li>int [] MagicJewelRequirements - this array contains int values that determine how many magic jewels are consumed, for each craft, on spellcrafting attempts.</li>
+		</ul>
+		<h4>The Craft/Item Table</h4>
+		<p>The table below lists each of the crafts and the types of items they apply to. Hats accept the same properties as armor.</p>
+		<p>
+			Hit Chance Increase: Shields Weapons Jewelry<br />
+			Dexterity Bonus: Jewelry<br />
+			Hitpoint Bonus: Armor<br />
+			Intelligence Bonus: Jewelry<br />
+			Mana Bonus: Armor<br />
+			Stamina Bonus: Armor<br />
+			Strength Bonus: Jewelry<br />
+			Cast Recovery: Jewelry<br />
+			Cast Speed: Shields Jewelry<br />
+			Cold Resistance: Armor Shields Weapons Jewelry<br />
+			Defense Chance Increase: Shields Weapons Jewelry<br />
+			Energy Resistance: Armor Shields Weapons Jewelry<br />
+			Enhance Potions: Jewelry<br />
+			Fire Resistance: Armor Shields Weapons Jewelry<br />
+			Hit Cold Area: Weapons<br />
+			Hit Dispel: Weapons<br />
+			Hit Energy Area: Weapons<br />
+			Hit Fire Area: Weapons<br />
+			Hit Fireball: Weapons<br />
+			Hit Harm: Weapons<br />
+			Hit Life Leech: Weapons<br />
+			Hit Mana Leech: Weapons<br />
+			Hit Stamina Leech: Weapons<br />
+			Hit Lightning: Weapons<br />
+			Hit Lower Attack: Weapons<br />
+			Hit Lower Defense: Weapons<br />
+			Hit Magic Arrow: Weapons<br />
+			Hit Physical Area: Weapons<br />
+			Hitpoint Regeneration: Armor<br />
+			Hit Poison Area: Weapons<br />
+			Lower Mana Cost: Armor Jewelry<br />
+			Lower Reagent Cost: Armor Jewelry<br />
+			Lower Requirements: Armor Shields Weapons<br />
+			Luck: Armor Shields Weapons Jewelry<br />
+			Mage Armor: Armor<br />
+			Mage Weapon: Weapons<br />
+			Mana Regeneration: Armor<br />
+			Night Sight: Armor Shields Jewelry<br />
+			Physical Resistance: Armor Shields Weapons Jewelry<br />
+			Poison Resistance: Armor Shields Weapons Jewelry<br />
+			Reflect Physical: Armor Shields<br />
+			Self Repair: Armor Shields<br />
+			Spell Channeling: Shields Weapons<br />
+			Spell Damage Increase: Jewelry<br />
+			Stamina Regeneration: Armor<br />
+			Use Best Weapon Skill: Weapons Weapon<br />
+			Damage Increase: Weapons Jewelry<br />
+			Swing Speed Increase: Weapons<br />
+			Night Sight: Armor Shields Jewelry<br />
+			Slayer: Weapons Instruments<br />
+			Durability: Armor Shields Weapons</p>
+		<h4>Requirements</h4>
+		<p>Requires the Xanthos Utilities package. The server must be AOS enabled for this system to work.</p>
+		<h4>Caveats</h4>
+		<p>You may use or modify this system in any way you desire, however I ask that you leave the original headers in the source files if you re-write or redistribute the sources in any way.</p>
+		<p>- Xanthos</p>
+		<h3>Changes</h3>
+		<h4>Version 2.9 2/04/06</h4>
+		<ul>
+			<li>ConfigParser no longer halts shard start-up when a bad value is found in the xml file. Instead it displays the error on the console, leaving the default value untouched</li>
+			<li>Added a ConfigParser option to halt the shard on bad values in the xml config file</li>
+		</ul>
+		<h4>Version 2.8 1/14/06</h4>
+		<ul>
+			<li>Players with top Spell Crafting skills have a chance to mark the item</li>
+			<li>A number of parameters are available for configuration in the file SpellCraftConfig.xml (place this in your RunUO\Data directory). This allows configuration parameters to be modified without code changes.</li>
+		</ul>
+		<h4>Version 2.7 5/27/05</h4>
+		<ul>
+			<li>Fixed a botched scaling factor that caused some craft values to be inflated by a factor of 10</li>
+		</ul>
+		<h4>Version 2.6 5/26/05</h4>
+		<ul>
+			<li>Added the capability to drop magic jewels onto the book giving the book charges with which to spellcraft. This feature can be enabled/disabled with a configuration variable</li>
+			<li>Crafts and charges in the book are displayed as name properties making it easier to identify what is in the book making buying and selling of of books less risky</li>
+			<li>Created more configuration variables for things that spawn on the mobiles, max skills and intensity ranges</li>
+			<li>Fixed an off by one value that caused the Durability craft (the last one) never to spawn</li>
+			<li>Added headers to all files giving credit to the original author of the system</li>
+			<li>Reworded a few user strings</li>
+		</ul>
+		<h4>Version 2.5 5/23/05</h4>
+		<ul>
+			<li>Corrected a total skill value of 240 for alchemy + inscription, used to figure the skill scalar. The value should have been 200 since 100 is the cap for both skills</li>
+			<li>Placed a check in the gump code to validate a minimum skill before allowing a craft to be applied</li>
+			<li>Fixed a rounding error in scale that made it difficult reaching 100% intensity on a property</li>
+			<li>Added an array to allow setting of individualy, per craft, the magic jewel consumption</li>
+			<li>Added showing of the magic jewel usage next to each craft name if the player is holding a lit candle when the book is opened. In this mode all craft names are show with a distinctive tan hue denoting crafts not in the book</li>
+			<li>Now checking that the book is in the player's backpack before allowing the book to be opened</li>
+		</ul>
+		<h4>Version 2.4 4/22/05</h4>
+		<ul>
+			<li>Hats are now supported for all the crafts that can be applied to armor</li>
+			<li>Instruments can now be Spellcrafted with the Slayer craft</li>
+			<li>Added the Night Sight craft and jewel</li>
+			<li>Added the Slayer craft and jewel. Applying this craft places a random Slayer on the instrument or weapon. There is a chance between 1% and 10%, depending on skill, that a super Slayer will be placed on the item</li>
+			<li>Added the durability craft and jewel</li>
+			<li>Updated the Readme to reflect the new items and crafts in the craft table</li>
+			<li>Percentage of maximum intensity for each craft is now linearly based on player skill - the higher the skill the higher the percentage of maximum intensity can be acheived. At 24 combined alchemy and inscribe the best that can be acheived is 10% intensity, below 24 combined skill there will be no effect. At 240 combined skill 100% intensity can be acheived. For example, the maximum Hit Chance Increase for the low skilled player is 2% HCI (thats 10% of the maximum of 15, or 1.5 rounded up). For the highly skilled player 15% would be the maximum HCI that can be acheived. This change was the result of a fix to an old math bug in the code that accounted for player skill</li>
+			<li>The book will now remain open at the page last viewed when using a craft. Some pages and crafts were moved around in the book to facilitate this change</li>
+			<li>Removed the somewhat gratuitous throw located directly inside and at the end of the try block in each of the callbacks. This was replaced with a string assignment and a subsequent check in the new finally block</li>
+			<li>The book now displays the total Spellcrafts in the book as well as the total possible. The book will now show the names of the missing Spellcrafts as well, if the player knows the secret to unlocking the hidden information</li>
+		</ul>
+		<h4>Version 2.3 4/17/05</h4>
+		<ul>
+			<li>Expanded the number of items that some of the crafts can be applied to (e.g. luck on shields). See the README file for a complete table of crafts and items they apply to</li>
+			<li>Explosive failures will now consume magic jewels</li>
+			<li>When attempting to apply a craft to an item not supported by the craft, the player is given a message stating what items the craft does apply to</li>
+			<li>Graphic and audio effects now occurr on Successful spellcrafting attmepts</li>
+			<li>The spellcrafting book now remains open until the user dismisses it. However it always resets to the first page upon spellcrafting attempts (still looking for a solution to this). + Some of the code and data has been factored resulting in a smaller assembly</li>
+			<li>Added new configuration variable kScPenaltyChance. This is the chance that adding spell channelling to a weapon may result in a penalty
+			to casting. See the README for a description of all the configuration variables</li>
+			<li>Properties are no longer stackable due to many reports of players heavily stacking fc on items</li>
+			<li>Changed the hue and image of the Spellcraft Jewels to make them easier to work with</li>
+			<li>Changed the wording of many user messages.</li>
+		</ul>
+</body>
+</html>

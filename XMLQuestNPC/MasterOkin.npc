@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Master Okin</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Trial of Skill Cont'd | ATTACHMENT,Trial of Skill Cont'd,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>MasterOkin</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Great kid! Don't get cocky!</Text>
+    <Action>SET,0x4003A352/Visible/False</Action>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>I have a bad feeling about this...</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Master Okin,4/Indeed you are wise to approach with caution. I am Master Okin and I am here to further hone your lightsaber skills. It is important to have a strong tether to the Force, but it's always a good idea to know how to properly wield a lightsaber. Have you completed the Trial of Skill offered by Master Ta-Tzu?;Yes, I completed it already.;Okay;No, I came to you first.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Excellent! Say "ready" when you're prepared to test your skills.</Text>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/Trial of Skill Cont'd/titlestring/Trial of Skill Cont'd/notestring/You have learned three new Force powers - Force Weapon, Bellow, and Battle Meditation. Study carefully what each one does before you begin combat. You will have to eliminate 2 remotes of increasing difficulty./Objective1/KILL,TrainingRemote2,1/Description1/Eliminate the first Training Remote./Objective2/KILL,TrainingRemote3,1/Description2/Eliminate the second Training Remote./AddJournalEntry/The Remotes: Say READY when you are prepared to battle the remotes./Repeatable/false/autoreward/true/CanSeeReward/False/Attachmentstring/XmlAddKarma,400/Rewardstring/@bag/ADD/ConcealmentDisc/ADD/StealthDisc&gt; ; SET,0x40039E0B/DoReset/True/Running/true</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>You should go back to Master Ta-Tzu before you attempt this trial.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

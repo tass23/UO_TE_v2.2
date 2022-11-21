@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Aindru The Mischevious Leprachaun</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>StPatrick</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>And to you!</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,A Fool And His Money,4/ Ah laddie, help a poor fella out - I've lost me gold! I swear - I'll even give the very beard on my face, if you do!!;Gold? Alright! I'll do it!;Yes;No, sounds a littletoo easy to me.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/A Fool And His Money/Titlestring/A fool and his money/Notestring/Aindru the Leprachaun has lost his pots of gold. Go get them for him!/Objective1/GIVENAMED,Aindru The Mischevious Leprachaun,Pot O' Gold,fork,10/Description1/Give 10 Pots O' Gold to Aindru/Autoreward/True/CanSeeReward/False/RewardString/@Bag/ADD,0.2/&lt;goldnecklace/hue/1466/name/Magic beard/ITEMID/8254&gt;/ADD/&lt;AleKeg/Name/Keg O' Guinness/Quality/Exceptional/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,A Fool And His Money,0/Wonderful lad! I knew you'd agree! I'm afraid I'm sketchy on where I left them - you can blame the black stuff for that! They're some around the lands, though. I'd suggest you start looking every tavern you can find - I was in them all! HAHAAHHA!! Well, there - don't look a me like a confused turnip - go get my gold!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Top of the morning to you!</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Well, have a merry day, anyway! Now where's me Guinness?</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

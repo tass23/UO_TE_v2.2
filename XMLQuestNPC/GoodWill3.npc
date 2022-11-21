@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Jedi Benefactor</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Delivering Aid | A Draught Of Senoti</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Goodwill3</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>I wish to volunteer.</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Delivering Aid,4/ Botanist, Master Laredor is currently investigating the source of the contamination in the Blighted Grove. He has requested that we send him a draught of Senoti to help him protect his padawan from the toxic waters. Would you bring it to him?;I can.;Yes;No, I'm too busy, sorry.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Fork/ITEMID/6187/Name/A Draught Of Senoti&gt; ; GIVE/&lt;Questholder/name/Delivering Aid/Titlestring/Delivering Aid/Notestring/A benefactor from the jedi order has asked you to deliver a  draught of Senoti to a Master Laredor in the Blighted Grove./Objective1/GIVENAMED,Master Laredor,A Draught Of Senoti,fork,1/Description1/Deliver the draught of Senoti to the Master Laredor in Blighted Grove/Objective2/Return to the quartermaster for your reward/Description2/Return to the quartermaster for your reward./Autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/RewardScroll/ADD,0.1/&lt;Decorativeshield3/Hue/2006/Name/Blessed Shield of Botany/movable/true/&gt;</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>May the Force be with you.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

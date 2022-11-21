@@ -1,0 +1,4 @@
+SETONTRIGMOB/ANIMATE,11 ; SETONTRIGMOB/MSG/You Grasp At The Name/ ; 
+ 
+SETONTHIS/MSG/*Rustles*/ ; SETONTRIGMOB/MSG/You Do Not Get Any Reward/ ;
+SETONTHIS/Weight/INC,-10/

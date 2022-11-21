@@ -1,0 +1,101 @@
+BINGO GAME
+by henry_r
+02/01/08
+
+Bingo is a game of chance in which randomly selected numbers are drawn and 
+players match those numbers to those appearing on 5x5 matrices which are 
+pre-printed in books named "Bingo Cards". The first person to have 
+a card where the drawn numbers form a specified pattern is the winner and calls 
+out the word "BINGO!" to alert others and inform the GameMaster of the win. The card must 
+first be properly checked for accuracy before the "win" is officially confirmed at which 
+time the prize is secured and a new game is begun.
+
+
+
+Description of the game
+
+Each bingo player is given a Bingo Card marked with a "grid" containing a unique combination
+of numbers and a book, "Bingo Called Numbers. The GameMaster notes the player's name 
+and the card number issued in the "Player / Card Number" book (this will be used to easily verify 
+winners later). The winning pattern to be formed on the card is announced before the 
+game starts. On each turn, the GameMaster "randomly" selects a numbered "ball" from the 
+"Bingo Number Bag" and announces the number to all the players. The ball is then 
+set aside in the "Bingo Called Number Bag" so that it cannot be chosen again 
+and the GameMaster notes the called number in the "Bingo Called Numbers" book. 
+Each player searches his card for the called number, and if he finds it, notes it in his
+"Bingo Called Numbers" book. The element of skill in the game is the ability to search 
+one's card for the called number in the short time before the next number is called.
+
+The GameMaster continues to select and announce numbers until the first player forms
+the agreed pattern (one line, two lines, full house) on their card and shouts
+out the name of the pattern or "BINGO!". The GameMaster verifies the player's card 
+against the called numbers and declares the win. One of the most common patterns, 
+called full card, blackout and cover-all simply consists of marking all the numbers 
+on the card. Other common patterns are single line, two lines, the four corners, 
+center cross, L, T, Y, postage stamp (2x2 and in a corner) inner square (4 × 4), 
+roving square (3 × 3), and roving kite (a 3 × 3 diamond). Lines can be made horizontally, 
+vertically, or diagonally. Inner and roving squares and kites must be completely filled; 
+roving squares and kites may be made anywhere on the card.
+
+
+
+Bingo Cards
+
+Bingo Cards are books which contain 25 "squares" arranged in five vertical and 
+five horizontal rows;  Each space in the "grid" contains a number, except for the center square, 
+which is considered filled. The highest number used is 75. The letters B, I, N, G, O 
+are printed above the five vertical columns, with one letter appearing above each column. 
+The center space is marked "F." The printed numbers on the card correspond 
+to the following arrangement: 
+
+1 to 15 in the B column
+16 to 30 in the I column
+31 to 45 in the N column
+46 to 60 in the G column
+61 to 75 in the O column
+
+
+
+Installation
+
+Drag and Drop Bingo folder into your customs folder.
+BingoGameInfo.txt included in main folder for reference.
+
+There is one SMALL Distro edit in Scripts/Misc/CharacterCreation.cs on or around line 47;
+This edit MUST be done in order to use this package
+
+look for this line: 
+private static void PlaceItemIn( Container parent, int x, int y, Item item )
+
+and change to this:
+public static void PlaceItemIn( Container parent, int x, int y, Item item )
+
+(this allows placement of game items in specific spots in their respective bags)
+
+Restart server.
+
+
+
+Useful In-Game Commands
+
+[Add BingoGame - adds a complete Bingo Game kit
+
+[Add BingoNumbersBag - adds a bag of Bingo Numbers: B1 - O75
+[Add BingoCalledNumbersBag - adds a empty bag for holding called numbers
+[Add BingoCalledNumbers - adds a book for keeping track of called numbers
+[Add BingoCardBag - adds a bag of Bingo Cards: 1 - 18
+[Add BingoCardMasterListBag - adds a bag of Bingo Cards: 1 - 18 / for GameMaster use
+[Add BingoPlayerCardRegister - adds a book for staff to keep track of player / issued card numbers
+
+[Add Bingo - brings up complete menu of Bingo game items
+
+
+Feel free to use this package as you see fit for your application.
+
+Enjoy
+
+henry_r
+
+
+
+

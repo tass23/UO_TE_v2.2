@@ -1,0 +1,48 @@
+<center><h3><basefont color=#007fff><u>Xml Training:Lesson Four</u></basefont></h3></center>
+<br>
+XmlQuestNPCs and Xmlspawners can both use Config files to Load setups when added to the 'shard. For Xmlspawners the Config files are XML files with specific header information and the XmlQuestNPCs use NPC files, which are another version of an XML file. Both file types can be edited with any Text Editor program, but one that shows Line numbers is more helpful when editing.
+<br>
+<br>
+XmlQuestNPCs use the XmlDialog attachment to create the Config files. When a new XmlQuestNPC is spawned they <b>do not come with XmlDialog already attached</b>. Did you catch that? Okay, so when an XmlQuestNPC is spawned without a Config file, a Staff member must attach XmlDialog to them.
+<br>
+<br>
+When a new XmlDialog is attached it is completely blank, without any Line Entries even. Once a Line Entry is added, the rest of the window will be populated. XmlDialogs should begin with Entry 0, and then Entry 10, 20, 30, 40, etc., etc. Depending on how the Player should interact with the XmlQuestNPC, the start of the XmlDialog itself may be Entry 0 or Entry 10. The flow of the XmlDialog is important and this is covered by Dialog Choices and Keywords.
+<br>
+<br>
+Previous Lessons referred to Xmlspawner Keywords as Commands used in Spawn Entries or from the Command Line. XmlDialog Keywords mean something different though. Instead of being a reference to a Command, it is a reference to a Dialog Entry, based on a Dialog Choice from a previous Entry.
+<br>
+Entry 0- XmlQuestNPC greets the Player as they approach, or TalkText is used by the Player that matches the Keyword(s) for Entry 0.
+<br>
+Entry 10- Dialog Option 1 from Entry 0 matches Keyword(s) for Entry 10.
+<br>
+Entry 20- Dialog Option 2 from Entry 0 matches Keyword(s) for Entry 20.
+<br>
+Entry 30- Dialog Option 1 from Entry 10 matches Keyword(s) for Entry 30.
+<br>
+Entry 40- Dialog Option 1 from Entry 20 matches Keyword(s) for Entry 40.
+<br>
+Entry 50- Dialog Option 1 from Entry 30 and Entry 40 match Keyword(s) for Entry 50.
+<br>
+<br>
+Typical Quests operate in a straight line. Dialog, Player Accepts or Declines, (optional) Player completes Quest. XmlQuests can work in the same fashion, or they can operate more like a Tree.
+<br>
+(Note: Entry 50 has Keywords that match from two previous Entries. Multiple Entries can be added to the DependsOn field.)
+<br>
+If we stay with the Tree analogy, Entry 0 are the Roots and Trunk of the Tree. Then every Entry that follows is another branch in the Tree, that grows from the Trunk. Yes, this does mean that a Player can crawl across an entire left side of the Tree and never see any Dialog on the right side. Then consider places where Branches intersect as Entries with multiple matches for the Keywords.
+<br>
+<br>
+Different Entries can be Conditional too, so they only Trigger if the Condition is met. For example, does the Player have less than 50% Health? (Trigger Dialog), or do or say something else, i.e. "Sorry, you do not meet those requirements.". Or did a Player complete another Quest before trying to do this Quest? Lots of options and choices!
+<br>
+<br>
+Since these files can be edited with any Text Editor, when adding new Entries the entire section of XML code must be copied and any additional fields must be added. Using in-game XmlEdit is easier for setting all the Entry Properties first and then Edit the Dialog and Choices in a Text Editor. This way all the additional fields needed for each Entry are handled in-game, rather than needing to be added manually in the Text Editor.
+<br>
+<br>
+Some of the Properties for the XmlQuestNPC can be set on the Xmlspawner Spawn Entry, like their Name, Gender (1 or 2) with no Gender being a random choice when the XmlQuestNPC spawns, and TalkText (which matches the Keyword in the XmlDialog for that XmlQuestNPC). The Config file must be declared and Loaded in the Spawn Entry, as well.
+<br>
+<br>
+A newly spawned XmlQuestNPC will have no XmlDialog attached, which is why the Config file must be declared and Loaded. However, an XmlQuestNPC can also be used as a Template. Assume someone wants a hundred Gathering Quests (Collect, CollectNamed). Rather than having to type out all that information for each one, instead spawn an XmlQuestNPC, attach XmlDialog, and fill in all the basic information, even the Objectives for the Quest Books. When all that is complete, Save to file. Open the Config file in a Text Editor, make the changes for the exact Quest Objectives and use Save As to rename the file and Save it. Place an Xmlspawner with a Spawn Entry for an XmlQuestNPC, with that Filename as the Config file and Loaded for that XmlQuestNPC.
+<br>
+<br>
+Then that Xmlspawner could be Saved as an XML file, and then converted into a Config file. When the next XmlQuestNPC needs to be setup and spawned, use XmlLoad  to load the Config file for the Xmlspawner. Use the DUPE Command on the newly created Xmlspawner, rename the Duped Xmlspawner, and remove the first one that was Loaded. XmlSave on the Duped Xmlspawner and now there is a Config file for that Xmlspawner. Then all anyone has to do is edit the files with a Text Editor and point the Xmlspawners and XmlQuestNPCs to the new Config files to be Loaded.
+<br>
+<br>

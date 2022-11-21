@@ -1,0 +1,44 @@
+PlayerMobile Edits
+
+Around line 59 add
+
+#region Plant system
+        BasketWeaving = 0x00300000,
+        ToggleClippings = 0x00400000,
+        ToggleCutClippings = 0x00500000,
+        ToggleCutReeds = 0x00600000, 
+        #endregion
+
+Within the Enums Section
+
+Around line 485 add
+        #region Plant system
+        
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool ToggleClippings
+        {
+            get { return GetFlag(PlayerFlag.ToggleClippings); }
+            set { SetFlag(PlayerFlag.ToggleClippings, value); }
+        }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool ToggleCutReeds
+        {
+            get { return GetFlag(PlayerFlag.ToggleCutReeds); }
+            set { SetFlag(PlayerFlag.ToggleCutReeds, value); }
+        }
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool ToggleCutClippings
+        {
+            get { return GetFlag(PlayerFlag.ToggleCutClippings); }
+            set { SetFlag(PlayerFlag.ToggleCutClippings, value); }
+        }
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool BasketWeaving
+        {
+            get { return GetFlag(PlayerFlag.BasketWeaving); }
+            set { SetFlag(PlayerFlag.BasketWeaving, value); }
+        }
+        #endregion
+
+Withing the Player Flags Section

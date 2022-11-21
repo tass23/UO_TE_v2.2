@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Charmaine</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Midnight Coven | ATTACHMENT,The Midnight Coven,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>vampiredungeon</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn />
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>*moan*...help....me.....please.....help</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>are you alright?</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Charmaine,4/Please help me. I'm being held captive. I'm so weak and thirsty. I was taken captive by creatures that attacked my farm and killed my family. I'm not sure where they came from, but they killed my entire family and brought me here to play with, like some sick, twisted game. Their lord was looking for a staff that my father had. I thought it was just an old walking stick, but it was the staff the Vampire Lord was looking for. I overheard two of the vampires talking as they brought me here. This staff grants the wielder tremendous power over the elements and would allow the vampires to travel in daylight. You must stop them! I've heard the coven's lair entrance is somewhere in Wisp Dungeon on the third level. My mother was taken down there and I followed a trail of her blood when I was captured. I overheard a voice say 'Raven'. Will you please help me?;Yes, I will help you get out of here.;Help!;No, I refuse to help you, it's a trap!;NoHelp!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>So thirsty...</Text>
+    <Keywords>Help!</Keywords>
+    <Action>GIVE/&lt;questholder/name/The Midnight Coven/titlestring/The Midnight Coven/notestring/You must find the entrance to the coven inside Wisp Dungeon. Then locate and kill the Vampire Lord./Objective1/Find Entrance/Description1/Find the entrance to the coven./Objective2/KILLNAMED,Lord Damon,1/Description2/Kill Vampire Lord Damon./addjournalentry/Charmaine gave you some clues: Wisp Dungeon, 3rd level. Follow the blood trail. Speak the word 'Raven' at the entrance to the coven./autoreward/true/CanSeeReward/False/partyenabled/true/difficulty/3/repeatable/true/rewardstring/@bag/ADD/RND,0.45/RewardScrollDeed/ADD/RND,0.25/RewardScrollDeed/ADD/RND,0.15/RewardScrollDeed/ADD/RND,0.05/RewardScrollDeed/ADD/Gold,5000</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>So thirsty...</Text>
+    <Keywords>NoHelp!</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

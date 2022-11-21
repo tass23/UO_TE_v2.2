@@ -1,0 +1,50 @@
+File: Scripts\Spells\Base\Spell.cs
+
+[SEARCH FOR]
+		public virtual bool ConsumeReagents()
+		{
+			if ( m_Scroll != null || !m_Caster.Player )
+				return true;
+
+			if ( AosAttributes.GetValue( m_Caster, AosAttribute.LowerRegCost ) > Utility.Random( 100 ) )
+				return true;
+
+			Container pack = m_Caster.Backpack;
+
+			if ( pack == null )
+				return false;
+
+			if ( pack.ConsumeTotal( m_Info.Reagents, m_Info.Amounts ) == -1 )
+				return true;
+
+			return false;
+		}
+		
+[REPLACE WITH]
+		public virtual bool ConsumeReagents()
+		{
+			if ( m_Scroll != null || !m_Caster.Player )
+				return true;
+
+			if ( AosAttributes.GetValue( m_Caster, AosAttribute.LowerRegCost ) > Utility.Random( 100 ) )
+				return true;
+
+			Container pack = m_Caster.Backpack;
+
+			if ( pack == null )
+				return false;
+
+			if ( pack.ConsumeTotal( m_Info.Reagents, m_Info.Amounts ) == -1 )
+				return true;
+
+			// UNIVERSAL STORAGE KEYS START
+			//pass the task of finding/consuming reagents to a static method in BaseStoreKey.  This allows the system to scan
+			//all keys in your backpack for any reagents, and pick what it needs from each one.  Also, it will doublecheck the
+			//backpack in case not everythinhg was found in the keys, but the rest is lying loose in the backpack
+			if( BaseStoreKey.Consume( pack, m_Info.Reagents, m_Info.Amounts ) )
+			{
+				return true;
+			}
+			// UNIVERSAL STORAGE KEYS END
+			return false;
+		}

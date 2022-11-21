@@ -1,0 +1,249 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Darth Indiglow</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Sith Crystal Harvester</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>SithSabers</ConfigFile>
+    <SpeechEntries>17</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>Yes </Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Hail!</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Sith Lord,2/So young sith take my harvesting tool and tell me which one you're after, you have much to learn from them.                       Cunning Of Tyranus     Vexxtal Crystal     Sapith Crystal         Lava Crystal       Stygium Crystal        Phond Crystal      Eralam Crystal         Sigil Crystal       Nextor Crystal         Damind Crystal     Synthetic Crystal       Lignan Crystal      Blackwing Crystal       Barab Ore</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Cunning Of Tyranus</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\CunningOfTyranus.txt} ; SETVAR,TargetCondition/Name = "Tyranus Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Tyranus/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>Vexxtal Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\VexxtalCrystal.txt} ; SETVAR,TargetCondition/Name = "Vexxtal Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Vexxtal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>Sapith Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\SapithCrystal.txt} ; SETVAR,TargetCondition/Name = "Sapith Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Sapith/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Keywords>Lava Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\LavaCrystal.txt} ; SETVAR,TargetCondition/Name = "Lava Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Lava/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Keywords>Stygium Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\StygiumCrystal.txt} ; SETVAR,TargetCondition/Name = "Stygium Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Stygium/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Keywords>Phond Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\PhondCrystal.txt} ; SETVAR,TargetCondition/Name = "Phond Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Phond/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Keywords>Eralam Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\EralamCrystal.txt} ; SETVAR,TargetCondition/Name = "Eralam Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Eralam/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Keywords>Sigil Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\SigilCrystal.txt} ; SETVAR,TargetCondition/Name = "Sigil Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Sigil/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Keywords>Nextor Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\NextorCrystal.txt} ; SETVAR,TargetCondition/Name = "Nextor Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Nextor/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>120</EntryNumber>
+    <ID>120</ID>
+    <Keywords>Damind Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\DamindCrystal.txt} ; SETVAR,TargetCondition/Name = "Damind Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Damind/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>130</EntryNumber>
+    <ID>130</ID>
+    <Keywords>Synthetic Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\SyntheticCrystal.txt} ; SETVAR,TargetCondition/Name = "Synthetic Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Synthetic/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>140</EntryNumber>
+    <ID>140</ID>
+    <Keywords>Lignan Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\LignanCrystal.txt} ; SETVAR,TargetCondition/Name = "Lignan Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Lignan/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>150</EntryNumber>
+    <ID>150</ID>
+    <Keywords>Blackwing Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\BlackwingCrystal.txt} ; SETVAR,TargetCondition/Name = "Blackwing Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/Blackwing/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>160</EntryNumber>
+    <ID>160</ID>
+    <Keywords>Barab Ore</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\BarabOre.txt} ; SETVAR,TargetCondition/Name = "Barab Ore" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/SithPick/Name/Sith Crystal Harvester ; SETONCARRIED,Sith Crystal Harvester/ATTACH/&lt;XmlUse/Name/BarabOre/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

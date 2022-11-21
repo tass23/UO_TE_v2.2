@@ -1,0 +1,28 @@
+/*---------------------------------------------------- BaseStoreKey ammo BEGIN-----------------------------------
+This block allows the ranged weapon system to check and withdraw ammo from any BaseStoreKey or MasterKey objects found within the
+archer's backpack.  
+
+Location: This block belongs in BaseRanged.cs under Scripts\Items\Weapons\Ranged\. This block needs to be inserted in the OnFired() 
+event callback method, and it needs to replace the following line:
+
+			if ( attacker.Player && (pack == null || !pack.ConsumeTotal( AmmoType, 1 )) )
+				return false;
+
+On an unmodified server, this is found on or around line 102 of BaseRanged.cs
+
+
+Installation: remove the two lines of code listed above, and drop this in its place
+
+*/
+			//only consume ammo if you're a player - monster archers have unlimited ammo
+			if ( attacker.Player )
+			{
+				//if they don't have a backpack, or they don't have arrows/bolts in their pack, or they dont have arrows/bolts in
+				//their keys, then return false
+				
+				if( pack == null || ( !pack.ConsumeTotal( AmmoType, 1 ) && !BaseStoreKey.Consume( pack, AmmoType, 1  ) ) ) 
+				{
+					return false;
+				}
+			}
+//---------------------------------------------------- BaseStoreKey ammo END-----------------------------------

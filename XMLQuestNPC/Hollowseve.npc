@@ -1,0 +1,98 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Maurice</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Two Foul Demons | ATTACHMENT,Two Foul Demons,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>5</ResetTime>
+    <ConfigFile>Hollowseve</ConfigFile>
+    <SpeechEntries>6</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn />
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>So, ye seek fame and fortune d'ye?</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes, tell me where it can be found.</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Maurice,4/Fame and fortune await those with strong constitution and mental fortitude. Two foul demons are attempting to crossover to our realm during Hollow's Eve. The Sweety Person and the Horseman have items that can be used to defeat one or the other of the demons. Are you prepared to accept this responsibility?;Yeah, you got it.;yes;Um, no sounds dangerous.;no</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>yes</Keywords>
+    <Action>GIVE/BrokenMirror/name/Broken Mirror ; GIVE/HorsemanHead</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Maurice,4/Great, take this mirror and proceed to the second level of the dungeon. You will find two sets of stairs, make sure you take the stairs to the WEST. Approach the pillar and speak the name "Sweety Person" outloud 5 times. If you should defeat them in combat, you can claim their hook as yours. Use the EAST stairs and take the Horseman's Head to his summoning pillar and say: "Rise, Horseman and fight!" If you should defeat him, you can claim his sword as yours. Return to me when you're done.;Wonderful, let's do it.;great;I really can't do this.;forgetit</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Fine, who needs you anyway!</Text>
+    <Keywords>forgetit</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>great</Keywords>
+    <Action>GIVE/&lt;questholder/name/Two Foul Demons/titlestring/Two Foul Demons/notestring/Take the WEST stairs to the second level of the dungeon. At the summoning pillar say "Sweety Person" outloud 5 times. Then take the EAST stairs to the second level of the dungeon and at the Horseman's summoning pillar say: "Rise, Horseman and fight!" /objective1/KILLNAMED,SweetyPerson,1/objective2/GIVENAMED,Maurice,Sweety Person's Left Hand/Objective3/KILLNAMED,The Horseman,1/Objective4/GIVENAMED,Maurice,Horseman's Sword/autoreward/false/repeatable/true/doreset/true/AddJournalEntry/A note from Maurice: Brave hero, to summon the Sweety Person, stand within their lair with the Broken Mirror. Look into it and say exactly these words, "Sweety Person, Sweety Person, Sweety Person, Sweety Person, Sweety Person" </Action>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Maurice,0/Goodluck! I'll be here awaiting your return.</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

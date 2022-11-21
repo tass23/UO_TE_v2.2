@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RegionEditor>
+  <mulpath path="D:\Program Files (x86)\Free Shard\EA Games\Ultima Online 2D Client" />
+  <script file="F:\The_Expanse_Public\Data\Regions.xml" />
+  <client compatibilitymode="true" />
+</RegionEditor>

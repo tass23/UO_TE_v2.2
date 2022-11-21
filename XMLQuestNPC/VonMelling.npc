@@ -1,0 +1,219 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Professor Abraham Von Melling</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Vampire Skeleton Key | Werewolf Skeleton Key</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.166666666666667</ResetTime>
+    <ConfigFile>VonMelling</ConfigFile>
+    <SpeechEntries>14</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Who's hunting whom...</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Professor, I need your help.</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Condition>GETONTRIGMOB,Vampire=0 | GETONTRIGMOB,Werewolf=0</Condition>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Von Melling,4/Ah, the stalwart adventurer {GETONTRIGMOB,Name} has arrived! Just in time too! We must arm ourselves against the nightmares roaming the world now. You do not seem prepared to hunt down these vile, evil forces. I can give you a list of everything you need in order to embark upon this quest, or you can just tell me what you need. The list of everything includes gathering resources to craft weapons as well as the ancient texts needed to enter their respective domains. Otherwise you may select just one or the other. Simply type the number to tell me what you need.;Everything that is needed to craft the weapons as well as the ancient texts needed to enter their respective domains.;All;I just need the ancient texts.;Text;I need the list of ingredients to craft the weapons.;ingredients;I have the text.;books;Nevermind;nevermind</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Condition>GETONTRIGMOB,Vampire=1 | GETONTRIGMOB,Werewolf=1</Condition>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Von Melling,4/Ah, the stalwart adventurer {GETONTRIGMOB,Name} has finally arrived! Oh, but I see you are tainted by the darkness. Perhaps it is best that you battle your evil counterparts on their own terms. As the greatest force against darkness is darkness. Fighting evil with evil, very interesting. I can give you a list of everything you need in order to embark upon this quest, or you can just tell me what you need. The list of everything includes gathering resources to craft weapons as well as the ancient texts needed to enter their respective domains. Otherwise you may select just one or the other. Simply type the number to tell me what you need.;Everything that is needed to craft the weapons as well as the ancient texts needed to enter their respective domains.;All;I just need the ancient texts.;Text;I need the list of ingredients to craft the weapons.;ingredients;I have the text.;text;Nevermind;nevermind</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>All</Keywords>
+    <Action>GIVE/&lt;questholder/Name/Bless Me Father For I Have/titlestring/Bless Me Father For I Have/Notestring/Professor Von Melling has given you a list of items to gather and have blessed in order to fight against the evil that is spreading across the land./Objective1/Craft Plain Silver Stake/Description1/Use Carpentry to craft an Unblessed Silver Stake and have it blessed./Objective2/Craft Holy Water Bomb/Description2/Use Alchemy to craft a Holy Water Bomb./Objective3/Locate the Holy Fountain/Description3/Locate the Holy Fountain./EchoAddJournalEntry/Unblessed Silver Stake: The Professor suggested using Carpentry to craft an Unblessed Silver Stake, which can be blessed at a Holy Fountain./EchoAddJournalEntry/Holy Water Bomb: Using Alchemy, the Professor said to craft Holy Water Bombs from specially blessed Holy Water./EchoAddJournalEntry/Holy Fountain: Deep inside the Holy Grail Temple discovered by Jonesy Ford there lies a Holy Fountain which will bless items that are dipped into the water./Difficulty/2/Repeatable/True/Autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/Gold,1000/ADD/VampireTome/ADD/WerewolfTome</Action>
+    <DependsOn>20,30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Von Melling,4/I have given you a quest to craft the weapons that will help you in the coming battle. Next I shall give you a list of items to gather to craft said weapons.;Thanks;Okay</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>Good luck {GETONTRIGMOB,Name}!</Text>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/Name/A Hunting We Will Go/titlestring/A Hunting We Will Go/Notestring/Professor Von Melling has given you a list of items to gather and use to craft powerful weapons to be used in the fight against the evil that is spreading across the land./Objective1/COLLECT,FreshGarlic,10/Description1/COLLECT 10 Fresh Garlic./Objective2/COLLECT,SilverIngot,10/Description2/COLLECT 10 Silver Ingots./EchoAddJournalEntry/Fresh Garlic: Professor Von Melling said he has heard that fresh garlic can be found around the witch Grizelda's cabin./EchoAddJournalEntry/Silver Ore: It's been said that the Solen Queen's love the way this mineral shines so they live in areas where veins of silver are plentiful./EchoAddJournalEntry/Silver Ingots: Silver ore can be smelted into ingots just like any regular ore./autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/&lt;FreshGarlic/Amount/10&gt;/ADD/&lt;SilverIngot/Amount/10&gt;/ADD,0.1/{RNDSTRLIST,VampireTalisman,WerewolfTalisman}</Action>
+    <DependsOn>40</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Text>Good luck {GETONTRIGMOB,Name}!</Text>
+    <Keywords>Text</Keywords>
+    <Action>GIVE/&lt;questholder/Name/Bless Me Father For I Have/titlestring/Bless Me Father For I Have/Notestring/Professor Von Melling has given you a list of items to gather and have blessed in order to fight against the evil that is spreading across the land./Objective1/Craft Plain Silver Stake/Description1/Use Carpentry to craft an Unblessed Silver Stake and have it blessed./Objective2/Craft Holy Water Bomb/Description2/Use Alchemy to craft a Holy Water Bomb./Objective3/Locate the Holy Fountain/Description3/Locate the Holy Fountain./EchoAddJournalEntry/Unblessed Silver Stake: The Professor suggested using Carpentry to craft an Unblessed Silver Stake, which can be blessed at a Holy Fountain./EchoAddJournalEntry/Holy Water Bomb: Using Alchemy, the Professor said to craft Holy Water Bombs from specially blessed Holy Water./EchoAddJournalEntry/Holy Fountain: Deep inside the Holy Grail Temple discovered by Jonesy Ford there lies a Holy Fountain which will bless items that are dipped into the water./Difficulty/2/Repeatable/True/Autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/Gold,1000/ADD/VampireTome/ADD/WerewolfTome</Action>
+    <DependsOn>20,30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Text>Good luck {GETONTRIGMOB,Name}!</Text>
+    <Keywords>ingredients</Keywords>
+    <Action>GIVE/&lt;questholder/Name/A Hunting We Will Go/titlestring/A Hunting We Will Go/Notestring/Professor Von Melling has given you a list of items to gather and use to craft powerful weapons to be used in the fight against the evil that is spreading across the land./Objective1/COLLECT,FreshGarlic,10/Description1/COLLECT 10 Fresh Garlic./Objective2/COLLECT,SilverIngot,10/Description2/COLLECT 10 Silver Ingots./EchoAddJournalEntry/Fresh Garlic: Professor Von Melling said he has heard that fresh garlic can be found around the witch Grizelda's cabin./EchoAddJournalEntry/Silver Ore: It's been said that the Solen Queen's love the way this mineral shines so they live in areas where veins of silver are plentiful./EchoAddJournalEntry/Silver Ingots: Silver ore can be smelted into ingots just like any regular ore./Autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/&lt;FreshGarlic/Amount/10&gt;/ADD/&lt;SilverIngot/Amount/10&gt;/ADD,0.1/{RNDSTRLIST,VampireTalisman,WerewolfTalisman}</Action>
+    <DependsOn>20,30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Keywords>books</Keywords>
+    <Condition>AMOUNTCARRIED,VampTome&gt;0 | AMOUNTCARRIED,WerewolfTome&gt;0</Condition>
+    <DependsOn>20,30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Von Melling,4/Ah {GETONTRIGMOB,Name}, yes, that is what is needed to open a portal to the various denizens of evil. Where shall we start?;With the Vampire Lair, Professor.;vamp;With the Werewolf Lair, Professor.;werewolf;I'm not really ready yet.;not ready</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Text>Good luck {GETONTRIGMOB,Name}!</Text>
+    <Keywords>vamp</Keywords>
+    <Action>GIVE/&lt;key/KeyValue/999/name/Vampire Skeleton Key/ATTACH/XmlUse,1</Action>
+    <Condition>AMOUNTCARRIED,VampTome&gt;0</Condition>
+    <DependsOn>80</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Text>Good luck {GETONTRIGMOB,Name}!</Text>
+    <Keywords>werewolf</Keywords>
+    <Action>GIVE/&lt;key/KeyValue/666/name/Werewolf Skeleton Key/ATTACH/XmlUse,1</Action>
+    <Condition>AMOUNTCARRIED,WerewolfTome&gt;0</Condition>
+    <DependsOn>80</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Text>Come back when you are prepared {GETONTRIGMOB,Name}.</Text>
+    <Keywords>not ready</Keywords>
+    <DependsOn>80</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>120</EntryNumber>
+    <ID>120</ID>
+    <Text>Come back when you're ready {GETONTRIGMOB,Name}.</Text>
+    <Keywords>nevermind</Keywords>
+    <DependsOn>20,30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>130</EntryNumber>
+    <ID>130</ID>
+    <Text>That is not the text you are carrying, {GETONTRIGMOB,Name}.</Text>
+    <Keywords>werewolf,vamp</Keywords>
+    <Condition>AMOUNTCARRIED,WerewolfTome&lt;1 | AMOUNTCARRIED,VampTome&lt;1</Condition>
+    <DependsOn>80</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

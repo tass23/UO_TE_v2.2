@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Lieutenant Jimmy Cooks</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Rest in Peace | ATTACHMENT,Rest in Peace,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>JimmyCooks</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>It all happened so fast...</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Lieutenant Jimmy Cooks,4/The attack...it happened so fast. Forgive me, it has been centuries since I have spoken with a real person. I have been tormented by the water demons lurking below. Do not let them fool you, they are vicious and foul-tempered. Ages ago, my crew and I were adrift in these waters for days. We were hit by a massive storm after our first day on this huge lake. The storm broke most of the riggings on the sails, causing the ship to veer off course. Suddenly, the storm ceased, and so began our long wait for the wind to once again prove favorable so we could free the ship from the stagnant waters. The morning after the end of our first week without any breeze whatsoever, our lookout spied something below the hull we had not noticed before, swirling water. Fearing I had cursed the ship and crew to a watery grave, mutiny soon swept across the deck, sure as a rogue wave. I was backed out onto the gangplank, but before they could force me over, a being appeared out of the water!The entire crew was slaughtered before I could even blink, but I watched every one of them collapse on the spot, and then I too, collapsed. I would be thankful if you could help put my spirit to rest after all these many ages. In order to do so, you must defeat the ancient Water Goddess, Amathaunta, in whatever form she takes. I will give you a list of items, once you have them, you will be given a talisman that will bring you to Amathaunta's domain. Use caution, she is not to be trifled with.;Okay, I'm ready.;Yes;I'm not ready.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/Rest In Peace/titlestring/Rest In Peace/notestring/Lieutenant Jimmy Cooks was the commander of the HMS Effort, when it was lost in Gravewater Lake. Jimmy has explained what happened and how the ship was lost. It is now time to help him rest in peace. You must gather the items below and you will receive a special talisman that will teleport you to Amathaunta's domain./Objective1/COLLECT,waterserpentvenom,5/Description1/Collect 5 bottles of Water Serpent Venom./Objective2/COLLECT,AtlanteanCoin,10/Description2/Collect 10 Atlantean Coins./Objective3/COLLECT,SpringWater,10/Description3/Collect 10 vials of Spring Water./Objective4/Return to Jimmy/Description4/Go back to Lt Cooks./AddJournalEntry/Water Serpent Venom:Water Serpents often make their homes near patches of seaweed/AddJournalEntry/Atlantean Coins:Citizens usually carry these, but guards can too./AddJournalEntry/Spring Water:Around Atlantis, natural hot springs are visible./AddJournalEntry/Return:Go back to Lt Cooks./repeatable/true/partyenabled/true/partyrange/5/Autoreward/true/CanSeeReward/false/Difficulty/2/AttachmentString/XmlQuestAttachment,Rest In Peace,1440/AttachmentString/XmlAddFaction,TriFords,100/Rewardstring/@bag/ADD/Gold,300/ADD/AtlantisTalisman ; SET,AtlantisBoss2/DoReset/True/Running/True ; SET,AtlantisBoss3/DoReset/True/Running/True</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>That is a shame...</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

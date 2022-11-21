@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Darth Roeggun</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Sith Holocron | Skill Ball | SkillsTotal&gt;20000</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DarthRoeggun</ConfigFile>
+    <SpeechEntries>7</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>The Force is strong in this one...</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What is thy bidding my master?</Keywords>
+    <Action>SETONTRIGMOB/ATTACH/XmlAddKarma,-5000</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Action>GIVE/SithCloak ; GIVE/SithRobe</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Darth Roeggun,4/Ah, I feel the Force flowing through you. Such power you possess, excellent! You will be a most powerful Sith once you've learned to harness the Dark side of the Force. Your opponents will kneel before you in defeat and shame. None shall stand in your way, especially your own master. If you accept your fate and turn yourself over to the Dark side, you will be capped on - Animal Taming, Magery, Chivalry, Necromancy, Spellweaving, and Mysticism to 50 each. Are you prepared to show the world the power within you?;Yes, I crave power!;Yes;No, I believe this is wrong.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/SithHolocron,false ; GIVE/&lt;questholder/Name/A New Apprentice/titlestring/A New Apprentice/Notestring/You must enter the Sith Temple and present yourself to the Sith Masters as anew apprentice./Objective1/Present yourself to the Sith Masters./Description1/Present yourself to the Sith Masters./EchoAddjournalentry/Sith Temple: Go inside the Sith Temple to the staircase and turn north. You will see teleport pads, take the teleport pad to the Dark Council. Speak to Darth Krosal, utter the words, "I wish to be a sith apprentice" You will then be teleported to the training grounds to prove your devotion to the Dark Side./Repeatable/false/repeatable/false/Autoreward/true/canseereward/false/rewardstring/@bag/ADD/SithApprenticeLightsaber/ADD/DarkKinesisDisc&gt; ; SETONTRIGMOB/ATTACH/XmlStarWars,StarWars,StarWars</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Darth Roeggun,4/Wonderful! You must equip your Sith Robe and Cloak to enter the Sith Temple. Once you have done so, proceed into the temple to the staircase and turn North. Here you will find several teleport pads that will transport you around the temple. Go into the one marked Council. Once there, you must declare your allegiance to the Sith path. Fear is not something a Sith feels, instead it is something a Sith uses against their opponents. You have every right to fear a Sith Master, as they have harnessed the full potential of the Dark side and know what your deepest, darkest fears really are. I will give you a Sith Holocron before you enter the temple. This holocron will hold all the Force Powers you learn as you progress in your training. Once a Sith Master has accepted your declaration, you will be teleported to the Sith Proving Grounds. There you shall be tested and pushed to your fullest potential. Each section of the proving grounds, you will be forced to choose to continue the way of the Sith, or take the path of the weakling. Be forewarned though, if you should take the path of the weakling, once you have completed the proving grounds, you will no longer be following the path of the Sith and we will be forced to strike you down where you stand.;I understand;Okay;I refuse to do this.;No way</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Embrace the power of the Dark side and you shall not fail!</Text>
+    <Keywords>Okay</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>You are lucky I do not kill you where you stand! Be gone from this place!</Text>
+    <Keywords>No way</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Text>You weak, pathetic fool! Leave here, now, or die where you stand!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

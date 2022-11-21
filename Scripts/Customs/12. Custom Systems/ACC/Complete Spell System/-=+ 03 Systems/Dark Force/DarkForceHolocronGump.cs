@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+using Server;
+using Server.Gumps;
+using Server.Items;
+using Server.Spells;
+using Server.Network;
+using Server.Prompts;
+//using Server.ACC.CSS.Systems.LightForce;
+
+namespace Server.ACC.CSS.Systems.DarkForce
+{
+    public class SithHolocronGump : SHolocronGump
+    {
+        public override string TextHue { get { return "999999"; } }	//100000 Black	300000 Dark Red 400000 Maroon 800000 Bright Red
+        public override int BGImage { get { return 2401; } }	//public override int BGImage { get { return 2219; } }
+        public override int SpellBtn { get { return 2104; } }
+        public override int SpellBtnP { get { return 2103; } }
+        public override string Label1 { get { return "Force"; } }
+        public override string Label2 { get { return "Powers"; } }
+        public override Type GumpType { get { return typeof(SithHolocronGump); } }
+
+        public SithHolocronGump(CSpellbook book)
+            : base(book)
+        {
+        }
+    }
+}

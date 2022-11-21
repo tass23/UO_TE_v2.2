@@ -1,0 +1,43 @@
+<Spawns>
+  <Points>
+    <Name>VampireKendall</Name>
+    <UniqueId>4395bd0f-a110-4b22-a83d-5f8470e3290b</UniqueId>
+    <Map>Malas</Map>
+    <X>995</X>
+    <Y>470</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <CentreX>995</CentreX>
+    <CentreY>470</CentreY>
+    <CentreZ>-90</CentreZ>
+    <Range>0</Range>
+    <MaxCount>1</MaxCount>
+    <MinDelay>5</MinDelay>
+    <MaxDelay>10</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>-1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>False</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>xmlquestnpc,0/name/Kendall/title/the Elder/talktext/Yes, I am in need of repairs./direction/East/EQUIP/&lt;MonkRobe/Name/An Ancient Vampire's Robe/Hue/37&gt;/Frozen/True/configfile/VampireKendall/loadconfig/true:MX=1:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

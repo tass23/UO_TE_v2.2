@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Victor the Spellcrafter</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>SpellcrafterVictor</ConfigFile>
+    <SpeechEntries>1</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>there's problem where?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>&lt;GUMP,The Rogue Spellcrafters,4/Well, it's embarrassing to mention, but I'm left with no option. I am, for my sins, a Spellcrafter. But worry not friend - I will not harm you. I come here to warn the fair people of Britannia of the peril they unwittingly face. You see, long ago we were a noble order. Kind, benevolent - you know the deal. However, by the first millenium, this all changed when our great master Beneculo, was murdered. The grand-wizard whotook his place, unfortunately, did not share his compassionate views and we quickly became embroiled in conflict. T'was a massacre and I survived only because of my cowardice. I think, perhaps I am the only one alive who holds true to our original tenets. Alas, I am but feeble and powerless old man. What possibly could I have done? I ask you stranger, do what I could not. Rid Britannia of their most foul and loathesome leader. Grant redemption for this old and foolish mage.;Very well. I shall help.;Yes;I am not ready for such a battle.;No</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

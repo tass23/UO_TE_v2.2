@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Dirty Harry</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Dung is for Dungeon. | XMLQuestAttachment,Dung is for Dungeon.</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DirtyHarry</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Greetings, young 'un. Come talk to me for a while.</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Peeeee-yew! What's that smell?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Dung is for Dungeons,4/Yes, it has quite the bouquet doesn't it? Work, child, work - that's how I earned it. Been sweeping the streets of Britannia for nigh on 40 years now, Was even an adventurer myself, before I took an arrow to the knee, Been picking up dung ever since, but the work is hard on these old bones of mine. Sure could do with a little help. I could make it worth your while;Anything to help and old-timer out, my pleasure.;Okay;I'd love to, but I have an aversion to smelling like a horse's behind.;No.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/Name/Dung is for Dungeon./titlestring/Dung is for Dungeon./Notestring/Harry has asked you to help him clean up Britannia - of dung. He didn't quite let on that it'd be this much, however./Difficulty/10/Objective1/COLLECTNAMED,Horse Dung,Turnip,1000/Description1/COLLECT horse dung from the stables of Britannia,/Objective2/Return to Dirty Harry./Description2/Return to Dirty Harry for your reward./autoReward/True/CanSeeReward/False/RewardString/@Bag/ADD/&lt;RewardScroll/Amount/4&gt;/ADD/TenkGoldDeed/ADD,0.1/&lt;Bakersboard/Hue/1290/RemainingUses/500/Name/Harry's Golden Pooper Scooper&gt;/ADD,0.05/&lt;FloppyHat/Name/Dirty Ole Hat/HitPoints/255/skillBonuses.Skill_1_Name/AnimalTaming/skillbonuses.skill_1_value/5/Skill.bonuses.skill_2_Name/AnimalLore/Skillbonuses.skill_2_value/5&gt;/ADD,0.1/&lt;Decorativeshield3/Hue/2001/Name/Blessed Shield of Edrem/movable/true/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Dung is for Dungeon,0/Excellent! Just go into any stable in Britannia and COLLECT that dung. Really won't take you too long if you work at it.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Cheeky Varmit! If I were 10 years younger I'd have had your hide for that!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

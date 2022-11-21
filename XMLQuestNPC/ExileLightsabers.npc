@@ -1,0 +1,179 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Graemore the Jedi Exile Lightsaber Master</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Exile Crystal Harvester</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>ExileLightsabers</ConfigFile>
+    <SpeechEntries>12</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>Yes </Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>I have moved on from the Jedi.</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Dark Jedi,2/So young Exile, I will give you a focusing crystal harvesting tool, just tell me which one you're after.                         1.Baas' Wisdom     2.Velmorite Crystal      3.Qixoni Crystal    4.Rubat Crystal        5.Permafrost Crystal 6.Ulric's Redemption Crystal           7.Allya's Exile Crystal    8.Allya's Redemption Crystal 9.Impact Crystal</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>1</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\BaasWisdom.txt} ; SETVAR,TargetCondition/Name = "Baas' Wisdom Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Baas' Wisdom Formation&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/Baas/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/ ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>2</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\VelmoriteCrystal.txt} ; SETVAR,TargetCondition/Name = "Velmorite Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Velmorite Crystal&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/Velmorite/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/ ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>3</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\QixoniCrystal.txt} ; SETVAR,TargetCondition/Name = "Qixoni Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Qixon Crystal&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/Qixoni/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Keywords>4</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\RubatCrystal.txt} ; SETVAR,TargetCondition/Name = "Rubat Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Rubat Crystal&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/Rubat/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Keywords>5</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\PermafrostCrystal.txt} ; SETVAR,TargetCondition/Name = "Permafrost Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/ Permafrost Crystal&gt;   ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/Permafrost/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Keywords>6</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\UlricsRedemption.txt} ; SETVAR,TargetCondition/Name = "Ulric's Redemption Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Ulric's Redemption&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/UlricsRedemption/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Keywords>7</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\AllyasExile.txt} ; SETVAR,TargetCondition/Name = "Allya's Exile Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Allya's Exile Crystal Formation&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/AllyasExile/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Keywords>8</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\AllyasRedemption.txt} ; SETVAR,TargetCondition/Name = "Allya's Redemption Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Allya's Redemption&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/AllyasRedemption/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Keywords>9</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&lt;0 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\ImpactCrystal.txt} ; SETVAR,TargetCondition/Name = "Impact Crystal Formation" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/&lt;ExilePick/Name/Exile Crystal Harvester/EngravedText/Impact Crystal&gt; ; SETONCARRIED,Exile Crystal Harvester/ATTACH/&lt;XmlUse/Name/Impact/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction ; GIVE/Lightsaberhiltmold ; SETONTRIGMOB/SENDMSG/You have been given a lightsaber mold and crystal harvesting pick.</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

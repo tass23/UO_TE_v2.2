@@ -1,0 +1,86 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Darth Belgar</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Sith Holocron</TriggerOnCarried>
+    <NoTriggerOnCarried>Nothing to Fear but Fear itself | ATTACHMENT,Nothing to Fear but Fear itself,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DarthBelgar</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Ah, another challenge...</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Your bidding my master?</Keywords>
+    <Action>SET,0x4004174D/Running/True ; SET,0x4005F4B3/DoReset/True/Running/True</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Action>SET,0x401BD5CB/Running/True</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Darth Belgar,4/So you've come before me with your feeble skills and lust for power. I'm surprised you have not been cut down, but then again, one such as yourself is hardly worth the effort. The Trial of Deception was simple. This next trial shall test your ability to follow orders. Your task is simple young apprentice: Make the hound kill itself by jumping into the lava below. You are not to engage it in combat, but you must make it do your bidding. If you completed the previous trial correctly, you should have the solution to the equation within your realm of knowledge. If not, well, the hound looks hungry, does he not?;I know what I must do.;Okay;I'm not any creature's judge and jury.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/Nothing to Fear but Fear itself/titlestring/Nothing to Fear but Fear itself/notestring/You must use Force Fear to terrify the Sith Hound into jumping off the platform into the lava below. Should you attempt to cast any spells, or use any other Force powers on it, it will turn against you and kill you instantly. There is a small alcove just to the left of the stairs, barely visible. That is the way out. If you choose to kill the beast, or flee, either way, that is the path you must take. Once inside the hidden passage, proceed to the end, turn east and use Force Projection to teleport to the stairs above you./Objective1/KILLNAMED,sithhound/Description1/Complete the Trial of Trepidation./addjournalentry/Choice 1: Use Force Fear on the Sith Hound and it will jump to it's death./addjournalentry/Choice 2: Use Force Projection to get to the alcove below, sparing the Sith Hound./repeatable/false/autoreward/true/canseereward/false/rewardstring/@bag/ADD/DarkPoisonDisc&gt;</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>You are testing my patience young apprentice...</Text>
+    <Keywords>No</Keywords>
+    <Action>GIVE/ATTACH/XmlAddKarma,1000</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,50 @@
+Items\Armor\BaseArmor.cs
+	SAAbsorptionAttributes added.
+	Cannot be worn by Gargoyle checks added.
+
+Items\Clothing\BaseClothing
+	Cannot be worn by Gargoyle checks added.
+
+Items\Jewels\BaseJewel.cs
+	SAAbsorptionAttributes added.
+	Cannot be worn by Gargoyle checks added.
+
+Items\Weapons\BaseWeapon.cs
+	SAAbsorptionAttributes added.
+	Cannot be worn by Gargoyle checks added.
+	CheckHit & OnHit use the overly complex throwing formulas.
+	New SA props supported (see AOS notes).
+
+Items\Weapons\Abilities\BleedAttack.cs
+	Added Blood Drinker support.
+
+Items\Weapons\Abilities\WeaponAbility.cs
+	Added the new throwing abilities.
+
+Items\Weapons\Axes\Pickaxe.cs
+	Allowed gargoyles to equip it.
+
+Items\Weapons\Ranged\BaseRanged.cs
+	Edits for Throwing (easier that copy/pasting a bunch of archery stuff into thrown in baseweapon)
+
+Items\Weapons\Staves\ShepherdsCrook.cs
+	Allowed gargoyles to equip it.
+
+Misc\AOS.cs
+	New SAAbsorptionAttributes class holds the 17 new absorption props.
+		Kinetic/Fire/Cold/Poison/Energy Eater/Resonance/Soul Charge makes up 16 of them.
+		The 17th is Casting Focus.
+	AosArmorAttributes
+		Added ReactiveParalyze & SoulCharge(the shield version)
+	AosWeaponAttributes
+		Added the three new Hit spells Curse, Fatigue, & ManaDrain.
+		Added BloodDrinker & BattleLust.
+	Damage
+		Altered for the new absorption props.
+
+Misc\SkillCheck.cs
+	Imbuing/Mysticism/Throwing added to the table.
+	Only Gargoyles can gain Throwing, and they cannot gain Archery.
+
+
+

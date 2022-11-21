@@ -1,0 +1,1 @@
+GIVE/<White1FocusingCrystal/ ; SETONTHIS/MSG/*Crumbles*/ ; SETONTHIS/DELETE ; SETONCARRIED,Sith Crystal Harvester,Item/DELETE/

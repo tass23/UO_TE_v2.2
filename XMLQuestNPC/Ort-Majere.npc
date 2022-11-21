@@ -1,0 +1,113 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Ort-Majere</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Jedi Holocron | Skill Ball | SkillsTotal&gt;20000</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Ort-Majere</ConfigFile>
+    <SpeechEntries>7</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Welcome young padawan...</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Master Ort, greetings.</Keywords>
+    <Action>SETONTRIGMOB/ATTACH/XmlAddKarma,5000</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Action>GIVE/JediCloak ; GIVE/JediRobe</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Ort-Majere,4/Please equip your Jedi Robe and Cloak to enter the Jedi Temple. I will be giving you an empty Jedi Holocron as well. This holocron will contain all your Force Powers as you learn them and advance your knowledge in the Force. You are a Force-sensitive being, as such you already feel the Force around you. You will learn to utilize the Light side of the Force for knowledge and defense, never for attack. You must go before the council and declare your intentions to become a Jedi to Master Yoda and the other council members. Once you have done this, you will have to use the teleporter inside the Council Chambers to enter the Jedi Training Facility, where you will face The Trials. The Trials are a series of tests all Jedi must complete to learn about the Light side of the Force and continue on their path to becoming a Jedi Knight, Consular, or Guardian. Only the wisest Jedi earn a seat on the Jedi Council. If you accept your fate and turn yourself to the Light side you will be capped on the following skill - Animal Taming, Magery, Chivalry, Necromancy, Spellweaving, and Mysticism at 50 each. Are you prepared to start on the path to a much larger world?;Yes, I believe I am ready Master Ort.;Yes;I don't think I am ready yet.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/JediHolocron,false ; GIVE/&lt;questholder/Name/A New Padawan/titlestring/A New Padawan/Notestring/Present yourself to the Jedi High Council, speak to Master Thrall and say - I declare myself a Jedi Padawan./Objective1/Go before the Jedi High Council/Description1/Go before the Jedi High Council./EchoAddjournalentry/Jedi Temple: Go inside the temple and take the stairs to the north to the second floor. Then go to the far west corner where there is a teleporter. Step into this to be sent before the Jedi High Council. Speak to Master Thrall and say - I declare myself a Jedi Padawan./Repeatable/False/AutoReward/True/CanSeeReward/False/Difficulty/1/Rewardstring/@bag/ADD/PadawanLightsaber/ADD/ProjectionDisc&gt; ; SETONTRIGMOB/ATTACH/XmlStarWars,StarWars,StarWars</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Ort-Majere,4/Excellent young one! Step inside the Jedi Temple and take the stairs on the right, then walk all the way to the west corner of the temple. You will see a teleporter there that will take you to the Councile Chambers.;Okay, thank you;Okay;I'm not so sure about all this;No way</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Good luck, young one! May the Force be with you.</Text>
+    <Keywords>Okay</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>Please return to me when you think you are ready.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Text>Being a Jedi takes extreme discipline, only you know if you are ready.</Text>
+    <Keywords>No way</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

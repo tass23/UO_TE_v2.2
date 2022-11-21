@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Ash</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Message to the Bampot</TriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>Ash</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>You Ash?</Keywords>
+    <Action>SET,0x4019C6E1/DoReset/True/Running/True ; SET,0x40045209/DoRespawn/True ; SET,0x40044D05/DoRespawn/True ; SET,0x40044580/DoRespawn/True</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Ash,4/Yeah, and you are tough guy? No wait, doesn't matter you'll just end up dead like the rest..... ANYWAY.... So did Erik send you to me, did he? Well, I got a reaaal easy job for you -no biggie. Just do me one small favor and go into the cabin over there. All you gotta do is get some musty old book for me. Oh and yeah, when you get it, don't forget to say these words: "Klaatu Barada nikt-*cough*" Something like that, anyway...Well, have at it, champ - don't just stand there lollygagging!";Sure, I'll help.;Yes;You're an ugly idiot.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>SETONCARRIED,The Great Escape/Objective4/Retrieve the book./Description4/Retrieve the Necronomicon from the cellar of the cabin./EchoAddJournalEntry/Ash said it's reaaal easy: Look around in the cellar for the Necronomicon. Don't forget to speak the words before you remove the book!/Autoreward/true/CanSeeReward/False/RewardString/@bag/ADD/Gold,2000/ADD/RewardScroll ; SET,0x4003CCE1/DoReset/True/Running/True ; SET,0x40105F21/DoRespawn/True ; TAKE/Message to the Bampot</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>You see this?! This is my BOOMSTICK! Get outta here before I use it on your ugly face!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

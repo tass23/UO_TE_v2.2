@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Jonesy Ford</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Pyramid,3</TriggerOnCarried>
+    <NoTriggerOnCarried>Pyramid,4 | ATTACHMENT,Pyramid,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy2</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>Hey, you made it, great!</Text>
+    <Action>TAKEBYTYPE,1,1,true/FakeStaffMedallion</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yep</Keywords>
+    <Action>GIVE/StaffMedallion ; TAKE,1,1,true/FakeStaffMedallion/Fake Staff Medallion</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Jonesy,4/So, Fouloch tried to lay a trap for you by trying to tell you that Phat had a fake medallion. Clever, but obviously not clever enough since you're standing here. I should probably confess that I already got the real medallion from Maryann. I'll give it to you as a reward for your hard work. Well, now that you're here, we need to get inside this pyramid find the Ark and deliver it to Bradley Sharkus in the Vesper Museum. Take this pickaxe and lets see if we can dig through to the entrance. I have more bad news though. I dropped the key down a crack in the stone. I saw a rather large snake, Bellah said it was an ASP, that swallowed it.;Alright, I'm ready.;yes;I don't want to do this right now.;no</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>yes</Keywords>
+    <Action>GIVE/JonesyAxe ; SETONCARRIED,Pyramid/Completed4/true/Objective5/GIVE,Bradley,QuestArk,1/Description5/Recover The Ark and deliver it to Bradley Sharkus./addjournalentry/Delivery of the Ark: Take the Ark to Bradley Sharkus in the basement of the Vesper Museum./autoreward/true/canseereward/false/AttachmentString/XmlAddFaction,TriFords,100/rewardstring/@bag/ADD/RewardScroll/ADD/Gold,2000 ; SETONTRIGMOB/SENDMSG/Quest Objective Complete</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Alright, well come back when you're ready.</Text>
+    <Keywords>no</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,1175 @@
+Script: Animal Taming Systems Gen2, v1.0.0
+For: RunUO v2.0.0 RC1
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Credits:
+ASayre: His original shrink system was used as a liner to create the shrink system featured in this system.
+ArteGordon: For his help not only on this project but many, many others.
+Voran: For all his teaching when i first started here on the boards.
+Daat99: For his help testing, and suggestions about the system.
+RoninGT: Awesome Script!!!
+Partystuffcloseouts: Detailed Install Instructions
+
+Tested again on a Fresh New Install following Instructions below on 12-31-2006
+
+--------------------------------------------------------------------------------
+Install
+--------------------------------------------------------------------------------
+1. Turn OFF your RunUO Server you are Working on.
+2. Download and Unzip Files.
+3. Take the "Taming" folder and place it in "Data\Bulk Orders" Folder
+4. Take the rest of the files and drop into your “Scripts\Customs” Folder
+5. If you are already using "Vorans Druid Spells" You will need to delete the "Reagent Pack" folder however if you are not using the druid spells keep the folder
+6. You have 3 Options 6A or 6B or 6C on the Distros Folder:
+6a.) If you have NOT made any Custom Modifications to the Distros that are in the folder then Take the ”Distros” Folder and Copy and Paste the Files inside to Following Locations:
+    AnimalTrainer.cs Copy to Scripts\Mobiles\Vendors\NPC
+    BaseCreature.cs Copy to  Scripts\Engines\AI\Creature
+    BasePotion.cs Copy to Scripts\Items\Skill Items\Magical\Potions
+    BaseVendor.cs Copy to Scripts\Mobiles\Vendors
+    DefInscription.cs Copy to Scripts\Engines\Craft
+    PlayerMobile.cs Copy to Scripts\Mobiles
+    PlayerVendor.cs Copy to Scripts\Mobiles\Vendors
+    PotionKeg.cs Copy to Scripts\Items\Skill Items\Magical\Misc
+    SBAnimalTrainer.cs Copy to Scripts\Mobiles\Vendors\SBInfo
+6b.) Or you can Do it yourself by using WinMerge a Free Opensource Project to update your Files. It is located here http://winmerge.sourceforge.net/
+6c.) Or Follow the Easy to use Instructions Below if you have Made Custom Modifications to the Distros.
+--------------------------------------------------------------------------------
+7a.)In AnimalTrainer.cs Find the following line(s):
+using Server.Targeting;   
+
+7b.)In AnimalTrainer.cs Add just after these line(s):
+using Server.Engines.BulkOrders;
+
+--------------------------------------------------------------------------------
+8a.)In AnimalTrainer.cs Find the following line(s):
+		public override VendorShoeType ShoeType
+		{
+			get{ return Female ? VendorShoeType.ThighBoots : VendorShoeType.Boots; }
+		}
+8b.)In AnimalTrainer.cs Add just after these line(s):
+
+		#region Bulk Orders
+		public override Item CreateBulkOrder( Mobile from, bool fromContextMenu )
+		{
+			PlayerMobile pm = from as PlayerMobile;
+
+			if ( pm != null && pm.NextTamingBulkOrder == TimeSpan.Zero && (fromContextMenu || 0.2 > Utility.RandomDouble()) )
+			{
+				double theirSkill = pm.Skills[SkillName.AnimalTaming].Base;
+
+				if ( theirSkill >= 70.1 )
+					pm.NextTamingBulkOrder = TimeSpan.FromHours( 2.0 );
+				else if ( theirSkill >= 50.1 )
+					pm.NextTamingBulkOrder = TimeSpan.FromHours( 2.0 );
+				else
+					pm.NextTamingBulkOrder = TimeSpan.FromMinutes( 30.0 );
+
+				if ( theirSkill >= 70.1 && ((theirSkill - 40.0) / 300.0) > Utility.RandomDouble() )
+					return new LargeTamingBOD();
+
+				return SmallTamingBOD.CreateRandomFor( from );
+			}
+
+			return null;
+		}
+
+		public override bool IsValidBulkOrder( Item item )
+		{
+			return ( item is SmallTamingBOD || item is LargeTamingBOD );
+		}
+
+		public override bool SupportsBulkOrders( Mobile from )
+		{
+			return ( from is PlayerMobile && from.Skills[SkillName.AnimalTaming].Base > 0 && FSATS.EnableTamingBODs == true );
+		}
+
+		public override TimeSpan GetNextBulkOrder( Mobile from )
+		{
+			if ( from is PlayerMobile )
+				return ((PlayerMobile)from).NextTamingBulkOrder;
+
+			return TimeSpan.Zero;
+		}
+		#endregion
+
+--------------------------------------------------------------------------------
+
+9a.)In BaseCreature.cs Find the following line(s):
+	public class BaseCreature : Mobile, IHonorTarget
+	{  
+
+9b.)In BaseCreature.cs Add just after these line(s):
+		#region FS:ATS Edits
+		private int m_RoarAttack;
+		private int m_PetPoisonAttack;
+		private int m_FireBreathAttack;
+
+		private bool m_IsMating;
+
+		private int m_ABPoints;
+		private int m_Exp;
+		private int m_NextLevel;
+		private int m_Level = 1;
+		private int m_MaxLevel;
+
+		private bool m_AllowMating;
+
+		private bool m_Evolves;
+		private int m_Gen = 1;
+
+		private DateTime m_MatingDelay;
+
+		private int m_Form1;
+		private int m_Form2;
+		private int m_Form3;
+		private int m_Form4;
+		private int m_Form5;
+		private int m_Form6;
+		private int m_Form7;
+		private int m_Form8;
+		private int m_Form9;
+
+		private int m_Sound1;
+		private int m_Sound2;
+		private int m_Sound3;
+		private int m_Sound4;
+		private int m_Sound5;
+		private int m_Sound6;
+		private int m_Sound7;
+		private int m_Sound8;
+		private int m_Sound9;
+
+		private bool m_UsesForm1;
+		private bool m_UsesForm2;
+		private bool m_UsesForm3;
+		private bool m_UsesForm4;
+		private bool m_UsesForm5;
+		private bool m_UsesForm6;
+		private bool m_UsesForm7;
+		private bool m_UsesForm8;
+		private bool m_UsesForm9;
+
+		public bool m_F0;
+		public bool m_F1;
+		public bool m_F2;
+		public bool m_F3;
+		public bool m_F4;
+		public bool m_F5;
+		public bool m_F6;
+		public bool m_F7;
+		public bool m_F8;
+		public bool m_F9;
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int RoarAttack
+		{
+			get{ return m_RoarAttack; }
+			set{ m_RoarAttack = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int PetPoisonAttack
+		{
+			get{ return m_PetPoisonAttack; }
+			set{ m_PetPoisonAttack = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int FireBreathAttack
+		{
+			get{ return m_FireBreathAttack; }
+			set{ m_FireBreathAttack = value; }
+		}
+
+		[CommandProperty( AccessLevel.Administrator )]
+		public DateTime MatingDelay
+		{
+			get{ return m_MatingDelay; }
+			set{ m_MatingDelay = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int Generation
+		{
+			get{ return m_Gen; }
+			set{ m_Gen = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int AbilityPoints
+		{
+			get{ return m_ABPoints; }
+			set{ m_ABPoints = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int Exp
+		{
+			get{ return m_Exp; }
+			set{ m_Exp = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int NextLevel
+		{
+			get{ return m_NextLevel; }
+			set{ m_NextLevel = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int Level
+		{
+			get{ return m_Level; }
+			set{ m_Level = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int MaxLevel
+		{
+			get{ return m_MaxLevel; }
+			set{ m_MaxLevel = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public bool Evolves
+		{
+			get{ return m_Evolves; }
+			set{ m_Evolves = value; }
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public bool AllowMating
+		{
+			get{ return m_AllowMating; }
+			set{ m_AllowMating = value; }
+		}
+
+		public int Form1
+		{
+			get{ return m_Form1; }
+			set{ m_Form1 = value; }
+		}
+
+		public int Form2
+		{
+			get{ return m_Form2; }
+			set{ m_Form2 = value; }
+		}
+
+		public int Form3
+		{
+			get{ return m_Form3; }
+			set{ m_Form3 = value; }
+		}
+
+		public int Form4
+		{
+			get{ return m_Form4; }
+			set{ m_Form4 = value; }
+		}
+
+		public int Form5
+		{
+			get{ return m_Form5; }
+			set{ m_Form5 = value; }
+		}
+
+		public int Form6
+		{
+			get{ return m_Form6; }
+			set{ m_Form6 = value; }
+		}
+
+		public int Form7
+		{
+			get{ return m_Form7; }
+			set{ m_Form7 = value; }
+		}
+
+		public int Form8
+		{
+			get{ return m_Form8; }
+			set{ m_Form8 = value; }
+		}
+
+		public int Form9
+		{
+			get{ return m_Form9; }
+			set{ m_Form9 = value; }
+		}
+
+		public int Sound1
+		{
+			get{ return m_Sound1; }
+			set{ m_Sound1 = value; }
+		}
+
+		public int Sound2
+		{
+			get{ return m_Sound2; }
+			set{ m_Sound2 = value; }
+		}
+
+		public int Sound3
+		{
+			get{ return m_Sound3; }
+			set{ m_Sound3 = value; }
+		}
+
+		public int Sound4
+		{
+			get{ return m_Sound4; }
+			set{ m_Sound4 = value; }
+		}
+
+		public int Sound5
+		{
+			get{ return m_Sound5; }
+			set{ m_Sound5 = value; }
+		}
+
+		public int Sound6
+		{
+			get{ return m_Sound6; }
+			set{ m_Sound6 = value; }
+		}
+
+		public int Sound7
+		{
+			get{ return m_Sound7; }
+			set{ m_Sound7 = value; }
+		}
+
+		public int Sound8
+		{
+			get{ return m_Sound8; }
+			set{ m_Sound8 = value; }
+		}
+
+		public int Sound9
+		{
+			get{ return m_Sound9; }
+			set{ m_Sound9 = value; }
+		}
+
+		public bool UsesForm1
+		{
+			get{ return m_UsesForm1; }
+			set{ m_UsesForm1 = value; }
+		}
+
+		public bool UsesForm2
+		{
+			get{ return m_UsesForm2; }
+			set{ m_UsesForm2 = value; }
+		}
+
+		public bool UsesForm3
+		{
+			get{ return m_UsesForm3; }
+			set{ m_UsesForm3 = value; }
+		}
+
+		public bool UsesForm4
+		{
+			get{ return m_UsesForm4; }
+			set{ m_UsesForm4 = value; }
+		}
+
+		public bool UsesForm5
+		{
+			get{ return m_UsesForm5; }
+			set{ m_UsesForm5 = value; }
+		}
+
+		public bool UsesForm6
+		{
+			get{ return m_UsesForm6; }
+			set{ m_UsesForm6 = value; }
+		}
+
+		public bool UsesForm7
+		{
+			get{ return m_UsesForm7; }
+			set{ m_UsesForm7 = value; }
+		}
+
+		public bool UsesForm8
+		{
+			get{ return m_UsesForm8; }
+			set{ m_UsesForm8 = value; }
+		}
+
+		public bool UsesForm9
+		{
+			get{ return m_UsesForm9; }
+			set{ m_UsesForm9 = value; }
+		}
+
+		public bool F0
+		{
+			get{ return m_F0; }
+			set{ m_F0 = value; }
+		}
+
+		public bool F1
+		{
+			get{ return m_F1; }
+			set{ m_F1 = value; }
+		}
+
+		public bool F2
+		{
+			get{ return m_F2; }
+			set{ m_F2 = value; }
+		}
+
+		public bool F3
+		{
+			get{ return m_F3; }
+			set{ m_F3 = value; }
+		}
+
+		public bool F4
+		{
+			get{ return m_F4; }
+			set{ m_F4 = value; }
+		}
+
+		public bool F5
+		{
+			get{ return m_F5; }
+			set{ m_F5 = value; }
+		}
+
+		public bool F6
+		{
+			get{ return m_F6; }
+			set{ m_F6 = value; }
+		}
+
+		public bool F7
+		{
+			get{ return m_F7; }
+			set{ m_F7 = value; }
+		}
+
+		public bool F8
+		{
+			get{ return m_F8; }
+			set{ m_F8 = value; }
+		}
+
+		public bool F9
+		{
+			get{ return m_F9; }
+			set{ m_F9 = value; }
+		}
+		#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+10a.)In BaseCreature.cs Find the following line(s):
+		public BaseCreature(AIType ai,
+			FightMode mode,
+			int iRangePerception,
+			int iRangeFight,
+			double dActiveSpeed, 
+			double dPassiveSpeed)
+		{  
+
+10b.)In BaseCreature.cs Add just after these line(s):
+			#region FS:ATS Edits
+			bool alwaysMale = false;
+			Type typ = this.GetType();
+			string nam = typ.Name;
+
+			bool alwaysFemale = false;
+			Type typ2 = this.GetType();
+			string nam2 = typ2.Name;
+
+			foreach ( string check in FSATS.AlwaysMale )
+			{
+  				if ( check == nam )
+    					alwaysMale = true;
+			}
+
+			foreach ( string check2 in FSATS.AlwaysFemale )
+			{
+  				if ( check2 == nam2 )
+    					alwaysFemale = true;
+			}
+
+			if ( alwaysMale == true )
+				this.Female = false;
+			else if ( alwaysFemale == true )
+				this.Female = true;
+			else
+			{
+				switch ( Utility.Random( 2 ) ) 
+				{ 
+         				case 0: this.Female = true; break;
+					
+					case 1: this.Female = false; break;
+				}
+			}
+
+			m_MaxLevel = Utility.RandomMinMax( 10, 30 );
+			#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+11a.)In BaseCreature.cs Find the following line(s):
+			writer.Write( (int) 16 ); // version  
+
+11b.)In BaseCreature.cs Replace with these line(s):
+			writer.Write( (int) 17 ); // version
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+12a.)In BaseCreature.cs Find the following line(s):
+			// Version 14
+			writer.Write( (bool)m_RemoveIfUntamed );
+			writer.Write( (int)m_RemoveStep );  
+
+12b.)In BaseCreature.cs Add just after these line(s):
+
+			// Version 17 FS:ATS EDITS
+			writer.Write( (bool) m_IsMating );
+			writer.Write( (int) m_ABPoints );
+			writer.Write( (int) m_Exp );
+			writer.Write( (int) m_NextLevel );
+			writer.Write( (int) m_Level );
+			writer.Write( (int) m_MaxLevel );
+			writer.Write( (bool) m_AllowMating );
+			writer.Write( (bool) m_Evolves );
+			writer.Write( (int) m_Gen );
+			writer.Write( (DateTime) m_MatingDelay );
+			writer.Write( (int) m_Form1 );
+			writer.Write( (int) m_Form2 );
+			writer.Write( (int) m_Form3 );
+			writer.Write( (int) m_Form4 );
+			writer.Write( (int) m_Form5 );
+			writer.Write( (int) m_Form6 );
+			writer.Write( (int) m_Form7 );
+			writer.Write( (int) m_Form8 );
+			writer.Write( (int) m_Form9 );
+			writer.Write( (int) m_Sound1 );
+			writer.Write( (int) m_Sound2 );
+			writer.Write( (int) m_Sound3 );
+			writer.Write( (int) m_Sound4 );
+			writer.Write( (int) m_Sound5 );
+			writer.Write( (int) m_Sound6 );
+			writer.Write( (int) m_Sound7 );
+			writer.Write( (int) m_Sound8 );
+			writer.Write( (int) m_Sound9 );
+			writer.Write( (bool) m_UsesForm1 );
+			writer.Write( (bool) m_UsesForm2 );
+			writer.Write( (bool) m_UsesForm3 );
+			writer.Write( (bool) m_UsesForm4 );
+			writer.Write( (bool) m_UsesForm5 );
+			writer.Write( (bool) m_UsesForm6 );
+			writer.Write( (bool) m_UsesForm7 );
+			writer.Write( (bool) m_UsesForm8 );
+			writer.Write( (bool) m_UsesForm9 );
+			writer.Write( (bool) m_F0 );
+			writer.Write( (bool) m_F1 );
+			writer.Write( (bool) m_F2 );
+			writer.Write( (bool) m_F3 );
+			writer.Write( (bool) m_F4 );
+			writer.Write( (bool) m_F5 );
+			writer.Write( (bool) m_F6 );
+			writer.Write( (bool) m_F7 );
+			writer.Write( (bool) m_F8 );
+			writer.Write( (bool) m_F9 );
+			writer.Write( (int) m_RoarAttack );
+			writer.Write( (int) m_PetPoisonAttack );
+			writer.Write( (int) m_FireBreathAttack );
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+13a.)In BaseCreature.cs Find the following line(s):
+			if ( version >= 14 )
+			{
+				m_RemoveIfUntamed = reader.ReadBool();
+				m_RemoveStep = reader.ReadInt();
+			}  
+
+13b.)In BaseCreature.cs Add just after these line(s):
+			if ( version >= 17 )
+			{
+				m_IsMating = reader.ReadBool();
+				m_ABPoints = reader.ReadInt();
+				m_Exp = reader.ReadInt();
+				m_NextLevel = reader.ReadInt();
+				m_Level = reader.ReadInt();
+				m_MaxLevel = reader.ReadInt();
+				m_AllowMating = reader.ReadBool();
+				m_Evolves = reader.ReadBool();
+				m_Gen = reader.ReadInt();
+				m_MatingDelay = reader.ReadDateTime();
+				m_Form1 = reader.ReadInt();
+				m_Form2 = reader.ReadInt();
+				m_Form3 = reader.ReadInt();
+				m_Form4 = reader.ReadInt();
+				m_Form5 = reader.ReadInt();
+				m_Form6 = reader.ReadInt();
+				m_Form7 = reader.ReadInt();
+				m_Form8 = reader.ReadInt();
+				m_Form9 = reader.ReadInt();
+				m_Sound1 = reader.ReadInt();
+				m_Sound2 = reader.ReadInt();
+				m_Sound3 = reader.ReadInt();
+				m_Sound4 = reader.ReadInt();
+				m_Sound5 = reader.ReadInt();
+				m_Sound6 = reader.ReadInt();
+				m_Sound7 = reader.ReadInt();
+				m_Sound8 = reader.ReadInt();
+				m_Sound9 = reader.ReadInt();
+				m_UsesForm1 = reader.ReadBool();
+				m_UsesForm2 = reader.ReadBool();
+				m_UsesForm3 = reader.ReadBool();
+				m_UsesForm4 = reader.ReadBool();
+				m_UsesForm5 = reader.ReadBool();
+				m_UsesForm6 = reader.ReadBool();
+				m_UsesForm7 = reader.ReadBool();
+				m_UsesForm8 = reader.ReadBool();
+				m_UsesForm9 = reader.ReadBool();
+				m_F0 = reader.ReadBool();
+				m_F1 = reader.ReadBool();
+				m_F2 = reader.ReadBool();
+				m_F3 = reader.ReadBool();
+				m_F4 = reader.ReadBool();
+				m_F5 = reader.ReadBool();
+				m_F6 = reader.ReadBool();
+				m_F7 = reader.ReadBool();
+				m_F8 = reader.ReadBool();
+				m_F9 = reader.ReadBool();
+				m_RoarAttack = reader.ReadInt();
+				m_PetPoisonAttack = reader.ReadInt();
+				m_FireBreathAttack = reader.ReadInt();
+			}
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+14a.)In BaseCreature.cs Find the following line(s):
+		public virtual void AddCustomContextEntries( Mobile from, List<ContextMenuEntry> list )
+		{  
+
+14b.)In BaseCreature.cs Add just after these line(s):
+			#region FS:ATS Edits
+			if ( this is BaseBioCreature || this is BioCreature || this is BioMount )
+			{
+			}
+			else if ( from.Alive && this.Alive && this.Controlled == true && this.Summoned == false && FSATS.EnablePetLeveling == true )
+			{
+				bool nolevel = false;
+				Type typ = this.GetType();
+				string nam = typ.Name;
+
+				foreach ( string check in FSATS.NoLevelCreatures )
+				{
+  					if ( check == nam )
+    						nolevel = true;
+				}
+
+				if ( nolevel != true )
+					list.Add( new ContextMenus.PetMenu( from, this ) );
+			}
+			#endregion
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+15a.)In BaseCreature.cs Find the following line(s):
+		public override void AddNameProperties( ObjectPropertyList list )
+		{
+			base.AddNameProperties( list );  
+
+15b.)In BaseCreature.cs Add just after these line(s):
+			#region FS:ATS Edits
+			if ( this.Tamable == true && FSATS.EnablePetBreeding == true )
+			{
+				bool nolevel = false;
+				Type typ = this.GetType();
+				string nam = typ.Name;
+
+				foreach ( string check in FSATS.NoLevelCreatures )
+				{
+  					if ( check == nam )
+    						nolevel = true;
+				}
+
+				if ( nolevel != true )
+				{
+					if ( this.Female == true )
+						list.Add( 1060658, "Gender\tFemale" );
+					else
+						list.Add( 1060658, "Gender\tMale" );
+
+					if ( this.Controlled == false )
+						list.Add( 1060659, "Max Level\t{0}", this.MaxLevel );
+				}
+			}
+			#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+16a.)In BaseCreature.cs Find the following line(s):
+				else if ( IsBonded )	//Intentional difference (showing ONLY bonded when bonded instead of bonded & tame)  
+
+16b.)In BaseCreature.cs Replace with these line(s):
+				else if ( IsBonded )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+17a.)In BaseCreature.cs Find the following line(s):
+		public override bool OnBeforeDeath()
+		{  
+
+17b.)In BaseCreature.cs Add just after these line(s):
+			#region FS:ATS Edits
+			if ( FSATS.EnablePetLeveling == true )
+			{
+				ArrayList toCheck = new ArrayList();
+				List<DamageEntry> rights = this.DamageEntries;
+
+				foreach ( DamageEntry entry in rights )
+				{
+					if ( entry.Damager is BaseCreature )
+					{
+						BaseCreature bc = (BaseCreature)entry.Damager;
+
+						if ( bc.Controlled == true && bc.ControlMaster != null )
+							toCheck.Add( entry.Damager );		
+					}
+				}
+
+				foreach ( Mobile mob in toCheck )
+				{
+					if ( mob is BaseCreature )
+					{
+						BaseCreature bc = (BaseCreature)mob;
+						PetLeveling.CheckLevel( this, bc, toCheck.Count );
+					}
+				}
+			}
+			#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+18a.)In BaseCreature.cs Find the following line(s):
+			int treasureLevel = TreasureMapLevel;  
+
+18b.)In BaseCreature.cs Add just after these line(s):
+			#region FS:ATS Edits
+			if ( this is BaseBioCreature || this is BioCreature || this is BioMount )
+			{
+				PetLeveling.DoBioDeath( this );
+			}
+			else
+			{
+				if ( FSATS.EnablePetLeveling == true )
+					PetLeveling.DoDeathCheck( this );
+			}
+			#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+19a.)In BaseCreature.cs Find the following line(s):
+		public virtual void OnThink()
+		{  
+
+19b.)In BaseCreature.cs Add just after these line(s):
+			if ( this.Tamable == true )
+			{
+				if ( this.NextLevel == 0 )
+				{
+					int totalstats = this.Str + this.Dex + this.Int + this.HitsMax + this.StamMax + this.ManaMax + this.PhysicalResistance + this.FireResistance + this.ColdResistance + this.EnergyResistance + this.PoisonResistance + this.DamageMin + this.DamageMax + this.VirtualArmor;
+					int nextlevel = totalstats * 10;
+
+					this.NextLevel = nextlevel;
+				}
+
+				if ( this.MaxLevel == 0 )
+				{
+					this.MaxLevel = Utility.RandomMinMax( 10, 30 );
+				}
+			}
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+20a.)In BaseCreature.cs Find the following line(s):
+			if ( CanBreath && DateTime.Now >= m_NextBreathTime ) // tested: controled dragons do breath fire, what about summoned skeletal dragons?  
+
+20b.)In BaseCreature.cs Add just after these line(s):
+			if ( CanBreath && DateTime.Now >= m_NextBreathTime ) // tested: Controlled dragons do breath fire, what about summoned skeletal dragons?
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+21a.)In BasePotion.cs Find the following line(s):
+		ExplosionGreater
+
+21b.)In BasePotion.cs Replace with these line(s):
+		ExplosionGreater,
+		#region FS:ATS Edits
+		PetResurrect,
+		PetShrink,
+		PetHeal,
+		PetGreaterHeal,
+		PetCure,
+		PetGreaterCure
+		#endregion
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+22a.)In BaseVendor.cs Find the following line(s):
+							if ( bulkOrder is LargeBOD )  
+
+22b.)In BaseVendor.cs Replace with these line(s):
+							if ( bulkOrder is SmallMobileBOD )
+								m_From.SendGump( new SmallMobileBODAcceptGump( m_From, (SmallMobileBOD)bulkOrder ) );
+							else if ( bulkOrder is LargeMobileBOD )
+								m_From.SendGump( new LargeMobileBODAcceptGump( m_From, (LargeMobileBOD)bulkOrder ) );
+							else if ( bulkOrder is LargeBOD )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+23a.)In BaseVendor.cs Find the following line(s):
+			if ( dropped is SmallBOD || dropped is LargeBOD )  
+
+23b.)In BaseVendor.cs Replace with these line(s):
+			if ( dropped is SmallBOD || dropped is LargeBOD || dropped is SmallMobileBOD || dropped is LargeMobileBOD )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+24a.)In BaseVendor.cs Find the following line(s):
+				else if ( (dropped is SmallBOD && !((SmallBOD)dropped).Complete) || (dropped is LargeBOD && !((LargeBOD)dropped).Complete) )  
+
+24b.)In BaseVendor.cs Replace with these line(s):
+				else if ( (dropped is SmallBOD && !((SmallBOD)dropped).Complete) || (dropped is LargeBOD && !((LargeBOD)dropped).Complete) || (dropped is SmallMobileBOD && !((SmallMobileBOD)dropped).Complete) || (dropped is LargeMobileBOD && !((LargeMobileBOD)dropped).Complete) )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+25a.)In BaseVendor.cs Find the following line(s):
+				if ( dropped is SmallBOD )
+					((SmallBOD)dropped).GetRewards( out reward, out gold, out fame );
+				else  
+
+25b.)In BaseVendor.cs Replace with these line(s):
+				if ( dropped is SmallBOD )
+					((SmallBOD)dropped).GetRewards( out reward, out gold, out fame );
+				else if ( dropped is LargeBOD )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+26a.)In BaseVendor.cs Find the following line(s):
+					((LargeBOD)dropped).GetRewards( out reward, out gold, out fame );  
+
+26b.)In BaseVendor.cs Add just after these line(s):
+				else if ( dropped is LargeMobileBOD )
+					((LargeMobileBOD)dropped).GetRewards( out reward, out gold, out fame );
+				else
+					((SmallMobileBOD)dropped).GetRewards( out reward, out gold, out fame );
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+27a.)In BaseVendor.cs Find the following line(s):
+					else if ( bulkOrder is SmallBOD )
+						seller.SendGump( new SmallBODAcceptGump( seller, (SmallBOD)bulkOrder ) );  
+
+27b.)In BaseVendor.cs Add just after these line(s):
+					else if ( bulkOrder is SmallMobileBOD )
+						seller.SendGump( new SmallMobileBODAcceptGump( seller, (SmallMobileBOD)bulkOrder ) );
+					else if ( bulkOrder is LargeMobileBOD )
+						seller.SendGump( new LargeMobileBODAcceptGump( seller, (LargeMobileBOD)bulkOrder ) );
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+28a.)In DefInscription.cs Find the following line(s):
+				// Bulk order book
+				AddCraft( typeof( Engines.BulkOrders.BulkOrderBook ), 1044294, 1028793, 65.0, 115.0, typeof( BlankScroll ), 1044377, 10, 1044378 );  
+
+28b.)In DefInscription.cs Add just after these line(s):
+
+				if ( FSATS.EnableTamingBODs == true )
+					AddCraft( typeof( Engines.BulkOrders.TamingBulkOrderBook ), 1044294, "taming bulk order book", 65.0, 115.0, typeof( BlankScroll ), 1044377, 10, 1044378 );
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+29a.)In PlayerMobile.cs Find the following line(s):
+	public class PlayerMobile : Mobile, IHonorTarget  
+
+29b.)In PlayerMobile.cs Add just after these line(s):
+		#region FS:ATS Edtis
+		private DateTime m_NextTamingBulkOrder;
+		private bool m_Bioenginer;
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public TimeSpan NextTamingBulkOrder
+		{
+			get
+			{
+				TimeSpan ts = m_NextTamingBulkOrder - DateTime.Now;
+
+				if ( ts < TimeSpan.Zero )
+					ts = TimeSpan.Zero;
+
+				return ts;
+			}
+			set
+			{
+				try{ m_NextTamingBulkOrder = DateTime.Now + value; }
+				catch{}
+			}
+		}
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public bool Bioenginer
+		{
+			get{ return m_Bioenginer; }
+			set{ m_Bioenginer = value; }
+		}
+		#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+30a.)In PlayerMobile.cs Find the following line(s):
+		public PlayerMobile()
+		{
+			m_VisList = new List<Mobile>();
+			m_PermaFlags = new List<Mobile>();
+			m_AntiMacroTable = new Hashtable();
+
+			m_BOBFilter = new Engines.BulkOrders.BOBFilter();
+
+30b.)In PlayerMobile.cs Add just after these line(s):
+			#region FS:ATS Edits
+			m_TamingBOBFilter = new Engines.BulkOrders.TamingBOBFilter();
+			#endregion
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+31a.)In PlayerMobile.cs Find the following line(s):
+		private Engines.BulkOrders.BOBFilter m_BOBFilter;  
+
+31b.)In PlayerMobile.cs Add just after these line(s):
+		#region FS:ATS Edits
+		private Engines.BulkOrders.TamingBOBFilter m_TamingBOBFilter;
+		#endregion
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+33a.)In PlayerMobile.cs Find the following line(s):
+		public Engines.BulkOrders.BOBFilter BOBFilter
+		{
+			get{ return m_BOBFilter; }
+		}
+  
+
+33b.)In PlayerMobile.cs Add just after these line(s):
+		#region FS:ATS Edits
+		public Engines.BulkOrders.TamingBOBFilter TamingBOBFilter
+		{
+			get{ return m_TamingBOBFilter; }
+		}
+		#endregion
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+34a.)In PlayerMobile.cs Find the following line(s):
+		public override void Deserialize( GenericReader reader )
+		{
+			base.Deserialize( reader );
+			int version = reader.ReadInt();
+
+			switch ( version )
+			{  
+
+34b.)In PlayerMobile.cs Add just after these line(s):
+				case 27:
+				{
+					m_TamingBOBFilter = new Engines.BulkOrders.TamingBOBFilter( reader );
+					goto case 26;
+				}
+				case 26:
+				{
+					m_Bioenginer = reader.ReadBool();
+					NextTamingBulkOrder = reader.ReadTimeSpan();
+					goto case 25;
+				}
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+35a.)In PlayerMobile.cs Find the following line(s):
+			if ( m_BOBFilter == null )
+				m_BOBFilter = new Engines.BulkOrders.BOBFilter();
+  
+
+35b.)In PlayerMobile.cs Add just after these line(s):
+			if ( m_TamingBOBFilter == null )
+				m_TamingBOBFilter = new Engines.BulkOrders.TamingBOBFilter();
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+36a.)In PlayerMobile.cs Find the following line(s):
+			writer.Write( (int) 25 ); // version
+
+36b.)In PlayerMobile.cs Replace with these line(s):
+			writer.Write( (int) 27 ); // version
+
+			m_TamingBOBFilter.Serialize( writer );
+
+			writer.Write( m_Bioenginer );
+
+			writer.Write( NextTamingBulkOrder );
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+37a.)In PlayerVendor.cs Find the following line(s):
+			if ( item is Container || item is Engines.BulkOrders.BulkOrderBook )  
+
+37b.)In PlayerVendor.cs Replace with these line(s):
+			if ( item is Container || item is Engines.BulkOrders.BulkOrderBook || item is Engines.BulkOrders.TamingBulkOrderBook )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+38a.)In PlayerVendor.cs Find the following line(s):
+					else if ( item is BaseBook || item is Engines.BulkOrders.BulkOrderBook )  
+
+38b.)In PlayerVendor.cs Replace with these line(s):
+					else if ( item is BaseBook || item is Engines.BulkOrders.BulkOrderBook || item is Engines.BulkOrders.TamingBulkOrderBook )
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+39a.)In PotionKeg.cs Find the following line(s):
+		public override int LabelNumber{ get{ return (m_Held > 0 ? 1041620 + (int)m_Type : 1041641); } }  
+
+39b.)In PotionKeg.cs Replace with these line(s):
+		#region FS:ATS Edits
+		public override void AddNameProperty(ObjectPropertyList list)
+		{
+			if ( m_Held > 0 )
+			{
+				if ( m_Type == PotionEffect.PetResurrect )
+				{
+					list.Add( "a keg of pet resurrection potions" );
+				}
+				else if ( m_Type == PotionEffect.PetShrink )
+				{
+					list.Add( "a keg of shrink potions" );
+				}
+				else if ( m_Type == PotionEffect.PetHeal )
+				{
+					list.Add( "a keg of pet heal potions" );
+				}
+				else if ( m_Type == PotionEffect.PetGreaterHeal )
+				{
+					list.Add( "a keg of pet greater heal potions" );
+				}
+				else if ( m_Type == PotionEffect.PetCure )
+				{
+					list.Add( "a keg of pet cure potions" );
+				}
+				else if ( m_Type == PotionEffect.PetGreaterCure )
+				{
+					list.Add( "a keg of pet greater cure potions" );
+				}
+				else
+				{
+					list.Add( 1041620 + (int)m_Type );
+				}
+			}
+			else
+			{
+				list.Add( "an empty potion keg" );
+			}
+		}
+
+		//public override int LabelNumber{ get{ return (m_Held > 0 ? 1041620 + (int)m_Type : 1041641); } }
+		#endregion
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+40a.)In PotionKeg.cs Find the following line(s):
+				case PotionEffect.ExplosionGreater:	return new GreaterExplosionPotion();  
+
+40b.)In PotionKeg.cs Add just after these line(s):
+
+				case PotionEffect.PetResurrect:		return new PetResurrectPotion();
+				case PotionEffect.PetShrink:		return new PetShrinkPotion();
+				case PotionEffect.PetHeal:		return new HealPotionPet();
+				case PotionEffect.PetGreaterHeal:	return new GreaterHealPotionPet();
+				case PotionEffect.PetCure:		return new CurePotionPet();
+				case PotionEffect.PetGreaterCure:	return new GreaterCurePotionPet();
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+41a.)In SBAnimalTrainer.cs Find the following line(s):
+					Add( new AnimalBuyInfo( 1, typeof( Rat ), 107, 10, 238, 0 ) );
+				}
+41b.)In SBAnimalTrainer.cs Add just after these line(s):
+
+				if ( FSATS.EnableTamingCraft == true )
+					Add( new AnimalBuyInfo( 1, typeof( Brush ), 72, 10, 0x1373, 0 ) );
+
+				if ( FSATS.EnableTamingCraft == false )
+				{
+					Add( new AnimalBuyInfo( 1, typeof( PetShrinkPotion ), 16, 10, 0xE26, 0 ) );
+					Add( new AnimalBuyInfo( 1, typeof( PetLeash ), 1456, 10, 0x1374, 0 ) );
+					Add( new AnimalBuyInfo( 1, typeof( HitchingPostEastDeed ), 1456, 10, 0x14F0, 0 ) );
+					Add( new AnimalBuyInfo( 1, typeof( HitchingPostSouthDeed ), 1456, 10, 0x14F0, 0 ) );
+				}
+
+				if ( FSATS.EnableTamingBODs == false && FSATS.EnableBioEngineer == true )
+				{
+					Add( new AnimalBuyInfo( 1, typeof( BioTool ), 72, 10, 0x1373, 1175 ) );
+					Add( new AnimalBuyInfo( 1, typeof( BioEnginerBook ), 10001, 10, 4084, 0 ) );
+				}
+--------------------------------------------------------------------------------
+
+
+42. Restart your server.
+43. Place Animal Breeders where your animal trainers are.
+44. Enjoy.
+

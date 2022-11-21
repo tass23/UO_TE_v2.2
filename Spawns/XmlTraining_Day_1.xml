@@ -1,0 +1,43 @@
+<Spawns>
+  <Points>
+    <Name>Xmlspawner_Training_#1_Ralph_1</Name>
+    <UniqueId>a40c91a1-ea5f-4a77-9eea-f42050b9f9af</UniqueId>
+    <Map>Trammel</Map>
+    <X>5475</X>
+    <Y>1097</Y>
+    <Width>10</Width>
+    <Height>10</Height>
+    <CentreX>5480</CentreX>
+    <CentreY>1102</CentreY>
+    <CentreZ>0</CentreZ>
+    <Range>5</Range>
+    <MaxCount>1</MaxCount>
+    <MinDelay>5</MinDelay>
+    <MaxDelay>10</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>-1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>False</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>rat/MSG/Hello! I am a rat.:MX=0:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=rat/name/Ralph/MSG/Hello! I am a rat named Ralph.:MX=0:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=rat/name/Ralph/HitsMaxSeed/300/MSG/Hello! I am a rat named Ralph, but I am very weak...:MX=0:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=rat/name/Ralph/HitsMaxSeed/300/Hits/300/MSG/Hello! I am a rat named Ralph and I am very *tough*!:MX=0:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1:OBJ=rat/name/Ralph/HitsMaxSeed/300/Hits/300/ADD,0.9/&lt;ThinLongSword/name/Ralph's Long Sword/hue/1125/Attributes.LowerRegCost/25/Attributes.LowerManaCost/25/Skill/Fencing&gt;/MSG/Hello! I am a rat named Ralph and I have a special sword!  |  &lt;SETONMOB,Playermobile/SENDMSG/Open Ralph's backpack and look at the sword.&gt;:MX=1:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

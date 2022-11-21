@@ -1,0 +1,283 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Lamar</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.166666666666667</ResetTime>
+    <ConfigFile>LamarTheBookie</ConfigFile>
+    <SpeechEntries>18</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>I'd like to enter the Wolf Pit.</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Warrior and The Wolf,4/So then, you fancy yourself as a fighter, do you? Well, you got in here, so you can't be too soft. Let's get down to the gambling shall we? It's a straight, 5000gp wager per tier. Each tier will be 2500gp more than the next. Ya lose, ya get nothin' - ya win, well, you'll be a little more richer? Do you agree to pay?;Sounds good;Yes;I'm not so sure. No.;No </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Warrior and The Wolf,4/Great! Now then, which tier do ya wish to compete in? If you've competed before, just show me yer dog tag and I'll let you in.;Tier One (5000gp);One;Tier Two (7500gp);Two;Tier Three (10000gp);Three;Tier Four (12500gp);Four;Tier Five (15000gp);Five</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Take a seat, then. I got REAL fighters waiting to participate here.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>The Blackrock Lycanthrope awaits you! Enter the portal!</Text>
+    <Keywords>One</Keywords>
+    <Action>SET,0x40409E21/DoRespawn/True ; TAKEBYTYPE,1,5000/Gold ; GIVE/&lt;Fork/Name/Pitfighter Token/ITEMID/10922/movable/false&gt; ; SET,0x4034f404/DoRespawn/True ; SET,0x4003F5A4/Running/True</Action>
+    <Condition>AMOUNTCARRIED,Gold&gt;4999</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>The Sanguine Lycanthrope is hungry to taste your blood! Enter the portal, if you dare... </Text>
+    <Keywords>Two</Keywords>
+    <Action>SET,0x40409E43/DoRespawn/True ; TAKEBYTYPE,1,7500/Gold ; GIVE/&lt;Fork/Name/Pitfighter Token/ITEMID/10922&gt; ; SET,0x4034f404/DoRespawn/True ; SET,0x4003F5A4/Running/True</Action>
+    <Condition>GETONCARRIED,Ancient Wolf Tag - Tier 2,Visible=true &amp; AMOUNTCARRIED,Gold&gt;7499</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Text>Brave one, eh? The Deathhowl Lycanthrope will soon change that! Enter the portal!</Text>
+    <Keywords>Three</Keywords>
+    <Action>SET,0x40409E6F/DoRespawn/True ; TAKEBYTYPE,1,10000/Gold ; GIVE/&lt;Fork/Name/Pitfighter Token/ITEMID/10922&gt; ; SET,0x4034F404/DoRespawn/True ; SET,0x4003F5A4/Running/True</Action>
+    <Condition>GETONCARRIED,Ancient Wolf Tag - Tier 3,Visible=true &amp; AMOUNTCARRIED,Gold&gt;9999</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Text>I hope ya got as much muscle as you do gold! The Bruteblood Lycanthrope awaits - enter the portal!</Text>
+    <Keywords>Four</Keywords>
+    <Action>SET,0x40409E70/DoRespawn/true ; TAKEBYTYPE,1,12500/Gold ; GIVE/&lt;Fork/Name/Pitfighter Token/ITEMID/10922&gt; ; SET,0x4034f404/DoRespawn/True ; SET,0x4003F5A4/Running/True</Action>
+    <Condition>GETONCARRIED,Ancient Wolf Tag - Tier 4,Visible=true &amp; AMOUNTCARRIED,Gold&gt;12499</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Text>Good choice! The Ultimatus Lycanthrope hasn't been fed today. Enter the portal!</Text>
+    <Keywords>Five</Keywords>
+    <Action>SET,0x4040A360/DoRespawn/True ; TAKEBYTYPE,1,15000/Gold ; GIVE/&lt;Fork/Name/Pitfighter Token/ITEMID/10922&gt; ; SET,0x4034f404/DoRespawn/True ; SET,0x4003F5A4/Running/True</Action>
+    <Condition>GETONCARRIED,Ancient Wolf Tag - Tier 3,Visible=true &amp; AMOUNTCARRIED,Gold&gt;14999</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Text>Sorry pal, not enough gold.</Text>
+    <Keywords>One</Keywords>
+    <Condition>AMOUNTCARRIED,Gold&lt;5000</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Text>Sorry pal, not enough gold.</Text>
+    <Keywords>Two</Keywords>
+    <Condition>AMOUNTCARRIED,Gold&lt;7500</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Text>Sorry pal, not enough gold.</Text>
+    <Keywords>Three</Keywords>
+    <Condition>AMOUNTCARRIED,Gold&lt;10000</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>120</EntryNumber>
+    <ID>120</ID>
+    <Text>Sorry pal, not enough gold.</Text>
+    <Keywords>Four</Keywords>
+    <Condition>AMOUNTCARRIED,Gold&lt;12500</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>130</EntryNumber>
+    <ID>130</ID>
+    <Text>Sorry pal, not enough gold.</Text>
+    <Keywords>Five</Keywords>
+    <Condition>AMOUNTCARRIED,Gold&lt;15000</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>140</EntryNumber>
+    <ID>140</ID>
+    <Text>You ain't got the rights, pal. Try a lower level.</Text>
+    <Keywords>Two</Keywords>
+    <Condition>~GETONCARRIED,Ancient Wolf Tag - Tier 2,Visible=true</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>150</EntryNumber>
+    <ID>150</ID>
+    <Text>You ain't got the rights, pal. Try a lower level.</Text>
+    <Keywords>Three</Keywords>
+    <Condition>~GETONCARRIED,Ancient Wolf Tag - Tier 3,visible=true</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>160</EntryNumber>
+    <ID>160</ID>
+    <Text>You ain't got the rights, pal. Try a lower level.</Text>
+    <Keywords>Four</Keywords>
+    <Condition>~GETONCARRIED,Ancient Wolf Tag - Tier 4,visible=true</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>170</EntryNumber>
+    <ID>170</ID>
+    <Text>You ain't got the rights, pal. Try a lower level.</Text>
+    <Keywords>Five</Keywords>
+    <Condition>~GETONCARRIED,Ancient Wolf Tag - Tier 5,visible=true</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

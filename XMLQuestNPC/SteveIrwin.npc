@@ -1,0 +1,294 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Steve Irwin</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Rainbow Mount Quest,5 &amp; Rainbow Mount Quest,4 &amp; Rainbow Mount Quest,3 &amp; Rainbow Mount Quest,2 &amp; Rainbow Mount Quest,1</TriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>SteveIrwin</ConfigFile>
+    <SpeechEntries>19</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>G'day!</Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Hi Steve!</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,2/G'day! Welcome to another exciting episode of...crikey, this isn't my show! Well we've got lots of beauties here for ya. Since you've gathered all your tokens, I'll give ya this little white beauty. You'll need that little bugger to get into the taming room to get your new pet. Crikey we've got a lot of pets here. Lovely little sheilas and tough blokes here to pick from. Just enter the name of the pet and I'll give you your new quest to tame it. Make sure you type them like this: Rainbow Unicorn or Rainbow CuSidhe. We have the following pets available for taming: CuSidhe, Forest Ostard, Frenzied Ostard, Desert Ostard, Beetle, Ridgeback, Savage Ridgeback, Swamp Dragon, Scaled Swamp Dragon, Hellsteed, Silver Steed, Hiryu, KiRin, Llama, Unicorn, and Polar Bear.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Rainbow Unicorn</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Unicorn/titlestring/Rainbow Unicorn/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if THEY are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>Rainbow CuSidhe</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow CuSidhe/titlestring/Rainbow CuSidhe/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>Rainbow Llama</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Llama/titlestring/Rainbow Llama/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Keywords>Rainbow Hiryu</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Hiryu/titlestring/Rainbow Hiryu/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Keywords>Rainbow KiRin</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow KiRin/titlestring/Rainbow KiRin/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Keywords>Rainbow Silver Steed</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Silver Steed/titlestring/Rainbow Silver Steed/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Keywords>Rainbow Forest Ostard</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Forest Ostard/titlestring/Rainbow Forest Ostard/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Keywords>Rainbow Frenzied Ostard</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Frenzied Ostard/titlestring/Rainbow Frenzied Ostard/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Keywords>Rainbow Desert Ostard</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Desert Ostard/titlestring/Rainbow Desert Ostard/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>120</EntryNumber>
+    <ID>120</ID>
+    <Keywords>Rainbow Hellsteed</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Hellsteed/titlestring/Rainbow Hellsteed/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>130</EntryNumber>
+    <ID>130</ID>
+    <Keywords>Rainbow Beetle</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Beetle/titlestring/Rainbow Beetle/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>140</EntryNumber>
+    <ID>140</ID>
+    <Keywords>Rainbow Ridgeback</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Ridgeback/titlestring/Rainbow Ridgeback/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>150</EntryNumber>
+    <ID>150</ID>
+    <Keywords>Rainbow Savage Ridgeback</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Savage Ridgeback/titlestring/Rainbow Savage Ridgeback/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>160</EntryNumber>
+    <ID>160</ID>
+    <Keywords>Rainbow Polar Bear</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Polar Bear/titlestring/Rainbow Polar Bear/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>170</EntryNumber>
+    <ID>170</ID>
+    <Keywords>Rainbow Swamp Dragon</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Swamp Dragon/titlestring/Rainbow Swamp Dragon/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>180</EntryNumber>
+    <ID>180</ID>
+    <Keywords>Rainbow Scaled Swamp Dragon</Keywords>
+    <Action>GIVE/RainbowToken ; GIVE/&lt;questholder/name/Rainbow Scaled Swamp Dragon/titlestring/Rainbow Scaled Swamp Dragon/notestring/Enter the red moongate and tame your new rainbow pet. Once tamed, you and your new pet will be teleported to a safe location and given a reward. Exit via the moongate back to Luna./objective1/Tame your mount./Description1/Tame your rainbow mount./autoreward/true/CanSeeReward/false/rewardstring/@bag/ADD/Gold,500/ADD/RewardScroll ; TAKE,1,1,true,questholder/Rainbow Mount Quest</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Steve,0/Goodluck mate! Enjoy your new pet! Don't forget, Rainbow pets can res the dead, even if they are dead!</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

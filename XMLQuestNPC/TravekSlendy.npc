@@ -1,0 +1,142 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Travek</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Ancient Summoning Scroll</TriggerOnCarried>
+    <NoTriggerOnCarried>Too Late</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>TravekSlendy</ConfigFile>
+    <SpeechEntries>9</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Are you Travek?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,There is no escape,4/Travek is many people and no one at all. Who are ye to ask?;I found your note in the mines;Dug;Oh, er, never mind.;Go</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Dug</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,You were chosen,4/He appears to become very aggitated as you present the dank note that you previously uncovered in the mines.;(continue);(continue)</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>He sent you, didn't he? Leave - NOW!</Text>
+    <Keywords>Go</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>(continue)</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,It is a blessing,4/Travek lurches from his seat and grabs you. His eyes, crazed - desperate.                                               "And the summoning scroll? Did you leave it??? It MUST not, CAN not..;This scroll? (You show the omninous parchment to Travek.) ;scroll;It seemed evil, I left it where you buried it.;left</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>scroll</Keywords>
+    <DependsOn>40</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Don't look back,4/As you present the scroll, the old mage retreats fearfully to the corner of his room. He waves his hands in protestation, before clasping his head and sinking to the floor.                                         "Then, it is too late. He will come. HE WILL COME!";Steady, old man, what do you mean?;steady</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Text>It must rest, never awaken - no, no...</Text>
+    <Keywords>left</Keywords>
+    <DependsOn>40</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Keywords>steady</Keywords>
+    <Action>TAKE/Mysterious Map</Action>
+    <DependsOn>50</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,It is too late,4/Upon seeing the scroll, Travek becomes noticably distraught.                                                         "Then you have cursed us both! How did you break the wards? They could not be found unless you did! WHAT DID YOU DO?;I followed a map - this map. It was, given to me.;map</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Text>The earth will not bleed, if someone is taken. Remember, this...</Text>
+    <Keywords>map</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Too Late/Titlestring/Too Late/Notestring/You spoke with Travek about the ancient summoning scroll. It appears he thinks that you are both in grave danger. He has desperately urged you to go to the Blood Marshes to complete a ritual of some kind. Otherwise, the consequences will be most dire./Objective1/COLLECTNAMED,Bloodfallen Earth,Gravedust,1/Description1/Go the the Blood Marshes and collect bloodfallen earth/Objective2/Complete the ritual/Description2/Complete the ritual/EchoAddJournalEntry/The Blood Marshes: Travek has compelled you to travel the Blood Marshes to complete the ritual, that he presumably started. It appears whatever you have unearthed it is of unimaginable evil. As you leave, you overhear him mention that the earth will not bleed - does this mean it will not always bleed?/Autoreward/true/canseereward/false/Rewardstring/@bag/ADD,0.01/&lt;Monkrobe/Name/Ethereal Robe/attributes.BonusMana/20/attributes.BonusInt/10/attributes.regenmana/2/attributes.ReflectPhysical/-10/hue/2022/loottype/blessed&gt;/ADD/&lt;RewardScroll/Amount/2&gt;</Action>
+    <DependsOn>70</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,He chose you,0/You notice  him caressing a locket which seems to soothe his nerves but he appears melancholy for doing so - something from a loved one, perhaps, now long lost. He regains his composure,                                                            "You must give it to me, now. No - wait - there's another way. I cannot go there again - I cannot. You must go to the Blood Marshes. You must endow the scroll with the earth of the bloodfallen. When you have done so, read it aloud. You must! You cannot turn back now - He will come."</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

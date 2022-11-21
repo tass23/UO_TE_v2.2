@@ -1,0 +1,356 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Gerard</Name>
+    <Running>True</Running>
+    <ProximityRange>5</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Hunter</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>7</SpeechPace>
+    <ResetTime>0.25</ResetTime>
+    <ConfigFile>Hunterquestnew</ConfigFile>
+    <SpeechEntries>25</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>2</EntryNumber>
+    <ID>2</ID>
+    <Condition>GETONCARRIED,The Hunter,Completed3=true</Condition>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>3</EntryNumber>
+    <ID>3</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Bhja'hor:Find and kill Bhja'hor somewhere around Yew (tram). He may be carrying something/objective4/KILLNAMED,Bhja'hor,1 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Bear4</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective4="Not yet available"</Condition>
+    <DependsOn>2</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>4</EntryNumber>
+    <ID>4</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Tir'sati:Find and kill Tir'sati somewhere far east of Delucia/objective4/KILLNAMED,Tir'sati,1 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Lion4</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective4="Not yet available"</Condition>
+    <DependsOn>2</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>5</EntryNumber>
+    <ID>5</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/T'dbleGr: Find and kill this beast by Serpents Hold/Objective4/KILLNAMED,T'dbleGr,1 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Tiger4</Action>
+    <Condition>GETONCARRIED,The Hunter,objective4="Not yet available"</Condition>
+    <DependsOn>2</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>8</EntryNumber>
+    <ID>8</ID>
+    <Text>Wow, {GETONTRIGMOB,name}. Your doing great, maybe you will be fit for my hunting party but prove yourself further against this dreaded beast.</Text>
+    <Action>SETONTHIS/doreset/true</Action>
+    <DependsOn>3,4,5</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>11</EntryNumber>
+    <ID>11</ID>
+    <Condition>GETONCARRIED,The Hunter,Completed2=true &amp; GETONCARRIED,The Hunter,Completed3=false</Condition>
+    <DependsOn>0</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>12</EntryNumber>
+    <ID>12</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Great Bear:There are Great Bears South of Yew, kill some of them and return to Gerard/objective3/KILLNAMED,Great Bear,5 ;SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Bear3</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective3="Not yet available"</Condition>
+    <DependsOn>11</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>13</EntryNumber>
+    <ID>13</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Strong Adult Lion:There are strong adult lions north of Delucia, kill some and return to Gerard/objective3/KILLNAMED,Strong Adult Lion,5 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Lion3</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective3="Not yet available"</Condition>
+    <DependsOn>11</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>14</EntryNumber>
+    <ID>14</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Strong Wild Tiger:Find and kill a few strong wild tigers south of Paupa and return to Gerard/Objective3/KILLNAMED,Strong Wild Tiger,5 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Tiger3</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective3="Not yet available"</Condition>
+    <DependsOn>11</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>18</EntryNumber>
+    <ID>18</ID>
+    <Text>Nice Job, However you may have more trouble with a truly powerful beast</Text>
+    <Action>SETONTHIS/doreset/true</Action>
+    <DependsOn>13,12,14</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Condition>GETONCARRIED,The Hunter,Completed1=true &amp; GETONCARRIED,The Hunter,Completed2=false</Condition>
+    <DependsOn>0</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>21</EntryNumber>
+    <ID>21</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Large Bear:There are Large Bears North of Yew, kill some of them and return to Gerard/objective2/KILLNAMED,Large Bear,10 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Bear2</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective2="Not yet available"</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>22</EntryNumber>
+    <ID>22</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Adult Lions:You may find adult lions east of Delucia, if you do, kill some and return./objective2/KILLNAMED,Adult Lion,10 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Lion2</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective2="Not yet available"</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>23</EntryNumber>
+    <ID>23</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Large Tiger:Find and kill some Large Tigers east of Vesper and return to Gerard/objective2/KILLNAMED,Large Tiger,10 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Tiger2</Action>
+    <Condition>GETONCARRIED,The Hunter,Objective2="Not yet available"</Condition>
+    <DependsOn>20</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>26</EntryNumber>
+    <ID>26</ID>
+    <Text>Well, you did that well, now lets see if you can kill something a bit stronger</Text>
+    <Action>SETONTHIS/doreset/true</Action>
+    <DependsOn>21,22,23</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>28</EntryNumber>
+    <ID>28</ID>
+    <Text>How ya Doin?</Text>
+    <DependsOn>-2,0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>29</EntryNumber>
+    <ID>29</ID>
+    <Text>Can you assist me?</Text>
+    <DependsOn>28</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>yes,ok,hail,sure</Keywords>
+    <DependsOn>29</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Gerard,4/I'm looking for fresh meat, umm I mean fresh volunteers to join in a hunting expedition. Would you be interested?;Yes, of course;Ok;No thanks;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>ok</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Gerard,3/Well before you can join, I need to see if you are a good hunter. You will need to kill some animals first. If you fight well, I'll give you something to fight with. I'll start ya off slow.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>Wait a moment, let me think of where to send you first.</Text>
+    <Keywords>accept</Keywords>
+    <Action>GIVE/&lt;questholder/name/The Hunter/hue/33/difficulty/50/nextrepeatable/20:00/CanSeeReward/False/notestring/Look in the journal tab for instructions./objective1/Not yet available/objective2/Not yet available/Objective3/Not yet available/Objective4/Not yet available/autoreward/true/rewardstring/@bag/hue/33/ADD/&lt;SARMOR,3,5/name/{GETONTRIGMOB,name}'s Armor/hue/33/MaxHitPoints/150/HitPoints/150/Attributes.LowerRegCost/RND,0,25/ArmorAttributes.SelfRepair/RND,0,7/PhysicalBonus/RND,0,20/FireBonus/RND,0,20/EnergyBonus/RND,0,20/PoisonBonus/RND,0,20/Attributes.Luck/RND,10,100&gt;</Action>
+    <DependsOn>40</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Action>SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Bear1 ; SETONCARRIED,The Hunter,questholder/addjournalentry/Young Bear:Kill a few young Bears east of Yew (tram)/objective1/KILLNAMED,Young Bear,20</Action>
+    <DependsOn>50</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Lion Cub:Kill a few Lion cubs east of Papau and return to Gerard/objective1/KILLNAMED,Lion Cub,25 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Lion1</Action>
+    <DependsOn>50</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>0</PrePause>
+    <LockConversation>False</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>72</EntryNumber>
+    <ID>72</ID>
+    <Action>SETONCARRIED,The Hunter,questholder/addjournalentry/Tiger cub:Kill a few tiger cubs west of trinsic and return to Gerard/objective1/KILLNAMED,Tiger Cub,15 ; SETONCARRIED,The Hunter/ATTACH/&lt;xmlmagicword/name/Tiger1</Action>
+    <DependsOn>50</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Text>Ok, I've written it into your journal</Text>
+    <Action>SETONTHIS/doreset/true</Action>
+    <DependsOn>60,70,72</DependsOn>
+    <Pause>0</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>True</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

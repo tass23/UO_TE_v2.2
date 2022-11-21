@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Shubin</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>A Feast For Thanksgiving</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Shubin</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Er, hello?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,A Feast for Thanksgiving,4/Oi - 'uman! Me need help, get Shubin gredients fer Big Thanking Meal. Me good cook, but me weak. Help, Shubin?;I don't see why not?;yes;Eh, no. I really don't think so;no</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>yes</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/A Feast For Thanksgiving/Titlestring/A Feast For Thanksgiving/Notestring/Shubin the Cook has asked you gather some ingredients for his Big Thanking Meal. Head into the Dungeon Despise to find what he seeks./Objective1/GIVENAMED,Shubin,Turklor Egg,fork,5/Description1/Give Shubin 5 Turklor Eggs/Objective2/GIVENAMED,Shubin,Turklor Brood Leg,fork,10/Description2/Give Shubin 10 Turklor Brood Legs/Objective3/GIVENAMED,Shubin,Magical Pumpkin,fork,5/Description3/Give Shubin 5 Magical Pumpkins/EchoAddJournalEntry/Preparing for the feast: Shubin has given you some crudely written directions leading to a cul de sac somewhere in the Dungeon Despise. You can't make out much, save  that it is marked with the words - "Turklor Eggs n' Joocy Legs" On the other parchment is a map of Britain. Shubin also mentions "Magic Pumpkins - bludy sore!" /autoreward/true/canseereward//rewardstring/@bag/ADD/&lt;TurkeyPie/Name/Turklor Pie&gt;/ADD/&lt;PumpkinPie/Name/Magical Pumpkin Pie&gt;/ADD/&lt;RewardScroll/Amount/4&gt;/&lt;ADD/Gold/Amount/4000&gt;/ADD,0.2/&lt;{RNDSTRLIST,HalfApron,Bonnet}/Name/Chef's uniform/skillbonuses.skill_1_name/Cooking/skillbonuses.skill_1_Value/30&gt;/ADD,0.01/&lt;Cornucopia/name/A Thanksgiving Feast&gt;&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Git!</Text>
+    <Keywords>no</Keywords>
+    <Action>SOUND,430</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

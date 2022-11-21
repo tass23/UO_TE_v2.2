@@ -1,0 +1,9 @@
+I just added the seasonchange. I used zardoz script of the season changer 
+( http://www.runuo.com/forums/showthread.php?t=71508 ) and implemented it in Morextons time system. 
+There is NO ingame command to change the dates each season starts. I took realtime dates (March 21th, June 21th...)
+I hope you like it. You can easily change it in the script timesystem.cs Search for the region season.
+I didn't use desolated.
+
+Have fun!
+
+Lia

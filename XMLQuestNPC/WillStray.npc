@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Will Stray</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Underwater Retrieval | ATTACHMENT,Underwater Retrieval,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>WillStray</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Name's Will, Will Stray.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What kind of name is that?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Will Stray,4/Hey, whoa, wait a second, pops! What kind of name is {GETONTRIGMOB,Name}, huh? You think that up all by yourself, there professor? Anyway, look, so my dad found this shipwreck, from, I dunno decades ago, or something. Then we find out, it's actually an entrance to an underwater civilization! So we went down to eyeball this grody place, dig. Then, bam! These blue odd balls came out of nowheresville and hit me with a knuckle sandwich! We high-tailed it and Jonesy left me here to keep an eyeball. I suppose you could do me a favor and get our stuff that we dropped. Whatdya say Big Daddy?;I suppose I'll help.;Yes;You little brat get bent!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/Underwater Retrieval/titlestring/Underwater Retrieval/notestring/The obnoxious brat of Jonesy's wants you to bring back the items that were left behind when they were attacked. You have decided, out of the goodness of your heart, to help, instead of siccing your pet on him or smacking him with the hilt of your weapon. To that end, Will has stated that the following items are now missing/Objective1/COLLECT,waterserpentvenom,5/Description1/Collect 5 bottles of Water Serpent Venom./Objective2/COLLECT,WaterLoggedNotebook,5/Description2/Collect 5 of Jonesy's water logged notebooks./Objective3/COLLECT,SpringWater,5/Description3/Collect 5 vials of Spring Water./AddJournalEntry/Water Serpent Venom:Water Serpents often make their homes near patches of seaweed/AddJournalEntry/Water Logged Notebooks:Look around the shipwreck./AddJournalEntry/Spring Water:Around Atlantis, natural hot springs are visible./repeatable/true/Autoreward/true/CanSeeReward/false/Difficulty/1/AttachmentString/XmlQuestAttachment,Underwater Retrieval,1440/AttachmentString/XmlAddFaction,TriFords,100/Rewardstring/@bag/ADD/Gold,200/ADD,0.25/AtlantisMap</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Wow, thanks for nothing Square!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Later gator!</Text>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

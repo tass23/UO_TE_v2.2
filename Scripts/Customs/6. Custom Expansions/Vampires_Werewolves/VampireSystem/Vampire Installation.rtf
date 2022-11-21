@@ -1,0 +1,283 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil Courier New;}{\f1\fnil\fcharset0 Courier New;}}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\margl1440\margr1440\psz1
+{\*\jarte object RichPersist
+  Version = 2
+  LMarg = 1440
+  RMarg = 1440
+  TMarg = 1440
+  BMarg = 1440
+  Equal = True
+  Orient = 1
+  Size = 1
+  Width = 2159
+  Height = 2794
+  HdrMarg = 720
+  FtrMarg = 720
+  HdrFont.Charset = DEFAULT_CHARSET
+  HdrFont.Color = clWindowText
+  HdrFont.Height = -11
+  HdrFont.Name = 'Arial'
+  HdrFont.Style = []
+  WMark = 'None'
+  WColor = 13822463
+end
+}\uc1\pard\b\f0\fs28 Freyd's Vampire System 1.1\b0\fs20\par
+\par
+\par
+Here comes my first bigger than others script. Script add vampirism for yours players. Its easy to configure and will give yours players a lot of fun.\par
+\par
+\ul Updates:\ulnone\par
+26.07.2007 v1.1\par
+#Added sunlight damages. Now vampires will get damage on days (between 6am to 6pm). Players can hide in Players Houses and Dungeons.\par
+Part of this scripts is recovered from Sickness System Re-edited V1.9 and all credits going to creators.\par
+#Removed bug on public override void Resurrect()\par
+#Changes Logout method (now you can easly remove vampire from chosen one player just changing his Vampire value to 0)\par
+\par
+\ul How it work:\ulnone\par
+Player have X% chance (recommended is 10%) to bite other player using command [bite or simply [b (player can use this ability in any time, special power will teleport him to his combatant and quickly bite him but then player will lose his all mana). After success biting, his enemy have X% chance (recommended is 1%) to get vampirism. Player must be on vampire bat form to bite anyone. You must choise one player (or more) who will start vampires (staff with vampirism allways have 100% chance to bite and give vampirism to other players).\par
+Vampire have 20 Str, 5 Dex and 10 Int bonus but his max Fire Resistance is 50 and he get sunlight damages. All of values are easy to configure in Vampire.cs. Also vampires need to drink blood. If they dont bite anyone of other players after 2h of last biting they will lost hp and die. Vampires offcourse can polymorph into vampire bat using command [vampireform or simply [vf. Then they can easly run away from combat.\par
+\par
+Important: You can easly disable this system in setup section without deleting characters. You can test it on your shard without any problems if you wouldnt like it in the future.\par
+\par
+\ul\f1 Thagoras Updates:\ulnone\par
+01.11.2010 v1.1a\par
+A good portion of this isn't mine.  I did make a number of heavy mods, but left the credits untouched.\f0\par
+\f1 #Changed the animation and sound for the sunlight damages.\par
+#Changed the X% chance.  Now skill based.  Requires Anatomy.  Can make difficulty adjustments in script.\par
+#Removed [bite and [form commands.  Replaced with a gump (I don't like players using commands).  Automatically appears on screen on login.  If it doesn't, however, you may type in [vampire to get gump.\par
+#Added NPCs (a whole mass) which can infect players.\par
+#Added Quest.  Bring head, get a bottle of blood.  Drink, become Vampire.  Works 100%.\par
+#Added Ghost mount...only for vampire.\par
+#Added Vampire Slayer.\par
+\f0\par
+\par
+\ul Installation:\ulnone\par
+Warning: This script need few PlayerMobile.cs changes!\par
+\b [1] Copy Vampire.cs file into your Custom folder\par
+\par
+[2] Open yours PlayerMobile.cs file\b0\par
+after\par
+Code:\par
+\tab\tab private int m_Profession;\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+        \f1 private\f0  int m_Vampire;\par
+        [CommandProperty(AccessLevel.GameMaster)]\par
+        public int Vampire \{ get \{ return m_Vampire; \} set \{ m_Vampire = value; \} \}   \par
+\par
+        \f1 private\f0  int m_VampireBited;\par
+        [CommandProperty(AccessLevel.GameMaster)]\par
+        public int VampireBited \{ get \{ return m_VampireBited; \} set \{ m_VampireBited = value; \} \}\par
+\par
+        private DateTime m_VampireBiteTime;\par
+        [CommandProperty(AccessLevel.GameMaster)]\par
+        public TimeSpan VampireBiteTime\par
+        \{\par
+            get\par
+            \{\par
+                TimeSpan ts = m_VampireBiteTime - DateTime.Now;\par
+\par
+                if (ts < TimeSpan.Zero)\par
+                    ts = TimeSpan.Zero;\par
+\par
+                return ts;\par
+            \}\par
+            set\par
+            \{\par
+                try \{ m_VampireBiteTime = DateTime.Now + value; \}\par
+                catch \{ \}\par
+            \}\par
+        \}          \par
+//Freyd's Vampire System\par
+\par
+\ul\f1 after (in public override int GetMaxResistance(ResistanceType type))\ulnone\par
+Code:\par
+            if (Core.ML && this.Race == Race.Elf && type == ResistanceType.Energy)\par
+                max += 5; //Intended to go after the 60 max from curse\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+            if (this.Vampire != 0 && 50 < max && type == ResistanceType.Fire)\par
+                max = 50;\par
+//Freyd's Vampire System\par
+\par
+\ul after (in public override void ComputeBaseLightLevels(out int global, out int personal))\ulnone\par
+Code:\par
+\tab\tab\tab\}\par
+            else\par
+                personal = this.LightLevel;\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+\tab\tab\tab if ((this.Vampire != 0) && (this.LightLevel <= 15)) \par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab if (this.Vampire > 15) personal = 15;\par
+\tab\tab\tab\tab else if ((this.Vampire + 4) > 15) personal = 15\par
+\tab\tab\tab\tab else personal = (this.Vampire + 4);\par
+\tab\tab\tab\}\par
+//Freyd's Vampire System\f0\par
+\par
+\ul after\f1  (in \f0 private static void OnLogin( LoginEventArgs e )\f1 )\ulnone\f0\par
+Code:\par
+\tab\tab\tab Mobile from = e.Mobile;\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+            PlayerMobile vampire = e.Mobile as PlayerMobile;\par
+            if (vampire.Vampire \f1 >\f0  0 && VampireSystem.Vampires)\par
+            \{\par
+                vampire.Title = "the Vampire";\par
+                vampire.AddStatMod(new StatMod(StatType.Str, "Vampire Str Bonus", VampireSystem.strBonus, TimeSpan.Zero));\par
+                vampire.AddStatMod(new StatMod(StatType.Dex, "Vampire Dex Bonus", VampireSystem.dexBonus, TimeSpan.Zero));\par
+                vampire.AddStatMod(new StatMod(StatType.Int, "Vampire Int Bonus", VampireSystem.intBonus, TimeSpan.Zero));                \par
+            \}\par
+            if (vampire.VampireBited == 1)\par
+                vampire.VampireBited = 0;\par
+            if (vampire.Vampire \f1 > 0\f0  && vampire.Alive && vampire.VampireBiteTime == TimeSpan.Zero)\par
+                new VampireTimer(vampire, 120.0).Start();\par
+\f1\tab\tab if (vampire.Vampire > 0) vampire.SendGump( new VampireGump() );\f0   \par
+//Freyd's Vampire System\par
+\par
+\par
+\ul after\f1  (in \f0 private static void OnLogout( LogoutEventArgs e )\f1 )\ulnone\f0\par
+Code:\par
+\tab\tab\{\par
+\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+            Mobile from = e.Mobile;\par
+            PlayerMobile vampire = e.Mobile as PlayerMobile;\par
+            vampire.BodyMod = 0;\par
+            vampire.NameMod = null;\par
+            vampire.Title = null;\par
+            vampire.RemoveStatMod("Vampire Str Bonus");\par
+            vampire.RemoveStatMod("Vampire Dex Bonus");\par
+            vampire.RemoveStatMod("Vampire Int Bonus");     \par
+            if (!VampireSystem.Vampires)            \par
+                vampire.Vampire = 0;\par
+//Freyd's Vampire System\par
+\par
+\par
+\ul after\f1  (in \f0 public override void Resurrect()\f1 )\ulnone\f0\par
+Code:\par
+\tab\tab\tab bool wasAlive = this.Alive;\par
+\par
+\tab\tab\tab base.Resurrect();\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+            PlayerMobile vampire = this as PlayerMobile;\par
+            if (vampire.VampireBited == 1)\par
+                vampire.VampireBited = 0;\par
+            if (vampire.Vampire == 1 && vampire.VampireBiteTime == TimeSpan.Zero)\par
+                new VampireTimer(vampire, 120.0).Start();\par
+//Freyd's Vampire System\par
+\par
+\par
+\ul after\f1  (in public override void OnDeath(Container c))\ulnone\f0\par
+Code:\par
+\tab\tab\tab Mobile killer = this.FindMostRecentDamager( true );\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+\tab\tab if (killer is PlayerMobile)\par
+\tab\tab\{\par
+\tab\tab\tab PlayerMobile pm = (PlayerMobile) killer;\par
+\tab\tab\tab if (pm.Vampire > 0)\par
+\tab\tab\tab\{\par
+            \tab if (this.VampireBited == 1)\par
+            \tab\tab this.VampireBited = 0;\par
+\tab\tab\tab\}\par
+\tab\tab\}\par
+\tab\tab if (killer is BaseVampire)\par
+\tab\tab\{\par
+\tab\tab\tab BaseVampire vamp = (BaseVampire) killer;\par
+\tab\tab\tab vamp.Rank += 1;\par
+\tab\tab\}\par
+//Freyd's Vampire System\par
+\par
+\par
+\ul before\f1  (in public override void Deserialize(GenericReader reader))\ulnone\f0\par
+Code:\par
+\f1\tab\tab\f0 switch ( version )\par
+\f1\tab\tab\f0\{\par
+\f1\tab\tab\tab\f0 case #LAST CASE#:\par
+add\par
+Code:\par
+\f1\tab\tab\tab\f0 case #NEXT CASE#:\par
+\f1\tab\tab\tab\f0\{\par
+//Freyd's Vampire System\par
+\f1\tab\tab\tab\tab\f0 m_Vampire = reader.ReadInt();                    \par
+\f1\tab\tab\tab\tab\f0 m_VampireBited = reader.ReadInt();                    \par
+\f1\tab\tab\tab\tab\f0 VampireBiteTime = reader.ReadTimeSpan();\par
+//Freyd's Vampire System      \par
+\f1\tab\tab\tab\tab\f0 goto case #LAST CASE#;\par
+\f1\tab\tab\tab\f0\}\par
+\par
+\par
+\ul this\f1  (in public override void Serialize(GenericWriter writer))\ulnone\f0\par
+Code:\par
+\tab\tab\tab writer.Write( (int) #LAST CASE# ); // version\par
+change to\par
+Code:\par
+\tab\tab\tab writer.Write( (int) #NEXT CASE# ); // version\par
+\par
+//Freyd's Vampire System\par
+ \f1\tab\tab\tab\f0 writer.Write((int)m_Vampire);\par
+\f1\tab\tab\tab\f0 writer.Write((int)m_VampireBited);\par
+\f1\tab\tab\tab\f0 writer.Write(VampireBiteTime);\par
+//Freyd's Vampire System\par
+\par
+\par
+\par
+\b [3] Open Noterity.cs\b0\par
+\ul after (in public static int MobileNotoriety( Mobile source, Mobile target ))\ulnone\par
+Code:\par
+\f1\tab\tab\f0 if (target.Kills >= 5 || (target.Body.IsMonster && IsSummoned(target as BaseCreature) && !(target is BaseFamiliar) && !(target is Golem)) || (target is BaseCreature && (((BaseCreature)target).AlwaysMurderer || ((BaseCreature)target).IsAnimatedDead)))\par
+\f1\tab\tab\tab\f0 return Notoriety.Murderer;\par
+add\par
+Code:\par
+//Freyd's Vampire System\par
+\f1\tab\tab\f0 if (((PlayerMobile) source).Vampire \f1 >\f0  \f1 0\f0 )           \par
+\f1\tab\tab\tab\f0 return Notoriety.Murderer;\par
+//Freyd's Vampire System\par
+\par
+\par
+\b\f1 [4] Open FoodDecay.cs\b0\par
+\ul after (in public static void HungerDecay( Mobile m ))\ulnone\par
+Code:\par
+\tab\tab\tab if ( m != null && m.Hunger >= 1 )\par
+\tab\tab\tab\tab m.Hunger -= 1;\par
+add\par
+Code:\par
+//Vampire Adds\par
+\tab\tab\tab if (m is PlayerMobile)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab PlayerMobile pm = (PlayerMobile) m;\par
+\tab\tab\tab\tab if (pm.Vampire > 0)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab pm.Hunger = 10;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\}\par
+//Vampire Adds\par
+\par
+\ul after (in public static void ThirstDecay( Mobile m ))\ulnone\par
+Code:\par
+\tab\tab\tab if ( m != null && m.Thirst >= 1 )\par
+\tab\tab\tab\tab m.Thirst -= 1;\par
+add\par
+Code:\par
+//Vampire Adds\par
+\tab\tab\tab if (m is PlayerMobile)\par
+\tab\tab\tab\{\par
+\tab\tab\tab\tab PlayerMobile pm = (PlayerMobile) m;\par
+\tab\tab\tab\tab if (pm.Vampire > 0)\par
+\tab\tab\tab\tab\{\par
+\tab\tab\tab\tab\tab pm.Thirst = 10;\par
+\tab\tab\tab\tab\}\par
+\tab\tab\tab\}\par
+//Vampire Adds\f0\par
+}
+ 

@@ -1,0 +1,27 @@
+<center><h3><basefont color=#007fff><u>Xml Training:Lesson Three</u></basefont></h3></center>
+<br>
+XmlQuestNPCs and Xmlspawners <i>can do the same things</i>. It is important to remember this, because it can help interject more or remove more roleplaying on a free shard pretty easily, with training and experience. For example, let us assume the dialog for an OSI quest is just <i>too long</i>. Instead of using that OSI QuestNPC, they can be replaced by an XmlQuestNPC with entirely <i>new</i> dialog as long or as short as you wish.
+<br>
+<br>
+An alternative to that could be replacing the OSI QuestNPC with an Xmlspawner that is Grouped and Sequenced, and triggered only by players on that Quest.
+<br>
+<br>
+Between the Xmlspawners and the XmlQuestNPCs, it is entirely possible to replace every spawned aspect of OSI with this system. Much of that has been done on UO-The Expanse already, but not all of it.
+<br>
+<br><b>Q</b>: <i>Wait, you said every spawned aspect, even the Champion Spawns?</i>
+<br>
+Yep. (just know that would require more than <i>one</i> Xmlspawner and will get very tedious, but it can be done, even spawning the Candles and waves of Mobs properly.)
+<br>
+<br>
+Combining different pieces of the Xmlspawner system offers the chance to grow even further beyond OSI boundaries. Like using XmlQuestNPCs and XmlSiege so players can use Siege engines and weapons to destroy walls and rescue or defeat someone. On top of that, incorporate XmlFactions and award or take away Faction points for custom factions, when the quest is completed and or walls are destroyed.
+<br>
+<br>
+But what if you still feel bound by OSI? Well, another feature of Xmlspawner is the ability to <i>read from and manipulate files</i>. XmlQuestNPCs and Xmlspawners can run from Config files, but they can also read and write text and xml files, and even read from HTML files, just like these training gumps.
+<br>
+<br>
+It is all thanks to using Get and Set! (as well as <i>Arte Gordon and all the authors and contributors to Xmlspawner over the years!)
+<br>
+<br>
+If you are using the Xmlspawner Training system on UO-The Expanse and wish to begin the <i>Hands-on training</i>, select <i>Ready to begin</i>, otherwise selecting <i>Thank you</i> will close this gump.
+<br>
+<br>

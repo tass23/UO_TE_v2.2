@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Nodin</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Frozen Bone Collector | ATTACHMENT,The Frozen Bone Collector,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>NewbieFrozenBones</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Welcome adventurer!</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Howdy!</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Nodin,4/Hello. My name is Nodin. I've got a task for you if you're interested. I'd like you to kill 5 Frozen Bones and 5 Frozen Bones McCoys. If you complete this quest, I will give you my lucky hat. You can collect that for another quest later on.;Alright, I can do that.;sure;I don't think so.;no</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Goodluck!</Text>
+    <Keywords>sure</Keywords>
+    <Action>GIVE/&lt;questholder/name/The Frozen Bone Collector/titlestring/The Frozen Bone Collector/notestring/Nodin has asked you to kill 5 Frozen Bones and 5 Bones McCoys./objective1/KILLNAMED,Frozen Bones,5/Description1/Kill 5 Frozen Bones./objective2/KILLNAMED,Bones McCoy,5/Description2/Kill 5 Bones McCoys/addjournalentry/Nodin's Task-Kill 5 Frozen Bones: Take the hallway to the west of the Moss Mongbats and continue on beyond the Ice Minions./addjournalentry/Nodin's Task-Kill 5 Bones McCoys: You can find these on the way to the Mini Champion Spawn room./autoreward/true/canseereward/false/rewardstring/@bag/ADD/Gold,1000/ADD/NodinHat ; SETONTRIGMOB,XmlQuestAttachment,The Frozen Bone Collector,10080</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Come back if you change your mind.</Text>
+    <Keywords>no</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

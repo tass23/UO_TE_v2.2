@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Terri Irwin</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Rainbow Mount Quest | ATTACHMENT,Rainbow Mount Quest,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>TerriIrwin</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>Hello there! Ready to begin the quest for your rainbow mount?</Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes please.</Keywords>
+    <Action>GIVE/&lt;questholder/difficulty/10/name/Rainbow Mount Quest/titlestring/Rainbow Mount Quest/notestring/You need to collect the 5 rainbow mount tokens. Check the journal for information on where the tokens can be found. Once you get a token, collect it with the questbook by clicking the Collect button and targetting the token. After you have all 5 tokens go see Steve Irwin in the Rainbow Zoo by taking the green moongate in Luna./objective1/COLLECT,RainbowMountToken1,1/Description1/Collect the Blue Rainbow Mount Token./objective2/COLLECT,RainbowMountToken2,1/Description2/Collect the Green Rainbow Mount Token./objective3/COLLECT,RainbowMountToken3,1/Description3/Collect the Red Rainbow Mount Token./objective4/COLLECT,RainbowMountToken4,1/Description4/Collect the Yellow Rainbow Mount Token./objective5/COLLECT,RainbowMountToken5,1/Description5/Collect the Purple Rainbow Mount Token./addjournalentry/The Blue Token: You can find the Blue Rainbow Token by completing the Swamp Queen quest and defeating the Swamp Queen herself. You can also get the Blue Rainbow Mount Token from completing all 7 wings of Death Maw dungeon./addjournalentry/The Green Token: Can be found by killing Lady Melisande in Blighted Grove./addjournalentry/The Red Token: Can be found by completing the Spellcrafting Quest which begins in New Haven with Balto./addjournalentry/The Yellow Token: Gather some friends and take down Shimmering Effusion for a chance at the Yellow Rainbow Mount Token./addjournalentry/The Purple Token: This token is hidden inside a cave in Ilshenar that is guarded by a fierce dragon made from bones and his companion.</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Terri,0/Great! All you need to do is collect the 5 rainbow mount tokens and go see my husband Steve in the Rainbow Zoo. He'll give you more information about taming your pet and how to get to the taming room. Goodluck!</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

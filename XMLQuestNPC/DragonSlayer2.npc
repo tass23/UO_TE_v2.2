@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Bulat</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.0166666666666667</ResetTime>
+    <ConfigFile>DragonSlayer</ConfigFile>
+    <SpeechEntries>1</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Hail!</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Slay Them All,0/The Dungeon Destard is beset by the most foul of beast. No regular dragon are they - though you ought slay those too. These creatures are foul abominations, constructs of flesh, bone and the darkest magic. Tis' the doing of the Six! But, no matter, I am old and my days of dragon-slaying are behind me. Now, I merely idle my time fashioning their mounted heads, but alas tis difficult to come by the right materials. If you brought a skull and perhaps their skin too, I might be able to make one for you. </Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

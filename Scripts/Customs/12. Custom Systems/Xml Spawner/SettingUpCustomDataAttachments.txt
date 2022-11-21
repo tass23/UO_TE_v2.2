@@ -1,0 +1,138 @@
+Here is some info that will get you started in using the attachment system in your custom scripts.
+
+first you will need to have the xmlspawner2 system installed.
+
+The spawner itself isnt actually required for anything, but it includes the attachment system and is just easier to just load the whole thing for testing.
+
+The idea of the system is that you create your new custom class derived from the XmlAttachment class that will hold all of your custom stuff that you would normally add directly into the item/mobile class that you were modding. 
+You can put data and methods in them just like you would a mobile or item class definition. The structure and method names are even the same. There are Deserialize and Serialize methods that you would use the same way that you would for items/mobiles. The difference is that the attachments are maintained separately from items/mobiles and can be assigned through hashtables to any arbitrary item/mobile, effectively adding new properties and methods without modifying the original item/mobile classes themselves. 
+
+The nice thing about it is that by putting your system data in attachments, you can upgrade versions by just modifying the attachment class without ever touching the item/mobile class or its ser/deser.
+
+To create a custom attachment you can look at one of the attachment examples. I attached a script that defines an attachment called CustomData with a string property called Data.
+
+You could add this attachment to any item/mobile. 
+
+add this using statement to the top of any script that refers to the attachment system
+using
+
+CODE  
+
+Server.Engines.XmlSpawner2;
+ 
+
+
+
+and put something like this in its constructor.
+
+CODE  
+
+// make the attachment
+CustomData c = new CustomData();
+
+// assign the properties
+c.Data = "mydatastring";
+
+// attach it to the object
+XmlAttach.AttachTo(this, c);
+ 
+
+
+
+or you could have also done it all in one line using the attachment constructor that took a string argument like this
+
+CODE  
+
+XmlAttach.AttachTo(this, new CustomData("mydatastring"));
+ 
+
+
+
+You could also add this on the fly while ingame by using the command
+
+[addatt customdata mydatastring
+
+Then any time that you wanted to get the data back from the object that it was attached to you would use code like this
+
+CODE  
+
+CustomData c = (CustomData)XmlAttach.FindAttachment(from, typeof(CustomData)); string mydata = c.Data;
+ 
+
+
+
+where 'from' would be a reference to whatever it was attached to. So where before you might have done 'from.Data' if you had actually added the property to the item/mobile class, now you first find the attachment on 'from', and access the Data property on the attachment instead. 
+
+You can also get access to the properties on the attachments by using the 
+
+[getatt
+
+command. Then you can open up the properties on the attachment just like doing [props on a item/mobile. 
+
+
+Setting up a custom addon system with attachments
+
+If you have thought about how you would set things up if you were to try to do it using an invisible item in the players pack to keep track of your system information, then doing it with attachments is very similar.
+
+The difference would be, first of all, there would be no item for the server and client to keep track of so the lag associated with that is gone.
+Second, the target doesnt actually have to have a pack to put the attachment in, so its use isnt restricted to npcs with packs.
+
+The three things that you would have to do would be:
+
+1) make the attachment that would hold all of your system information for a player. 
+Setting this up is almost identical to what you would do if you were to make an item, except that instead of deriving it from the Item class, you would derive it from the XmlAttachment class. 
+Then you would define your variables, serialization/deserialization, etc. just like you would on an item.
+There are a few other minor differences (like defining the constructors as Attachable instead of Constructable, and specifying an ASerial argument instead of a Serial argument to the serial constructor) but you can look at any of the attachment examples and see what they should look like. 
+
+2) add the attachment to your target.
+If this were an invisible item, you would then add the item to a players pack using something like
+
+CODE  
+
+mob.AddToBackpack( new yournewitem());
+ 
+
+
+
+The equivalent operation with attachments is to use the AttachTo call like this
+
+CODE  
+
+XmlAttach.AttachTo(mob, new yournewattachment());
+ 
+
+
+
+3) read/write the information on the attachment
+If you were doing this with an item, when you wanted to get the information off of that item, you would first find the item in the players pack, and then access the properties on it using something like
+
+CODE  
+
+YourNewItemType myitem = (YourNewItemType )mob.Backpack.FindItemByType( typeof(YourNewItemType ));
+
+int val = myitem.Property1;
+ 
+
+
+
+The equivalent operation with attachments is to use the
+
+CODE  
+
+YourNewAttachmentType myattachment = (YourNewAttachmentType)XmlAttach.FindAttachment(mob, typeof(YourNewAttachmentType));
+
+int val = myattachment.Property1;
+ 
+
+
+
+You can also set properties on the attachment like
+
+CODE  
+
+myattachment.Property1 = val;
+ 
+
+
+
+After you had added the attachment, you could also access those properties ingame via the props gump as if it were an item, but instead of opening the players pack and doing a [props on the invisible item, you would use the [getatt command to open up the list of attachments on the player, and then press the props gump button to open up the props gump on it 

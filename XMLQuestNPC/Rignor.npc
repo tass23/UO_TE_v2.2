@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Ayana</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Travel To The Orient | ATTACHMENT, Travel To The Orient, XMLQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.0166666666666667</ResetTime>
+    <ConfigFile>Rignor</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>What do you want, then?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Travel to the Orient,4/I'm trying to find some help for Dr Jonesy Ford, I believe he's searching for a rather powerful item - no doubt to restock his dusty old museum. Shame, really. Anyway, would you go meet his compatriot Lao Che in Zento?                                         Travel to Zento City in Tokuno. You'll need to find the Miyabi Inn there. Lao Chen is on the top floor.;Okay, sure.;Okay;Er, no I don't think so;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/repeatable/false/name/Travel To The Orient/titlestring/Travel To The Orient/notestring/Dr Ford wants you to speak to Lao Che in the Miyabi Inn. Travel to Zento City and head to the Western section of town. Lao is waiting in a room on the top floor./Objective1/Find Lao Chen at the Miyabi Inn./Description1/Find Lao Chen at the Miyabe Inn./Autoreward/true/CanSeeReward/False/RewardString/@bag/ADD/&lt;Gold,500&gt;/ADD,0.1/&lt;Decorativeshield1/Hue/1082/Name/Blessed Shield of Passage/movable/true&gt;</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>That's fine, I can ask someone else, I guess.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,43 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Jonesy Ford</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Letter to Jonesy</TriggerOnCarried>
+    <NoTriggerOnCarried>Nurhaci,1 | ATTACHMENT,Nurhaci,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy4</ConfigFile>
+    <SpeechEntries>2</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>This is from Lao.</Keywords>
+    <Action>TAKEBYTYPE,1,1,true/JonesyLetter ; SETONCARRIED,Nurhaci,0/Completed1/true/objective2/Travel to Nurhaci's Temple/Description2/Travel to Nurhaci's Temple. According to Shao's letter, the temple is somewhere SOUTH of the town of Trinsic, along the coast, near some ruins./addjournalentry/A hint to the whereabouts of the temple:Travel SOUTH from the Trinsic Moongate, through the Southern Jungle to the coast and find some ruins. The entrance to the temple is nearby.</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Jonesy,0/Hmm, this letter says Shao found the location of Nurhaci's Temple. It says the entrance is SOUTH of the town of Trinsic, along the coast, near some ruins.</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

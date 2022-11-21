@@ -1,0 +1,98 @@
+<?xml version='1.0' ?>
+<!--
+	This file enables configuration of the Xanthos Claim System module without code changes
+	You may only change the values between the '>' and '<' characters to set the configuratoin
+	parameters.  The type attribute is ignored and is only provided as a documentary guide to
+	the user. Array element names are also meaningless.  Values may be left empty, with the
+	exception of individual array elements, so that the value in the code is used.
+	
+	For example: to change the foo configuration from 50 to 100 one would change
+		<foo type="int">50</foo>
+			to
+		<foo type="int">100</foo>
+-->
+<Xanthos>
+	<ClaimSystem version='2.0'>
+
+		<!-- List the item classes to claim/grab -->
+		<TypesToLoot type="array">
+		<!--  <a type="string">Server.Items.Gold</a>  -->
+			<a type="string">Server.Factions.Silver</a>
+		<!--  <a type="string">Server.Items.Bandage</a>
+			<a type="string">Server.Items.Arrow</a>
+			<a type="string">Server.Items.Diamond</a>  -->
+			<a type="string">Server.Items.BaseJewel</a>		<!-- jewelry: rings, bracelets, etc. -->
+		<!--  <a type="string">Server.Items.BaseHides</a>
+			<a type="string">Server.Items.BaseScales</a>
+			<a type="string">Server.Items.BaseOre</a>
+			<a type="string">Server.Items.Feather</a>  -->
+			<a type="string">Server.Items.CookableFood</a>
+			<a type="string">Server.Items.Food</a>
+			<a type="string">Server.Items.BaseWeapon</a>
+			<a type="string">Server.Items.BaseArmor</a>
+		<!--  <a type="string">Server.Items.BaseReagent</a>  -->
+			<a type="string">Server.Items.Bone</a>
+			<a type="string">Server.Items.TreasureMap</a>
+			<a type="string">Server.Items.ParagonChest</a>
+			<a type="string">Server.Items.BaseWand</a>
+			<a type="string">Server.SpellCrafting.Items.BaseSpellCraft</a>
+			<a type="string">Server.SpellCrafting.Items.BookOfSpellCrafts</a>
+			<a type="string">Server.Items.ChampionSkull</a>
+		</TypesToLoot>
+
+		<!-- Claim/grab any artifact armor, weapons, clothing or jewelry -->
+		<LootArtifacts type="bool">true</LootArtifacts>
+		
+		<LootPlayers type="bool">false</LootPlayers>		<!-- Whether players can grab/claim other players -->
+		<EnableClaim type="bool">true</EnableClaim>			<!-- Allow/Disallow the Claim command -->
+		<EnableGrab type="bool">true</EnableGrab>			<!-- Allow/Disallow the Grab command -->
+		<GrabRadius type="int">1</GrabRadius>				<!-- Distance around Player to grab items -->
+		<ClaimRadius type="int">1</ClaimRadius>			<!-- Distance around Player to claim items -->
+
+		<!-- Mobs with fame below this require no looting rights -->
+		<FreelyLootableFame type="int">1000</FreelyLootableFame>
+
+		<!--
+			Reward = (((mob fame + |mob karma| + player fame + |player karma|)/1.5) / FameDivisor)
+			Lower divisor yeilds higher reward.  In this formula, it pays to keep your fame
+			and karma high.			
+		 -->
+		<FameDivisor type="int">100</FameDivisor>
+		
+		<MinimumReward type="int">100</MinimumReward>
+		
+		<!--
+			Set to a positive value to make players manually scavenge
+			when other players are near.
+			Set to zero to always allow grabbing in proximity of
+			other players.
+		 -->
+		<CompetitiveGrabRadius type="int">2</CompetitiveGrabRadius>
+		
+		<!--
+			Set to a positive value to make players manually claim
+			when other players are near.
+			Set to zero to always allow claiming in proximity of
+			other players.
+		 -->
+		<CompetitiveClaimRadius type="int">2</CompetitiveClaimRadius>
+
+		<!-- Class of the container, if found in players pack, to drop gold to -->
+		<GoldBagType type="string">Xanthos.Claim.GoldBag</GoldBagType>
+
+		<!-- Class of the container, if found in players pack, to drop silver to -->
+		<SilverBagType type="string">Xanthos.Claim.SilverBag</SilverBagType>
+
+		<!-- Class of the container, if found in players pack, to other loot to -->
+		<LootBagBagType type="string">Xanthos.Claim.LootBag</LootBagBagType>
+
+		<!-- Move silver in the player's pack into a silver bag on claim or grab  -->
+		<AggregateSilver type="bool">true</AggregateSilver>
+
+		<!-- Add some excitement by making them not blessed =) -->
+		<GoldBagBlessed>true</GoldBagBlessed>
+		<SilverBagBlessed>false</SilverBagBlessed>
+		<LootBagBlessed>true</LootBagBlessed>
+		
+	</ClaimSystem>	
+</Xanthos>

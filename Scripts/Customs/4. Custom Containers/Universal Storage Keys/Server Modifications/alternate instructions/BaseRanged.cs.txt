@@ -1,0 +1,38 @@
+File: Scripts\Items\Weapons\Ranged\BaseRanged.cs
+
+[SEARCH FOR]
+		public virtual bool OnFired( Mobile attacker, Mobile defender )
+		{
+			Container pack = attacker.Backpack;
+
+			if ( attacker.Player && (pack == null || !pack.ConsumeTotal( AmmoType, 1 )) )
+				return false;
+
+			attacker.MovingEffect( defender, EffectID, 18, 1, false, false );
+
+			return true;
+		}
+
+[REPLACE WITH]
+		public virtual bool OnFired( Mobile attacker, Mobile defender )
+		{
+			Container pack = attacker.Backpack;
+
+			// UNIVERSAL STORAGE KEYS START
+			//only consume ammo if you're a player - monster archers have unlimited ammo
+			if ( attacker.Player )
+			{
+				//if they don't have a backpack, or they don't have arrows/bolts in their pack, or they dont have arrows/bolts in
+				//their keys, then return false
+				
+				if( pack == null || ( !pack.ConsumeTotal( AmmoType, 1 ) && !BaseStoreKey.Consume( pack, AmmoType, 1  ) ) ) 
+				{
+					return false;
+				}
+			}
+			// UNIVERSAL STORAGE KEYS END
+
+			attacker.MovingEffect( defender, EffectID, 18, 1, false, false );
+
+			return true;
+		}

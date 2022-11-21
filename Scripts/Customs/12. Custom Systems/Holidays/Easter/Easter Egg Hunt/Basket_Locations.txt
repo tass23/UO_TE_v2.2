@@ -1,0 +1,39 @@
+
+Here are the First Clue Locations( all located on Haven )and where the corosponding baskets would be placed. You do NOT have to use the clues we have set. Feal free to change the clues and place the baskets whereever you would like to use them.
+
+BASKET # and [go location for placement:
+
+
+(New Haven & Haven Island)
+1- ANYWHERE you want the quest to begin for players to get the first clue and start the hunt.
+2- 3467 2537 44
+3- 3442 2727 51
+4- 3446 2680 31
+5- 3606 2583 0
+6- 3506 2745 0
+7- 3417 2521 21
+8- 3504 2514 27
+9- 3513 2777 30
+10- 3573 2594 0
+11- 3703 2639 20
+
+(Malas)
+12- 2069 1374 -75
+
+(Tokuno)
+13- 725 1044 33
+
+(Trammel)
+14- 1861 876 -1
+15- 1410 1590 30
+16- 5728 711 0
+
+(Malas)
+17- 996 718 -90
+18- 1011 631 -88
+
+(Ilshenar)
+19- 399 1253 -42
+20- 1204 1127 -25
+(Trammel)
+21- 5772 1895 12

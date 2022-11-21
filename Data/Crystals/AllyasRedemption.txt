@@ -1,0 +1,1 @@
+GIVE/<Green2FocusingCrystal/ ; SETONTHIS/MSG/*Crumbles*/ ; SETONTHIS/DELETE ; SETONCARRIED,Jedi Crystal Harvester,Item/DELETE/

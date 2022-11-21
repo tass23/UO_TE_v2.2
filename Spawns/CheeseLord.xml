@@ -1,0 +1,94 @@
+<Spawns>
+  <Points>
+    <Name>CheeseLord[</Name>
+    <UniqueId>af6750cd-7fb4-4a03-b475-25d0ef4119e1</UniqueId>
+    <Map>Trammel</Map>
+    <X>69</X>
+    <Y>58</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <CentreX>5616</CentreX>
+    <CentreY>1145</CentreY>
+    <CentreZ>8</CentreZ>
+    <Range>0</Range>
+    <MaxCount>1</MaxCount>
+    <MinDelay>0</MinDelay>
+    <MaxDelay>0</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>5</ProximityRange>
+    <ProximityTriggerSound>792</ProximityTriggerSound>
+    <ProximityTriggerMessage>*Your flame is snuffed out by an unbearably noxious smell*</ProximityTriggerMessage>
+    <ItemTriggerName>Munster's Unholy Flame</ItemTriggerName>
+    <TriggerProbability>1</TriggerProbability>
+    <SpeechTrigger>The Power of Cheeze Whizz Compels You</SpeechTrigger>
+    <InContainer>True</InContainer>
+    <ContainerX>69</ContainerX>
+    <ContainerY>58</ContainerY>
+    <ContainerZ>0</ContainerZ>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>True</AllowNPCTriggering>
+    <SpawnOnTrigger>True</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>SlasherOfVeils/AI/AI_Necromage/name/Colby Jack/title/The Necromantic Lacto-Overlord/Hue/1290/hitsMaxSeed/5000/hits/5000/str/2000/dex/500/BodyValue/216/damagemin/20/damagemax/30/int/400/SKILL,anatomy/120/SKILL,Wrestling/200/SKILL,necromancy/120/SKILL,magery/120/SKILL,focus/120/ADD,0.5/&lt;WEAPON,0,0/Name/Cheese Ripper of The Damned/Hue/1290/attributes.spellchanneling/1/attributes.AttackChance/35/Hitsound/792&gt;/ADD,0.5/&lt;ARMOR,0,0/Name/Unholy Cheese Platter/Hue/1290/attributes.RegenHits/RND,1,3/attributes.LowerRegCost/RND,15,30/attributes.LowerManaCost/RND,6,11&gt;/ADD,0.85/RewardScrollDeed/ADD,0.05/&lt;FountainofBlood/hue/1290/name/Dark Font of Brebis du Puyfaucon&gt;/ADD,0.75/&lt;ChaosShield/Hue/1290/name/Demonic Shield of the Stinking Bishop/attributes.spellchanneling/1/attributes.DefendChance/RND,10,15/attributes.AttackChance/RND,10,15&gt;/Kills/666/BaseSoundID/101/ADD,0.15/&lt;Muculent/RND,1,3&gt;/ADD,0.99/&lt;bankcheck/worth/200000/&gt;:MX=1:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+  <Points>
+    <Name>CheeseLord</Name>
+    <UniqueId>94b675f4-f04a-4791-a44a-2a34f0670173</UniqueId>
+    <Map>Trammel</Map>
+    <X>3715</X>
+    <Y>2035</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <CentreX>3715</CentreX>
+    <CentreY>2035</CentreY>
+    <CentreZ>5</CentreZ>
+    <Range>0</Range>
+    <MaxCount>1</MaxCount>
+    <MinDelay>10</MinDelay>
+    <MaxDelay>10</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>5</ProximityRange>
+    <ProximityTriggerSound>792</ProximityTriggerSound>
+    <ProximityTriggerMessage>*Your flame is snuffed out by an unbearably noxious smell*</ProximityTriggerMessage>
+    <ObjectPropertyItemName>Munster's Unholy Flame,Torch</ObjectPropertyItemName>
+    <ItemTriggerName>Munster's Unholy Flame</ItemTriggerName>
+    <TriggerProbability>1</TriggerProbability>
+    <SpeechTrigger>The Power of Cheeze Whizz Compels You</SpeechTrigger>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>-1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>True</AllowNPCTriggering>
+    <SpawnOnTrigger>True</SpawnOnTrigger>
+    <SmartSpawning>True</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>True</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>SlasherOfVeils/AI/AI_Necromage/name/Colby Jack/Hue/16385/hitsMaxSeed/60000/hits/20000/str/2000/dex/500/BodyValue/216/damagemin/20/damagemax/30/int/400/SKILL,anatomy/120/SKILL,Wrestling/200/SKILL,necromancy/120/SKILL,magery/120/SKILL,focus/120/ADD,0.5/&lt;WEAPON,0,0/Name/Cheese Ripper of The Damned/Hue/1290/attributes.spellchanneling/1/attributes.AttackChance/35/Hitsound/792&gt;/ADD,0.5/&lt;ARMOR,0,0/Name/Unholy Cheese Platter/Hue/1290/attributes.RegenHits/RND,1,3/attributes.LowerRegCost/RND,15,30/attributes.LowerManaCost/RND,6,11&gt;/ADD,0.02/RewardScrollDeed/ADD,0.05/&lt;FountainofBlood/hue/1290/name/Dark Font of Brebis du Puyfaucon&gt;/ADD,0.75/&lt;ChaosShield/Hue/1290/name/Demonic Shield of the Stinking Bishop/attributes.spellchanneling/1/attributes.DefendChance/RND,10,15/attributes.AttackChance/RND,10,15&gt;/Kills/666/BaseSoundID/101/ADD,0.15/&lt;Muculent/RND,1,3&gt;/ADD,0.99/TwenfikGoldDeed/ADD,0.01/DiscountCoupon 35/ADD,0.02/&lt;JackalsCollar/Name/The Unholy Yoke of Colby/HueCollar/Name/The Unholy Yoke of Colby/Hue/1290/Attributes.BonusDex/RND,1,20/Attributes.RegenHits/RND,1,3/Attributes.RegenStam/RND/1,3/&gt;:MX=1:SB=0:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

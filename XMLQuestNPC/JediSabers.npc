@@ -1,0 +1,219 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Jeniqua</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>JediSabers</ConfigFile>
+    <SpeechEntries>7</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>Yes </Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Hail!</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Lord Jedi,2/So young jedi take my harvesting tool and tell me which one you're after, have patience young one.                                Ankarres Sapphire     Kenobi's Legacy     Krayt Dragon Pearl    Upari Crystal     Green Adegan Crystal   Bondara's Folly    Dawn of Dagobah      Sunrider's Destiny    Yellow Dragite Crystal  Heart of the Guardian Durindfire Crystal     Jenruax Crystal      Ultima-Pearl          Qixoni Crystal     Lorrdian Gemstone     Ruusan Crystal     Hurrikaine Crystal     Windu's Guile     Lambent Crystal      Solari Crystal     Mantle of the Force   Meditation Crystal</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Keywords>Ankarres Sapphire</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\AnkarresSapphire.txt} ; SETVAR,TargetCondition/Name = "Ankarres Sapphire" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/AnkarresSapphire/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>60</EntryNumber>
+    <ID>60</ID>
+    <Keywords>Kenobi's Legacy</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\KenobisLegacy.txt} ; SETVAR,TargetCondition/Name = "Kenobi's Legacy" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/KenobisLegacy/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>70</EntryNumber>
+    <ID>70</ID>
+    <Keywords>Krayt Dragon Pearl</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\KraytDragonPearl.txt} ; SETVAR,TargetCondition/Name = "Krayt Dragon Pearl" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/KraytDragonPearl/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>80</EntryNumber>
+    <ID>80</ID>
+    <Keywords>Upari Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\UpariCrystal.txt} ; SETVAR,TargetCondition/Name = "Upari Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/UpariCrystal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+  <SpeechEntry>
+    <EntryNumber>90</EntryNumber>
+    <ID>90</ID>
+    <Keywords>Meditation Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\MeditationCrystal.txt} ; SETVAR,TargetCondition/Name = "Meditation Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/MeditationCrystal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+
+  <SpeechEntry>
+    <EntryNumber>100</EntryNumber>
+    <ID>100</ID>
+    <Keywords>Mantle Of The Force</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\MantleOfTheForce.txt} ; SETVAR,TargetCondition/Name = "Mantle Of The Force" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/MantleOfTheForce/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+
+  <SpeechEntry>
+    <EntryNumber>110</EntryNumber>
+    <ID>110</ID>
+    <Keywords>Solari Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\SolariCrystal.txt} ; SETVAR,TargetCondition/Name = "Solari Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/SolariCrystal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+
+
+  <SpeechEntry>
+    <EntryNumber>120</EntryNumber>
+    <ID>120</ID>
+    <Keywords>Lambent Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\LambentCrystal.txt} ; SETVAR,TargetCondition/Name = "Lambent Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/LambentCrystal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+
+  <SpeechEntry>
+    <EntryNumber>130</EntryNumber>
+    <ID>130</ID>
+    <Keywords>Windu's Guile</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\WindusGuile.txt} ; SETVAR,TargetCondition/Name = "Windu's Guile" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/Windu'sGuile/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+  <SpeechEntry>
+    <EntryNumber>140</EntryNumber>
+    <ID>140</ID>
+    <Keywords>Hurrikaine Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\HurrikaineCrystal.txt} ; SETVAR,TargetCondition/Name = "Hurrikaine Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/HurrikaineCrystal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+  <SpeechEntry>
+    <EntryNumber>150</EntryNumber>
+    <ID>150</ID>
+    <Keywords>Ruusan Crystal</Keywords>
+    <Action>SETVAR,Condition/GETONTRIGMOB,Karma&gt;5000 ; SETVAR,FailureAction/SETONTRIGMOB/MSG/You are not powerful enough to use this. ; SETVAR,SuccessAction/{GETFROMFILE,Data\Crystals\HurrikaineCrystal.txt} ; SETVAR,TargetCondition/Name = "Hurrikaine Crystal" ; SETVAR,TargetFailureAction/SETONTHIS/MSG/forces your pickaxe away. ; SETVAR,TargetingAction/SETONTRIGMOB/MSG/You focus your power. ; GIVE/JediPick/Name/Jedi Crystal Harvester ; SETONCARRIED,Jedi Crystal Harvester/ATTACH/&lt;XmlUse/Name/HurrikaineCrystal/BlockDefaultUse/True/TargetingEnabled/True/Condition/GETVAR,Condition/FailureAction/GETVAR,FailureAction/SuccessAction/GETVAR,SuccessAction/TargetCondition/GETVAR,TargetCondition/TargetFailureAction/GETVAR,TargetFailureAction/TargetingAction/GETVAR,TargetingAction/</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+
+</XmlQuestNPC>

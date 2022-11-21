@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Barkley</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>A Curse Is A Curse Of Curse | ATTACHMENT,A Curse Is A Curse Of Curse,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>NewbieNamedHunt</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Hello adventurer!</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Hi Barkley!</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Barkley,4/Hi back. Nice to see you around these parts. I've got a task for you, if you're up for it. There's a couple of "guys" in the dungeon that I'd like you to eliminate for me. Go find Gerald the Cursed, Jeckyl and lastly, Hyde. If you complete this task, I'll give you my lucky hatchet and some gold.;Okay, I can do that.;yep;No, I'm not inetested.;nope</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Goodluck!</Text>
+    <Keywords>yep</Keywords>
+    <Action>GIVE/&lt;questholder/name/A Curse Is A Curse Of Curse/titlestring/A Curse Is A Curse Of Curse/notestring/Barkley wants you to kill Gerald the Cursed, Jeckyl and Hyde./objective1/KILLNAMED,Gerald,1/Description1/Kill Gerald the Cursed./objective2/KILLNAMED,Jeckyl,1/Description2/Kill Jeckyl./objective3/KILLNAMED,Hyde,1/Description3/Kill Hyde./addjournalentry/Barkley's Task-Marked for Death: Gerald the Cursed is in a tiny alcove inside the dungeon. Jeckyl and Hyde are close to each other towards the end of the dungeon./autoreward/true/canseereward/false/rewardstring/@bag/ADD/Gold,1000/ADD/BarkleyHatchet ; SETONTRIGMOB/XmlQuestAttachment,A Curse Is A Curse Of Curse,10080</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Come back when you change your mind.</Text>
+    <Keywords>nope</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

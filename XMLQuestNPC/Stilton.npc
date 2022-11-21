@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Stilton</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Lactose Intolerance </NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.166666666666667</ResetTime>
+    <ConfigFile>Stilton</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>By the virtues, what have they done?</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What's happened here?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Lactose Intolerance,4/The fool Lord of Games is what's happened - that's what! I told them not to meddle in those damnable foul arts and now look at us - the town has been sundered in twain! Most of the people killed or condemned to the unlife and the odious Cheese Molochs roam free once again. Worst of all, they've been corrupted into  foul Necromantic Cheeserippers, if only they'd listened...                        Well, all we can do now is try to beat them back, I suppose. Say, you look like an able warrior - I don't suppose you'd be interested in aiding me rid this place of their foul taint?;Sure, why not?;Okay; Er, WELL, the thing is - my doctor advised me to avoid all dairy produce...;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/Name/Lactose Intolerance/titlestring/Lactose Intolerance/notestring/Stilton The Mage has asked you to rid Magincia of the foul demons that mirch it with their foul taint./Objective1/KILLNAMED,Mogster The Necromantic Cheeseripper,1/Description1/Kill the Necromantic Cheeseripper known as Mogster/Objective2/KILLNAMED,Rose The Necromantic Cheeseripper,1/Description2/Kill the Necromantic Cheeseripper known as Rose/Objective3/KILLNAMED,Maximus The Necromantic Cheeseripper,1/Description3/Kill the Necromantic Cheeseripper known as Maximus/Objective4/KILLNAMED,Angellus The Necromantic Cheeseripper,1/Description4/Kill the Necromantic Cheeseripper known as Angellus/Objective5/KILLNAMED,Zagros The Necromantic Cheeseripper,1/Description5/Kill the Necromantic Cheeseripper known as Zagros/autoreward/true/CanSeeReward/False/Rewardstring/@bag/ADD/RewardScrollDeed/ADD/RewardScrollDeed/ADD/RewardScrollDeed/ADD/RewardScrollDeed/ADD/RewardScrollDeed/ADD,0.1/&lt;Decorativeshield3/Hue/1358/Name/Blessed Shield of Adelost/movable/true&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Lactose Intolerance,0/ Ah, wonderful. Now, you'll need to head to the Western woods, that's where their foul ceremony was held. I'm afraid there's no saving them now, though. The Game Lords have succumbed fully to the dark allure of the Necromantic Cheeseripping. You must be their guiding light, my friend, and end their pitiful existence. Good luck to you!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>I hope you choke on an Edam Wheel, then! </Text>
+    <Keywords>Er, WELL, the thing is - my doctor advised me to avoid all dairy produce...</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

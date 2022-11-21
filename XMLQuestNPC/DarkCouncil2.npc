@@ -1,0 +1,58 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Dark Council Member</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Subvert and Sabotage | Tainted Rations</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DarkCouncil2</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>At your command.</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Subvert and Sabotage,4/ The Dark Council bids you to deal a meddling old fool who once belonged to the Jedi Order - one whose constant "heroics" had been a thorn in the side of the Sith Empire for almost a century. Make an example of him by duping him into believing that you his Jedi Benefactor and deliver this package of tainted rations. He  currently in the Lost Lands within Cyclops Valley.  ;I live for treachery!;Yes;This is beneath me, I decline. ;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Fork/ITEMID/2445/Name/Tainted Rations&gt; ; GIVE/&lt;Questholder/name/Subvert and Sabotage/Titlestring/Subvert and Sabotage/Notestring/The Dark Council has tasked you to exact revenge upon an old member of the Jedi Enclave residing in the Lost Lands in Cyclops Valley/Objective1/GIVENAMED,An Isolated Hermit,Tainted Rations,fork,1/Description1/Deliver the tainted rations to the isolated hermit in the lost lands./Objective2/Return to the Sith Academy and see the quartermaster for your reward/Description2/Return to the Sith Academy and see the Quartermaster for your reward./Autoreward/True/CanSeeReward/false/RewardString/@bag/ADD/RewardScroll/ADD,0.1/&lt;Decorativeshield8/Hue/1582/Name/Blessed Shield of Rotgut/movable/true/&gt;</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>You DARE defy the will of the Dark Council? Suffer - fool!</Text>
+    <Keywords>No</Keywords>
+    <Action>POISON,2,5,PlayerOnly ; SOUND,517</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

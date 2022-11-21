@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Abraxis</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Jar Jar Say Bye Bye | ATTACHMENT,Jar Jar Say Bye Bye,XmlQuestAttachment </NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Arbraxis</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Pssst...Over here.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Jar Jar Say Bye Bye,4/A dischevelled man in Mandalorian Battle Armor steps out from the shadowed corner of his cell. "Listen, I have job for you. I was supposed to take of a mark but curse my luck, if he isn't a most slippery foe! Got myself landed in jail, haven't I? I can't very well finish the job from here, but you could do it.                                Tell me, how do you feel about Gungans?";The only good Gungan - is a dead one. What do you want me to do?;yes;I tolerate them, they're good-hearted, if somewhat annoying creatures;no</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/Jar Jar Say Bye Bye/titlestring/Assassinate the Gungan visiting the Casino in Luna. /objective1/Head to Luna Casino and wait upstairs for your mark./autoreward/true/CanSeeReward/False/rewardstring/@bag/ADD/RewardScroll/ADD/&lt;Gold/Amount/RND,1000,3000&gt;/ADD/&lt;Fork/ITEMID/10091/Hue/21/Name/Jar Jar Contract Completed by {{}GETONTRIGMOB,name{}}&gt;/</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Jar Jar Say Bye Bye,3/"Good, that's what I'd hope you'd say, Okay, here's the deal: Go to Luna Casino, you know the place - go up stairs and wait or a Pink-coloured Gungan to arrive. I want you to take him out. Return here with his head and I'll give you half of my bounty for your troubles." The Bounty hunter leans closer into the bars of his cell, "And make it hurt."</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Not word to anyone or you're dead.</Text>
+    <Keywords>no</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

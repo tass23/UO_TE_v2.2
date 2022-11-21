@@ -1,0 +1,101 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Chuckles</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Perilous Pumpkins</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>ChucklesHalloween</ConfigFile>
+    <SpeechEntries>6</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Why, with a pumpkin patch - of course!</Text>
+    <Keywords>How do you fix a cracked pumpkin?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Perilous Pumpkins!,4/ Hello, hello - my jolly friend. Wouldst thou like to indulge in a fun Halloween caper? ;Er, okay then...;Yes;Not today, thanks.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Perilous Pumpkins!,4/ A fine fellow you are! I have a pickle of puzzle on my hands. I am greatly ashamed to admit it, but I am a gentleman of burden,  a crooked prankster, who Lord British rightfully decided to punish. As it turns out he didst not share my fondness for itching powder. But I am Jester! Tis, my duty to bring mirth is it not? Oh my...;Continue;Continue                                                                    </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Fare thee well.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Continue</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Perilous Pumpkins!,4/ My esteemed Lord is having a grand party this Hallow's Eve and my most injurous task is to collect magical pumpkins to carve, but alas my stringy arms have not the strength to uproot the damned things - they were made for jolly tickles, not hard labor! But, a fine burly hero like yourself wouldst be better suited for this task!  Will thou help, please sayeth, "Aye.";Very well.;Okay;No, I don't trust you.;Nope</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;Questholder/name/Perilous Pumpkins/titlestring/Perilous Pumpkins/Notestring/Chuckles the Jester has asked you to collect some magical pumpkins for him./Objective1/COLLECTNAMED,Magical Pumpkin,Fork,100/Description1/Collect 100 pumpkins for Lord British's Halloween Party/Objective2/Return to Chuckles The Jester for your reward/autoreward/true/canseereward/False/RewardString/@bag/ADD/&lt;RNDSTRLIST,{CarvedPumpkin,CarvedPumpkin2}/hue/{RNDLIST,4,138,54,59,43,25,508}&gt;/ADD/&lt;RewardScroll/Amount/4&gt;/ADD,0.01/&lt;GoldRing/Hue/23/Name/Chuckle's Ring of Pumpkin Protection&gt;</Action>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Perilous Pumpkins!,0/You will? Here,  take this quest journal - it will keep you right. Just search around Britain for curiously hued pumpkin patches. The noble lord Shamino knoweth their whereabouts. When you find one, be very careful how you tread! They don't take kindly to being plucked - they are magic, after all! Hahahah!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>I am the Royal Jester - thou canst surely trust me...</Text>
+    <Keywords>Nope</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

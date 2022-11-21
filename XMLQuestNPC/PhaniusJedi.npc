@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Master Phanius</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Darkest Influence</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>PhaniusJedi</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>The High Council has need of you.</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What is thy bidding, Master?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Darkest Influence,4/Hail, young Jedi. As you may have heard, we have made a new discovery concerning the activities of our ancient foe, the Sith Lords. I wish you to do two things: investigate the Tomb of Marka Ragnos to collect evidence of their resurgence  and find the whereabouts of my padawan, it has been some moons since I last had any report from him.                                                                                  Would you be willing to do this for me?;I will do as you wish, Master Phanius;Okay;I'm sorry, but that is way too dangerous for me;No.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/The Darkest Influence/Difficulty/3/Titlestring/The Darkest Influence/Notestring/Find evidence of the re-emergence of the Sith in the Tomb of Mark Ragnos and find the whereabouts of the missing padawan./Objective1/COLLECTNAMED,Sith Amulet,Necklace,10/Description1/Collect the Sith Amulets/Objective2/Find Padawan Shraed./Description2/Find Padawan Shraed./Autoreward/true/Canseereward/false/Rewardstring/@bag/hue/1563/ADD,0.1/&lt;DecorativeShield7/hue/1563/name/Blessed Shield of The Pursuant Padawan/movable/true&gt;/ADD/Rewardscroll/ADD/&lt;gold/Amount/RND,1000,3000&gt;/ADD,0.5/&lt;ARMOR,0,0/Name/Armor of The Exalted Templar/Hue/2212/attributes.LowerRegCost/RND,20,30/ArmorAttributes.SelfRepair/2/ArmorAttributes.MageArmor/1/Attributes.LowerManaCost/RND,2,10/Attributes.Spelldamage/RND,5,10/Attributes.RegenMana/3/skillbonuses.skill_1_name/Focus/Skillbonuses.skill_1_Value/5/Skillbonuses.skill_2_name/Meditation/Skillbonuses.Skill_2_Value/5/MaxHitPoints/150/HitPoints/150&gt;&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, The Darkest Influence,0/You are brave to accept. Go hence to the Valley of The Sith Lords and enter the tomb. Be very careful, friend.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Understandable. 'Tis a dangerous undertaking.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

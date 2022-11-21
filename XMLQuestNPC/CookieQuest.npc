@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Mrs Claus</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>That's the way the cookie crumbles | XMLQuestAttachment,That's the way the cookie crumbles</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>CookieQuest</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Gosh, I do hope I can bake these cookies on time!</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Did I hear you say cookies?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Cookie Capers,4/Hello there deary! Why yes, I'm making cookies. Would you care to help me? I'm baking up a lovely fresh batch for Santa and his hard-working elves, only I'm short on ingredients. You couldn't be a darling and go fetch them for me, could you?;Um, sure. What do you want?;Okay;Sorry, not my thing. Besides, Santa needs to go on a diet.; No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Cookie Capers/titlestring/Cookie Capers/Notestring/Mrs Clause wants you to find ingredients so she can complete her batch of cookies for Santa and his elves./Objective1/COLLECT,EssenceofLove,1/Description1/Find  and collect secret ingredient #1/Objective2/COLLECT,FaeryDust,1/Description2/Find and collect secret ingredient #2/Objective3/COLLECTNAMED,Enchanted Chocolate,ChocolateDust,1/Description3/Find and collect secret ingredient #3/Objective4/COLLECTNAMED,Rainbow Sprinkles,PrimalLichDust,10/Description4/Find and collect secret ingredient #4/Objective5/Return to Mrs Claus/Description5/Return to Mrs Claus/Autoreward/true/Canseereward/False/Rewardstring/@bag/ADD,0.005/SantasSleighDeed/ADD/&lt;RewardScroll/Amount/2&gt;/ADD/&lt;gold/amount/5000&gt;/ADD/&lt;OatMealCookies/Name/A lovely tray of Cristmas Cookies!/hue/1773/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Cookie Capers,0/You'll do it? Wonderful!!! Now, I'm afraid due to the magical nature of the ingredients I can't actually tell you what they are. You'll have to find them using a magical riddle book, called Cookie Conundrums. It's in the Luna Rune Library. I'd suggest starting there.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>How dare you! </Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

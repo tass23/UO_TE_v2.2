@@ -1,0 +1,12 @@
+/*---------------------------------------------------- BaseStoreKey mark BEGIN-----------------------------------
+
+This block allows the spell system to check and withdraw a recall rune from any BaseStoreKey or MasterKey objects found within the
+caster's backpack.  
+
+Location: This block belongs in Mark.cs under Scripts\Spells\Sixth\. This block needs to be inserted in the OnCast method
+of class MarkSpell, as the first line after the { curly bracket. On an unmodified server, this is around line 28 of Mark.cs
+
+Installation: drop this block in place, being mindful of the structure around it
+*/
+			BaseStoreKey.FindItemByType( Caster.Backpack, typeof( RecallRune ) );
+//---------------------------------------------------- BaseStoreKey mark END-----------------------------------

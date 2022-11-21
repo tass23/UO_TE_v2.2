@@ -1,0 +1,94 @@
+Here is a list of the formatting variables:
+
+$yr$      This will display the year.
+
+$yr-#$    This will display the year where # is how many digits of the year to display, starting
+          from the right.  For example: $yr-2$ for year 2006 would display 06.
+
+$mo$      This will display the number of the current month.
+
+$mo-0$    This will display the full name of a real month ONLY if using UseRealTime or if you have
+          MonthsPerYear set to 12.  For example: $mo-0$ for month 2 would display February.
+
+$mo-3$    This will display the first three letters of a real month ONLY if using UseRealTime or if
+          you have MonthsPerYear set to 12.  For example: $mo-3$ for month 2 would display Feb.
+
+$da$      This will display the day.
+
+$da-#$    This will display the day where # is how many digits of the day to display.
+          For example: $da-2$ for day 7 would be 07.
+
+$hr$      This will display the hour.
+
+$hr-#$    This will display the hour where # is how many digits of the hour to display.
+          For example: $hr-2$ for hour 3 would be 03.
+
+$hr-ap$   This will display the hour using AM/PM hours (typically called 12h format, but if you have
+          a custom set of hours such as 36, it would half 36 and be 18h format).
+          For example: $hr-ap$ for hour 20 would display 8.  This will not display AM/PM.  You will
+          need to use the $ap$ variable for that.
+
+$mn$      This will display the minute.
+
+$mn-#$    This will display the minute where # is how many digits of the minute to display.
+          For example: $mn-2$ for minute 2 would be 02.
+
+$mp$      This will display the moon phase.  For example: The moon is full, so $ap$ will display "full"
+
+$ap$      This will display AM or PM based on the time of day.  For example:  The hour is 15 (3 PM)
+          so $ap$ will display "PM"
+
+$nth-d$   This will display the "th", "st", "nd", or "rd" based on the day.  For example: $nth-d$ for
+          day 3 would display "rd"
+
+$nth-m$   This will display the "th", "st", "nd", or "rd" based on the month.  For example: $nth-m$ for
+          month 7 would display "th"
+
+$$        This will add an extra space.
+
+
+Formatting examples:
+
+Example 1:
+2/18/2006 11:30 AM
+"It is $hr-ap$:$mn-2$ $ap$ on the $da$$nth-d$ day of $mo-0$, $yr$."
+
+Would display:
+"It is 11:30 AM on the 18th day of February, 2006."
+
+Example 2:
+1/3/104 5:24 PM. Moon is waxing first quarter.
+"The time is $hr-ap$:$mn-2$ $ap$ on day $da$ of month $mo$ of year $yr$. The moon is $mp$."
+
+Would display:
+"The time is 5:24 PM on day 3 of month 1 of year 104. The moon is waxing first quarter."
+
+Example 3:
+4/13/251 3:02 PM
+"The current time is $hr$:$mn-2$ on $mo$/$da$/$yr$."
+
+Would display:
+"The current time is 15:02 on 4/13/251."
+
+
+How to set the format for [TIME and [BASETIME commands:
+
+[TS SET TIMEFORMAT <format>
+
+Example:
+[TS SET TIMEFORMAT The time is $hr-ap$:$mn-2$ $ap$ on day $da$ of month $mo$ of year $yr$. The moon is $mp$.
+
+
+How to set the format for clock items:
+
+[TS SET CLOCKTIMEFORMAT <format>
+
+Example:
+[TS SET CLOCKTIMEFORMAT It is $hr-ap$:$mn-2$ $ap$ on the $da$$nth-d$ day of $mo-0$, $yr$.
+
+
+Presets:
+
+There are six presets you can choose from.  To use a preset, type: [TS SET TIMEFORMAT PRESET#
+where # is the number of the preset.  You can use the presets for CLOCKTIMEFORMAT as well.
+

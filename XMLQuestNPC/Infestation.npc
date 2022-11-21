@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Captain Ronis</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Mysterious Disappearances,Shadow Solen Pheromone Sac,Where the Shadows Dwell</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Infestation</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Stranger, can you help? 'Tis most urgent.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>What is it you need?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Mysterious Disappearances,4/Greeting, wanderer. People have been inexplicably disappearing in the town of Yew, only to return some moons later seeming queer of thought and action. Worse still, it seems to happening at an exponential rate. This greatly worries me stranger, would you be kind enough to investigate?;Yes, of course.;Yes;Not at this time, I have other pressing matters.;No </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Mysterious Disappearances/Difficulty/4/Titlestring/Mysterious Disappearances/Notestring/Captain Ronis wants you to try and find out the cause of the disappearances in Yew. Try and find leads into this strange occurance./Objective1/Investigate the house of  Talarn the Ranger in Eastern Yew./Description1/Investigate the house of Talern the Ranger in Eastern Yew/AddJournalEntry/The Ranger's House: Captain Ronis of the Republic Guard has asked you to investigate a spate of mysterious disappearances in Yew (Felucca). He suggested you investigate the holdings of their new ranger, Talarn, out nearby the cemetary in Eastern Yew./Autoreward/True/CanSeeReward/True/RewardString/@bag/hue/1400/ADD/&lt;Gold/Amount/1400/&gt;ADD,0.1/&lt;DecorativeShield1/hue/1581/Name/Blessed Shield of The Exterminator/movable/true&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Mysterious Disappearances,0/You have my gratitude, friend. I would suggest you investigate the house of our ranger,Talarn, in the southern perimeter of this town. He was one the first to disappear, but be wary - there have been sightings of strange creatures near that place.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Then I shall ask another. Good journey to you, stranger.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Alvina</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Around The Dungeon In Eighty Minutes | ATTACHMENT,Around The Dungeon In Eighty Minutes,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>NewbieVendor</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Hail adventurer!</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Hi Alvina!</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Alvina,4/Hi there. Welcome to the New Player Dungeon. Behind me to the north are some quest givers. If you gather their quest rewards I can give you a key to get to the end of the Dungeon and will be granted a prize . Are you interested?;Sure, reward scrolls are nice!;yes;No, I'm not interested.;no</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Best of luck to you!</Text>
+    <Keywords>yes</Keywords>
+    <Action>GIVE/&lt;questholder/name/Around The Dungeon In Eighty Minutes/titlestring/Around The Dungeon In Eighty Minutes/notestring/Alvina wants you to collect 5 objects from the other quest givers located nearby. You can collect their items by completing their quests./objective1/COLLECT,BarkleyHatchet,1/Description1/Collect Barkley's lucky hatchet./objective2/COLLECT,BusterDrawer,1/Description2/Collect Buster's drawers./objective3/COLLECT,NodinHat,1/Description3/Collect Nodin's hat./objective4/COLLECT,RumpleCharms,1/Description4/Collect Rumplestiltskin's Lucky Charms./objective5/COLLECT,SusanBrush,1/Description5/Collect Susan's brush./addjournalentry/Alvina's Task-Collect the 5 items: After you collect all 5 items. Alvina will give you a key to unlock the door to Chuckles at the end of the dungeon. To get there, go back to the blue stone and say "I wish to train non-combat skills" and you will be teleported to the non-combat part of the dungeon. Follow the hallways all the way back to the door. The key will only work once./autoreward/true/canseereward/false/rewardstring/@bag/ADD/&lt;BlankScroll/hue/1479/Name/Dungeon Certificate&gt;/ADD/Gold,1500/ADD/&lt;RewardScroll/Amount/2&gt;/ADD/&lt;key/KeyValue/167459/name/Old Iron Key/ATTACH/XmlUse,1&gt; ; SETONTRIGMOB/XmlQuestAttachment,Around The Dungeon In Eighty Minutes,10080</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Come back when you change your mind.</Text>
+    <Keywords>no</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

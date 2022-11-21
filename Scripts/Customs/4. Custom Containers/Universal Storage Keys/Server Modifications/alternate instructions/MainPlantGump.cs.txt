@@ -1,0 +1,110 @@
+File: Scripts\Engines\Plants\MainPlantGump.cs
+
+[SEARCH FOR]
+				case 6: // Water
+				{
+					from.Target = new PlantPourTarget( m_Plant );
+					from.SendLocalizedMessage( 1060808, "#" + m_Plant.GetLocalizedPlantStatus().ToString() ); // Target the container you wish to use to water the ~1_val~.
+
+					break;
+				}
+				
+[REPLACE WITH]
+				case 6: // Water
+				{
+					from.Target = new PlantPourTarget( m_Plant );
+					
+					// UNIVERSAL STORAGE KEYS START
+					//perform the function to scan for keys, looking for a potion entry of the desired effect(s)
+					Item keyitem = BaseStoreKey.WithdrawByEntryType( from.Backpack, typeof( Solaris.ItemStore.BeverageEntry ), 1, new object[]{ BeverageType.Water } );
+					
+					//if something was found, return it
+					if( keyitem != null && keyitem is BaseBeverage )
+					{
+						from.Backpack.DropItem( keyitem );
+						m_Plant.Pour( from, keyitem );
+						
+						//clean up the empty glassware that the keys spit out
+						keyitem.Delete();
+						
+						//abort the cursor use
+						from.SendGump( new MainPlantGump( m_Plant ) );
+						return;
+					}
+					// UNIVERSAL STORAGE KEYS END
+					
+					from.SendLocalizedMessage( 1060808, "#" + m_Plant.GetLocalizedPlantStatus().ToString() ); // Target the container you wish to use to water the ~1_val~.
+
+					break;
+				}
+				
+				
+[SEARCH FOR]
+		public static Item GetPotion( Mobile from, PotionEffect[] effects )
+		{
+			if ( from.Backpack == null )
+				return null;
+
+			Item[] items = from.Backpack.FindItemsByType( new Type[] { typeof( BasePotion ), typeof( PotionKeg ) } );
+
+			foreach ( Item item in items )
+			{
+				if ( item is BasePotion )
+				{
+					BasePotion potion = (BasePotion)item;
+
+					if ( Array.IndexOf( effects, potion.PotionEffect ) >= 0 )
+						return potion;
+				}
+				else
+				{
+					PotionKeg keg = (PotionKeg)item;
+
+					if ( keg.Held > 0 && Array.IndexOf( effects, keg.Type ) >= 0 )
+						return keg;
+				}
+			}
+
+			return null;
+		}
+		
+[REPLACE WITH]
+		public static Item GetPotion( Mobile from, PotionEffect[] effects )
+		{
+			if ( from.Backpack == null )
+				return null;
+
+			Item[] items = from.Backpack.FindItemsByType( new Type[] { typeof( BasePotion ), typeof( PotionKeg ) } );
+
+			foreach ( Item item in items )
+			{
+				// UNIVERSAL STORAGE KEYS START
+				//perform the function to scan for keys, looking for a potion entry of the desired effect(s)
+				Item keyitem = BaseStoreKey.WithdrawByEntryType( from.Backpack, typeof( Solaris.ItemStore.PotionEntry ), 1, new object[]{ effects } );
+
+				//if something was found, return it
+				if( keyitem != null )
+				{
+					return keyitem;
+				}			
+				//otherwise return nothing
+				// UNIVERSAL STORAGE KEYS END
+			
+				if ( item is BasePotion )
+				{
+					BasePotion potion = (BasePotion)item;
+
+					if ( Array.IndexOf( effects, potion.PotionEffect ) >= 0 )
+						return potion;
+				}
+				else
+				{
+					PotionKeg keg = (PotionKeg)item;
+
+					if ( keg.Held > 0 && Array.IndexOf( effects, keg.Type ) >= 0 )
+						return keg;
+				}
+			}
+
+			return null;
+		}

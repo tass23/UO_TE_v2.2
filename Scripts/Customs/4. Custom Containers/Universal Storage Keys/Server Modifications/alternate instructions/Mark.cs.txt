@@ -1,0 +1,16 @@
+File: Scripts\Spells\Sixth\Mark.cs
+
+[SEARCH FOR]
+		public override void OnCast()
+		{
+			Caster.Target = new InternalTarget( this );
+		}
+		
+[REPLACE WITH]
+		public override void OnCast()
+		{
+			// UNIVERSAL STORAGE KEYS START
+			BaseStoreKey.FindItemByType( Caster.Backpack, typeof( RecallRune ) );
+			// UNIVERSAL STORAGE KEYS END
+			Caster.Target = new InternalTarget( this );
+		}

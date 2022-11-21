@@ -1,0 +1,68 @@
+Vendor Tile Mall
+By henry_r 
+12/27/07
+Original author(s) unknown
+Special thanks to Lord Greywolfe for supplying the code for contract and tile
+Addon made using Arya's Addon Generator
+
+Overview:
+
+Allows for placement of player vendors on special vendor tiles, regardless of location.
+Player Vendor Tiles are added in-game by staff, as needed (tiles delete on use)
+Minor revisions to SB info (noted below).
+
+
+
+Contents:
+
+ Main folder; VendorTileMall:
+
+1 script with 2 items (see VendorTile.cs) // Public Contract Of Employment and Player Vendor Tile // [add TownContractOfEmployment. 
+
+1 mobile; Vendor Mall Manager (see VendorMallManager.cs) // acts as NPC Banker as well. 
+
+SBVendorMallManager (see SBVendorMallManager.cs).
+
+1 Vendor Mall Addon (see VendorMallAddon.cs) //  overall dimensions approx. 33x19 // 499 items.
+
+1 .txt file with instuctions (see VendorTileMall.txt)
+
+
+
+
+Installation Instructions:
+
+Drop VendorTileMall folder into your Customs folder.
+
+Comment out (//) listings for Contract Of Employment  on SBBanker.cs, SBInnkeeper.cs and SBTavernkeeper.cs.
+
+Restart server.
+
+Add Vendor Mall Addon at your desired location (optional) // decorate as needed // [add VendorMallAddon.
+
+Add Vendor Mall Manager and move into bar area // [add VendorMallManager.
+
+Add Player Vendor Tiles in desired location // [add PlayerVendorTile.
+
+
+
+Player Instructions:
+
+Purchase a Public Contract Of Employment from the Vendor Mall Manager.
+
+Choose desired Player Vendor Tile location.
+
+Double-click Contract, target desired Player Vendor Tile.
+
+
+
+
+Comments:
+This is a easy to use system for player vendors.
+Please report any bugs.
+Feel free to modify this package as you see fit for your application.
+
+
+Enjoy
+
+henry_r

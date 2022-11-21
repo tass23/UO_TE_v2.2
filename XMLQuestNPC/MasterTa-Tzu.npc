@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Master Ta-Tzu</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Trial of Skill | ATTACHMENT,Trial of Skill,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>MasterTa-Tzu</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Ah, welcome young padawan.</Text>
+    <Action>SET,0x40176BCD/Visible/False</Action>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>May the Force be with you Master Ta-Tzu.</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Master Ta-Tzu,4/And to you as well. It has been a long time since I experienced such a formal greeting. Perhaps the old ways truly are returning. Ah the good old days of the Republic. It was a sight to see young padawan. Hmm, well enough of that. Old ways or not, there are some new developments that Master Skywalker and Master Yoda have held council about. It has been decided that all Jedi must know the Dark side just as their adversaries do. So I will be teaching you Force Lightning. Unlike the Dark side counterpart of Chain Lightning, Force Lightning only targets one enemy at a time. One should be careful when calling upon such a destructive Force power though as it can have drastic results sometimes. You see before you a Training Remote. Your task is simple- defeat the Training Remote in combat using Force Lightning at least one time. You should do a significant amount of damage to the remote and be able to finish it off with a few swings of your lightsaber.;I am prepared to face the remote.;Okay;Good against remotes is one thing, good against the living is another.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Say "ready" when you're prepared to fight the remote.</Text>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/name/Trial of Skill/titlestring/Trial of Skill/notestring/Engage the Training Remote in combat and use Force Lightning at least one time during the battle to help defeat the remote./Objective1/Destroy the Training Remote./Description1/Use Force Lightning to cripple the remote, then use your lightsaber skills to defeat it./AddJournalEntry/The Remote: Say READY when you are prepared to face the remote./Repeatable/false/Autoreward/true/CanSeeReward/false/Attachmentstring/XmlAddKarma,200/rewardstring/@bag/ADD/BattleMeditationDisc/ADD/ForceWeaponDisc/ADD/BellowDisc ; SET,0x40176978/DoReset/True/Running/true</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>Sometimes it is wise to turn from combat, but not during training young padawan.</Text>
+    <Keywords>No</Keywords>
+    <Action>GIVE/ATTACH/XmlAddKarma,-200</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

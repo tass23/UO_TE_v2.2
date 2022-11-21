@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Shao Che</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Nurhaci | ATTACHMENT,Nurhaci,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy_Shao</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>You've arrived!</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Jonesy sent me.</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Shao,4/Ah, Dr. Ford sent you, excellent! I understand you're quite an avid explorer and, how do you say, Tomb Raider. There is a certain artifact I would like brought to me. It is the remains of Nurhaci. They are contained inside a golden idol of a cat. I'm sure with the resources between you and Dr. Ford, you'll be able to figure out where it might be located. I will have a healthy reward for you upon your return.;Healthy rewards are always nice, Lao.;okay;Hmm, I don't think I trust you.;nope</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>okay</Keywords>
+    <Action>GIVE/JonesyLetter ; GIVE/&lt;questholder/name/Nurhaci/titlestring/The remains of Nurhaci/notestring/Give the letter to Jonesy. Find the remains of Nurhaci and return them to Shao./objective1/GIVENAMED,Jonesy Ford,Letter for Jonesy,JonesyLetter,1/Description1/Give the letter to Jonesy./addjournalentry/A new objective: You've been asked to give the letter to Jonesy./autoreward/false/CanSeeReward/False/AttachmentString/XmlAddFaction,TriFords,100/RewardString/@bag/ADD,0.1/&lt;Decorativeshield5/Hue/1290/Name/Blessed Shield of Nurhaci/movable/true&gt;/repeatable/true/doreset/true</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Shao,0/Wonderful! Take this letter to Dr. Ford. I understand he's waiting outside for you. I'll be waiting for your return with the idol. You can find me on the first floor of the tavern, when you get back.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>I'll wait until you change your mind.</Text>
+    <Keywords>nope</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

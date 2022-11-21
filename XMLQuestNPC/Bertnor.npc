@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Bertnor</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Hunt for the Hum Bug</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Bertnor</ConfigFile>
+    <SpeechEntries>6</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Festive Greetings!</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Hum Bug,4/ A rather unhappy looking Elf turns to greet you, "And to you, I suppose.";Why so glum?;Why</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Why</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Hum Bug,4/"Glum? Ah, my apologies. I am simply lost in thought. You see, I was once the guardsman for Santa's Pen of Naughty Pets. Once. I was so good at it...;What Happened?;What</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>What</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Hum Bug,4/Well, I don't know! I went for my eventide Egg Nog break and all when I came back, I'd found that the Hum Bug pen was left WIDE open. I can't account for it. I did find this rather curious note, though. Perhaps, you could find it? I mean, only you want to - they are RATHER naughty animals.;I don't see why not, okay;Ok;I think I'll pass;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Keywords>Ok</Keywords>
+    <Action>GIVE/&lt;Questholder/Name/Hunt for The Hum Bug/Titlestring/Hunt for the Hum Bug/Notestring/Bertnor the Christmas Elf has tasked you the find one of the missing animals that has escaped from Santa's Naughty Pen./Objective1/Find The Hum Bug/Description1/Find The Hum Bug/EchoAddJournalEntry/Hunt for the Hum Bug: It appears that the note gives very little information. It reads, "The DECEITFUL and WRONGFUL entrapment of the Free Animals of Britannia must stop - we will strike again!"/NextRepeatable/12:00:00/AutoReward/True/CanSeeReward/False/Rewardstring/@GiftBox/ADD/{RNDSTRLIST,Mistletoedeed,BlueSnowflake,Whitesnowflake,GreenStocking,RedStocking,Snowman}/ADD/&lt;SimpleNote/Notestring/Hope you have a very Merry Christmas! Kindest regards - The Expanse./TitleString/Merry Christmas/Name/Christmas Greetings/&gt;; GIVE/&lt;SimpleNote/Name/A Grubby Note/Titlestring/A message from EA/Notestring/We are Elves Anonymous - we are legion. Your WRONGFUL actions against the animals of Britannia must cease. You have been warned.&gt;</Action>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>50</EntryNumber>
+    <ID>50</ID>
+    <Text>Well, Merry Christmas to you too, then.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>30</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

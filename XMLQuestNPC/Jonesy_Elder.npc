@@ -1,0 +1,74 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Village Elder</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Letter to Village Elder</TriggerOnCarried>
+    <NoTriggerOnCarried>The Palace of Gloom | ATTACHMENT,The Palace of Gloom,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Jonesy_Elder</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Text>I knew you were coming.</Text>
+    <Keywords>I have a letter for you.</Keywords>
+    <Action>SETONCARRIED,Nurhaci/Completed5/true</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Elder,4/I saw it in a dream. You will go to palace. It is the palace that kills my village. The evil starts in Pankot. Then like monsoon, it moves darkness over all country. They came from Palace and took sivalinga from out village. It is why Krishna brought you here. We pray to Krishna to help us find the stone. It was Krishna who made you fall from sky, so you can go to the Palace. To find sivalinga, and bring back to us.;Okay, I'm off to the Palace then.;going;Krishna or no Krishna, I'm not going.;no </Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>Krishna guide you!</Text>
+    <Keywords>going</Keywords>
+    <Action>TAKEBYTYPE,1,1/ElderLetter ; GIVE/MillieBracelet ; GIVE/&lt;questholder/name/The Palace of Gloom/titlestring/The Palace of Gloom/notestring/You have been charged with recovering the sacred Sankara Stones, rescuing the kidnapped children, and finding and defeating the Muggee Clan, led by Molar Ham./Objective1/Find Millie in the Palace./Description1/Find Millie in the Palace and give her this bracelet she forgot./Objective2/COLLECT,childbracelet,20/Description2/Collect 20 children's trinkets from the guards./Objective3/COLLECT,SankaraStones,1/Description3/Find the Sankara Stones and give them to the Village Elder./Objective4/KILLNAMED,Molar Ham,1/Description4/Find and destroy Molar Ham./addjournalentry/Tasks: You must find a way inside the palace. Collect 20 of the children's trinkets from the guards inside the Palace dungeons. Find the remnents of the Muggee Clan and defeat Molar Ham. Find the sacred Sankara Stones and return them to the Village Elder. Finally, meet Jonesy in his office in the NORTHWEST corner of Luna./autoreward/true/canseereward/false/AttachmentString/XmlAddFaction,TriFords,100/rewardstring/@bag/ADD/RewardScroll/ADD/Gold,2500/ADD,0.01/SankaraStonesDeco/ADD,0.1/&lt;Decorativeshield8/Hue/1756/Name/Blessed Shield of Kali/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Elder,0/The Palace is south of this village at the other end of the isle. You will find a way inside temple and defeat the Muggee Clan, led by Molar Ham, rescue the kidnapped children and bring the Sankara Stones back to me.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Krishna wills it, you must do this!</Text>
+    <Keywords>no</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

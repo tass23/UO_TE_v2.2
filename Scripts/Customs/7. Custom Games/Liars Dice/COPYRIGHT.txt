@@ -1,0 +1,2432 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+ 
+ <meta name="ROBOTS" content="NOARCHIVE">
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="https://ssl.gstatic.com/codesite/ph/images/phosting.ico">
+ 
+ 
+ <script type="text/javascript">
+ 
+ (function(){(function(){function b(a){this.t={};this.tick=function(a,b,c){b=void 0!=c?c:(new Date).getTime();this.t[a]=b};this.tick("start",null,a)}var a=new b;window.jstiming={Timer:b,load:a};try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT)),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT),a&&(window.jstiming.pt=a)}catch(d){}})();})();
+
+ 
+ 
+ 
+ 
+ var codesite_token = null;
+ 
+ 
+ var CS_env = {"assetVersionPath":"https://ssl.gstatic.com/codesite/ph/4319235871638307680","profileUrl":null,"loggedInUserEmail":null,"assetHostPath":"https://ssl.gstatic.com/codesite/ph","relativeBaseUrl":"","projectHomeUrl":"/p/runuo2-2repack","projectName":"runuo2-2repack","token":null,"domainName":null};
+ var _gaq = _gaq || [];
+ _gaq.push(
+ ['siteTracker._setAccount', 'UA-18071-1'],
+ ['siteTracker._trackPageview']);
+ 
+ (function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+ })();
+ 
+ </script>
+ 
+ 
+ <title>COPYRIGHT.txt - 
+ runuo2-2repack -
+ 
+ 
+ A repack of Runuo 2.2 Server - Google Project Hosting
+ </title>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/4319235871638307680/css/core.css">
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/4319235871638307680/css/ph_detail.css" >
+ 
+ 
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/4319235871638307680/css/d_sb.css" >
+ 
+ 
+ 
+<!--[if IE]>
+ <link type="text/css" rel="stylesheet" href="https://ssl.gstatic.com/codesite/ph/4319235871638307680/css/d_ie.css" >
+<![endif]-->
+ <style type="text/css">
+ .menuIcon.off { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -42px }
+ .menuIcon.on { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 -28px }
+ .menuIcon.down { background: no-repeat url(https://ssl.gstatic.com/codesite/ph/images/dropdown_sprite.gif) 0 0; }
+ 
+ 
+ 
+  tr.inline_comment {
+ background: #fff;
+ vertical-align: top;
+ }
+ div.draft, div.published {
+ padding: .3em;
+ border: 1px solid #999; 
+ margin-bottom: .1em;
+ font-family: arial, sans-serif;
+ max-width: 60em;
+ }
+ div.draft {
+ background: #ffa;
+ } 
+ div.published {
+ background: #e5ecf9;
+ }
+ div.published .body, div.draft .body {
+ padding: .5em .1em .1em .1em;
+ max-width: 60em;
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+ font-size: 1em;
+ }
+ div.draft .actions {
+ margin-left: 1em;
+ font-size: 90%;
+ }
+ div.draft form {
+ padding: .5em .5em .5em 0;
+ }
+ div.draft textarea, div.published textarea {
+ width: 95%;
+ height: 10em;
+ font-family: arial, sans-serif;
+ margin-bottom: .5em;
+ }
+
+ 
+ .nocursor, .nocursor td, .cursor_hidden, .cursor_hidden td {
+ background-color: white;
+ height: 2px;
+ }
+ .cursor, .cursor td {
+ background-color: darkblue;
+ height: 2px;
+ display: '';
+ }
+ 
+ 
+.list {
+ border: 1px solid white;
+ border-bottom: 0;
+}
+
+ 
+ </style>
+</head>
+<body class="t4">
+<script type="text/javascript">
+ window.___gcfg = {lang: 'en'};
+ (function() 
+ {var po = document.createElement("script");
+ po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+ var s = document.getElementsByTagName("script")[0];
+ s.parentNode.insertBefore(po, s);
+ })();
+</script>
+<div class="headbg">
+
+ <div id="gaia">
+ 
+
+ <span>
+ 
+ 
+ <a href="#" id="projects-dropdown" onclick="return false;"><u>My favorites</u> <small>&#9660;</small></a>
+ | <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Frunuo2-2repack%2Fsource%2Fbrowse%2Ftrunk%2F%2Brunuo2-2repack%2FScripts%2FCustoms%2FLiarsDice%2FCOPYRIGHT.txt&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Frunuo2-2repack%2Fsource%2Fbrowse%2Ftrunk%2F%2Brunuo2-2repack%2FScripts%2FCustoms%2FLiarsDice%2FCOPYRIGHT.txt" onclick="_CS_click('/gb/ph/signin');"><u>Sign in</u></a>
+ 
+ </span>
+
+ </div>
+
+ <div class="gbh" style="left: 0pt;"></div>
+ <div class="gbh" style="right: 0pt;"></div>
+ 
+ 
+ <div style="height: 1px"></div>
+<!--[if lte IE 7]>
+<div style="text-align:center;">
+Your version of Internet Explorer is not supported. Try a browser that
+contributes to open source, such as <a href="http://www.firefox.com">Firefox</a>,
+<a href="http://www.google.com/chrome">Google Chrome</a>, or
+<a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a>.
+</div>
+<![endif]-->
+
+
+
+ <table style="padding:0px; margin: 0px 0px 10px 0px; width:100%" cellpadding="0" cellspacing="0"
+ itemscope itemtype="http://schema.org/CreativeWork">
+ <tr style="height: 58px;">
+ 
+ 
+ 
+ <td id="plogo">
+ <link itemprop="url" href="/p/runuo2-2repack">
+ <a href="/p/runuo2-2repack/">
+ 
+ <img src="https://ssl.gstatic.com/codesite/ph/images/defaultlogo.png" alt="Logo" itemprop="image">
+ 
+ </a>
+ </td>
+ 
+ <td style="padding-left: 0.5em">
+ 
+ <div id="pname">
+ <a href="/p/runuo2-2repack/"><span itemprop="name">runuo2-2repack</span></a>
+ </div>
+ 
+ <div id="psum">
+ <a id="project_summary_link"
+ href="/p/runuo2-2repack/"><span itemprop="description">A repack of Runuo 2.2 Server</span></a>
+ 
+ </div>
+ 
+ 
+ </td>
+ <td style="white-space:nowrap;text-align:right; vertical-align:bottom;">
+ 
+ <form action="/hosting/search">
+ <input size="30" name="q" value="" type="text">
+ 
+ <input type="submit" name="projectsearch" value="Search projects" >
+ </form>
+ 
+ </tr>
+ </table>
+
+</div>
+
+ 
+<div id="mt" class="gtb"> 
+ <a href="/p/runuo2-2repack/" class="tab ">Project&nbsp;Home</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/runuo2-2repack/w/list" class="tab ">Wiki</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/runuo2-2repack/issues/list"
+ class="tab ">Issues</a>
+ 
+ 
+ 
+ 
+ 
+ <a href="/p/runuo2-2repack/source/checkout"
+ class="tab active">Source</a>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class=gtbc></div>
+</div>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" border="0" class="st">
+ <tr>
+ 
+ 
+ 
+ 
+ 
+ 
+ <td class="subt">
+ <div class="st2">
+ <div class="isf">
+ 
+ 
+
+
+ <span class="inst1"><a href="/p/runuo2-2repack/source/checkout">Checkout</a></span> &nbsp;
+ <span class="inst2"><a href="/p/runuo2-2repack/source/browse/">Browse</a></span> &nbsp;
+ <span class="inst3"><a href="/p/runuo2-2repack/source/list">Changes</a></span> &nbsp;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </form>
+ <script type="text/javascript">
+ 
+ function codesearchQuery(form) {
+ var query = document.getElementById('q').value;
+ if (query) { form.action += '%20' + query; }
+ }
+ </script>
+ </div>
+</div>
+
+ </td>
+ 
+ 
+ 
+ <td align="right" valign="top" class="bevel-right"></td>
+ </tr>
+</table>
+
+
+<script type="text/javascript">
+ var cancelBubble = false;
+ function _go(url) { document.location = url; }
+</script>
+<div id="maincol"
+ 
+>
+
+ 
+
+
+
+
+<div class="expand">
+<div id="colcontrol">
+<style type="text/css">
+ #file_flipper { white-space: nowrap; padding-right: 2em; }
+ #file_flipper.hidden { display: none; }
+ #file_flipper .pagelink { color: #0000CC; text-decoration: underline; }
+ #file_flipper #visiblefiles { padding-left: 0.5em; padding-right: 0.5em; }
+</style>
+<table id="nav_and_rev" class="list"
+ cellpadding="0" cellspacing="0" width="100%">
+ <tr>
+ 
+ <td nowrap="nowrap" class="src_crumbs src_nav" width="33%">
+ <strong class="src_nav">Source path:&nbsp;</strong>
+ <span id="crumb_root">
+ 
+ <a href="/p/runuo2-2repack/source/browse/">svn</a>/&nbsp;</span>
+ <span id="crumb_links" class="ifClosed"><a href="/p/runuo2-2repack/source/browse/trunk/">trunk</a><span class="sp">/&nbsp;</span><a href="/p/runuo2-2repack/source/browse/trunk/+runuo2-2repack/"> runuo2-2repack</a><span class="sp">/&nbsp;</span><a href="/p/runuo2-2repack/source/browse/trunk/+runuo2-2repack/Scripts/">Scripts</a><span class="sp">/&nbsp;</span><a href="/p/runuo2-2repack/source/browse/trunk/+runuo2-2repack/Scripts/Customs/">Customs</a><span class="sp">/&nbsp;</span><a href="/p/runuo2-2repack/source/browse/trunk/+runuo2-2repack/Scripts/Customs/LiarsDice/">LiarsDice</a><span class="sp">/&nbsp;</span>COPYRIGHT.txt</span>
+ 
+ 
+
+
+ </td>
+ 
+ 
+ <td nowrap="nowrap" width="33%" align="right">
+ <table cellpadding="0" cellspacing="0" style="font-size: 100%"><tr>
+ 
+ 
+ <td class="flipper"><b>r2</b></td>
+ 
+ </tr></table>
+ </td> 
+ </tr>
+</table>
+
+<div class="fc">
+ 
+ 
+ 
+<style type="text/css">
+.undermouse span {
+ background-image: url(https://ssl.gstatic.com/codesite/ph/images/comments.gif); }
+</style>
+<table class="opened" id="review_comment_area"
+><tr>
+<td id="nums">
+<pre><table width="100%"><tr class="nocursor"><td></td></tr></table></pre>
+<pre><table width="100%" id="nums_table_0"><tr id="gr_svn2_1"
+
+><td id="1"><a href="#1">1</a></td></tr
+><tr id="gr_svn2_2"
+
+><td id="2"><a href="#2">2</a></td></tr
+><tr id="gr_svn2_3"
+
+><td id="3"><a href="#3">3</a></td></tr
+><tr id="gr_svn2_4"
+
+><td id="4"><a href="#4">4</a></td></tr
+><tr id="gr_svn2_5"
+
+><td id="5"><a href="#5">5</a></td></tr
+><tr id="gr_svn2_6"
+
+><td id="6"><a href="#6">6</a></td></tr
+></table></pre>
+<pre><table width="100%"><tr class="nocursor"><td></td></tr></table></pre>
+</td>
+<td id="lines">
+<pre><table width="100%"><tr class="cursor_stop cursor_hidden"><td></td></tr></table></pre>
+<pre ><table id="src_table_0"><tr
+id=sl_svn2_1
+
+><td class="source">Liars Dice for UO copyright information, released under GPL 3.0 license<br></td></tr
+><tr
+id=sl_svn2_2
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_3
+
+><td class="source">Any redistribution, source code or game must retain the original attribution(s) to the author Bobby Kramer.<br></td></tr
+><tr
+id=sl_svn2_4
+
+><td class="source"><br></td></tr
+><tr
+id=sl_svn2_5
+
+><td class="source">In addition, you may not use this software/algorithm in any way proprietary, <br></td></tr
+><tr
+id=sl_svn2_6
+
+><td class="source">without explicit permission from Bobby Kramer.<br></td></tr
+></table></pre>
+<pre><table width="100%"><tr class="cursor_stop cursor_hidden"><td></td></tr></table></pre>
+</td>
+</tr></table>
+
+ 
+<script type="text/javascript">
+ var lineNumUnderMouse = -1;
+ 
+ function gutterOver(num) {
+ gutterOut();
+ var newTR = document.getElementById('gr_svn2_' + num);
+ if (newTR) {
+ newTR.className = 'undermouse';
+ }
+ lineNumUnderMouse = num;
+ }
+ function gutterOut() {
+ if (lineNumUnderMouse != -1) {
+ var oldTR = document.getElementById(
+ 'gr_svn2_' + lineNumUnderMouse);
+ if (oldTR) {
+ oldTR.className = '';
+ }
+ lineNumUnderMouse = -1;
+ }
+ }
+ var numsGenState = {table_base_id: 'nums_table_'};
+ var srcGenState = {table_base_id: 'src_table_'};
+ var alignerRunning = false;
+ var startOver = false;
+ function setLineNumberHeights() {
+ if (alignerRunning) {
+ startOver = true;
+ return;
+ }
+ numsGenState.chunk_id = 0;
+ numsGenState.table = document.getElementById('nums_table_0');
+ numsGenState.row_num = 0;
+ if (!numsGenState.table) {
+ return; // Silently exit if no file is present.
+ }
+ srcGenState.chunk_id = 0;
+ srcGenState.table = document.getElementById('src_table_0');
+ srcGenState.row_num = 0;
+ alignerRunning = true;
+ continueToSetLineNumberHeights();
+ }
+ function rowGenerator(genState) {
+ if (genState.row_num < genState.table.rows.length) {
+ var currentRow = genState.table.rows[genState.row_num];
+ genState.row_num++;
+ return currentRow;
+ }
+ var newTable = document.getElementById(
+ genState.table_base_id + (genState.chunk_id + 1));
+ if (newTable) {
+ genState.chunk_id++;
+ genState.row_num = 0;
+ genState.table = newTable;
+ return genState.table.rows[0];
+ }
+ return null;
+ }
+ var MAX_ROWS_PER_PASS = 1000;
+ function continueToSetLineNumberHeights() {
+ var rowsInThisPass = 0;
+ var numRow = 1;
+ var srcRow = 1;
+ while (numRow && srcRow && rowsInThisPass < MAX_ROWS_PER_PASS) {
+ numRow = rowGenerator(numsGenState);
+ srcRow = rowGenerator(srcGenState);
+ rowsInThisPass++;
+ if (numRow && srcRow) {
+ if (numRow.offsetHeight != srcRow.offsetHeight) {
+ numRow.firstChild.style.height = srcRow.offsetHeight + 'px';
+ }
+ }
+ }
+ if (rowsInThisPass >= MAX_ROWS_PER_PASS) {
+ setTimeout(continueToSetLineNumberHeights, 10);
+ } else {
+ alignerRunning = false;
+ if (startOver) {
+ startOver = false;
+ setTimeout(setLineNumberHeights, 500);
+ }
+ }
+ }
+ function initLineNumberHeights() {
+ // Do 2 complete passes, because there can be races
+ // between this code and prettify.
+ startOver = true;
+ setTimeout(setLineNumberHeights, 250);
+ window.onresize = setLineNumberHeights;
+ }
+ initLineNumberHeights();
+</script>
+
+ 
+ 
+ <div id="log">
+ <div style="text-align:right">
+ <a class="ifCollapse" href="#" onclick="_toggleMeta(this); return false">Show details</a>
+ <a class="ifExpand" href="#" onclick="_toggleMeta(this); return false">Hide details</a>
+ </div>
+ <div class="ifExpand">
+ 
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="changelog">
+ <p>Change log</p>
+ <div>
+ <a href="/p/runuo2-2repack/source/detail?spec=svn2&amp;r=1">r1</a>
+ by jamesreg1973
+ on Oct 7, 2012
+ &nbsp; <a href="/p/runuo2-2repack/source/diff?spec=svn2&r=1&amp;format=side&amp;path=/trunk/+runuo2-2repack/Scripts/Customs/LiarsDice/COPYRIGHT.txt&amp;old_path=/trunk/+runuo2-2repack/Scripts/Customs/LiarsDice/COPYRIGHT.txt&amp;old=">Diff</a>
+ </div>
+ <pre>[No log message]</pre>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <script type="text/javascript">
+ var detail_url = '/p/runuo2-2repack/source/detail?r=1&spec=svn2';
+ var publish_url = '/p/runuo2-2repack/source/detail?r=1&spec=svn2#publish';
+ // describe the paths of this revision in javascript.
+ var changed_paths = [];
+ var changed_urls = [];
+ 
+ changed_paths.push('/trunk');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Accounts');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Accounts?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Accounts/accounts.xml');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Accounts/accounts.xml?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds/Guilds.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds/Guilds.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds/Guilds.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds/Guilds.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.tdb');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.tdb?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.tdb');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.tdb?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Staff Runebook');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Staff Runebook?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Staff Runebook/Rune Accounts.xml');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Staff Runebook/Rune Accounts.xml?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Accounts');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Accounts?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Accounts/accounts.xml');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Accounts/accounts.xml?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds/Guilds.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds/Guilds.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds/Guilds.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds/Guilds.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.tdb');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.tdb?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.tdb');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.tdb?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Staff Runebook');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Staff Runebook?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Staff Runebook/Rune Accounts.xml');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Staff Runebook/Rune Accounts.xml?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Accounts');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Accounts?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Accounts/accounts.xml');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Accounts/accounts.xml?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds/Guilds.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds/Guilds.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds/Guilds.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds/Guilds.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.tdb');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.tdb?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.idx');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.idx?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.tdb');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.tdb?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Staff Runebook');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Staff Runebook?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Staff Runebook/Rune Accounts.xml');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Staff Runebook/Rune Accounts.xml?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/COPYING');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/COPYING?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Assemblies.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Assemblies.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Binary');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Binary?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Binary/Bounds.bin');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Binary/Bounds.bin?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/armor.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/armor.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeaxes.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeaxes.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largechain.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largechain.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largefencing.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largefencing.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largemaces.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largemaces.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeplate.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeplate.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largepolearms.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largepolearms.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largering.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largering.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeswords.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeswords.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/weapons.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/weapons.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/boneset.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/boneset.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/cloth.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/cloth.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/farmer.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/farmer.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/femaleleatherset.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/femaleleatherset.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/fishergirl.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/fishergirl.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/gypsy.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/gypsy.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/hatset.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/hatset.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/jester.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/jester.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/lady.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/lady.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/leather.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/leather.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/maleleatherset.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/maleleatherset.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/pirate.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/pirate.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/shoeset.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/shoeset.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/studdedset.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/studdedset.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/towncrier.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/towncrier.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/wizard.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/wizard.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Common.map');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Common.map?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/doors.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/doors.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/floors.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/floors.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/misc.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/misc.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/roof.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/roof.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/stairs.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/stairs.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/suppinfo.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/suppinfo.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/teleprts.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/teleprts.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Components/walls.txt');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/walls.txt?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/NERUN-BritainSewers.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/NERUN-BritainSewers.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/NERUN-SeaMarket.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/NERUN-SeaMarket.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_covetous.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_covetous.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_deceit.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_deceit.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_despise.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_despise.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_destard.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_destard.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_fire.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_fire.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_hedgemaze.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_hedgemaze.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_hythloth.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_hythloth.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_ice.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_ice.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_orccave.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_orccave.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_shame.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_shame.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_terathankeep.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_terathankeep.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/_wrong.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_wrong.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/britain.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/britain.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/britain.cfg.bak');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/britain.cfg.bak?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/bucs.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/bucs.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/bucsportal.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/bucsportal.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/cove.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/cove.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/delucia.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/delucia.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/despise.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/despise.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/destard.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/destard.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/hythloth.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/hythloth.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/jhelom.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/jhelom.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/magincia.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/magincia.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/minoc.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/minoc.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/moonglow.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/moonglow.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/nujelm.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/nujelm.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/papua.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/papua.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/patches.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/patches.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/serpent pillars.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/serpent pillars.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/serpentshold.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/serpentshold.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/shame.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/shame.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/shrines.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/shrines.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/skara.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/skara.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/solen matriarch quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/solen matriarch quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/study of solen quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/study of solen quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/trinsic.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/trinsic.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/vesper.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/vesper.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/wind.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/wind.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/witch apprentice quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/witch apprentice quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Britannia/yew.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/yew.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/_champion teleporters.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/_champion teleporters.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/_star room.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/_star room.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/ambitious solen queen quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/ambitious solen queen quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/khaldun entrance.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/khaldun entrance.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/khaldun.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/khaldun.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/ocllo.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/ocllo.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/solen matriarch quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/solen matriarch quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Felucca/yew.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/yew.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_blood.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_blood.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_central.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_central.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_exodus.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_exodus.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_gwenno.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_gwenno.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_ratcave.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_ratcave.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_regvolom.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_regvolom.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_serpentine.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_serpentine.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_sheepfarm.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_sheepfarm.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_sorcerers.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_sorcerers.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_terortskitas.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_terortskitas.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_twinoaks.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_twinoaks.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/camp.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/camp.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/camp2.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/camp2.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/enslavedgargs.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/enslavedgargs.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/gargoylecity.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/gargoylecity.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/golemsandjukas.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/golemsandjukas.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/lakeshire.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/lakeshire.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/meercatacombs.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/meercatacombs.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/misc.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/misc.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/mistas.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/mistas.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/patches.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/patches.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/ratfortress.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/ratfortress.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/savagecamp.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/savagecamp.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/shrines.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/shrines.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/vinculuminn.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/vinculuminn.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/wispdungeon.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/wispdungeon.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/NERUN-Malas.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/NERUN-Malas.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/_luna.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/_luna.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/_umbra.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/_umbra.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/dark tides quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/dark tides quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/doom.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/doom.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/emino&#39;s undertaking quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/emino\x27s undertaking quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/haochi&#39;s trials quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/haochi\x27s trials quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/luna.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/luna.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/markcontainers.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/markcontainers.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Malas/summoning quest.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/summoning quest.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Blighted Grove.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Blighted Grove.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Covetous.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Covetous.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Heartwood.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Heartwood.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Moonglow.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Moonglow.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Palace of Paroxysmus.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Palace of Paroxysmus.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Prism of Light.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Prism of Light.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Sanctuary.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Sanctuary.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Vesper.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Felucca/Vesper.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Ilshenar');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Ilshenar?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Ilshenar/Misc.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Ilshenar/Misc.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ changed_paths.push('/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Ilshenar/Twisted Weald.cfg');
+ changed_urls.push('/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain\x27s Legacy/Ilshenar/Twisted Weald.cfg?r\x3d1\x26spec\x3dsvn2');
+ 
+ 
+ function getCurrentPageIndex() {
+ for (var i = 0; i < changed_paths.length; i++) {
+ if (selected_path == changed_paths[i]) {
+ return i;
+ }
+ }
+ }
+ function getNextPage() {
+ var i = getCurrentPageIndex();
+ if (i < changed_paths.length - 1) {
+ return changed_urls[i + 1];
+ }
+ return null;
+ }
+ function getPreviousPage() {
+ var i = getCurrentPageIndex();
+ if (i > 0) {
+ return changed_urls[i - 1];
+ }
+ return null;
+ }
+ function gotoNextPage() {
+ var page = getNextPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoPreviousPage() {
+ var page = getPreviousPage();
+ if (!page) {
+ page = detail_url;
+ }
+ window.location = page;
+ }
+ function gotoDetailPage() {
+ window.location = detail_url;
+ }
+ function gotoPublishPage() {
+ window.location = publish_url;
+ }
+</script>
+
+ 
+ <style type="text/css">
+ #review_nav {
+ border-top: 3px solid white;
+ padding-top: 6px;
+ margin-top: 1em;
+ }
+ #review_nav td {
+ vertical-align: middle;
+ }
+ #review_nav select {
+ margin: .5em 0;
+ }
+ </style>
+ <div id="review_nav">
+ <table><tr><td>Go to:&nbsp;</td><td>
+ <select name="files_in_rev" onchange="window.location=this.value">
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk?r=1&amp;spec=svn2"
+ 
+ >/trunk</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack?r=1&amp;spec=svn2"
+ 
+ >/trunk/ runuo2-2repack</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups?r=1&amp;spec=svn2"
+ 
+ >/trunk/ runuo2-2repack/Backups</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic?r=1&amp;spec=svn2"
+ 
+ >...runuo2-2repack/Backups/Automatic</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)?r=1&amp;spec=svn2"
+ 
+ >...Most Recent (6-10-2012 16-28-48)</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Accounts?r=1&amp;spec=svn2"
+ 
+ >...nt (6-10-2012 16-28-48)/Accounts</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Accounts/accounts.xml?r=1&amp;spec=svn2"
+ 
+ >... 16-28-48)/Accounts/accounts.xml</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds?r=1&amp;spec=svn2"
+ 
+ >...cent (6-10-2012 16-28-48)/Guilds</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds/Guilds.bin?r=1&amp;spec=svn2"
+ 
+ >...2012 16-28-48)/Guilds/Guilds.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Guilds/Guilds.idx?r=1&amp;spec=svn2"
+ 
+ >...2012 16-28-48)/Guilds/Guilds.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items?r=1&amp;spec=svn2"
+ 
+ >...ecent (6-10-2012 16-28-48)/Items</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.bin?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-28-48)/Items/Items.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.idx?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-28-48)/Items/Items.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Items/Items.tdb?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-28-48)/Items/Items.tdb</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles?r=1&amp;spec=svn2"
+ 
+ >...ent (6-10-2012 16-28-48)/Mobiles</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.bin?r=1&amp;spec=svn2"
+ 
+ >...12 16-28-48)/Mobiles/Mobiles.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.idx?r=1&amp;spec=svn2"
+ 
+ >...12 16-28-48)/Mobiles/Mobiles.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Mobiles/Mobiles.tdb?r=1&amp;spec=svn2"
+ 
+ >...12 16-28-48)/Mobiles/Mobiles.tdb</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Staff Runebook?r=1&amp;spec=svn2"
+ 
+ >...10-2012 16-28-48)/Staff Runebook</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Most Recent (6-10-2012 16-28-48)/Staff Runebook/Rune Accounts.xml?r=1&amp;spec=svn2"
+ 
+ >...Staff Runebook/Rune Accounts.xml</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)?r=1&amp;spec=svn2"
+ 
+ >...cond Backup (6-10-2012 16-15-08)</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Accounts?r=1&amp;spec=svn2"
+ 
+ >...up (6-10-2012 16-15-08)/Accounts</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Accounts/accounts.xml?r=1&amp;spec=svn2"
+ 
+ >... 16-15-08)/Accounts/accounts.xml</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds?r=1&amp;spec=svn2"
+ 
+ >...ckup (6-10-2012 16-15-08)/Guilds</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds/Guilds.bin?r=1&amp;spec=svn2"
+ 
+ >...2012 16-15-08)/Guilds/Guilds.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Guilds/Guilds.idx?r=1&amp;spec=svn2"
+ 
+ >...2012 16-15-08)/Guilds/Guilds.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items?r=1&amp;spec=svn2"
+ 
+ >...ackup (6-10-2012 16-15-08)/Items</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.bin?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-15-08)/Items/Items.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.idx?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-15-08)/Items/Items.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Items/Items.tdb?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-15-08)/Items/Items.tdb</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles?r=1&amp;spec=svn2"
+ 
+ >...kup (6-10-2012 16-15-08)/Mobiles</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.bin?r=1&amp;spec=svn2"
+ 
+ >...12 16-15-08)/Mobiles/Mobiles.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.idx?r=1&amp;spec=svn2"
+ 
+ >...12 16-15-08)/Mobiles/Mobiles.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Mobiles/Mobiles.tdb?r=1&amp;spec=svn2"
+ 
+ >...12 16-15-08)/Mobiles/Mobiles.tdb</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Staff Runebook?r=1&amp;spec=svn2"
+ 
+ >...10-2012 16-15-08)/Staff Runebook</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Second Backup (6-10-2012 16-15-08)/Staff Runebook/Rune Accounts.xml?r=1&amp;spec=svn2"
+ 
+ >...Staff Runebook/Rune Accounts.xml</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)?r=1&amp;spec=svn2"
+ 
+ >...hird Backup (6-10-2012 16-09-44)</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Accounts?r=1&amp;spec=svn2"
+ 
+ >...up (6-10-2012 16-09-44)/Accounts</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Accounts/accounts.xml?r=1&amp;spec=svn2"
+ 
+ >... 16-09-44)/Accounts/accounts.xml</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds?r=1&amp;spec=svn2"
+ 
+ >...ckup (6-10-2012 16-09-44)/Guilds</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds/Guilds.bin?r=1&amp;spec=svn2"
+ 
+ >...2012 16-09-44)/Guilds/Guilds.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Guilds/Guilds.idx?r=1&amp;spec=svn2"
+ 
+ >...2012 16-09-44)/Guilds/Guilds.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items?r=1&amp;spec=svn2"
+ 
+ >...ackup (6-10-2012 16-09-44)/Items</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.bin?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-09-44)/Items/Items.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.idx?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-09-44)/Items/Items.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Items/Items.tdb?r=1&amp;spec=svn2"
+ 
+ >...0-2012 16-09-44)/Items/Items.tdb</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles?r=1&amp;spec=svn2"
+ 
+ >...kup (6-10-2012 16-09-44)/Mobiles</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.bin?r=1&amp;spec=svn2"
+ 
+ >...12 16-09-44)/Mobiles/Mobiles.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.idx?r=1&amp;spec=svn2"
+ 
+ >...12 16-09-44)/Mobiles/Mobiles.idx</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Mobiles/Mobiles.tdb?r=1&amp;spec=svn2"
+ 
+ >...12 16-09-44)/Mobiles/Mobiles.tdb</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Staff Runebook?r=1&amp;spec=svn2"
+ 
+ >...10-2012 16-09-44)/Staff Runebook</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Backups/Automatic/Third Backup (6-10-2012 16-09-44)/Staff Runebook/Rune Accounts.xml?r=1&amp;spec=svn2"
+ 
+ >...Staff Runebook/Rune Accounts.xml</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/COPYING?r=1&amp;spec=svn2"
+ 
+ >/trunk/ runuo2-2repack/COPYING</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data?r=1&amp;spec=svn2"
+ 
+ >/trunk/ runuo2-2repack/Data</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Assemblies.cfg?r=1&amp;spec=svn2"
+ 
+ >...nuo2-2repack/Data/Assemblies.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Binary?r=1&amp;spec=svn2"
+ 
+ >/trunk/ runuo2-2repack/Data/Binary</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Binary/Bounds.bin?r=1&amp;spec=svn2"
+ 
+ >...2-2repack/Data/Binary/Bounds.bin</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders?r=1&amp;spec=svn2"
+ 
+ >... runuo2-2repack/Data/Bulk Orders</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith?r=1&amp;spec=svn2"
+ 
+ >...pack/Data/Bulk Orders/Blacksmith</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/armor.cfg?r=1&amp;spec=svn2"
+ 
+ >...Bulk Orders/Blacksmith/armor.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeaxes.cfg?r=1&amp;spec=svn2"
+ 
+ >... Orders/Blacksmith/largeaxes.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largechain.cfg?r=1&amp;spec=svn2"
+ 
+ >...Orders/Blacksmith/largechain.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largefencing.cfg?r=1&amp;spec=svn2"
+ 
+ >...ders/Blacksmith/largefencing.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largemaces.cfg?r=1&amp;spec=svn2"
+ 
+ >...Orders/Blacksmith/largemaces.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeplate.cfg?r=1&amp;spec=svn2"
+ 
+ >...Orders/Blacksmith/largeplate.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largepolearms.cfg?r=1&amp;spec=svn2"
+ 
+ >...ers/Blacksmith/largepolearms.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largering.cfg?r=1&amp;spec=svn2"
+ 
+ >... Orders/Blacksmith/largering.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/largeswords.cfg?r=1&amp;spec=svn2"
+ 
+ >...rders/Blacksmith/largeswords.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Blacksmith/weapons.cfg?r=1&amp;spec=svn2"
+ 
+ >...lk Orders/Blacksmith/weapons.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring?r=1&amp;spec=svn2"
+ 
+ >...epack/Data/Bulk Orders/Tailoring</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/boneset.cfg?r=1&amp;spec=svn2"
+ 
+ >...ulk Orders/Tailoring/boneset.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/cloth.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Bulk Orders/Tailoring/cloth.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/farmer.cfg?r=1&amp;spec=svn2"
+ 
+ >...Bulk Orders/Tailoring/farmer.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/femaleleatherset.cfg?r=1&amp;spec=svn2"
+ 
+ >...s/Tailoring/femaleleatherset.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/fishergirl.cfg?r=1&amp;spec=svn2"
+ 
+ >... Orders/Tailoring/fishergirl.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/gypsy.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Bulk Orders/Tailoring/gypsy.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/hatset.cfg?r=1&amp;spec=svn2"
+ 
+ >...Bulk Orders/Tailoring/hatset.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/jester.cfg?r=1&amp;spec=svn2"
+ 
+ >...Bulk Orders/Tailoring/jester.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/lady.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Bulk Orders/Tailoring/lady.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/leather.cfg?r=1&amp;spec=svn2"
+ 
+ >...ulk Orders/Tailoring/leather.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/maleleatherset.cfg?r=1&amp;spec=svn2"
+ 
+ >...ers/Tailoring/maleleatherset.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/pirate.cfg?r=1&amp;spec=svn2"
+ 
+ >...Bulk Orders/Tailoring/pirate.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/shoeset.cfg?r=1&amp;spec=svn2"
+ 
+ >...ulk Orders/Tailoring/shoeset.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/studdedset.cfg?r=1&amp;spec=svn2"
+ 
+ >... Orders/Tailoring/studdedset.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/towncrier.cfg?r=1&amp;spec=svn2"
+ 
+ >...k Orders/Tailoring/towncrier.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Bulk Orders/Tailoring/wizard.cfg?r=1&amp;spec=svn2"
+ 
+ >...Bulk Orders/Tailoring/wizard.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Common.map?r=1&amp;spec=svn2"
+ 
+ >.../ runuo2-2repack/Data/Common.map</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components?r=1&amp;spec=svn2"
+ 
+ >.../ runuo2-2repack/Data/Components</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/doors.txt?r=1&amp;spec=svn2"
+ 
+ >...repack/Data/Components/doors.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/floors.txt?r=1&amp;spec=svn2"
+ 
+ >...epack/Data/Components/floors.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/misc.txt?r=1&amp;spec=svn2"
+ 
+ >...2repack/Data/Components/misc.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/roof.txt?r=1&amp;spec=svn2"
+ 
+ >...2repack/Data/Components/roof.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/stairs.txt?r=1&amp;spec=svn2"
+ 
+ >...epack/Data/Components/stairs.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/suppinfo.txt?r=1&amp;spec=svn2"
+ 
+ >...ack/Data/Components/suppinfo.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/teleprts.txt?r=1&amp;spec=svn2"
+ 
+ >...ack/Data/Components/teleprts.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Components/walls.txt?r=1&amp;spec=svn2"
+ 
+ >...repack/Data/Components/walls.txt</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration?r=1&amp;spec=svn2"
+ 
+ >.../ runuo2-2repack/Data/Decoration</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia?r=1&amp;spec=svn2"
+ 
+ >...repack/Data/Decoration/Britannia</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/NERUN-BritainSewers.cfg?r=1&amp;spec=svn2"
+ 
+ >...ritannia/NERUN-BritainSewers.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/NERUN-SeaMarket.cfg?r=1&amp;spec=svn2"
+ 
+ >...on/Britannia/NERUN-SeaMarket.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_covetous.cfg?r=1&amp;spec=svn2"
+ 
+ >...coration/Britannia/_covetous.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_deceit.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/_deceit.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_despise.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Britannia/_despise.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_destard.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Britannia/_destard.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_fire.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Britannia/_fire.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_hedgemaze.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Britannia/_hedgemaze.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_hythloth.cfg?r=1&amp;spec=svn2"
+ 
+ >...coration/Britannia/_hythloth.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_ice.cfg?r=1&amp;spec=svn2"
+ 
+ >...ta/Decoration/Britannia/_ice.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_orccave.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Britannia/_orccave.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_shame.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Britannia/_shame.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_terathankeep.cfg?r=1&amp;spec=svn2"
+ 
+ >...tion/Britannia/_terathankeep.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/_wrong.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Britannia/_wrong.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/britain.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/britain.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/britain.cfg.bak?r=1&amp;spec=svn2"
+ 
+ >...ration/Britannia/britain.cfg.bak</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/bucs.cfg?r=1&amp;spec=svn2"
+ 
+ >...ta/Decoration/Britannia/bucs.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/bucsportal.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Britannia/bucsportal.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/cove.cfg?r=1&amp;spec=svn2"
+ 
+ >...ta/Decoration/Britannia/cove.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/delucia.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/delucia.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/despise.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/despise.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/destard.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/destard.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/hythloth.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Britannia/hythloth.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/jhelom.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Britannia/jhelom.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/magincia.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Britannia/magincia.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/minoc.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Britannia/minoc.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/moonglow.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Britannia/moonglow.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/nujelm.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Britannia/nujelm.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/papua.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Britannia/papua.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/patches.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/patches.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/serpent pillars.cfg?r=1&amp;spec=svn2"
+ 
+ >...on/Britannia/serpent pillars.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/serpentshold.cfg?r=1&amp;spec=svn2"
+ 
+ >...ation/Britannia/serpentshold.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/shame.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Britannia/shame.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/shrines.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/shrines.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/skara.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Britannia/skara.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/solen matriarch quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...tannia/solen matriarch quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/study of solen quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...itannia/study of solen quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/trinsic.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Britannia/trinsic.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/vesper.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Britannia/vesper.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/wind.cfg?r=1&amp;spec=svn2"
+ 
+ >...ta/Decoration/Britannia/wind.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/witch apprentice quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...annia/witch apprentice quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Britannia/yew.cfg?r=1&amp;spec=svn2"
+ 
+ >...ata/Decoration/Britannia/yew.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca?r=1&amp;spec=svn2"
+ 
+ >...-2repack/Data/Decoration/Felucca</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/_champion teleporters.cfg?r=1&amp;spec=svn2"
+ 
+ >...elucca/_champion teleporters.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/_star room.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Felucca/_star room.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/ambitious solen queen quest.cfg?r=1&amp;spec=svn2"
+ 
+ >.../ambitious solen queen quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/khaldun entrance.cfg?r=1&amp;spec=svn2"
+ 
+ >...ion/Felucca/khaldun entrance.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/khaldun.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Felucca/khaldun.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/ocllo.cfg?r=1&amp;spec=svn2"
+ 
+ >...ata/Decoration/Felucca/ocllo.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/solen matriarch quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...elucca/solen matriarch quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Felucca/yew.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Data/Decoration/Felucca/yew.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar?r=1&amp;spec=svn2"
+ 
+ >...2repack/Data/Decoration/Ilshenar</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_blood.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Ilshenar/_blood.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_central.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Ilshenar/_central.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_exodus.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Ilshenar/_exodus.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_gwenno.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Ilshenar/_gwenno.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_ratcave.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Ilshenar/_ratcave.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_regvolom.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Ilshenar/_regvolom.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_serpentine.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Ilshenar/_serpentine.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_sheepfarm.cfg?r=1&amp;spec=svn2"
+ 
+ >...coration/Ilshenar/_sheepfarm.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_sorcerers.cfg?r=1&amp;spec=svn2"
+ 
+ >...coration/Ilshenar/_sorcerers.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_terortskitas.cfg?r=1&amp;spec=svn2"
+ 
+ >...ation/Ilshenar/_terortskitas.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/_twinoaks.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Ilshenar/_twinoaks.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/camp.cfg?r=1&amp;spec=svn2"
+ 
+ >...ata/Decoration/Ilshenar/camp.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/camp2.cfg?r=1&amp;spec=svn2"
+ 
+ >...ta/Decoration/Ilshenar/camp2.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/enslavedgargs.cfg?r=1&amp;spec=svn2"
+ 
+ >...ation/Ilshenar/enslavedgargs.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/gargoylecity.cfg?r=1&amp;spec=svn2"
+ 
+ >...ration/Ilshenar/gargoylecity.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/golemsandjukas.cfg?r=1&amp;spec=svn2"
+ 
+ >...tion/Ilshenar/golemsandjukas.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/lakeshire.cfg?r=1&amp;spec=svn2"
+ 
+ >...ecoration/Ilshenar/lakeshire.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/meercatacombs.cfg?r=1&amp;spec=svn2"
+ 
+ >...ation/Ilshenar/meercatacombs.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/misc.cfg?r=1&amp;spec=svn2"
+ 
+ >...ata/Decoration/Ilshenar/misc.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/mistas.cfg?r=1&amp;spec=svn2"
+ 
+ >...a/Decoration/Ilshenar/mistas.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/patches.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Ilshenar/patches.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/ratfortress.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Ilshenar/ratfortress.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/savagecamp.cfg?r=1&amp;spec=svn2"
+ 
+ >...coration/Ilshenar/savagecamp.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/shrines.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Decoration/Ilshenar/shrines.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/vinculuminn.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Ilshenar/vinculuminn.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Ilshenar/wispdungeon.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Ilshenar/wispdungeon.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas?r=1&amp;spec=svn2"
+ 
+ >...o2-2repack/Data/Decoration/Malas</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/NERUN-Malas.cfg?r=1&amp;spec=svn2"
+ 
+ >...Decoration/Malas/NERUN-Malas.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/_luna.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Data/Decoration/Malas/_luna.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/_umbra.cfg?r=1&amp;spec=svn2"
+ 
+ >...Data/Decoration/Malas/_umbra.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/dark tides quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...ation/Malas/dark tides quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/doom.cfg?r=1&amp;spec=svn2"
+ 
+ >...k/Data/Decoration/Malas/doom.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/emino&#39;s undertaking quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...as/emino&#39;s undertaking quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/haochi&#39;s trials quest.cfg?r=1&amp;spec=svn2"
+ 
+ >.../Malas/haochi&#39;s trials quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/luna.cfg?r=1&amp;spec=svn2"
+ 
+ >...k/Data/Decoration/Malas/luna.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/markcontainers.cfg?r=1&amp;spec=svn2"
+ 
+ >...oration/Malas/markcontainers.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Malas/summoning quest.cfg?r=1&amp;spec=svn2"
+ 
+ >...ration/Malas/summoning quest.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy?r=1&amp;spec=svn2"
+ 
+ >...Data/Decoration/Mondain&#39;s Legacy</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca?r=1&amp;spec=svn2"
+ 
+ >...oration/Mondain&#39;s Legacy/Felucca</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Blighted Grove.cfg?r=1&amp;spec=svn2"
+ 
+ >...egacy/Felucca/Blighted Grove.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Covetous.cfg?r=1&amp;spec=svn2"
+ 
+ >...in&#39;s Legacy/Felucca/Covetous.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Heartwood.cfg?r=1&amp;spec=svn2"
+ 
+ >...n&#39;s Legacy/Felucca/Heartwood.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Moonglow.cfg?r=1&amp;spec=svn2"
+ 
+ >...in&#39;s Legacy/Felucca/Moonglow.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Palace of Paroxysmus.cfg?r=1&amp;spec=svn2"
+ 
+ >...Felucca/Palace of Paroxysmus.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Prism of Light.cfg?r=1&amp;spec=svn2"
+ 
+ >...egacy/Felucca/Prism of Light.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Sanctuary.cfg?r=1&amp;spec=svn2"
+ 
+ >...n&#39;s Legacy/Felucca/Sanctuary.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Felucca/Vesper.cfg?r=1&amp;spec=svn2"
+ 
+ >...dain&#39;s Legacy/Felucca/Vesper.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Ilshenar?r=1&amp;spec=svn2"
+ 
+ >...ration/Mondain&#39;s Legacy/Ilshenar</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Ilshenar/Misc.cfg?r=1&amp;spec=svn2"
+ 
+ >...ndain&#39;s Legacy/Ilshenar/Misc.cfg</option>
+ 
+ <option value="/p/runuo2-2repack/source/browse/trunk/ runuo2-2repack/Data/Decoration/Mondain&#39;s Legacy/Ilshenar/Twisted Weald.cfg?r=1&amp;spec=svn2"
+ 
+ >...egacy/Ilshenar/Twisted Weald.cfg</option>
+ 
+ </select>
+ </td></tr></table>
+ 
+ 
+ 
+
+
+
+ <div style="white-space:nowrap">
+ Project members,
+ <a href="https://www.google.com/accounts/ServiceLogin?service=code&amp;ltmpl=phosting&amp;continue=https%3A%2F%2Fcode.google.com%2Fp%2Frunuo2-2repack%2Fsource%2Fbrowse%2Ftrunk%2F%2Brunuo2-2repack%2FScripts%2FCustoms%2FLiarsDice%2FCOPYRIGHT.txt&amp;followup=https%3A%2F%2Fcode.google.com%2Fp%2Frunuo2-2repack%2Fsource%2Fbrowse%2Ftrunk%2F%2Brunuo2-2repack%2FScripts%2FCustoms%2FLiarsDice%2FCOPYRIGHT.txt"
+ >sign in</a> to write a code review</div>
+
+
+ 
+ </div>
+ 
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="older_bubble">
+ <p>Older revisions</p>
+ 
+ <a href="/p/runuo2-2repack/source/list?path=/trunk/+runuo2-2repack/Scripts/Customs/LiarsDice/COPYRIGHT.txt&start=1">All revisions of this file</a>
+ </div>
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ 
+ <div class="pmeta_bubble_bg" style="border:1px solid white">
+ <div class="round4"></div>
+ <div class="round2"></div>
+ <div class="round1"></div>
+ <div class="box-inner">
+ <div id="fileinfo_bubble">
+ <p>File info</p>
+ 
+ <div>Size: 311 bytes,
+ 6 lines</div>
+ 
+ <div><a href="//runuo2-2repack.googlecode.com/svn/trunk/ runuo2-2repack/Scripts/Customs/LiarsDice/COPYRIGHT.txt">View raw file</a></div>
+ </div>
+ 
+ </div>
+ <div class="round1"></div>
+ <div class="round2"></div>
+ <div class="round4"></div>
+ </div>
+ </div>
+ </div>
+
+
+</div>
+
+</div>
+</div>
+
+
+<script src="https://ssl.gstatic.com/codesite/ph/4319235871638307680/js/source_file_scripts.js"></script>
+
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/4319235871638307680/js/kibbles.js"></script>
+ <script type="text/javascript">
+ var lastStop = null;
+ var initialized = false;
+ 
+ function updateCursor(next, prev) {
+ if (prev && prev.element) {
+ prev.element.className = 'cursor_stop cursor_hidden';
+ }
+ if (next && next.element) {
+ next.element.className = 'cursor_stop cursor';
+ lastStop = next.index;
+ }
+ }
+ 
+ function pubRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initialized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftRevealed(data) {
+ updateCursorForCell(data.cellId, 'cursor_stop cursor_hidden');
+ if (initialized) {
+ reloadCursors();
+ }
+ }
+ 
+ function draftDestroyed(data) {
+ updateCursorForCell(data.cellId, 'nocursor');
+ if (initialized) {
+ reloadCursors();
+ }
+ }
+ function reloadCursors() {
+ kibbles.skipper.reset();
+ loadCursors();
+ if (lastStop != null) {
+ kibbles.skipper.setCurrentStop(lastStop);
+ }
+ }
+ // possibly the simplest way to insert any newly added comments
+ // is to update the class of the corresponding cursor row,
+ // then refresh the entire list of rows.
+ function updateCursorForCell(cellId, className) {
+ var cell = document.getElementById(cellId);
+ // we have to go two rows back to find the cursor location
+ var row = getPreviousElement(cell.parentNode);
+ row.className = className;
+ }
+ // returns the previous element, ignores text nodes.
+ function getPreviousElement(e) {
+ var element = e.previousSibling;
+ if (element.nodeType == 3) {
+ element = element.previousSibling;
+ }
+ if (element && element.tagName) {
+ return element;
+ }
+ }
+ function loadCursors() {
+ // register our elements with skipper
+ var elements = CR_getElements('*', 'cursor_stop');
+ var len = elements.length;
+ for (var i = 0; i < len; i++) {
+ var element = elements[i]; 
+ element.className = 'cursor_stop cursor_hidden';
+ kibbles.skipper.append(element);
+ }
+ }
+ function toggleComments() {
+ CR_toggleCommentDisplay();
+ reloadCursors();
+ }
+ function keysOnLoadHandler() {
+ // setup skipper
+ kibbles.skipper.addStopListener(
+ kibbles.skipper.LISTENER_TYPE.PRE, updateCursor);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_top', 50);
+ // Set the 'offset' option to return the middle of the client area
+ // an option can be a static value, or a callback
+ kibbles.skipper.setOption('padding_bottom', 100);
+ // Register our keys
+ kibbles.skipper.addFwdKey("n");
+ kibbles.skipper.addRevKey("p");
+ kibbles.keys.addKeyPressListener(
+ 'u', function() { window.location = detail_url; });
+ kibbles.keys.addKeyPressListener(
+ 'r', function() { window.location = detail_url + '#publish'; });
+ 
+ kibbles.keys.addKeyPressListener('j', gotoNextPage);
+ kibbles.keys.addKeyPressListener('k', gotoPreviousPage);
+ 
+ 
+ }
+ </script>
+<script src="https://ssl.gstatic.com/codesite/ph/4319235871638307680/js/code_review_scripts.js"></script>
+<script type="text/javascript">
+ function showPublishInstructions() {
+ var element = document.getElementById('review_instr');
+ if (element) {
+ element.className = 'opened';
+ }
+ }
+ var codereviews;
+ function revsOnLoadHandler() {
+ // register our source container with the commenting code
+ var paths = {'svn2': '/trunk/ runuo2-2repack/Scripts/Customs/LiarsDice/COPYRIGHT.txt'}
+ codereviews = CR_controller.setup(
+ {"assetVersionPath":"https://ssl.gstatic.com/codesite/ph/4319235871638307680","profileUrl":null,"loggedInUserEmail":null,"assetHostPath":"https://ssl.gstatic.com/codesite/ph","relativeBaseUrl":"","projectHomeUrl":"/p/runuo2-2repack","projectName":"runuo2-2repack","token":null,"domainName":null}, '', 'svn2', paths,
+ CR_BrowseIntegrationFactory);
+ 
+ codereviews.registerActivityListener(CR_ActivityType.REVEAL_DRAFT_PLATE, showPublishInstructions);
+ 
+ codereviews.registerActivityListener(CR_ActivityType.REVEAL_PUB_PLATE, pubRevealed);
+ codereviews.registerActivityListener(CR_ActivityType.REVEAL_DRAFT_PLATE, draftRevealed);
+ codereviews.registerActivityListener(CR_ActivityType.DISCARD_DRAFT_COMMENT, draftDestroyed);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ var initialized = true;
+ reloadCursors();
+ }
+ window.onload = function() {keysOnLoadHandler(); revsOnLoadHandler();};
+
+</script>
+<script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/4319235871638307680/js/dit_scripts.js"></script>
+
+ 
+ 
+ 
+ <script type="text/javascript" src="https://ssl.gstatic.com/codesite/ph/4319235871638307680/js/ph_core.js"></script>
+ 
+ 
+ 
+ 
+</div> 
+
+<div id="footer" dir="ltr">
+ <div class="text">
+ <a href="/projecthosting/terms.html">Terms</a> -
+ <a href="http://www.google.com/privacy.html">Privacy</a> -
+ <a href="/p/support/">Project Hosting Help</a>
+ </div>
+</div>
+ <div class="hostedBy" style="margin-top: -20px;">
+ <span style="vertical-align: top;">Powered by <a href="http://code.google.com/projecthosting/">Google Project Hosting</a></span>
+ </div>
+
+ 
+ 
+
+
+ 
+ 
+ <script type="text/javascript">_CS_reportToCsi();</script>
+ 
+ </body>
+</html>
+

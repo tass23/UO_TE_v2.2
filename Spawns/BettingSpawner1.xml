@@ -1,0 +1,45 @@
+<Spawns>
+  <Points>
+    <Name>BettingSpawner1</Name>
+    <UniqueId>7f3e37a1-1ad4-41ac-95b1-d547d09c9d59</UniqueId>
+    <Map>Malas</Map>
+    <X>991</X>
+    <Y>462</Y>
+    <Width>0</Width>
+    <Height>0</Height>
+    <CentreX>991</CentreX>
+    <CentreY>462</CentreY>
+    <CentreZ>-90</CentreZ>
+    <Range>5</Range>
+    <MaxCount>5</MaxCount>
+    <MinDelay>0</MinDelay>
+    <MaxDelay>0</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>1</ProximityRange>
+    <ProximityTriggerSound>500</ProximityTriggerSound>
+    <ProximityTriggerMessage>You've won!</ProximityTriggerMessage>
+    <ItemTriggerName>a Gold Voucher</ItemTriggerName>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>0</MinRefractory>
+    <MaxRefractory>0</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>True</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>True</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>SETONCARRIED,R.A.F.T.,RAFTRS/WinningAmount/{GETONCARRIED,R.A.F.T.,RAFTRS,CurrentBet}:MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=0:DN=-1:DX=-1:SP=1:PR=-1:OBJ=SETONCARRIED,R.A.F.T.,RAFTRS/WinningAmount/MUL,0.1:MX=1:SB=2:RT=0:TO=0:KL=0:RK=0:CA=0:DN=-1:DX=-1:SP=1:PR=-1:OBJ=SETONCARRIED,R.A.F.T.,RAFTRS/WinningAmount/INC,{GETONCARRIED,R.A.F.T.,RAFTRS,CurrentBet}:MX=1:SB=3:RT=0:TO=0:KL=0:RK=0:CA=0:DN=-1:DX=-1:SP=1:PR=-1:OBJ=TAKE,1,1,true,GoldVoucher/a Gold Voucher:MX=1:SB=3:RT=0:TO=0:KL=0:RK=0:CA=0:DN=-1:DX=-1:SP=1:PR=-1:OBJ=SETONTHIS/DoReset/True/Running/False:MX=1:SB=3:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

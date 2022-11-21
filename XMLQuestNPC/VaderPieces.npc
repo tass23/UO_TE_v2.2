@@ -1,0 +1,83 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Reginald</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Vader's Gone To Pieces | ATTACHMENT,Vader's Gone To Pieces,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>VaderPieces</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Oh my goodness! Whatever am I going to do?</Text>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>What happened to Master Vader?</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Vader's Gone To Pieces,4/ Ah, yes. Well, I can explain that...Terrible accident involving Fold Space, you see? I, er, DEFINITELY didn't accidentally set Master Vader's meditation chamber to decompress while he was inside and cause it to explode all over the place, or anything. No, not that at all! So, er, yes - I don't suppose you could help me here, could you?;Go on...;Okay;Tidy up your own mess, oaf.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/Name/Vader's Gone To Pieces/titlestring/Vader's Gone to Pieces/notestring/ Master Vader's haphazard apprentice wants you to search the Temple Complex and COLLECT Master Vader's mysteriously re-distributed body-parts in addition to  replacing the destroyed cybernetic implants./Objective1/COLLECT,MandalorianCrushgaunts,1/Description1/Find Master Vader's Mandalorian Crushgaunts/Objective2/COLLECT,ArmorweaveCladding,1/Description2/Find Master Vader's Armorweave cladding suit./Objective3/COLLECT,DroidActuators,5/Description3/Scavenge some droid actuators./Objective4/COLLECT,EnergyCore,1/Description4/Vader's life-support needs a new energy core./Objective5/COLLECT,PlastoidGirdle,1/Description5/Find Master Vader's Plastoid Girdle/autoreward/true/CanSeeReward/False/rewardstring/@bag/ADD/RewardScrollDeed/ADD/&lt;Gold/Amount/3000/&gt;/ADD,0.1/&lt;Decorativeshield5/Hue/1756/Name/Blessed Shield of Ineptitude/movable/true/&gt;</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, Vader's Gone To Pieces,0/ Ah, thank goodness! I've been hunting high and low for parts of Master Vader all over this complex, I was beginning to lose hope! You'll need to find his Mandalorian Crushgaunts, Armorweave Cladding, Plastoid Girdle, some droid actuators to replace the ones destroyed in the accident and a new energy core. You'll find most of these in the complex, but you'll most likely need to venture elsewhere for the droid parts. I hear the Valley of The Sith Lords is a good place to look for those.</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>I couldn't get you to reconsider, could I?</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

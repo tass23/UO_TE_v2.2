@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Darth Maul</Name>
+    <Running>True</Running>
+    <ProximityRange>5</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Message to Darth Mog | Gone Walkabout </NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DarthMaul</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Approach with caution, worm.</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>How may I serve you, Master?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Darth Maul,4/If you do not seek to find a swift and most unpleasant death, I would suggest averting your curious gaze, apprentice. I may be broken, but do not think that I could not tear the very essence from your being with but a thought.                                      But perhaps, I have spoken too hastily - weak as you are, you may be of use to me. Here, take this message and deliver it unto Darth Mog in the Interrogation Sector of this complex. Hurry fool - time is of great importance!;I will do as you command, Master;Yes;Go find some other nerfherder to run your errands.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;SimpleNote/Name/Message For Darth Mog/TitleString/Beware, Darth Mog/Notestring/This is your final warning - return that which you stole or face my wrath!/hue/1761/&gt; ; GIVE/&lt;Questholder/Name/Gone Walkabout/Titlestring/Gone Walkabout/Notestring/Darth Maul has asked you to search for the legs he had commisioned and bring them back to him./Objective1/GIVENAMED,Darth Mog,Message For Darth Mog,blankscroll,1/Description1/Take the message to Darth Mog and give it to him/Objective2/GIVENAMED,Darth Maul,Cybernetic Legs,platelegs,1/Description2/Find Darth Maul's legs and return them to their owner/Autoreward/True/CanSeeReward/False/RewardString/@bag/ADD,0.1/&lt;Decorativeshield10/Hue/1090/Name/Blessed Shield of Treachery/movable/true&gt;/ADD/&lt;Gold/Amount/500/&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Fool! Leave now or DIE!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

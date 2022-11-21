@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Master Jan-Tra</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>A Bridge too far | ATTACHMENT,A Bridge too far,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>MasterJan-Tra</ConfigFile>
+    <SpeechEntries>5</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>You are nearing the end of your training.</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>The trials have taught me much master.</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Action>SET,0x401A7E3C/DoReset/True/Running/True</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Master Jan-Tra,4/You have learned to control your anger and your hate. You have learned to channel the Force through your being and focus under the most extreme circumstances. Indeed you are ready to move forward. While the trials up until now have been designed to teach you a specific skillset be it for combat, or healing. This trial teaches you to channel the Force to see places you've been and places you wish to return to. It is said that if a Jedi concentrates enough and can focus their mind with the Force, they can instantly travel to distant lands, even other worlds in mere seconds. So I give you your task. Take this rune I have given you and use Force Rememberance to mark this current location. Travel across the bridge and you will find a fractured focusing crystal and a disc containing Force Mind Trick, a Jedi's most powerful Force power. Retrieve the fractured focusing crystal and add Force Mind Trick to your holocron. Finally, use Force Fold Space to return to this location. If you do not follow these instructions, you will be lost to the void,as the bridge will disappear after a few seconds.;I understand Master Jan-Tra.;Okay;I don't want to be lost to the void!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/RecallRune ; GIVE/&lt;questholder/name/A Bridge too far/titlestring/A Bridge too far/notestring/Use Force Rememberance and target the blank rune you were given. Run across the bridge and get the holocron disc with Force Mind Trick. Then use Force Fold Space to return to Master Jan-Tra./Objective1/COLLECTNAMED,Fractured Focusing Crystal,FracturedCrystal,1/Description1/COLLECT the Fractured Focusing Crystal./Objective2/Return to Master Jan-Tra./Description2/Return to Master Jan-Tra./repeatable/false/autoreward/true/canseereward/false/rewardstring/@bag/ADD/GripDisc/ADD/LightCurseDisc/ADD/LightResurrectionDisc&gt; ; SET,0x4002EE92/DoReset/True/Running/True ; SET,0x400366A7/DoReset/True/Running/True</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>40</EntryNumber>
+    <ID>40</ID>
+    <Text>I feel a heavy burden upon my heart hearing you say that...</Text>
+    <Keywords>No</Keywords>
+    <Action>GIVE/ATTACH/XmlAddKarma,-300</Action>
+    <DependsOn>20</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

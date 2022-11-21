@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Verdana;}{\f1\froman\fcharset2 Symbol;}{\f2\froman\fcharset0 Times New Roman;}}
+{\colortbl ;\red0\green0\blue0;\red255\green0\blue0;}
+{\*\generator Msftedit 5.41.15.1507;}\viewkind4\uc1\pard\cf1\b\f0\fs24 Time System v1.1.12 (\cf2 RUN UO 1.0 FINAL\cf1 )\line Released: February 18, 2006 @ 11:30 PM CST\b0\line\line\b Description:\b0\line\line A fully customizable date and time system that keeps track of it's own time or use real time. It loads it's data from a file at world load, and saves it's data on every world save.\line\line\b Updates:\b0\line\line\b v1.1.12:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed a bug in setting the TIMEFORMAT or CLOCKTIMEFORMAT without specifying a value would result in a null reference exception. \cf0\f2\par
+\cf1\f1\'b7\tab\f0 Added a \b [TS VERSION\b0  command to display the version of the time system.\par
+\pard\fs24\line\b v1.1.11:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed the $nth$ format variable to now be either based off of day or month. $nth$ can no longer be used. It is now $nth-d$ for day and $nth-m$ for month.\cf0\f2\par
+\pard\cf1\f0\fs24\line\b v1.1.1:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Added a \b [TS APPEND\b0  command for appending to string variables. If you use the command for non-string variables, it just sets them as it would with \b [TS SET\b0 . \cf0\f2\par
+\cf1\f1\'b7\tab\f0 Fixed a bug when specifying a variable that does not exist, it would not notify you.\par
+\pard\fs24\line\b v1.1.01:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Changed some code in the Support.cs to allow customizing the names of your months in the m_MonthsList.\cf0\f2\par
+\pard\cf1\f0\fs24\line\b v1.1.0:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed a bug that when specifying a number without a decimal point for the timerspeed, it would reject the attempt due to it being an int instead of a double. \cf0\f2\par
+\cf1\f1\'b7\tab\f0 Added a \b [TS STOP\b0 , \b [TS START\b0 , and \b [TS RESTART\b0  commands which will stop, start, and restart the time system. When stopping the system, it does not perform the calculations for light level and time. It will display the day level until the system is started again. \par
+\f1\'b7\tab\f0 Added instructions for how to modify Spyclass.cs and Clocks.cs to reflect the moonphase and time. \par
+\f1\'b7\tab\f0 Added time zones with ability to configure them yourself based on how many location.X is considered 1 minute. This was a huge overhaul to the system to be able to do this. The default is 16 X is 1 minute and can be changed via \b [TS SET TIMEZONEXDIVISOR <number>\b0  \par
+\f1\'b7\tab\f0 You can disable using time zones by typing \b [TS SET USETIMEZONES false\b0 , in which the system will perform calculations on each tick of the timer only, and not each and every time a player moves. \par
+\f1\'b7\tab\f0 Added \b [BASETIME\b0  command that gamemaster's and above can use to check the system's base time, which is the time the system keeps track of basing it's time zones from. Using \b [TIME\b0  will display the time in the current time zone. \par
+\f1\'b7\tab\f0 Changed the variable name m_UseItemLighting to m_UseAutoLighting which means you will type UseAutoLighting instead of UseItemLighting using \b [TS SET\b0 . \par
+\f1\'b7\tab\f0 Fixed a bug where changing the moonphaseday would not recalculate the light levels until the next timer tick. \par
+\f1\'b7\tab\f0 Added a \b [TS SETTIME <hh:mm>\b0  command to allow you to set the time a bit easier. \par
+\f1\'b7\tab\f0 Added a \b [TS QUERY\b0  command to query the time system to see if it is running, and if it is, how fast is it calculating time. \par
+\f1\'b7\tab\f0 Added a Support.cs script to assist the system as well as help move some methods out of the Time System.cs so that the file is not too big. \par
+\f1\'b7\tab\f0 Added custom formatting. This was a huge update. You will type \b [TS SET TIMEFORMAT <format>\b0  to set the formatting for the \b [TIME\b0  and \b [BASETIME\b0  commands. You will type \b [TS SET CLOCKTIMEFORMAT <format>\b0  to set the format for when double clicking on clock items. There are six presets you can choose from.\par
+\pard\fs24\line\b v1.0.4:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed a bug when typing \b [TS\b0  it would not show the command list.\cf0\f2\par
+\pard\cf1\f0\fs24\line\b v1.0.3:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed a bug when a managed light was deleted from the world and it was selected in PerformRandomLightOutage(), it would not check to see if it was deleted first. \cf0\f2\par
+\cf1\f1\'b7\tab\f0 Made it so when the managed lights list was repopulated, it would check to see if the item was deleted or not before adding it to the list. \par
+\f1\'b7\tab\f0 Added a command called \b [TS REPOPLIGHTSLIST\b0  to force the list to be repopulated. Use this command after adding/removing lights that are of the type that will be managed by the system (i.e. LampPost1, LampPost2, LampPost3). \par
+\f1\'b7\tab\f0 Typing \b [TS\b0  by itself will show a list of commands that can be used.\par
+\pard\fs24\line\b v1.0.2:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed a bug in the code that was causing the time calculation to appear to occur one timer tick too slow. \cf0\f2\par
+\cf1\f1\'b7\tab\f0 Fixed a bug that would cause the lights to come on after the m_LightsOnLevel, and not on it. \par
+\f1\'b7\tab\f0 Added UseRealTime variable in which by default is false. When true, it will use your computer's date and time. \par
+\f1\'b7\tab\f0 Realized that my loading/saving method was not going to work, I had to make some slight changes in it which involves any pre v1.0.2 files to load "corrupt" and force the system to recreate the file using default values. \par
+\f1\'b7\tab\f0 Fixed a bug where setting the Hour or Minute variable would not recalculate the light levels, instead it would wait for the next timer tick.\par
+\pard\fs24\line\b v1.0.1:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Fixed a minor bug when using the \b [TS SET\b0  command when setting a boolean value, it would only accept lowercase true or false. \cf0\f2\par
+\cf1\f1\'b7\tab\f0 Removed an unused method which was used to test how the light levels were handled in the distro.\par
+\pard\fs24\line\b Features:\b0  \par
+\pard\fi-360\li720\sb100\sa100\tx720\cf0\f1\fs20\'b7\tab\cf1\f0 Darkest Hour is a time period (default two hours) in which after night has fallen that it gets extremely dark. The time period can be adjusted as well as how long it takes to scale from Night/Darkest Hour and vice versa. The moon phase has no effect on the Darkest Hour. \cf0\f2\par
+\cf1\f1\'b7\tab\f0 During the Darkest Hour, random lampposts throughout the world will toggle on/off (as a result of the presence of evil in the air). This feature can be customized by a percentage of how often it can happen and then a random percent range of how many lights are affected at once. This feature can be disabled. \par
+\f1\'b7\tab\f0 Light levels for Day/Night/Darkest Hour are customizable. \par
+\f1\'b7\tab\f0 When a certain light level has been reached (by default when it's halfway to night fall), all the world lampposts will be turned on. This feature can be customized or disabled. \par
+\f1\'b7\tab\f0 You can set the Minutes/Hour, Hours/Day, Days/Month, and Months/Year. Default is 60 min/hour, 24 hours/day, 30 days/month, 12 months/year. \par
+\f1\'b7\tab\f0 The moon phase affects how dark it is at night. You can adjust how much the moon phase can affect the light level. \par
+\f1\'b7\tab\f0 The amount of days per total moon phase can be adjusted (default is 16). \par
+\f1\'b7\tab\f0 You can customize the moonphase enumerator, but this requires editting the script and adding in your own custom moonphases if you wish. Please read the comments in the script for instructions. \par
+\f1\'b7\tab\f0 The timer by default ticks once every five seconds. You can adjust how often the timer ticks with a minimum value of 0.5 seconds. You can also set how many game minutes will pass with each tick (default 1). \par
+\f1\'b7\tab\f0 You can customize the starting hour for day and night. By default night starts scaling at the 20th hour (8 PM) and day starts scaling at the 6th hour. There is a minimum difference of 4 hours required. \par
+\f1\'b7\tab\f0 You can set the current year, month, day, hour, and minute as well as the current moon phase day.\par
+\pard\fs24\line\b Information:\b0\line\line To customize the system in-game, please use the \b [TS SET <variable> <value>\b0  command. Type \b [TS SET\b0  for a list of variables that can be set.\line\line Use the \b [TIME\b0  command to see the current date/time/moonphase. Players are able to use this command. If you wish to disable them from using it, change the accesslevel in the Initialize function.\line\line The only lights that will be toggled on/off are BaseLight types LampPost1, LampPost2, and LampPost3. You can add/remove types by changing the Type array m_ItemLightTypes.\line\line If any lights are deleted from the world, they will not be removed from the m_LightsList array unless the PerformRandomLightOutage() method just so happens to come across a deleted light. I will look into another method for handling this without modifying BaseLight.cs and without being a resource hog.\line\line If any lights are added to the world, they will not be controlled by the system unless the system wipes and repopulates the m_LightsList. You can force the list to be repopulated by typing \b [TS REPOPLIGHTSLIST\b0 .\line\line For formatting help, please view the \b Formatting.txt\b0  inside the zip file.\par
+\par
+To use real time type \b [TS SET userealtime true\b0\par
+}
+ 

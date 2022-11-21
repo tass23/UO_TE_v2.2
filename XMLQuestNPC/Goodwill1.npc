@@ -1,0 +1,57 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Jedi Benefactor</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Delivering Aid | Food Package</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>GoodWill1</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>May I help?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Delivering Aid,4/ Hail there! For many years, our order has been delivering food and supplies  to an ancient hermit living the far reaches of the Lost Land in Cyclop's Valley. Would you deliver the package for us this day?;It would be my pleasure;Yes;No, I'm not going that way.;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;FruitBasket/Name/Food Package/&gt; ; GIVE/&lt;Questholder/name/Delivering Aid/Titlestring/Delivering Aid/Notestring/A benefactor from the Jedi order has asked you to deliver a food package to a hermit in the Lost Lands./Objective1/GIVENAMED,An Isolated Hermit,Food Package,FruitBasket,1/Description1/Deliver the food package to the hermit residing in Cyclops Valley/Objective2/Return to the quartermaster in the Jedi Academy for your reward/Description2/Return to the quartermaster for your reward./Autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/RewardScroll/ADD,0.1/&lt;Decorativeshield2/Name/Blessed Shield Of The Recluse/Hue/2204/movable/true/&gt;</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Text>May the Force be with you.</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

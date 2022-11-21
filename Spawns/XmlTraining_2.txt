@@ -1,0 +1,57 @@
+<center><h3><basefont color=#007fff><u>Xml Training: Lesson Two</u></basefont></h3></center>
+<br>
+Setting a Property is pretty straightforward, but if a Property is set with a Range of Values, like Fire Resist 10,20 would add Fire Resist to a Mob in the Range of 10 to 20, that Value can be discovered by <i>other</i> parts of the Xmlspawner system using the <i>GET</i> keyword.
+<br>
+<br>
+Using Get can be tricky, because Xmlspawner expects an <i>exact</i> target and if the spawn entry does not meet these expectations, an error will result. Most of the time the error will show where the issue is in the spawn entry, but if it does not then the spawn entry must be dissected by the Property-Value sets until the culprit set is identified.
+<br>
+<br>
+Tearing down a spawn entry is best done from <i>Right to Left</i>, (unless the error is glaringly obvious), if each spawn entry is constructed <i>in the same manner</i>. In other words - find a structure that is comfortable and stick with it. If Name <i>after</i> Title feels better, so be it, as long as the Property-Value set remains intact.
+<br>
+<br>
+Often using the Get keyword will result in an error, because the proper target was not identified, and that includes a <i>Property</i> as the target, and not just a Mob or Object.
+<br>
+<br>
+Because Keyword construcs often vary, refer to the Help gump frequently too. With Get the construct is Get,ObjectName or Serial,ObjectType,Property. However Get also comes in a few varieties itself with GetVar, GetAccountTag, GetOnCarried, GetOnNearby, GetOnMob, GetOnGiven, GetOnTaken, GetOnParent, GetOnSpawn, GetOnThis, GetOnTrigMob, GetOnAttach or GetOnAttachment, GetFromFile. Using the correct Get will save some headaches.
+<br>
+<br>
+Two of the most common Get spawn entries used on UO-The Expanse are:
+<br>
+GetOnSpawn, SpawnerName, Subgroup, Property or Count
+<br>
+GetOnTrigMob, Property
+<br>
+<br>
+<h2><basefont color=#ffff00><u>How to use this Knowledge</u></basefont></h2>
+<br>
+<br>
+Building a quest chain requires some way of detecting a player is not only <i>on the quest</i>, but also <i>where they are</i> on the quest objectives. With OSI quests, the Quest Log is read in the background to determine what objective a player is on. Xmlspawner uses a combination of elements to determine this rather than just a Quest Log.
+<br>
+<br>
+Most quests that are created can be set up to generate a Quest Book, which is a miniature quest log and contains information specific <i>to that quest or quest chain</i>. That is not all though. While Xmlspawner uses this to track a player's progress in a quest, any of the objectives can be <i>updated or changed while on the Quest</i> by other Xmlspawners or even XmlQuestNPCs. For example a quest objective could be "Go to Blackthorn Castle.", and have an XmlQuestNPC placed in a position the player <i>absolutely</i> must go through to get to the destination. As the player gets within Range, the XmlQuestNPC can update the objective to <i>"Steal keys to the cellar from a guard."</i>
+<br>
+<br>
+The Quest gump has room for about 5 objectives, but by using other aspects of Xmlspawner, the amount of objectives could be unlimited, as long as they are <i>changed</i> and <i>not completed</i>.
+<br>
+<br>
+In order for all this to work, the XmlQuestNPC in the above example must be set up in such a way that <i>only players on the quest</i> will trigger it. Otherwise <i>any player</i> could trigger the XMlQuestNPC, and ruin the quest for the players actually trying to do it.
+<br>
+<br>
+One way to accomplish this is to trigger the Xmlspawner with the Property <i>TriggerOnCarried</i>, but the samething can be done with the XmlQuestNPC as well in the <i>Condition</i> entry in the XmlDialog gump for that XmlQuestNPC. The entry could be used to make sure the player is on the correct objective to trigger the XmlQuestNPC, before advancing the dialog, or it could be used to determine the correct Property is set on an Object the player is carrying or a Property on the player.
+<br>
+<br>
+Even more incredible is being able to use Get to change the Value of a Property on another Object, which usually is combining a <i>Set</i> Keyword with a <i>Get</i> Keyword.
+<br>
+<br>
+<h3><basefont color=#00ff00>"GetOnCarried,ObjectName,Property".</basefont></h3>
+<br>
+This would typically be used to trigger <i>the next step</i> of the Quest, like checking the Quest Book to make sure Objective #1 is completed before being able to complete Objective #2, if that makes a difference in the quest arc.
+<br>
+<br>
+<h3><basefont color=#00ff00>"SetOnCarried,ObjectName, ObjectType|Property|{GetOnCarried,ObjectName,Property}".</basefont></h3>
+<br>
+This would typically be used to set a Property on an Object being carried by the Mob that triggered the Xmlspawner or XmlQuestNPC, by using a <i>Value from something else being carried by the Player</i>.
+<br>
+(This particular combination of Keywords is used for the Gambling Xmlspawners and Increases or Decreases the Values on the player's R.A.F.T., based on the Value of a Win or Loss.)
+<br>
+<br>

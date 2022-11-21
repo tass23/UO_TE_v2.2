@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Wiseman John</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>Dispelling the Evil | ATTACHMENT,Dispelling the Evil,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>DeadlyEvil_Wiseman</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Strange one! The Deadlights are upon us! Please help!</Text>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes, old man?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>134</SpeechHue>
+    <Gump>GUMP,Wiseman John,4/The Deadlights are invading these lands. We must locate the Super Groovy One. It is so written in the Necronomicon. It contains passages that can dispel the Evil from this place. Thou must seek the book in a far off place. Only the Super Groovy One may retrieve it. Thou must undertake to quest for it. Seek out Erik the Bright Red in the mountains Northest of Umbra. There is a house there where evil dwells. Erik was searching for his clan shield. Then thou must seek out the Super Groovy One, only Erik the Bright Red knows where he may be found.;Savior of Brittania sounds great!;Sure;Crazy old fool, that's a death trap!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Sure</Keywords>
+    <Action>GIVE/&lt;questholder/PartyEnabled/True/Name/Dispelling the Evil/titlestring/Dispelling the Evil/Notestring/Seek out Erik the Bright Red, the Super Groovy One, Ash and retrieve the Necronomicon from it's resting place and bring it to Wiseman John./Objective1/Find Erik/Description1/Locate Erik the Bright Red/Objective2/Find Ash/Description2/Locate the Super Groovy One, Ash/Objective3/Retrieve the Necronomicon/Description3/Retrieve the Necronomicon/Objective4/Bring the Necronomicon back to Wiseman John/Description4/Bring the Necronomicon back to Wiseman John/Objective5/KILLNAMED,Evil Ash,1/Description5/Destroy Evil Ash/EchoAddJournalEntry/Erik the Bright Red: Wiseman John said Erik the Bright Red was in the mountains Northeast of Umbra searching a house./Difficulty/2/Repeatable/True/Autoreward/True/CanSeeReward/False/Rewardstring/@bag/ADD/&lt;Gold/Amount/3000&gt;/ADD,0.1/&lt;fork/name/Ash's Demonically Possessed Hand/ItemID/11704/Hue/1761&gt;/ADD,0.1/&lt;Decorativeshield3/Hue/5488/Name/Blessed Shield of The Deadite/movable/true&gt;/ADD/RewardScroll/ADD/RewardScroll&gt; ; SET,0x4004C11B/DoRespawn/True ; SET,0x4004FE9E/DoRespawn/True</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Thou hast made me very sad, we shall all surely perish...</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

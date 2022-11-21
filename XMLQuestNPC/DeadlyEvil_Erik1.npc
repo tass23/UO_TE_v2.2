@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Erik The Bright Red</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>The Great Escape | ATTACHMENT,The Great Escape,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>0.5</ResetTime>
+    <ConfigFile>DeadlyEvil_Erik1</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <DependsOn>-2</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Greetings</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>True</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Erik The Bright Red,4/So you've found me at last have ye? Ye'd better no turn me in to that scoundrel King Arthur! That fool is blaming me for the ruin that these accursed Deadlights have wrought upon our land! And now I find myself captured trying to lay low in this forsaken place? Bah - the shame of it! Well, then lad unlock the door will ye? And go fetch my shield in that room yonder. ;Okay, sure;Yes;Bugger off!;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Yes</Keywords>
+    <Action>GIVE/&lt;questholder/PartyEnabled/True/name/The Great Escape/titlestring/The Great Escape/Notestring/Find Erik The Bright Red's Shield and help him escape from his Deadlight captors./Objective1/Find Erik The Bright Red's Shield/Description1/Recover Erik The Bright Red's Shield/Objective2/GIVENAMED,Erik The Bright Red,Erik The Bright Red's Clan Shield,fork,1/Description2/Find Erik's shield and give it to him./Objective3/Escape the Deadlights!/Description3/Escape the Deadlights!/AddJournalEntry/Erik The Bright Red has been captured, but he won't leave without his clan shield. Go in to the adjacent room to recover it for him and then help him escape to Cove./autoreward/true/canseereward/false/rewardstring/@bag/ADD/&lt;SimpleNote/Name/Message to the Bampot/TitleString/Dear Strange One/Notestring/I shall rally on the field of battle with King Arthur. Meet you at that wretched Cabin. Good luck friend!&gt;/ADD/&lt;Gold/Amount/500&gt;/ADD,0.01/&lt;glassmug/hue/33/itemid/4901/name/Erik The Bright Red's Skullmug&gt;/ADD,0.1/&lt;Decorativeshield3/Hue/1570/Name/Blessed Shield of The Bright Red/movable/true&gt; ; SET,0x401595FF/DoRespawn/True/</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Bugger off then! I'll find me own damned way out!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>

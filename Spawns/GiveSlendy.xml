@@ -1,0 +1,45 @@
+<Spawns>
+  <Points>
+    <Name>GiveSlendyQuestHolder</Name>
+    <UniqueId>8693cf22-5849-4a4e-aa45-df438ee75898</UniqueId>
+    <Map>Malas</Map>
+    <X>2093</X>
+    <Y>1020</Y>
+    <Width>80</Width>
+    <Height>80</Height>
+    <CentreX>2133</CentreX>
+    <CentreY>1060</CentreY>
+    <CentreZ>-62</CentreZ>
+    <Range>5</Range>
+    <MaxCount>1</MaxCount>
+    <MinDelay>0</MinDelay>
+    <MaxDelay>0</MaxDelay>
+    <DelayInSec>False</DelayInSec>
+    <Duration>0</Duration>
+    <DespawnTime>0</DespawnTime>
+    <ProximityRange>5</ProximityRange>
+    <ProximityTriggerSound>251</ProximityTriggerSound>
+    <ProximityTriggerMessage>*Your backpack suddenly feels a little heavier*</ProximityTriggerMessage>
+    <NoItemTriggerName>The Pages</NoItemTriggerName>
+    <TriggerProbability>1</TriggerProbability>
+    <InContainer>False</InContainer>
+    <MinRefractory>5</MinRefractory>
+    <MaxRefractory>5</MaxRefractory>
+    <TODStart>0</TODStart>
+    <TODEnd>0</TODEnd>
+    <TODMode>0</TODMode>
+    <KillReset>1</KillReset>
+    <ExternalTriggering>False</ExternalTriggering>
+    <SequentialSpawning>1</SequentialSpawning>
+    <AllowGhostTriggering>False</AllowGhostTriggering>
+    <AllowNPCTriggering>False</AllowNPCTriggering>
+    <SpawnOnTrigger>True</SpawnOnTrigger>
+    <SmartSpawning>False</SmartSpawning>
+    <Team>0</Team>
+    <Amount>1</Amount>
+    <IsGroup>False</IsGroup>
+    <IsRunning>False</IsRunning>
+    <IsHomeRangeRelative>True</IsHomeRangeRelative>
+    <Objects2>GIVE/&lt;Questholder/ItemID/4030/hue/1762/Name/The Pages/Titlestring/The Pages/Notestring/You see a ragged parchment within your backpack. It appears to have come from nowhere.                                                       "Goooo, three blacccck treeeees, Fens of the Deaaaaaad...."/Objective1/Go To The Fens of The Dead/Description1/Go To The Fens of The Dead./EchoAddJournalEntry/The Fens Of The Dead: The mysterious note urges you to search for three black trees within the swamp&gt;                                        :MX=1:SB=1:RT=0:TO=0:KL=0:RK=0:CA=1:DN=-1:DX=-1:SP=1:PR=-1</Objects2>
+  </Points>
+</Spawns>

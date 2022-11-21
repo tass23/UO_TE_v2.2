@@ -1,0 +1,4470 @@
+# Server.Item
+Name	29,976
+Items	5
+Bounce	2
+Weight	102,697
+
+# Server.Items.Gold
+Weight	90,050
+
+# Server.Items.AddonComponent
+Name	8,074
+
+# Server.Mobiles.XmlSpawner
+Name	7,937
+Weight	1
+
+# Server.Items.SpecialHueListItem
+Name	3,063
+Weight	3,063
+
+# Server.Items.BaseLight
+Name	45
+Weight	2,289
+
+# Server.Items.Static
+Name	2,203
+Weight	25
+
+# Server.Items.Container
+Name	233
+Weight	1,546
+
+# Server.Items.BaseContainer
+Name	212
+Weight	1,533
+
+# Server.Items.TrapableContainer
+Name	111
+Weight	1,154
+
+# Server.Items.LockableContainer
+Name	110
+Weight	1,154
+
+# Server.Items.BaseArmor
+Name	851
+Weight	310
+
+# Server.Items.LargeFireRock
+Name	523
+Weight	523
+
+# Server.Items.BaseClothing
+Name	806
+Weight	208
+
+# Server.Items.YardItem
+Name	945
+
+# Server.Items.Rope
+Weight	870
+
+# Server.Items.CandelabraStand
+Weight	857
+
+# Solaris.BoardGames.BombermanObstacle
+Name	755
+
+# Solaris.BoardGames.GamePiece
+Name	755
+
+# Server.Items.BaseJewel
+Name	81
+Bounce	2
+Weight	659
+
+# Server.Items.WoodenChest
+Name	11
+Weight	520
+
+# Server.Items.WoodenBench
+Weight	528
+
+# Server.Items.Food
+Name	254
+Weight	258
+
+# Server.Items.LampPost1
+Weight	507
+
+# Server.Items.LampPost3
+Weight	479
+
+# Server.Items.PottedTree1
+Weight	473
+
+# Server.Items.MediumCrate
+Weight	463
+
+# Server.Items.BaseReagent
+Name	447
+
+# Server.Items.Turnip
+Name	221
+Weight	221
+
+# Solaris.BoardGames.BombermanFloorTile
+Name	441
+
+# Server.Items.BaseMeleeWeapon
+Name	328
+Weight	93
+
+# Server.Items.BaseWeapon
+Name	328
+Weight	93
+
+# Server.Items.BaseBracelet
+Name	43
+Weight	324
+
+# Server.Items.Crops.BaseGrapeVine
+Name	358
+
+# Server.Items.BaseFloor
+Name	329
+
+# Server.Items.MarbleFloor
+Name	329
+
+# Server.Items.BolaBall
+Weight	322
+
+# Server.Items.BaseRing
+Name	24
+Weight	296
+
+# Server.Items.Backpack
+Name	14
+Weight	258
+
+# Server.Items.BaseOuterTorso
+Name	151
+Weight	108
+
+# Server.Items.StrongBackpack
+Name	1
+Weight	248
+
+# Server.Items.GoldRing
+Name	20
+Weight	221
+
+# Server.Items.GoldBracelet
+Name	4
+Weight	199
+
+# Server.Items.BaseBashing
+Name	111
+Weight	90
+
+# Server.Items.Fork
+Name	199
+Weight	1
+
+# Server.Items.PetrifiedWood
+Name	198
+
+# Server.Items.BaseDecorationArtifact
+Name	9
+Weight	188
+
+# Server.Items.BoneGloves
+Name	3
+Weight	193
+
+# Server.Items.CandleSkull
+Weight	188
+
+# Server.Items.Teleporter
+Name	188
+
+# Server.Items.PottedPlant
+Weight	184
+
+# Server.Items.BaseFocusingCrystal
+Name	90
+Weight	90
+
+# Server.Items.DestroyingAngel
+Name	180
+
+# Server.Items.SmallCrate
+Weight	168
+
+# Solaris.BoardGames.IndestructableWall
+Name	161
+
+# Server.Items.BaseShoes
+Name	154
+
+# Solaris.BoardGames.DestructableWall
+Name	153
+
+# Server.Items.ZoogiFungus
+Weight	147
+
+# Server.Items.MagicCrystalBall
+Name	137
+
+# Server.Items.BaseShirt
+Name	133
+Weight	1
+
+# Server.Items.BaseSword
+Name	128
+
+# Server.Items.LampPost2
+Weight	122
+
+# Server.Items.Organics
+Name	60
+Weight	60
+
+# Server.Items.BaseHat
+Name	108
+Weight	11
+
+# Server.Items.BaseCloak
+Name	112
+
+# Server.Items.BonePile
+Name	2
+Weight	108
+
+# Server.Items.PottedPlant1
+Weight	100
+
+# Server.Items.VampArms0
+Name	97
+
+# Server.Items.VampChest0
+Name	97
+
+# Server.Items.VampGloves0
+Name	97
+
+# Server.Items.VampGorget0
+Name	97
+
+# Server.Items.Crops.GrapeVinePoleNorth3
+Name	94
+
+# Server.Items.MonkRobe
+Name	94
+
+# Server.Items.BaseBeverage
+Name	7
+Weight	86
+
+# Server.Items.EmpoweringDeed
+Name	45
+Weight	45
+
+# Server.Items.Keg
+Weight	90
+
+# Server.Items.UnhideFloorTile
+Name	90
+
+# Server.Items.HoodedShroudOfShadows
+Weight	88
+
+# Server.Items.SilverBracelet
+Name	1
+Weight	87
+
+# Server.Items.Pitcher
+Weight	86
+
+# Server.Items.Crops.GrapeVineBranchEast
+Name	80
+
+# Server.Items.Brazier
+Weight	78
+
+# Server.Items.PlagueBeastGland
+Name	78
+
+# Server.Items.ChildBracelet
+Name	38
+Weight	38
+
+# Server.Items.SilverRing
+Name	1
+Weight	74
+
+# Server.Items.Torso
+Weight	74
+
+# Server.Items.ReturnHomeFloorTile
+Name	73
+
+# Server.Items.BaseOuterLegs
+Name	70
+
+# Server.Items.BloodyClothNinjaHood
+Name	70
+
+# Server.Items.BloodyClothNinjaJacket
+Name	70
+
+# Server.Items.LeatherNinjaPants
+Name	70
+
+# Server.Items.Lightsaber
+Name	70
+
+# Server.Items.NinjaTabi
+Name	70
+
+# Server.SG.SGActivatorDevice
+Name	33
+Weight	33
+
+# Server.Items.Bag
+Name	62
+Weight	3
+
+# Server.Items.Cloak
+Name	64
+
+# Server.Items.BaseSign
+Name	63
+
+# Server.Items.Sign
+Name	63
+
+# Server.Items.SpringWater
+Name	59
+
+# Server.Items.BaseStoreKey
+Name	48
+Weight	10
+
+# Server.Items.GargishClothChest
+Name	2
+Weight	54
+
+# Server.Items.SimpleSwitch
+Name	56
+
+# Server.Items.VampLegWraps0
+Name	56
+
+# Server.Items.ChainCoif
+Name	4
+Weight	50
+
+# Server.Items.PottedPlant2
+Weight	54
+
+# Server.Items.RegionControl
+Name	54
+
+# Server.Items.CheeseWheel
+Name	26
+Weight	26
+
+# Server.Items.CrystalineFire
+Name	52
+
+# Server.ACC.CSS.CSpellScroll
+Name	47
+
+# Server.Items.BaseNecklace
+Name	12
+Bounce	2
+Weight	33
+
+# Server.Items.BloodyCloak
+Name	45
+
+# Server.Items.Crops.GrapeVineBranchEast2
+Name	45
+
+# Server.Items.SGAddressSymbol3
+Name	45
+
+# Server.Items.YardFountain+Piece
+Name	45
+
+# Server.Items.BaseDoor
+Name	44
+
+# Server.Items.WaterFeather
+Name	22
+Weight	22
+
+# Server.Items.Crops.GrapeVinePoleEast
+Name	43
+
+# Server.Items.PlayerVendorTile
+Name	43
+
+# Server.Items.PottedTree
+Weight	42
+
+# Server.Items.YardStair
+Name	42
+
+# Server.Items.Crops.GrapeVinePoleEast3
+Name	41
+
+# Server.Items.VampLegs0
+Name	41
+
+# Server.Items.BaseEquipableLight
+Name	40
+
+# Server.Items.FireFeather
+Name	20
+Weight	20
+
+# Server.Items.SGAddressSymbol4
+Name	40
+
+# Server.SpellCrafting.Items.MagicJewel
+Name	20
+Weight	20
+
+# Server.Items.SGAddressSymbol2
+Name	38
+
+# Server.Items.Crops.BaseCrop
+Name	35
+Weight	1
+
+# Server.Items.PoisonFeather
+Name	18
+Weight	18
+
+# Server.Items.EyesOfHate
+Name	34
+
+# Server.Items.Glasses
+Name	34
+
+# Server.Items.BaseMiddleTorso
+Name	33
+
+# Server.Items.Torch
+Name	33
+
+# Server.Items.DecorativeBlood
+Weight	32
+
+# Server.Items.DragonFeather
+Name	16
+Weight	16
+
+# Server.Items.PlayerVendorDirectory
+Name	32
+
+# Server.Items.BaseDailyRare
+Name	1
+Weight	30
+
+# Server.Items.GargishClothLegs
+Weight	31
+
+# Server.Items.BloodFeather
+Name	15
+Weight	15
+
+# Server.Items.UnderworldSpawnNode
+Name	30
+
+# Server.Items.FreshGarlic
+Name	29
+
+# Server.Items.Bandage
+Name	28
+
+# Server.Items.BloodyPentagramComponent
+Name	28
+
+# Server.Items.Runebook
+Name	27
+
+# Server.Items.SingleUseSwitch
+Name	27
+
+# Server.Items.BloodySkirt
+Name	26
+
+# Server.Items.HangingLantern
+Weight	26
+
+# Server.Items.BaseWaist
+Name	25
+
+# Server.Items.RingmailArms
+Name	1
+Weight	24
+
+# Server.Items.Crops.GrapeVinePoleEast2
+Name	24
+
+# Server.Items.Moongate
+Name	24
+
+# Server.Items.SGAddressSymbol5
+Name	24
+
+# Server.Items.ThinLongsword
+Name	24
+
+# Server.Items.BaseAxe
+Name	23
+
+# Server.Items.BaseTool
+Name	15
+Weight	8
+
+# Server.Items.BloodyFancyShirt
+Name	23
+
+# Server.Items.LargeCrate
+Name	23
+
+# Server.Items.SilverBeadNecklace
+Name	10
+Bounce	2
+Weight	10
+
+# Server.ACC.CSS.CSpellbook
+Name	20
+Weight	1
+
+# Server.Items.BloodyHakama
+Name	21
+
+# Server.Items.TeleportBook
+Name	21
+
+# Server.Items.BloodyElvenBoots
+Name	20
+
+# Server.Items.ClockworkAssembly
+Weight	20
+
+# Server.Items.CocytusSpawnNode
+Name	20
+
+# Server.Items.DragonHead
+Name	10
+Weight	10
+
+# Server.Items.QuestHolder
+Name	10
+Weight	10
+
+# Server.Items.XmlQuestHolder
+Name	10
+Weight	10
+
+# Server.Voting.VoteItem
+Name	16
+Weight	4
+
+# Server.Items.BaseAddonDeed
+Name	19
+
+# Server.Items.BloodyKilt
+Name	19
+
+# Server.Items.LockpickingChest30
+Name	19
+
+# Server.Items.SGFacetSymbol2
+Name	19
+
+# Server.Items.Skull
+Name	19
+
+# Server.Items.BaseDecorationContainerArtifact
+Weight	18
+
+# Server.Items.BaseSpear
+Name	18
+
+# Server.Items.DonationBackpack
+Name	9
+Weight	9
+
+# Server.Items.SGAddressSymbol1
+Name	18
+
+# Server.Items.SGLocationLantern1South
+Name	18
+
+# Server.Items.WallTorch
+Weight	18
+
+# Server.Items.BloodyShoes
+Name	17
+
+# Server.Items.Necklace
+Name	1
+Weight	16
+
+# Server.Items.ReagentKey
+Name	17
+
+# Server.Items.YardTreeMulti+TreePiece
+Name	17
+
+# Server.Items.Amber
+Name	8
+Weight	8
+
+# Server.Items.BaseDailyRareFood
+Name	1
+Weight	15
+
+# Server.Items.Crops.GrapeVinePoleNorth
+Name	16
+
+# Server.Items.LetheSpawnNode
+Name	16
+
+# Server.Items.Lever
+Name	16
+
+# Server.Items.PrismaticAmber
+Name	8
+Weight	8
+
+# Server.Items.YetiHair
+Name	8
+Weight	8
+
+# Server.Items.BaseAddon
+Name	14
+Weight	1
+
+# Server.Items.BaseKnife
+Name	15
+
+# Server.Items.BloodyElvenDarkShirt
+Name	15
+
+# Server.Items.Crops.GrapeVinePoleNorth2
+Name	15
+
+# Server.Items.DailyFruitBasket
+Weight	14
+
+# Server.Items.EssenceOfLove
+Name	7
+Weight	7
+
+# Server.Items.GraveStone1
+Name	7
+Weight	7
+
+# Server.Items.SGLocationLantern1East
+Name	14
+
+# Server.Items.SGLocationLantern2East
+Name	14
+
+# Server.Items.VampireSignetRing
+Name	7
+Weight	7
+
+# Server.Items.WerewolfGloves1
+Name	14
+
+# Server.Items.WerewolfGorget1
+Name	14
+
+# Server.Items.BasePotion
+Name	12
+Weight	1
+
+# Server.Items.BaseRewardScroll
+Name	13
+
+# Server.Items.BaseStaff
+Name	12
+Weight	1
+
+# Server.Items.BloodyDoublet
+Name	13
+
+# Server.Items.CasinoToken
+Weight	13
+
+# Server.Items.LifeStone
+Name	13
+
+# Server.Items.RewardScroll
+Name	13
+
+# Server.Items.WayPoint
+Name	13
+
+# Server.Items.XmlLatch
+Name	13
+
+# Server.Items.BaseTeleporter
+Name	12
+
+# Server.Items.BloodyShirt
+Name	12
+
+# Server.Items.Crops.DandelionCrop
+Name	12
+
+# Server.Items.GreenPowder
+Name	12
+
+# Server.Items.HideFemaleChest
+Weight	12
+
+# Server.Items.HiLoCards
+Name	12
+
+# Server.Items.SithLordCloak
+Name	12
+
+# Server.Items.TurboSlot
+Name	12
+
+# Server.Items.UnknownRogueSkeleton
+Name	12
+
+# Server.Items.WerewolfArms1
+Name	12
+
+# Server.Items.BarabLightsaber
+Name	11
+
+# Server.Items.BasePants
+Name	11
+
+# Server.Items.BaseRanged
+Name	9
+Weight	2
+
+# Server.Items.BaseToken
+Name	11
+
+# Server.Items.BloodyCap
+Name	11
+
+# Server.Items.BloodyNinjaTabi
+Name	11
+
+# Server.Items.GargishLeatherArms
+Name	5
+Weight	6
+
+# Server.Items.MobileRestrictFloorTile
+Name	11
+
+# Server.Items.OrcishKinMask
+Weight	11
+
+# Server.Items.PlateGloves
+Name	11
+
+# Server.Items.TimedSwitch
+Name	11
+
+# Server.Items.VoteStone
+Name	11
+
+# Server.Items.WerewolfChest1
+Name	11
+
+# Server.Items.BaseDragonTrophy
+Name	10
+
+# Server.Items.BasePoleArm
+Name	10
+
+# Server.Items.BloodyThighBoots
+Name	10
+
+# Server.Items.CEOBlackJack
+Name	10
+
+# Server.Items.ColdIronIngot
+Name	5
+Weight	5
+
+# Server.Items.CreepyWeeds
+Name	10
+
+# Server.Items.FruitBasket
+Name	5
+Weight	5
+
+# Server.Items.GargoyleChest
+Name	10
+
+# Server.Items.GraveDust
+Name	10
+
+# Server.Items.PlateArms
+Name	10
+
+# Server.Items.PlateLegs
+Name	10
+
+# Server.Items.SGLocationLantern3East
+Name	10
+
+# Server.Items.ShrinkItemX
+Name	5
+Weight	5
+
+# Server.Items.AleKeg
+Name	8
+Weight	1
+
+# Server.Items.BloodyJinBaori
+Name	9
+
+# Server.Items.BloodyPlainDress
+Name	9
+
+# Server.Items.LinkStone
+Name	5
+Weight	4
+
+# Server.Items.PlateChest
+Name	9
+
+# Server.Items.Robe
+Name	9
+
+# Server.Items.Scepter
+Name	9
+
+# Server.Items.StatBall
+Name	9
+
+# Server.Ashlar.CyclingDyetub
+Name	4
+Weight	4
+
+# Server.Items.BaseEarrings
+Name	2
+Weight	6
+
+# Server.Items.BloodyFullApron
+Name	8
+
+# Server.Items.BloodySandals
+Name	8
+
+# Server.Items.DecoStoneChair
+Name	8
+
+# Server.Items.FurBoots
+Name	8
+
+# Server.Items.LampPostArtifact
+Weight	8
+
+# Server.Items.LightsaberHiltMold
+Name	4
+Weight	4
+
+# Server.Items.LockpickingChest50
+Name	8
+
+# Server.Items.PawsOfTheWereWolf
+Name	8
+
+# Server.Items.PlateGorget
+Name	8
+
+# Server.Items.SithLordRobe
+Name	4
+Weight	4
+
+# Server.Items.VampireAncientRobe
+Name	4
+Weight	4
+
+# Server.Items.WallSconce
+Weight	8
+
+# Server.Misc.SpellbookDeed
+Name	8
+
+# Server.SkillBall
+Name	8
+
+# Server.Items.BladedStaff
+Name	7
+
+# Server.Items.GiftBox
+Weight	7
+
+# Server.Items.Goblet
+Name	7
+
+# Server.Items.LockpickingChest60
+Name	7
+
+# Server.Items.LockpickingChest70
+Name	7
+
+# Server.Items.LockpickingChest80
+Name	7
+
+# Server.Items.Shirt
+Name	6
+Weight	1
+
+# Server.Items.Spine
+Weight	7
+
+# Server.Items.TrashChest
+Name	7
+
+# Server.Items.WerewolfLegs1
+Name	7
+
+# Server.Items.WineKeg
+Name	4
+Weight	3
+
+# Server.ACC.CSS.Systems.DarkForce.SithHolocron
+Name	6
+
+# Server.Items.BaseAddonContainer
+Name	6
+
+# Server.Items.BaseBook
+Name	6
+
+# Server.Items.BaseSiegeProjectile
+Name	3
+Weight	3
+
+# Server.Items.BloodyBandana
+Name	6
+
+# Server.Items.BloodyBonnet
+Name	6
+
+# Server.Items.BloodyFancyDress
+Name	6
+
+# Server.Items.BloodyHakamaShita
+Name	6
+
+# Server.Items.BloodyKamishimo
+Name	6
+
+# Server.Items.BloodyObi
+Name	6
+
+# Server.Items.BloodyWoodlandBelt
+Name	6
+
+# Server.Items.BluePrint2
+Name	3
+Weight	3
+
+# Server.Items.DecoStoneTable2
+Name	6
+
+# Server.Items.DragonArms
+Weight	6
+
+# Server.Items.FakeContainer
+Name	2
+Items	2
+Weight	2
+
+# Server.Items.GargishBanner
+Weight	6
+
+# Server.Items.GargishLeatherLegs
+Name	3
+Weight	3
+
+# Server.Items.HippieWoodDoor
+Name	6
+
+# Server.Items.JediRobe
+Name	3
+Weight	3
+
+# Server.Items.Library
+Name	2
+Items	2
+Weight	2
+
+# Server.Items.LockpickingChest40
+Name	6
+
+# Server.Items.PlateHelm
+Name	6
+
+# Server.Items.SGFacetSymbol5
+Name	6
+
+# Server.Items.SGLocationLantern2South
+Name	6
+
+# Server.Items.ShadowCrystal
+Name	6
+
+# Server.Items.SiegeCannonball
+Name	3
+Weight	3
+
+# Server.Items.VampGorget4
+Name	6
+
+# Server.SpellCrafting.Items.BaseSpellCraft
+Name	3
+Weight	3
+
+# System.CustomizableVendor.DisplayBox
+Name	6
+
+# Xanthos.Claim.LootBag
+Name	3
+Weight	3
+
+# Server.Items.BaseShield
+Name	5
+
+# Server.Items.BladedStaffOfEvolution
+Name	5
+
+# Server.Items.BloodySkullCap
+Name	5
+
+# Server.Items.Candle
+Name	5
+
+# Server.Items.DecoStoneTable
+Name	5
+
+# Server.Items.GargishSash
+Name	2
+Weight	3
+
+# Server.Items.GoldEarrings
+Name	2
+Weight	3
+
+# Server.Items.GoldNecklace
+Name	1
+Weight	4
+
+# Server.Items.LeatherCap
+Name	5
+
+# Server.Items.MasterRewardsStone
+Name	5
+
+# Server.Items.MetalChest
+Name	5
+
+# Server.Items.RangerLegs
+Weight	5
+
+# Server.Items.SerpentNest
+Name	5
+
+# Server.Items.Shoes
+Name	5
+
+# Server.Items.ShortPants
+Name	5
+
+# Server.Items.SkullCap
+Name	5
+
+# Server.Items.VikingSword
+Name	5
+
+# Server.Mobiles.EtherealMount
+Name	5
+
+# Server.SpellCrafting.Items.BookOfSpellCrafts
+Name	5
+
+# Server.ACC.CSS.Systems.LightForce.JediHolocron
+Name	4
+
+# Server.Engines.Quests.Doom.GoldenSkull
+Name	4
+
+# Server.Items.AppleBobbinBarrel
+Name	2
+Weight	2
+
+# Server.Items.BaseConflagrationPotion
+Name	4
+
+# Server.Items.BaseDailyRareLight
+Weight	4
+
+# Server.Items.BaseHealPotion
+Name	4
+
+# Server.Items.BaseSuit
+Name	4
+
+# Server.Items.BlackStaff
+Name	3
+Weight	1
+
+# Server.Items.BlessBag
+Name	2
+Weight	2
+
+# Server.Items.BloodyHalfApron
+Name	4
+
+# Server.Items.Blue1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Blue2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Blue3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Blue4FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Blue5FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Blue6FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.BluePrint
+Name	2
+Weight	2
+
+# Server.Items.BoneShards
+Weight	4
+
+# Server.Items.BountyBoard
+Name	4
+
+# Server.Items.BrazierTall
+Weight	4
+
+# Server.Items.Broadsword
+Name	4
+
+# Server.Items.Brown1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Brown2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.CarvedWoodDoor
+Name	4
+
+# Server.Items.CelestialSteelDoor
+Name	4
+
+# Server.Items.Clock
+Name	1
+Weight	3
+
+# Server.Items.CloseHelm
+Name	4
+
+# Server.Items.Crops.CropHelper+Weeds
+Name	4
+
+# Server.Items.CursedEarrings
+Name	2
+Weight	2
+
+# Server.Items.Cutlass
+Name	4
+
+# Server.Items.Cyan1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Cyan2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.DailyCandle
+Weight	4
+
+# Server.Items.Daisho
+Name	4
+
+# Server.Items.DaishoOfEvolution
+Name	4
+
+# Server.Items.DecoStoneChair2
+Name	4
+
+# Server.Items.EmptyDNAVial
+Name	4
+
+# Server.Items.EmptyJug
+Name	4
+
+# Server.Items.ForgedSteelDoor
+Name	4
+
+# Server.Items.GargishLeatherKilt
+Name	2
+Weight	2
+
+# Server.Items.GoldSmelter
+Name	2
+Weight	2
+
+# Server.Items.GoodLuckWoodDoor
+Name	4
+
+# Server.Items.Gray1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Gray2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Gray3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Green1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Green2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Green3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Green4FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Green5FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Halberd
+Name	4
+
+# Server.Items.HealPotion
+Name	4
+
+# Server.Items.HolyHandgrenade2
+Name	4
+
+# Server.Items.LeatherChest
+Name	4
+
+# Server.Items.LeatherGloves
+Name	4
+
+# Server.Items.LeatherGorget
+Name	4
+
+# Server.Items.LeatherLegs
+Name	4
+
+# Server.Items.MetalBox
+Name	4
+
+# Server.Items.MetalShield
+Name	4
+
+# Server.Items.Muffins
+Weight	4
+
+# Server.Items.Orange1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Orange2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Orange3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Orange4FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.PaintedRatanDoor
+Name	4
+
+# Server.Items.Pink1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Pink2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Pink3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.PlateHiroSode
+Weight	4
+
+# Server.Items.PostBox
+Name	4
+
+# Server.Items.PotionKeg
+Name	2
+Weight	2
+
+# Server.Items.PSCredits
+Name	2
+Weight	2
+
+# Server.Items.Purple1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Purple2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.QuarterStaff
+Name	4
+
+# Server.Items.Red1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Red2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Red3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Red4FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Red5FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Red6FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Red7FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.RedOrnateWoodDoor
+Name	4
+
+# Server.Items.RitualCoin
+Name	4
+
+# Server.Items.SasquatchHair
+Name	2
+Weight	2
+
+# Server.Items.ScribesKey
+Name	2
+Weight	2
+
+# Server.Items.SGFacetSymbol3
+Name	4
+
+# Server.Items.SGFacetSymbol4
+Name	4
+
+# Server.Items.SGLocationLantern3South
+Name	4
+
+# Server.Items.SithRobe
+Name	2
+Weight	2
+
+# Server.Items.Skirt
+Name	4
+
+# Server.Items.StuddedGloves
+Name	4
+
+# Server.Items.TigerRatanDoor
+Name	4
+
+# Server.Items.TreeDoor
+Name	4
+
+# Server.Items.VampChest4
+Name	4
+
+# Server.Items.WerewolfLegWraps1
+Name	4
+
+# Server.Items.White1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White4FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White5FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White6FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White7FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.White8FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.WhiteDragonWoodDoor
+Name	4
+
+# Server.Items.WoodKey
+Name	2
+Weight	2
+
+# Server.Items.YardTreeMulti
+Name	4
+
+# Server.Items.Yellow1FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Yellow2FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Items.Yellow3FocusingCrystal
+Name	2
+Weight	2
+
+# Server.Mobiles.GuardSpawner
+Name	4
+
+# Knives.TownHouses.TownHouseSign
+Name	3
+
+# Server.Items.AccessLevelStone
+Name	3
+
+# Server.Items.AdventurerKey
+Name	2
+Weight	1
+
+# Server.Items.ArcaneBookshelfEastAddon
+Name	3
+
+# Server.Items.Bardiche
+Name	3
+
+# Server.Items.BaseBulletinBoard
+Items	3
+
+# Server.Items.BaseCraftsmanSatchel
+Name	3
+
+# Server.Items.BloodyLongPants
+Name	3
+
+# Server.Items.BoneLegs
+Name	3
+
+# Server.Items.BookOfTruthArtifact
+Name	1
+Weight	2
+
+# Server.Items.BooksWestArtifact
+Weight	3
+
+# Server.Items.BulletinBoard
+Items	3
+
+# Server.Items.ChainChest
+Name	3
+
+# Server.Items.CrescentBlade
+Name	3
+
+# Server.Items.Dagger
+Name	3
+
+# Server.Items.DailyHay
+Weight	3
+
+# Server.Items.DeathMawDragonToken
+Name	3
+
+# Server.Items.FemaleLeatherChest
+Name	3
+
+# Server.Items.FletcherCraftsmanSatchel
+Name	3
+
+# Server.Items.GardenersKey
+Name	2
+Weight	1
+
+# Server.Items.GargishApron
+Name	3
+
+# Server.Items.GMHidingStone
+Name	3
+
+# Server.Items.GMRobe
+Name	3
+
+# Server.Items.HammerPick
+Name	3
+
+# Server.Items.Kryss
+Name	3
+
+# Server.Items.LargeBattleAxe
+Name	3
+
+# Server.Items.LargeFireworksStand
+Name	3
+
+# Server.Items.LeatherArms
+Name	3
+
+# Server.Items.MarkaSkull
+Name	3
+
+# Server.Items.Maul
+Name	3
+
+# Server.Items.MediumFireworksStand
+Name	3
+
+# Server.Items.NextorLightsaber
+Name	3
+
+# Server.Items.ObsidianRock
+Name	3
+
+# Server.Items.PadawanLightsaber
+Name	3
+
+# Server.Items.PelvisBone
+Weight	3
+
+# Server.Items.PetKey
+Name	3
+
+# Server.Items.PetLeash3
+Name	2
+Weight	1
+
+# Server.Items.Pickaxe
+Name	3
+
+# Server.Items.QuestLeadersBoard
+Name	3
+
+# Server.Items.QuestStaffMedallion
+Name	3
+
+# Server.Items.Scythe
+Name	3
+
+# Server.Items.ShortSpear
+Name	3
+
+# Server.Items.SilverEarrings
+Weight	3
+
+# Server.Items.SilverNecklace
+Weight	3
+
+# Server.Items.SimpleNote
+Name	3
+
+# Server.Items.SleeperTallElvenSouth
+Name	3
+
+# Server.Items.SmallFireworksStand
+Name	3
+
+# Server.Items.StuddedArms
+Name	3
+
+# Server.Items.TailorKey
+Name	2
+Weight	1
+
+# Server.Items.TatteredCloak
+Name	3
+
+# Server.Items.TatteredElvenDarkShirt
+Name	3
+
+# Server.Items.TatteredHakamaShita
+Name	3
+
+# Server.Items.TatteredSandals
+Name	3
+
+# Server.Items.TatteredShirt
+Name	3
+
+# Server.Items.UltimateHider
+Name	3
+
+# Server.Items.YardFountain
+Name	3
+
+# Server.Items.Yumi
+Name	1
+Weight	2
+
+# Server.Multis.LockableBarrel
+Weight	3
+
+# Server.ACC.CSS.Systems.Ancient.AncientSpellbook
+Name	2
+
+# Server.ACC.CSS.Systems.Chivalry.ChivalrySpellbook
+Name	2
+
+# Server.ACC.CSS.Systems.DarkForce.DarkGuardianDisc
+Name	2
+
+# Server.ACC.CSS.Systems.DarkForce.DarkPoisonFieldDisc
+Name	2
+
+# Server.ACC.CSS.Systems.LightForce.LightGuardianDisc
+Name	2
+
+# Server.ACC.CSS.Systems.LightForce.ProjectionDisc
+Name	2
+
+# Server.ACC.CSS.Systems.Mage.MageSpellbook
+Name	2
+
+# Server.ACC.CSS.Systems.Spellweaving.SpellweavingSpellbook
+Name	1
+Weight	1
+
+# Server.Engines.Underworld.UnderworldSystem
+Name	2
+
+# Server.Items.AcidVine
+Name	2
+
+# Server.Items.AcklaySilk
+Name	1
+Weight	1
+
+# Server.Items.AdolescentDragonHead
+Name	1
+Weight	1
+
+# Server.Items.AgapiteBulkOrderCover
+Name	2
+
+# Server.Items.AirFeather
+Name	1
+Weight	1
+
+# Server.Items.AlchemistsBauble
+Weight	2
+
+# Server.Items.AlchemyPot
+Name	1
+Weight	1
+
+# Server.Items.AllyaExileDeed
+Name	1
+Weight	1
+
+# Server.Items.AllyaExileLightsaber
+Name	2
+
+# Server.Items.AllyaRedemptionDeed
+Name	1
+Weight	1
+
+# Server.Items.AnkarresDeed
+Name	1
+Weight	1
+
+# Server.Items.AnkarresLightsaber
+Name	2
+
+# Server.Items.ArcaneBookshelfSouthAddon
+Name	2
+
+# Server.Items.Ark
+Name	1
+Weight	1
+
+# Server.Items.ArmsAndWeaponsPrimer
+Name	2
+
+# Server.Items.ArmsOfNobility
+Name	1
+Weight	1
+
+# Server.Items.Axe
+Name	2
+
+# Server.Items.BaasDeed
+Name	1
+Weight	1
+
+# Server.Items.BackpackArtifact
+Weight	2
+
+# Server.Items.BagofIngotBookCovers
+Name	2
+
+# Server.Items.BarabDeed
+Name	1
+Weight	1
+
+# Server.Items.BarrelLid
+Name	2
+
+# Server.Items.BaseClothingOfCommand
+Name	2
+
+# Server.Items.BaseCraftWine
+Name	1
+Weight	1
+
+# Server.Items.BaseDailyRareCont
+Weight	2
+
+# Server.Items.BaseDailyRareContainer
+Weight	2
+
+# Server.Items.BasePoisonPotion
+Name	1
+Weight	1
+
+# Server.Items.BaseSiegeWeapon
+Name	1
+Weight	1
+
+# Server.Items.BaseSliding
+Name	2
+
+# Server.Items.Basket1Artifact
+Weight	2
+
+# Server.Items.Basket2Artifact
+Weight	2
+
+# Server.Items.Basket3NorthArtifact
+Weight	2
+
+# Server.Items.Basket3WestArtifact
+Weight	2
+
+# Server.Items.Basket4Artifact
+Weight	2
+
+# Server.Items.Basket5NorthArtifact
+Weight	2
+
+# Server.Items.Basket5WestArtifact
+Weight	2
+
+# Server.Items.Basket6Artifact
+Weight	2
+
+# Server.Items.BasketOfHerbs
+Name	1
+Weight	1
+
+# Server.Items.BattleAxe
+Name	2
+
+# Server.Items.BigFish
+Name	1
+Weight	1
+
+# Server.Items.BlackBannerNorthArtifact
+Name	1
+Weight	1
+
+# Server.Items.BlackwingDeed
+Name	1
+Weight	1
+
+# Server.Items.BlankScroll
+Name	2
+
+# Server.Items.BlazeBulkOrderCover
+Name	2
+
+# Server.Items.BloodyFemaleKimono
+Name	1
+Weight	1
+
+# Server.Items.BloodyWaterArtifact
+Weight	2
+
+# Server.Items.BlueBook
+Name	2
+
+# Server.Items.BODKey
+Name	2
+
+# Server.Items.BondaraDeed
+Name	1
+Weight	1
+
+# Server.Items.BondaraFollyLightsaber
+Name	2
+
+# Server.Items.BondarDeed
+Name	1
+Weight	1
+
+# Server.Items.BoneChest
+Name	2
+
+# Server.Items.BoneHarvester
+Name	2
+
+# Server.Items.BooksFaceDownArtifact
+Weight	2
+
+# Server.Items.BooksNorthArtifact
+Weight	2
+
+# Server.Items.BottleArtifact
+Weight	2
+
+# Server.Items.BottleOfHolyWater
+Name	1
+Weight	1
+
+# Server.Items.BottleOfWine
+Name	1
+Weight	1
+
+# Server.Items.BowlArtifact
+Weight	2
+
+# Server.Items.BowlsHorizontalArtifact
+Weight	2
+
+# Server.Items.BowlsVerticalArtifact
+Weight	2
+
+# Server.Items.BroadswordOfEvolution
+Name	2
+
+# Server.Items.BronzeBulkOrderCover
+Name	2
+
+# Server.Items.Candelabra
+Name	2
+
+# Server.Items.ChainLegs
+Name	2
+
+# Server.Items.ChampSkullKey
+Name	1
+Weight	1
+
+# Server.Items.CheeseWedge
+Weight	2
+
+# Server.Items.ChimeraHead
+Name	1
+Weight	1
+
+# Server.Items.Cleaver
+Name	2
+
+# Server.Items.CocoonArtifact
+Weight	2
+
+# Server.Items.CopperBulkOrderCover
+Name	2
+
+# Server.Items.CraftableEtherealLlama
+Name	1
+Weight	1
+
+# Server.Items.CraftBag
+Name	1
+Weight	1
+
+# Server.Items.Crops.CarrotCrop
+Name	2
+
+# Server.Items.Crops.RedPepperSeed
+Name	1
+Weight	1
+
+# Server.Items.Crops.RiceCrop
+Name	2
+
+# Server.Items.CrystallineBlackrock
+Name	2
+
+# Server.Items.CupsArtifact
+Weight	2
+
+# Server.Items.Daat99Tokens
+Name	1
+Weight	1
+
+# Server.Items.DailyBucketOfWater
+Weight	2
+
+# Server.Items.DailyClosedBarrel
+Weight	2
+
+# Server.Items.DailyMeatPie
+Name	1
+Weight	1
+
+# Server.Items.DailyRock
+Weight	2
+
+# Server.Items.DailyRocks
+Weight	2
+
+# Server.Items.DamagedBooksArtifact
+Weight	2
+
+# Server.Items.DamindDeed
+Name	1
+Weight	1
+
+# Server.Items.DamindLightsaber
+Name	2
+
+# Server.Items.DeadlyPoisonPotion
+Name	1
+Weight	1
+
+# Server.Items.DeathMawDaemonToken
+Name	2
+
+# Server.Items.DeathMawUnholyToken
+Name	2
+
+# Server.Items.DiscountCoupon
+Name	1
+Weight	1
+
+# Server.Items.DODDeed
+Name	1
+Weight	1
+
+# Server.Items.DolphinLeftArtifact
+Weight	2
+
+# Server.Items.DolphinRightArtifact
+Weight	2
+
+# Server.Items.DonationBox
+Name	1
+Weight	1
+
+# Server.Items.DoubleAxe
+Name	2
+
+# Server.Items.DoubleBladedStaff
+Name	2
+
+# Server.Items.DragiteDeed
+Name	1
+Weight	1
+
+# Server.Items.DroidActuators
+Name	2
+
+# Server.Items.DullCopperBulkOrderCover
+Name	2
+
+# Server.Items.DurindfireDeed
+Name	1
+Weight	1
+
+# Server.Items.DyeTub
+Name	1
+Weight	1
+
+# Server.Items.EasternPaintingEast1
+Name	1
+Weight	1
+
+# Server.Items.EggCaseArtifact
+Weight	2
+
+# Server.Items.ElderDragonHead
+Name	1
+Weight	1
+
+# Server.Items.ElectrumBulkOrderCover
+Name	2
+
+# Server.Items.ElvenCompositeLongbow
+Name	2
+
+# Server.Items.EmptyFishtankAddonDeed
+Name	2
+
+# Server.Items.EralamDeed
+Name	1
+Weight	1
+
+# Server.Items.EralamLightsaber
+Name	2
+
+# Server.Items.EtherealChargerOfTheFallen
+Name	2
+
+# Server.Items.EverlastingSmithHammer
+Name	2
+
+# Server.Items.ExecutionersAxe
+Name	2
+
+# Server.Items.ExileRobe
+Name	1
+Weight	1
+
+# Server.Items.ExplodingCannonball
+Name	1
+Weight	1
+
+# Server.Items.FanNorthArtifact
+Weight	2
+
+# Server.Items.FanWestArtifact
+Weight	2
+
+# Server.Items.FemaleKimono
+Weight	2
+
+# Server.Items.FieryCannonball
+Name	1
+Weight	1
+
+# Server.Items.FireDragonHead
+Name	1
+Weight	1
+
+# Server.Items.FlowersArtifact
+Weight	2
+
+# Server.Items.ForgeComponent
+Name	2
+
+# Server.Items.GamblingStone
+Name	2
+
+# Server.Items.GargishClothKilt
+Name	2
+
+# Server.Items.GargishClothWingArmor
+Name	2
+
+# Server.Items.GargishTraditionalVaseArtifact
+Weight	2
+
+# Server.Items.GemKey
+Name	2
+
+# Server.Items.GlovesOfTheFeyWing
+Name	2
+
+# Server.Items.GlovesOfTheHarrower
+Name	1
+Weight	1
+
+# Server.Items.GnarledStaff
+Name	2
+
+# Server.Items.GoldBulkOrderCover
+Name	2
+
+# Server.Items.GraniteKey
+Name	2
+
+# Server.Items.GreenAdeganDeed
+Name	1
+Weight	1
+
+# Server.Items.GroupDungeonExit
+Name	2
+
+# Server.Items.GruesomeStandardArtifact
+Weight	2
+
+# Server.Items.Hatchet
+Name	2
+
+# Server.Items.Head
+Name	2
+
+# Server.Items.HeartDeed
+Name	1
+Weight	1
+
+# Server.Items.HellHoundFighting
+Name	2
+
+# Server.Items.HideChest
+Name	2
+
+# Server.Items.HideGloves
+Name	2
+
+# Server.Items.HidePants
+Name	2
+
+# Server.Items.HolyGrail
+Name	2
+
+# Server.Items.HueStone
+Name	1
+Weight	1
+
+# Server.Items.HurrikaineDeed
+Name	1
+Weight	1
+
+# Server.Items.IceBulkOrderCover
+Name	2
+
+# Server.Items.ImpactDeed
+Name	1
+Weight	1
+
+# Server.Items.IngotKey
+Name	2
+
+# Server.Items.IronCannonball
+Name	1
+Weight	1
+
+# Server.Items.JadeDragonHead
+Name	1
+Weight	1
+
+# Server.Items.JediCloak
+Name	2
+
+# Server.Items.JenruaxDeed
+Name	1
+Weight	1
+
+# Server.Items.JusticeBreastplate
+Name	2
+
+# Server.Items.KenobiDeed
+Name	1
+Weight	1
+
+# Server.Items.KenoBoard
+Name	2
+
+# Server.Items.Key
+Name	2
+
+# Server.Items.KingArthurCrown
+Name	2
+
+# Server.Items.KirinBrains
+Name	2
+
+# Server.Items.KraytDeed
+Name	1
+Weight	1
+
+# Server.Items.KraytDragonLightsaber
+Name	2
+
+# Server.Items.KryssOfEvolution
+Name	2
+
+# Server.Items.LambentDeed
+Name	1
+Weight	1
+
+# Server.Items.Lantern
+Name	2
+
+# Server.Items.LargeEmptyPot
+Weight	2
+
+# Server.Items.LavaDeed
+Name	1
+Weight	1
+
+# Server.Items.LavaLightsaber
+Name	2
+
+# Server.Items.LeatherNinjaBelt
+Name	2
+
+# Server.Items.LeatherSkirt
+Name	2
+
+# Server.Items.LeatherTunicArtifact
+Weight	2
+
+# Server.Items.LegsOfTheFeyWing
+Name	2
+
+# Server.Items.LignanDeed
+Name	1
+Weight	1
+
+# Server.Items.LocalizedAddonComponent
+Name	2
+
+# Server.Items.LorridianDeed
+Name	1
+Weight	1
+
+# Server.Items.Mace
+Name	2
+
+# Server.Items.MaleKimono
+Weight	2
+
+# Server.Items.ManStatuetteEastArtifact
+Weight	2
+
+# Server.Items.ManStatuetteSouthArtifact
+Weight	2
+
+# Server.Items.MantleDeed
+Name	1
+Weight	1
+
+# Server.Items.MeadKeg
+Name	1
+Weight	1
+
+# Server.Items.MeditationDeed
+Name	1
+Weight	1
+
+# Server.Items.MetalDoor2
+Name	2
+
+# Server.Items.MidnightGloves
+Name	1
+Weight	1
+
+# Server.Items.MoongateLibrary
+Name	2
+
+# Server.Items.MythicalDragonHead
+Name	1
+Weight	1
+
+# Server.Items.NewbieMoongate
+Name	2
+
+# Server.Items.NextorDeed
+Name	1
+Weight	1
+
+# Server.Items.OldDragonHead
+Name	1
+Weight	1
+
+# Server.Items.OreKey
+Name	1
+Weight	1
+
+# Server.Items.Painting1NorthArtifact
+Weight	2
+
+# Server.Items.Painting1WestArtifact
+Weight	2
+
+# Server.Items.Painting2NorthArtifact
+Weight	2
+
+# Server.Items.Painting2WestArtifact
+Weight	2
+
+# Server.Items.Painting3Artifact
+Weight	2
+
+# Server.Items.Painting4NorthArtifact
+Weight	2
+
+# Server.Items.Painting4WestArtifact
+Weight	2
+
+# Server.Items.Painting5NorthArtifact
+Weight	2
+
+# Server.Items.Painting5WestArtifact
+Weight	2
+
+# Server.Items.Painting6NorthArtifact
+Weight	2
+
+# Server.Items.Painting6WestArtifact
+Weight	2
+
+# Server.Items.PermafrostDeed
+Name	1
+Weight	1
+
+# Server.Items.PetDyeTub
+Name	1
+Weight	1
+
+# Server.Items.PetShrinkPotion
+Name	2
+
+# Server.Items.PhondDeed
+Name	1
+Weight	1
+
+# Server.Items.PigFighting
+Name	2
+
+# Server.Items.Pike
+Name	2
+
+# Server.Items.PlatinumBulkOrderCover
+Name	2
+
+# Server.Items.PSKey
+Name	2
+
+# Server.Items.PublicMoongate
+Name	2
+
+# Server.Items.QixoniDeed
+Name	1
+Weight	1
+
+# Server.Items.RAFTRS
+Name	2
+
+# Server.Items.RareSCJewel
+Name	2
+
+# Server.Items.RingmailChest
+Name	2
+
+# Server.Items.RingmailLegs
+Name	2
+
+# Server.Items.RoastPig
+Name	2
+
+# Server.Items.RockArtifact
+Weight	2
+
+# Server.Items.RubatDeed
+Name	1
+Weight	1
+
+# Server.Items.RuinedPaintingArtifact
+Weight	2
+
+# Server.Items.RumpleCharms
+Name	1
+Weight	1
+
+# Server.Items.RuusanDeed
+Name	1
+Weight	1
+
+# Server.Items.SaddleArtifact
+Weight	2
+
+# Server.Items.SakeArtifact
+Weight	2
+
+# Server.Items.SankaraStonesDeco
+Name	1
+Weight	1
+
+# Server.Items.SapithDeed
+Name	1
+Weight	1
+
+# Server.Items.SapithLightsaber
+Name	2
+
+# Server.Items.Scimitar
+Name	2
+
+# Server.Items.Sculpture1Artifact
+Weight	2
+
+# Server.Items.Sculpture2Artifact
+Weight	2
+
+# Server.Items.ShadowDrakeHead
+Name	1
+Weight	1
+
+# Server.Items.ShadowIronBulkOrderCover
+Name	2
+
+# Server.Items.ShadowWyrmHead
+Name	1
+Weight	1
+
+# Server.Items.ShepherdsCrook
+Name	2
+
+# Server.Items.SiegeRam
+Name	1
+Weight	1
+
+# Server.Items.SigilDeed
+Name	1
+Weight	1
+
+# Server.Items.SilverStakeUnblessed
+Name	1
+Weight	1
+
+# Server.Items.SimpleLever
+Name	2
+
+# Server.Items.SithApprenticeLightsaber
+Name	2
+
+# Server.Items.SkinnedDeerArtifact
+Weight	2
+
+# Server.Items.SkinnedGoatArtifact
+Weight	2
+
+# Server.Items.Skullball
+Name	2
+
+# Server.Items.SkullballEnterGate
+Name	2
+
+# Server.Items.SkullballExitGate
+Name	2
+
+# Server.Items.SkullCandleArtifact
+Weight	2
+
+# Server.Items.SmithyKey
+Name	1
+Weight	1
+
+# Server.Items.SolariDeed
+Name	1
+Weight	1
+
+# Server.Items.Spear
+Name	2
+
+# Server.Items.SpellbookBasket
+Name	2
+
+# Server.Items.SpikePost
+Name	2
+
+# Server.Items.StaffLightEditor
+Name	1
+Weight	1
+
+# Server.Items.StaffMedallion
+Name	1
+Weight	1
+
+# Server.Items.StaffoftheMagister
+Name	1
+Weight	1
+
+# Server.Items.StaffRing
+Name	2
+
+# Server.Items.StatueEast2
+Weight	2
+
+# Server.Items.StretchedHideArtifact
+Weight	2
+
+# Server.Items.StrippersLingerie
+Name	2
+
+# Server.Items.StuddedLeggingsArtifact
+Weight	2
+
+# Server.Items.StuddedTunicArtifact
+Weight	2
+
+# Server.Items.StygiumDeed
+Name	1
+Weight	1
+
+# Server.Items.SunriderDeed
+Name	1
+Weight	1
+
+# Server.Items.SusanBrush
+Name	2
+
+# Server.Items.SwordDisplay1NorthArtifact
+Weight	2
+
+# Server.Items.SwordDisplay1WestArtifact
+Weight	2
+
+# Server.Items.SwordDisplay2NorthArtifact
+Weight	2
+
+# Server.Items.SwordDisplay2WestArtifact
+Weight	2
+
+# Server.Items.SwordDisplay3EastArtifact
+Weight	2
+
+# Server.Items.SwordDisplay3SouthArtifact
+Weight	2
+
+# Server.Items.SwordDisplay4NorthArtifact
+Weight	2
+
+# Server.Items.SwordDisplay4WestArtifact
+Weight	2
+
+# Server.Items.SwordDisplay5NorthArtifact
+Weight	2
+
+# Server.Items.SyntheticDeed
+Name	1
+Weight	1
+
+# Server.Items.TalismanOfFear
+Name	1
+Weight	1
+
+# Server.Items.TarotCardsArtifact
+Weight	2
+
+# Server.Items.TatteredPlainDress
+Name	2
+
+# Server.Items.TatteredWoodlandBelt
+Name	2
+
+# Server.Items.TeapotNorthArtifact
+Weight	2
+
+# Server.Items.TeapotWestArtifact
+Weight	2
+
+# Server.Items.TimedLever
+Name	2
+
+# Server.Items.TowerLanternArtifact
+Weight	2
+
+# Server.Items.ToxicBulkOrderCover
+Name	2
+
+# Server.Items.Trash4TokensBackpack
+Name	2
+
+# Server.Items.TripleFanNorthArtifact
+Weight	2
+
+# Server.Items.TripleFanWestArtifact
+Weight	2
+
+# Server.Items.TunicOfTheFeyWing
+Name	2
+
+# Server.Items.TyranusDeed
+Name	1
+Weight	1
+
+# Server.Items.UlricRedemptionDeed
+Name	1
+Weight	1
+
+# Server.Items.UltimaDeed
+Name	1
+Weight	1
+
+# Server.Items.UpariDeed
+Name	1
+Weight	1
+
+# Server.Items.Urn1Artifact
+Weight	2
+
+# Server.Items.Urn2Artifact
+Weight	2
+
+# Server.Items.ValoriteBulkOrderCover
+Name	2
+
+# Server.Items.VampArms1
+Name	2
+
+# Server.Items.VampArms4
+Name	2
+
+# Server.Items.VampireShroud
+Name	2
+
+# Server.Items.VampLegs1
+Name	2
+
+# Server.Items.VampLegs4
+Name	2
+
+# Server.Items.VelmoriteDeed
+Name	1
+Weight	1
+
+# Server.Items.VenomDragonHead
+Name	1
+Weight	1
+
+# Server.Items.VeriteBulkOrderCover
+Name	2
+
+# Server.Items.VexxtalDeed
+Name	1
+Weight	1
+
+# Server.Items.WarAxe
+Name	2
+
+# Server.Items.WarHammer
+Name	2
+
+# Server.Items.WaxCampfire
+Name	1
+Weight	1
+
+# Server.Items.WaxCraftingPot
+Name	1
+Weight	1
+
+# Server.Items.WebStoneS
+Name	2
+
+# Server.Items.WerewolfAncientRobe
+Name	1
+Weight	1
+
+# Server.Items.WerewolfArms5
+Name	2
+
+# Server.Items.WerewolfChest5
+Name	2
+
+# Server.Items.WerewolfGloves5
+Name	2
+
+# Server.Items.WerewolfGorget5
+Name	2
+
+# Server.Items.WerewolfLegs5
+Name	2
+
+# Server.Items.WinduDeed
+Name	1
+Weight	1
+
+# Server.Items.YumiOfEvolution
+Name	1
+Weight	1
+
+# Server.Items.ZenRock1Artifact
+Weight	2
+
+# Server.Items.ZenRock2Artifact
+Weight	2
+
+# Server.Items.ZenRock3Artifact
+Weight	2
+
+# Server.Mobiles.EtherealHorse
+Name	2
+
+# Server.SpellCrafting.Items.BonusHitsJewel
+Name	1
+Weight	1
+
+# Server.SpellCrafting.Items.BonusStrengthJewel
+Name	1
+Weight	1
+
+# Server.SpellCrafting.Items.ReflectPhysicalJewel
+Name	1
+Weight	1
+
+# Arya.Chess.ChessControl
+Name	1
+
+# Server.ACC.CSS.Systems.Avatar.AvatarSpellbook
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkChainLightningDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkCleanseDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkCurseDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkCurseWeaponDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkFoldSpaceDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkKinesisDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkMatterDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkMindTrickDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkPainSpikeDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkPoisonDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkProjectionDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkRemembranceDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkResurrectionDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkStealthDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkStrangleDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DarkVortexDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.DrainDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.FearDisc
+Name	1
+
+# Server.ACC.CSS.Systems.DarkForce.ForceDestructionDisc
+Name	1
+
+# Server.ACC.CSS.Systems.Druid.DruidSpellbook
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.BattleMeditationDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.BellowDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.CleanseDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.ConcealmentDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.FoldSpaceDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.ForceLightningDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.ForceTidesDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.ForceWeaponDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.GripDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.JediGroveDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.KinesisDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.LightCurseDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.LightMatterDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.LightPoisonFieldDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.LightResurrectionDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.LightVortexDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.MindTrickDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.RemembranceDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.ShieldDisc
+Name	1
+
+# Server.ACC.CSS.Systems.LightForce.StealthDisc
+Name	1
+
+# Server.ACC.CSS.Systems.Necromancy.NecroSpellbook
+Name	1
+
+# Server.Engines.CannedEvil.ChampionSpawnController
+Name	1
+
+# Server.Engines.Quests.Ninja.EminosKatanaChest
+Weight	1
+
+# Server.Engines.Quests.Samurai.HaochisKatanaGenerator
+Name	1
+
+# Server.Engines.SAMiniChamps.MiniChampSpawnController
+Name	1
+
+# Server.Engines.XmlSpawner2.MobFactionRegionStone
+Name	1
+
+# Server.Gumps.ToTStone
+Name	1
+
+# Server.Items.AbysmalGloves
+Name	1
+
+# Server.Items.AddonContainerComponent
+Name	1
+
+# Server.Items.AddressBook
+Name	1
+
+# Server.Items.AdeganLightsaber
+Name	1
+
+# Server.Items.AdolescentDragonSkins
+Name	1
+
+# Server.Items.AdolescentDragonTrophy
+Name	1
+
+# Server.Items.AgapiteGranite
+Name	1
+
+# Server.Items.AlbinoAngelfishSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.AllyaRedemptionLightsaber
+Name	1
+
+# Server.Items.Amethyst
+Name	1
+
+# Server.Items.AngelfishSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.AngelicEmbrace
+Name	1
+
+# Server.Items.AngeroftheGods
+Name	1
+
+# Server.Items.AnkhNorth
+Name	1
+
+# Server.Items.AnkhNorth+InternalItem
+Name	1
+
+# Server.Items.Annihilation
+Name	1
+
+# Server.Items.ArcanicRobe
+Name	1
+
+# Server.Items.ArcticBeacon
+Name	1
+
+# Server.Items.ArmorOfInsight
+Name	1
+
+# Server.Items.ArmorOfNobility
+Name	1
+
+# Server.Items.ArmorweaveCladding
+Name	1
+
+# Server.Items.ArmsOfFortune
+Name	1
+
+# Server.Items.ArmsOfInsight
+Name	1
+
+# Server.Items.ArmsOfTheFallenKing
+Name	1
+
+# Server.Items.ArmsOfTheHarrower
+Name	1
+
+# Server.Items.ArmsOfToxicity
+Name	1
+
+# Server.Items.ArtyOre
+Name	1
+
+# Server.Items.ArtySatchel
+Name	1
+
+# Server.Items.ASHKey
+Name	1
+
+# Server.Items.AssassinSpike
+Name	1
+
+# Server.Items.AssassinSpikeOfEvolution
+Name	1
+
+# Server.Items.AtlantisFighting
+Name	1
+
+# Server.Items.AutoRestarter
+Name	1
+
+# Server.Items.AWFighting
+Name	1
+
+# Server.Items.AxeOfEvolution
+Name	1
+
+# Server.Items.BaasWisdomLightsaber
+Name	1
+
+# Server.Items.BagOfAllReagents
+Name	1
+
+# Server.Items.BagofLeatherBookCovers
+Name	1
+
+# Server.Items.BankChestAddonDeed
+Name	1
+
+# Server.Items.BarbedBulkOrderCover
+Name	1
+
+# Server.Items.BardicheOfEvolution
+Name	1
+
+# Server.Items.BarkleyHatchet
+Name	1
+
+# Server.Items.Bascinet
+Name	1
+
+# Server.Items.BaseArtyOre
+Name	1
+
+# Server.Items.BaseArtySatchel
+Name	1
+
+# Server.Items.BaseBlaster
+Name	1
+
+# Server.Items.BaseCraftMead
+Weight	1
+
+# Server.Items.BaseCurePotion
+Name	1
+
+# Server.Items.BaseGranite
+Name	1
+
+# Server.Items.BaseRewardAxe
+Name	1
+
+# Server.Items.BaseStatuette
+Name	1
+
+# Server.Items.BaseTalisman
+Name	1
+
+# Server.Items.BatteredPanArtifact
+Weight	1
+
+# Server.Items.BattleAxeOfEvolution
+Name	1
+
+# Server.Items.BearMask
+Name	1
+
+# Server.Items.BigElvenChair
+Name	1
+
+# Server.Items.BlackKnightStatuette
+Name	1
+
+# Server.Items.BlackwingLightsaber
+Name	1
+
+# Server.Items.BladeOfThanatos
+Name	1
+
+# Server.Items.BladePlantSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.Blaster
+Name	1
+
+# Server.Items.BlazeLBulkOrderCover
+Name	1
+
+# Server.Items.BlessedBagDeed
+Name	1
+
+# Server.Items.BlockAndTackleArtifact
+Weight	1
+
+# Server.Items.BloodAnkh1EWAddonDeed
+Name	1
+
+# Server.Items.BloodyShortPants
+Name	1
+
+# Server.Items.BloodySpoonArtifact
+Weight	1
+
+# Server.Items.BloodyStrawHat
+Name	1
+
+# Server.Items.BoardGameControlItem
+Name	1
+
+# Server.Items.BodyPaint
+Name	1
+
+# Server.Items.BodySashOfCommand
+Name	1
+
+# Server.Items.BombermanControlItem
+Name	1
+
+# Server.Items.BondarLightsaber
+Name	1
+
+# Server.Items.Bone
+Name	1
+
+# Server.Items.BoneArms
+Name	1
+
+# Server.Items.BoneHarvesterOfEvolution
+Name	1
+
+# Server.Items.BoneHelm
+Name	1
+
+# Server.Items.BottleOfMead
+Weight	1
+
+# Server.Items.BottlesOfSpoiledWine1Artifact
+Weight	1
+
+# Server.Items.BottlesOfSpoiledWine2Artifact
+Weight	1
+
+# Server.Items.BottlesOfSpoiledWine3Artifact
+Weight	1
+
+# Server.Items.Bow
+Name	1
+
+# Server.Items.BowlFlour
+Weight	1
+
+# Server.Items.BowOfEvolution
+Name	1
+
+# Server.Items.BrazierArtifact
+Weight	1
+
+# Server.Items.BrilliantAmber
+Name	1
+
+# Server.Items.BrownBook
+Name	1
+
+# Server.Items.BugReportStone
+Name	1
+
+# Server.Items.BustEast
+Weight	1
+
+# Server.Items.BusterDrawer
+Name	1
+
+# Server.Items.BustSouth
+Weight	1
+
+# Server.Items.ButcherKnife
+Name	1
+
+# Server.Items.ButcherKnifeOfEvolution
+Name	1
+
+# Server.Items.CandelabraOfSouls
+Name	1
+
+# Server.Items.CandleOfLove
+Name	1
+
+# Server.Items.CapOfFortune
+Name	1
+
+# Server.Items.CapOfTheFallenKing
+Name	1
+
+# Server.Items.ChampionSkull
+Name	1
+
+# Server.Items.ChaosShield
+Name	1
+
+# Server.Items.ChimeraTrophy
+Name	1
+
+# Server.Items.chocolatedust
+Name	1
+
+# Server.Items.CleaverOfEvolution
+Name	1
+
+# Server.Items.CloakOfCommand
+Name	1
+
+# Server.Items.CoifOfBane
+Name	1
+
+# Server.Items.CoifOfFire
+Name	1
+
+# Server.Items.CompositeBow
+Name	1
+
+# Server.Items.CompositeBowOfEvolution
+Name	1
+
+# Server.Items.CookableFood
+Weight	1
+
+# Server.Items.CraftableFurniture
+Name	1
+
+# Server.Items.CrescentBladeOfEvolution
+Name	1
+
+# Server.Items.Crops.BlueberryCrop
+Name	1
+
+# Server.Items.Crops.CeleryCrop
+Name	1
+
+# Server.Items.Crops.FieldCornCrop
+Name	1
+
+# Server.Items.Crops.MiniGrapefruitCrop
+Name	1
+
+# Server.Items.Crops.MiniMangoCrop
+Name	1
+
+# Server.Items.Crops.MiniOrangeCrop
+Name	1
+
+# Server.Items.Crops.PeanutCrop
+Name	1
+
+# Server.Items.Crops.PinkCarnationCrop
+Name	1
+
+# Server.Items.Crops.PoppyCrop
+Name	1
+
+# Server.Items.Crops.SpiritRoseCrop
+Name	1
+
+# Server.Items.Crops.SweetPotatoCrop
+Name	1
+
+# Server.Items.Crops.TanMushroomCrop
+Name	1
+
+# Server.Items.Crops.WheatCrop
+Name	1
+
+# Server.Items.Crops.YellowRoseCrop
+Name	1
+
+# Server.Items.Crossbow
+Name	1
+
+# Server.Items.CrossbowOfEvolution
+Name	1
+
+# Server.Items.CryptClosedSarcophagusEWF
+Name	1
+
+# Server.Items.CutlassOfEvolution
+Name	1
+
+# Server.Items.DaemonicBulkOrderCover
+Name	1
+
+# Server.Items.DaggerOfEvolution
+Name	1
+
+# Server.Items.DagobahLightsaber
+Name	1
+
+# Server.Items.DailyBrokenChair
+Weight	1
+
+# Server.Items.DailyFullJars
+Weight	1
+
+# Server.Items.DarkGuardiansChest
+Name	1
+
+# Server.Items.DeathMawDaemonTeleporter
+Name	1
+
+# Server.Items.DeathMawDragonTeleporter
+Name	1
+
+# Server.Items.DeathMawElementalTeleporter
+Name	1
+
+# Server.Items.DeathMawFeyTeleporter
+Name	1
+
+# Server.Items.DeathMawFeyToken
+Name	1
+
+# Server.Items.DeathMawSpiderTeleporter
+Name	1
+
+# Server.Items.DeathMawToken
+Name	1
+
+# Server.Items.DeathMawUnholyTeleporter
+Name	1
+
+# Server.Items.DecorativeGoldFuton
+Weight	1
+
+# Server.Items.DecorativeShield7
+Name	1
+
+# Server.Items.DemonSkull
+Name	1
+
+# Server.Items.DisplayNorthMLAddonDeed
+Name	1
+
+# Server.Items.DivineArms
+Name	1
+
+# Server.Items.DivineGloves
+Name	1
+
+# Server.Items.DivineGorget
+Name	1
+
+# Server.Items.DivineLeggings
+Name	1
+
+# Server.Items.DivineTunic
+Name	1
+
+# Server.Items.DoubleAxeOfEvolution
+Name	1
+
+# Server.Items.DoubleBladedStaffOfEvolution
+Name	1
+
+# Server.Items.DragiteLightsaber
+Name	1
+
+# Server.Items.DragonSkins
+Name	1
+
+# Server.Items.DriedUpInkWellArtifact
+Weight	1
+
+# Server.Items.DurindfireLightsaber
+Name	1
+
+# Server.Items.DyingPlantArtifact
+Weight	1
+
+# Server.Items.EasterEggs
+Weight	1
+
+# Server.Items.ElderDragonTrophy
+Name	1
+
+# Server.Items.ElvenCompositeLongbowOfEvolution
+Name	1
+
+# Server.Items.ElvenSpellblade
+Name	1
+
+# Server.Items.ElvenSpellbladeOfEvolution
+Name	1
+
+# Server.Items.EternalFlame
+Name	1
+
+# Server.Items.EtherealBulkOrderCover
+Name	1
+
+# Server.Items.EtherealPolarBear
+Name	1
+
+# Server.Items.EverlastingFletcherTools
+Name	1
+
+# Server.Items.EverlastingSaw
+Name	1
+
+# Server.Items.EverlastingScribesPen
+Name	1
+
+# Server.Items.EverlastingSewingKit
+Name	1
+
+# Server.Items.EverlastingTinkerTools
+Name	1
+
+# Server.Items.Excalibur
+Name	1
+
+# Server.Items.ExecutionersAxeOfEvolution
+Name	1
+
+# Server.Items.ExileCloak
+Name	1
+
+# Server.Items.FakeCopperIngotsArtifact
+Weight	1
+
+# Server.Items.FancyShirt
+Name	1
+
+# Server.Items.FemalePlateChest
+Name	1
+
+# Server.Items.FillableContainer
+Name	1
+
+# Server.Items.FireDragonTrophy
+Name	1
+
+# Server.Items.FireRuby
+Name	1
+
+# Server.Items.FishiesSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.FloppyHat
+Name	1
+
+# Server.Items.FlyingCarpetMagicLamp
+Name	1
+
+# Server.Items.FordLetter
+Name	1
+
+# Server.Items.FountainOfLife
+Name	1
+
+# Server.Items.FreddysTeleporter
+Name	1
+
+# Server.Items.FrostBulkOrderCover
+Name	1
+
+# Server.Items.GaramonsBook
+Name	1
+
+# Server.Items.GaramonsBook1
+Name	1
+
+# Server.Items.GargishBentasVaseArtifact
+Weight	1
+
+# Server.Items.GargishKnowledgeTotemArtifact
+Weight	1
+
+# Server.Items.GargishLeatherWingArmor
+Name	1
+
+# Server.Items.GargishLuckTotemArtifact
+Weight	1
+
+# Server.Items.GargishPortraitArtifact
+Weight	1
+
+# Server.Items.GargishProtectiveTotemArtifact
+Weight	1
+
+# Server.Items.GargishStoneArms
+Weight	1
+
+# Server.Items.GargishStoneChest
+Weight	1
+
+# Server.Items.GargishStoneKilt
+Weight	1
+
+# Server.Items.GargishStoneLegs
+Weight	1
+
+# Server.Items.GargishStoneWingArmor
+Weight	1
+
+# Server.Items.GargoyleFirePick
+Name	1
+
+# Server.Items.GlovesOfFortune
+Name	1
+
+# Server.Items.GlovesOfInsight
+Name	1
+
+# Server.Items.GlovesOfTheFallenKing
+Name	1
+
+# Server.Items.GnarledStaffOfEvolution
+Name	1
+
+# Server.Items.GoldenBroadtailSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.GorgetOfFortune
+Name	1
+
+# Server.Items.GorgetOfInsight
+Name	1
+
+# Server.Items.GrailDiary
+Name	1
+
+# Server.Items.GreaterCurePotion
+Name	1
+
+# Server.Items.GreenTeaBasket
+Name	1
+
+# Server.Items.GroupDungeonStone
+Name	1
+
+# Server.Items.GroupDungeonTeleporter
+Name	1
+
+# Server.Items.GuardianLightsaber
+Name	1
+
+# Server.Items.GumballStand
+Name	1
+
+# Server.Items.GumballTicket
+Name	1
+
+# Server.Items.HalberdOfEvolution
+Name	1
+
+# Server.Items.HalfEatenSupperArtifact
+Weight	1
+
+# Server.Items.HammerPickOfEvolution
+Name	1
+
+# Server.Items.HanzosBow
+Weight	1
+
+# Server.Items.HatchetOfEvolution
+Name	1
+
+# Server.Items.HealingFairyJar
+Name	1
+
+# Server.Items.HeavyCrossbow
+Name	1
+
+# Server.Items.HeavyCrossbowOfEvolution
+Name	1
+
+# Server.Items.Helmet
+Name	1
+
+# Server.Items.HolyKnightsArmPlates
+Name	1
+
+# Server.Items.HolyKnightsGloves
+Name	1
+
+# Server.Items.HolyKnightsGorget
+Name	1
+
+# Server.Items.HolyKnightsLegging
+Name	1
+
+# Server.Items.HolyKnightsPlateHelm
+Name	1
+
+# Server.Items.HonorLegs
+Name	1
+
+# Server.Items.HornedBulkOrderCover
+Name	1
+
+# Server.Items.HorseCoconuts2
+Name	1
+
+# Server.Items.HouseJoinDeed
+Name	1
+
+# Server.Items.HouseMailBox
+Name	1
+
+# Server.Items.HunkGoldDeed
+Name	1
+
+# Server.Items.HurrikaineLightsaber
+Name	1
+
+# Server.Items.ImpactLightsaber
+Name	1
+
+# Server.Items.ImprovedDecorator
+Name	1
+
+# Server.Items.InquisitorsArms
+Name	1
+
+# Server.Items.InquisitorsGorget
+Name	1
+
+# Server.Items.InquisitorsHelm
+Name	1
+
+# Server.Items.InquisitorsLeggings
+Name	1
+
+# Server.Items.InquisitorsTunic
+Name	1
+
+# Server.Items.ItemIDDeed
+Name	1
+
+# Server.Items.JackalsArms
+Name	1
+
+# Server.Items.JackalsGloves
+Name	1
+
+# Server.Items.JackalsHelm
+Name	1
+
+# Server.Items.JackalsLeggings
+Name	1
+
+# Server.Items.JackalsTunic
+Name	1
+
+# Server.Items.JadeDragonTrophy
+Name	1
+
+# Server.Items.JediPick
+Name	1
+
+# Server.Items.JellyfishSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.JenruaxLightsaber
+Name	1
+
+# Server.Items.JugsOfGoblinRotgutArtifact
+Weight	1
+
+# Server.Items.Kama
+Name	1
+
+# Server.Items.KamaOfEvolution
+Name	1
+
+# Server.Items.Katana
+Name	1
+
+# Server.Items.KatanaOfEvolution
+Name	1
+
+# Server.Items.KenobiLegacyLightsaber
+Name	1
+
+# Server.Items.KingsChest
+Name	1
+
+# Server.Items.KingsSatchel
+Name	1
+
+# Server.Items.Lajatang
+Name	1
+
+# Server.Items.LajatangOfEvolution
+Name	1
+
+# Server.Items.LambentLightsaber
+Name	1
+
+# Server.Items.Lance
+Name	1
+
+# Server.Items.LanceOfEvolution
+Name	1
+
+# Server.Items.LargeBattleAxeOfEvolution
+Name	1
+
+# Server.Items.LargeCannon2Addon
+Name	1
+
+# Server.Items.LargeDyingPlantArtifact
+Weight	1
+
+# Server.Items.LargeGrandfatherClock
+Weight	1
+
+# Server.Items.LargePewterBowlArtifact
+Weight	1
+
+# Server.Items.LeafArms
+Name	1
+
+# Server.Items.Leafblade
+Name	1
+
+# Server.Items.LeafbladeOfEvolution
+Name	1
+
+# Server.Items.LeatherBustierArms
+Name	1
+
+# Server.Items.LeatherShorts
+Name	1
+
+# Server.Items.LeggingsOfFire
+Name	1
+
+# Server.Items.LegsOfFortune
+Name	1
+
+# Server.Items.LegsOfInsight
+Name	1
+
+# Server.Items.LegsOfNobility
+Name	1
+
+# Server.Items.LegsOfTheFallenKing
+Name	1
+
+# Server.Items.LegsOfTheHarrower
+Name	1
+
+# Server.Items.LetheGauntlets
+Name	1
+
+# Server.Items.LightBlue
+Name	1
+
+# Server.Items.LightGreen
+Name	1
+
+# Server.Items.LightPurple
+Name	1
+
+# Server.Items.LightRed
+Name	1
+
+# Server.Items.LignanLightsaber
+Name	1
+
+# Server.Items.LocalizedSign
+Name	1
+
+# Server.Items.Lockpick
+Name	1
+
+# Server.Items.LongPants
+Name	1
+
+# Server.Items.Longsword
+Name	1
+
+# Server.Items.LordBritishCostume
+Name	1
+
+# Server.Items.LorridianLightsaber
+Name	1
+
+# Server.Items.LOSBlocker
+Name	1
+
+# Server.Items.LotteryStone
+Name	1
+
+# Server.Items.LotteryTicket
+Name	1
+
+# Server.Items.LycanthropeCurePotion
+Name	1
+
+# Server.Items.MaceOfEvolution
+Name	1
+
+# Server.Items.MagicalShortbow
+Name	1
+
+# Server.Items.MagicVinesComponent
+Name	1
+
+# Server.Items.MandalorianCrushgaunts
+Name	1
+
+# Server.Items.MangledHeadOfDreadhorn
+Name	1
+
+# Server.Items.MantleLightsaber
+Name	1
+
+# Server.Items.MaulOfEvolution
+Name	1
+
+# Server.Items.MeatSkeleton
+Weight	1
+
+# Server.Items.MeatSkeleton2
+Weight	1
+
+# Server.Items.MeditationLightsaber
+Name	1
+
+# Server.Items.MerlinsStaff
+Name	1
+
+# Server.Items.MiasmaFighting
+Name	1
+
+# Server.Items.MidnightHelm
+Name	1
+
+# Server.Items.MidnightLegs
+Name	1
+
+# Server.Items.MidnightTunic
+Name	1
+
+# Server.Items.MilGoldDeed
+Name	1
+
+# Server.Items.MobFactionsRewardStone
+Name	1
+
+# Server.Items.MovableAddonKey
+Name	1
+
+# Server.Items.MuseumRetrieval
+Name	1
+
+# Server.Items.MysteriousSupperArtifact
+Weight	1
+
+# Server.Items.MythicalDragonTrophy
+Name	1
+
+# Server.Items.NaverysWeb1Artifact
+Weight	1
+
+# Server.Items.NaverysWeb2Artifact
+Weight	1
+
+# Server.Items.NaverysWeb3Artifact
+Weight	1
+
+# Server.Items.NaverysWeb4Artifact
+Weight	1
+
+# Server.Items.NaverysWeb5Artifact
+Weight	1
+
+# Server.Items.NaverysWeb6Artifact
+Weight	1
+
+# Server.Items.NeeLandscapingAddonDeed
+Name	1
+
+# Server.Items.NoDachi
+Name	1
+
+# Server.Items.NoDachiOfEvolution
+Name	1
+
+# Server.Items.NodinHat
+Name	1
+
+# Server.Items.NorseHelm
+Name	1
+
+# Server.Items.NosferatuTeleporter
+Name	1
+
+# Server.Items.NoxHelm
+Name	1
+
+# Server.Items.NoxNightlight
+Name	1
+
+# Server.Items.NoxRobe
+Name	1
+
+# Server.Items.NujelmHoneySmallFishtankAddonDeed
+Name	1
+
+# Server.Items.OldDragonTrophy
+Name	1
+
+# Server.Items.OrcHelm
+Name	1
+
+# Server.Items.OrderReportStone
+Name	1
+
+# Server.Items.OrnamentOfTheMagician
+Weight	1
+
+# Server.Items.OrnateAxe
+Name	1
+
+# Server.Items.OrnateAxeOfEvolution
+Name	1
+
+# Server.Items.PauldronsofContinualLife
+Name	1
+
+# Server.Items.PermafrostLightsaber
+Name	1
+
+# Server.Items.PetBondingDeed
+Name	1
+
+# Server.Items.PhondLightsaber
+Name	1
+
+# Server.Items.PikeOfEvolution
+Name	1
+
+# Server.Items.PirateChest
+Name	1
+
+# Server.Items.Pitchfork
+Name	1
+
+# Server.Items.PitchforkOfEvolution
+Name	1
+
+# Server.Items.PlastoidGirdle
+Name	1
+
+# Server.Items.Plate
+Name	1
+
+# Server.Items.PlayerQuestBoard
+Name	1
+
+# Server.Items.PointsRewardStone
+Name	1
+
+# Server.Items.PolarBulkOrderCover
+Name	1
+
+# Server.Items.PotionKey
+Name	1
+
+# Server.Items.PottedCactus
+Weight	1
+
+# Server.Items.PottedCactus1
+Weight	1
+
+# Server.Items.Pouch
+Name	1
+
+# Server.Items.PowerscrollExchange
+Name	1
+
+# Server.Items.PowerSurge
+Name	1
+
+# Server.Items.PricelessTreasureArtifact
+Weight	1
+
+# Server.Items.PushmePullyuArtifact
+Weight	1
+
+# Server.Items.PyramidTeleporter
+Name	1
+
+# Server.Items.QixoniLightsaber
+Name	1
+
+# Server.Items.QuarterStaffOfEvolution
+Name	1
+
+# Server.Items.QuestBookBag
+Name	1
+
+# Server.Items.QuestMap
+Name	1
+
+# Server.Items.QuestRewardStone
+Name	1
+
+# Server.Items.RAFT
+Name	1
+
+# Server.Items.RainbowMountTeleporter
+Name	1
+
+# Server.Items.RainbowMountToken1
+Name	1
+
+# Server.Items.RainbowMountToken5
+Name	1
+
+# Server.Items.RandomSnowGlobeDeed
+Name	1
+
+# Server.Items.RedBook
+Name	1
+
+# Server.Items.Redkeyfragment
+Name	1
+
+# Server.Items.RedRose
+Name	1
+
+# Server.Items.RemnantsOfMeatLoafArtifact
+Weight	1
+
+# Server.Items.RepeatingCrossbow
+Name	1
+
+# Server.Items.RepeatingCrossbowOfEvolution
+Name	1
+
+# Server.Items.RewardPickaxe
+Name	1
+
+# Server.Items.RingmailGloves
+Name	1
+
+# Server.Items.RobinhoodBow
+Name	1
+
+# Server.Items.RottedOarsArtifact
+Weight	1
+
+# Server.Items.RubatLightsaber
+Name	1
+
+# Server.Items.RuneBlade
+Name	1
+
+# Server.Items.RuneBladeOfEvolution
+Name	1
+
+# Server.Items.RunicToolKey
+Name	1
+
+# Server.Items.RustedPanArtifact
+Weight	1
+
+# Server.Items.RuusanLightsaber
+Name	1
+
+# Server.Items.SacrificeSollerets
+Name	1
+
+# Server.Items.Sai
+Name	1
+
+# Server.Items.SailboatMembershipcard
+Name	1
+
+# Server.Items.SaiOfEvolution
+Name	1
+
+# Server.Items.ScepterOfEvolution
+Name	1
+
+# Server.Items.ScimitarOfEvolution
+Name	1
+
+# Server.Items.ScytheOfEvolution
+Name	1
+
+# Server.Items.SecretDungeonWallNS
+Name	1
+
+# Server.Items.SecretShadowWallNS
+Name	1
+
+# Server.Items.ShadowBox
+Name	1
+
+# Server.Items.ShadowBulkOrderCover
+Name	1
+
+# Server.Items.ShadowDancerArms
+Name	1
+
+# Server.Items.ShadowDancerCap
+Name	1
+
+# Server.Items.ShadowDancerGloves
+Name	1
+
+# Server.Items.ShadowDancerGorget
+Name	1
+
+# Server.Items.ShadowDancerTunic
+Name	1
+
+# Server.Items.ShadowDrakeTrophy
+Name	1
+
+# Server.Items.ShadowWyrmTrophy
+Name	1
+
+# Server.Items.ShieldRubbing
+Name	1
+
+# Server.Items.ShortbowOfEvolution
+Name	1
+
+# Server.Items.ShortSpearOfEvolution
+Name	1
+
+# Server.Items.ShrimpSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.ShrineOfSingularity
+Name	1
+
+# Server.Items.SiegePickaxe
+Name	1
+
+# Server.Items.SigilLightsaber
+Name	1
+
+# Server.Items.SithCloak
+Name	1
+
+# Server.Items.SkinningKnife
+Name	1
+
+# Server.Items.SkinningKnifeOfEvolution
+Name	1
+
+# Server.Items.SleeperCasketFacingWestAddon
+Name	1
+
+# Server.Items.SleeperCoffinFacingNorthAddon
+Name	1
+
+# Server.Items.SleeperElvenSouth
+Name	1
+
+# Server.Items.SleeperEWUsedAddon
+Name	1
+
+# Server.Items.SleeperFurEWAddon
+Name	1
+
+# Server.Items.SleeperFutonEWAddon
+Name	1
+
+# Server.Items.SleeperSarcophagusFacingNorthAddon
+Name	1
+
+# Server.Items.SleeperSmallSouth
+Name	1
+
+# Server.Items.SlenderNote8
+Name	1
+
+# Server.Items.SmallGrandfatherClock
+Weight	1
+
+# Server.Items.SmallMouthSuckerFishSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.SolariLightsaber
+Name	1
+
+# Server.Items.SpearOfEvolution
+Name	1
+
+# Server.Items.SpeckledCrabSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.SpinedBulkOrderCover
+Name	1
+
+# Server.Items.SpinningwheelSouthDeed
+Name	1
+
+# Server.Items.StarSapphire
+Name	1
+
+# Server.Items.StaticListGenerator
+Name	1
+
+# Server.Items.StatueWest
+Weight	1
+
+# Server.Items.StolenBottlesOfLiquor1Artifact
+Weight	1
+
+# Server.Items.StolenBottlesOfLiquor2Artifact
+Weight	1
+
+# Server.Items.StolenBottlesOfLiquor3Artifact
+Weight	1
+
+# Server.Items.StolenBottlesOfLiquor4Artifact
+Weight	1
+
+# Server.Items.StoneChair
+Weight	1
+
+# Server.Items.StoneGoldCounter
+Name	1
+
+# Server.Items.StuddedBustierArms
+Name	1
+
+# Server.Items.StuddedChest
+Name	1
+
+# Server.Items.StuddedGorget
+Name	1
+
+# Server.Items.StuddedLegs
+Name	1
+
+# Server.Items.StygiumLightsaber
+Name	1
+
+# Server.Items.SunriderLightsaber
+Name	1
+
+# Server.Items.SwordDisplay5WestArtifact
+Weight	1
+
+# Server.Items.SyntheticBulkOrderCover
+Name	1
+
+# Server.Items.SyntheticLightsaber
+Name	1
+
+# Server.Items.TatteredBandana
+Name	1
+
+# Server.Items.TatteredCap
+Name	1
+
+# Server.Items.TatteredDoublet
+Name	1
+
+# Server.Items.TatteredFullApron
+Name	1
+
+# Server.Items.TatteredHalfApron
+Name	1
+
+# Server.Items.TatteredJinBaori
+Name	1
+
+# Server.Items.TatteredLongPants
+Name	1
+
+# Server.Items.TatteredObi
+Name	1
+
+# Server.Items.TatteredShoes
+Name	1
+
+# Server.Items.TatteredThighBoots
+Name	1
+
+# Server.Items.Tekagi
+Name	1
+
+# Server.Items.TekagiOfEvolution
+Name	1
+
+# Server.Items.TempleOfDoomTeleporter
+Name	1
+
+# Server.Items.Tessen
+Name	1
+
+# Server.Items.TessenOfEvolution
+Name	1
+
+# Server.Items.ThinLongswordOfEvolution
+Name	1
+
+# Server.Items.Throne
+Name	1
+
+# Server.Items.TileFlipPuzzleControlPanel
+Name	1
+
+# Server.Items.ToolKey
+Name	1
+
+# Server.Items.TopPlayersBoard
+Name	1
+
+# Server.Items.TrainingElementalDeedDisplay
+Name	1
+
+# Server.Items.TreasureChestSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.TreasureHuntersKey
+Name	1
+
+# Server.Items.TunicOfBane
+Name	1
+
+# Server.Items.TunicOfTheFallenKing
+Name	1
+
+# Server.Items.TunicOfTheHarrower
+Name	1
+
+# Server.Items.TurboSlotStats
+Name	1
+
+# Server.Items.TwoHandedAxe
+Name	1
+
+# Server.Items.TwoHandedAxeOfEvolution
+Name	1
+
+# Server.Items.TyballsFlaskStandArtifact
+Weight	1
+
+# Server.Items.TyranusLightsaber
+Name	1
+
+# Server.Items.UlricRedemptionLightsaber
+Name	1
+
+# Server.Items.UltimaLightsaber
+Name	1
+
+# Server.Items.UnknownMageSkeleton
+Name	1
+
+# Server.Items.UpariLightsaber
+Name	1
+
+# Server.Items.VampArms2
+Name	1
+
+# Server.Items.VampChest3
+Name	1
+
+# Server.Items.VampGloves4
+Name	1
+
+# Server.Items.VampGloves5
+Name	1
+
+# Server.Items.VampGorget2
+Name	1
+
+# Server.Items.VampireStrippersLingerie
+Name	1
+
+# Server.Items.VampLegs3
+Name	1
+
+# Server.Items.VampLegWraps1
+Name	1
+
+# Server.Items.VampLegWraps4
+Name	1
+
+# Server.Items.VelmoriteLightsaber
+Name	1
+
+# Server.Items.VenomDragonTrophy
+Name	1
+
+# Server.Items.VesperCollectionStatuette
+Name	1
+
+# Server.Items.VexxtalLightsaber
+Name	1
+
+# Server.Items.VigosTeleporter
+Name	1
+
+# Server.Items.VikingSwordOfEvolution
+Name	1
+
+# Server.Items.VoteStoneDeed
+Name	1
+
+# Server.Items.Wakizashi
+Name	1
+
+# Server.Items.WakizashiOfEvolution
+Name	1
+
+# Server.Items.WarAxeOfEvolution
+Name	1
+
+# Server.Items.WarCleaver
+Name	1
+
+# Server.Items.WarCleaverOfEvolution
+Name	1
+
+# Server.Items.WarFork
+Name	1
+
+# Server.Items.WarForkOfEvolution
+Name	1
+
+# Server.Items.WarHammerOfEvolution
+Name	1
+
+# Server.Items.WarMace
+Name	1
+
+# Server.Items.WarMaceOfEvolution
+Name	1
+
+# Server.Items.WebStoneE
+Name	1
+
+# Server.Items.Whip
+Name	1
+
+# Server.Items.WhiteGrandfatherClock
+Weight	1
+
+# Server.Items.WhitePearlSmallFishtankAddonDeed
+Name	1
+
+# Server.Items.WinduLightsaber
+Name	1
+
+# Server.Items.WrathOfTheDryadReplica
+Name	1
+
+# Server.Items.XmlQuestBook
+Name	1
+
+# Server.Mobiles.VendorBackpack
+Weight	1
+

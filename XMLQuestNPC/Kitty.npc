@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Kitty</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <TriggerOnCarried>Kitty Treat | The Search For Kitty</TriggerOnCarried>
+    <NoTriggerOnCarried>Kitty's Collar</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Kitty</ConfigFile>
+    <SpeechEntries>3</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Yes</Keywords>
+    <Action>SET,0x4006c5ab/DoRespawn/True/;TAKE/Kitty Treat</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,The Search For Kitty,0/Is that a Kitty Treat! Gimme!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>No</Keywords>
+    <Action>SET,0x40077FCB/DoRespawn/True/ ; SETONCARRIED,The Search For Kitty/Objective3/GIVENAMED,Melsy,Kitty's Collar,Plategorget,1/Description3/Return Kitty's Collar to Melsy/Objective4/Tell Melsy the bad news./Description4/Tell Melsy the bad news./AddJournalEntry/Kitty No More: The naked stranger called Kitty has asked you to dupe Melsy into thinking that he's passed away. Just say "Kitty has died." and hopefully that will be the end of his worries./;TAKE/Kitty Treat; SETONCARRIED,The Search For Kitty/Completed2/True ; GIVE/&lt;Plategorget/Name/Kitty's Collar&gt;; SETONTHIS/MSG/My thanks! Goodbye. ;SET, 0x40162bb7/DoReset/True/</Action>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Kitty No More,0/Thank you so very much, stranger! Here take this - tell her I got eaten by a bear. As for me, I think I'm going to retreat to a monstary for a while - I've had enough sard to last me a lifetime!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Keywords>My goodness! Are YOU Kitty?</Keywords>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Kitty's Been Bad,4/Merciful heavens, PLEASE tell me that mad, sex-crazed cat-lady did NOT send you after me. I am NOT her $@%! cat!;Yes - you are and you've been a BAD kitty (Use the Kitty Treat);Yes;What sort of madness is this?(Discard the Kitty Treat);No</Gump>
+  </SpeechEntry>
+</XmlQuestNPC>

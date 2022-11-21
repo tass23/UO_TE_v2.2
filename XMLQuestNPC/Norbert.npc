@@ -1,0 +1,71 @@
+<?xml version="1.0" standalone="yes"?>
+<XmlQuestNPC>
+  <NPC>
+    <Name>Norbert The Christmas Elf</Name>
+    <Running>True</Running>
+    <ProximityRange>3</ProximityRange>
+    <ResetRange>16</ResetRange>
+    <NoTriggerOnCarried>That Naughty Grinch | ATTACHMENT,That Naughty Grinch,XmlQuestAttachment</NoTriggerOnCarried>
+    <AllowGhost>False</AllowGhost>
+    <SpeechPace>10</SpeechPace>
+    <ResetTime>1</ResetTime>
+    <ConfigFile>Norbert</ConfigFile>
+    <SpeechEntries>4</SpeechEntries>
+  </NPC>
+  <SpeechEntry>
+    <EntryNumber>0</EntryNumber>
+    <ID>0</ID>
+    <Text>Seasons tidings, fair adventurer! Perhaps you could help me?</Text>
+    <DependsOn>-1</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>10</EntryNumber>
+    <ID>10</ID>
+    <Keywords>Oh, there's a problem?</Keywords>
+    <DependsOn>0</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,That naughty Grinch,4/That evil grinch has decided to raid Santa's Workshop at Ice Island and stolen all the presents! Rumors have it he's holed up in Covetous for the festive season, if you hurry over there, you might be able to grab back those pressies back before it's too late! ;And so close to Christmas too! Of course, I'll help!;Okay;Bah, humbug - not this time...;No</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>20</EntryNumber>
+    <ID>20</ID>
+    <Keywords>Okay</Keywords>
+    <Action>GIVE/&lt;questholder/Name/That Naughty Grinch/titlestring/That Naughty Grinch/notestring/The Grinch has struck Britannia and Santa has no more presents to give. Head into Covetous and go find them. Try to avoid the Grinch if you can though, he's a very naughty fellow!/Objective1/Find the Grinch's lair!/Description1/Find the Grinch's Lair!/Objective2/COLLECTNAMED,Christmas Present,Fork,150/Description2/COLLECT the Presents!/Objective3/Return to Norbert with your haul./Description3/Return to Norbert with your haul./autoreward/true/CanSeeReward/False/Rewardstring/@GiftBox/ADD,0.01/HolidayTreeDeed/ADD/RedStocking/ADD/Greenstocking/ADD/&lt;fork/ITEMID/18170/Name/Christmas Tree Angel/&gt;/ADD/GingerBreadCookie/ADD/CandyCane/ADD/CandyCane/ADD/&lt;RewardScroll/Amount/2&gt;</Action>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP, That Naughty Grinch,0/Wonderful, Wonderful! The grinch was last seen heading into the depths of Covetous. Please hurry back with the presents quickly - Christmas is almost upon us!</Gump>
+  </SpeechEntry>
+  <SpeechEntry>
+    <EntryNumber>30</EntryNumber>
+    <ID>30</ID>
+    <Text>Well you're just a big meanie, then! No presents for you!</Text>
+    <Keywords>No</Keywords>
+    <DependsOn>10</DependsOn>
+    <Pause>1</Pause>
+    <PrePause>-1</PrePause>
+    <LockConversation>True</LockConversation>
+    <IgnoreCarried>False</IgnoreCarried>
+    <AllowNPCTrigger>False</AllowNPCTrigger>
+    <SpeechStyle>Regular</SpeechStyle>
+    <SpeechHue>-1</SpeechHue>
+  </SpeechEntry>
+</XmlQuestNPC>
