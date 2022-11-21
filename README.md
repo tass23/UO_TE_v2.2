@@ -11,7 +11,7 @@ UO-The Expanse was an Ultima Online freeshard server emulator written in c# that
 Follow these instructions to install UO-The Expanse:
 
 #### Windows
-Just run `RecompileCore.bat` and follow the prompts. This script will compile both the server binary and Ultima binary for you and launch the server at end. After this you can run the server by executing `server.exe`.
+First, extract the free shard Client files into C:\UO_TE, and then just run `RecompileCore.bat` and follow the prompts. This script will compile both the server binary and Ultima binary for you and launch the server at end. After this you can run the server by executing `server.exe`. NOTE: If you change the file path for the free shard client file, please edit Scripts->Misc->DataPath.cs and enter the custom path, THEN run 'RecompileCore.bat'. Otherwise the free shard has no client files to load from and compiling it will cause it to crash.
 
 #### OSX
 No solutions exist.
