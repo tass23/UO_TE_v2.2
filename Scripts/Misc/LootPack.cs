@@ -29,24 +29,33 @@ namespace Server
 			return (int)(Math.Pow( luck, 1 / 1.8 ) * 100);
 		}
 
-		public static int GetLuckChanceForKiller( Mobile dead )
+		public static int GetLuckChanceForKiller(Mobile m)
 		{
-			List<DamageStore> list = BaseCreature.GetLootingRights( dead.DamageEntries, dead.HitsMax );
+            BaseCreature dead = m as BaseCreature;
+
+            if (dead == null)
+                return 240;
+
+			var list = dead.GetLootingRights();
 
 			DamageStore highest = null;
 
-			for ( int i = 0; i < list.Count; ++i )
+			for (int i = 0; i < list.Count; ++i)
 			{
 				DamageStore ds = list[i];
 
-				if ( ds.m_HasRight && (highest == null || ds.m_Damage > highest.m_Damage) )
+				if (ds.m_HasRight && (highest == null || ds.m_Damage > highest.m_Damage))
+				{
 					highest = ds;
+				}
 			}
 
-			if ( highest == null )
+			if (highest == null)
+			{
 				return 0;
+			}
 
-			return GetLuckChance( highest.m_Mobile, dead );
+			return GetLuckChance(highest.m_Mobile, dead);
 		}
 
 		public static bool CheckLuck( int chance )

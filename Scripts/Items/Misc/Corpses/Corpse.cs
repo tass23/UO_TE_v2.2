@@ -630,7 +630,7 @@ namespace Server.Items
 				if( master != null )
 					m_Aggressors.Add( master );
 
-				List<DamageStore> rights = BaseCreature.GetLootingRights( bc.DamageEntries, bc.HitsMax );
+				List<DamageStore> rights = bc.GetLootingRights();
 				for ( int i = 0; i < rights.Count; ++i )
 				{
 					DamageStore ds = rights[i];

@@ -1,6 +1,8 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Server;
 using Server.Regions;
 using Server.Targeting;
@@ -10,6 +12,7 @@ using Server.Spells;
 using Server.Misc;
 using Server.Items;
 using Server.Mobiles;
+using Server.SkillHandlers;
 using Server.ContextMenus;
 using Server.Engines.Quests;
 using Server.Engines.PartySystem;
@@ -5701,6 +5704,168 @@ namespace Server.Mobiles
 			}
 		}
 
+		#region UO-The Expanse
+		public List<DamageStore> LootingRights { get; set; }
+
+        public bool HasLootingRights(Mobile m)
+        {
+            if (LootingRights == null)
+                return false;
+
+            return LootingRights.FirstOrDefault(ds => ds.m_Mobile == m && ds.m_HasRight) != null;
+        }
+
+        public Mobile GetHighestDamager()
+        {
+            if (LootingRights == null || LootingRights.Count == 0)
+                return null;
+
+            return LootingRights[0].m_Mobile;
+        }
+
+        public bool IsHighestDamager(Mobile m)
+        {
+            return LootingRights != null && LootingRights.Count > 0 && LootingRights[0].m_Mobile == m;
+        }
+
+        public List<DamageStore> GetLootingRights()
+        {
+            if (LootingRights != null)
+                return LootingRights;
+
+            List<DamageEntry> damageEntries = this.DamageEntries;
+            int hitsMax = HitsMax;
+
+            List<DamageStore> rights = new List<DamageStore>();
+
+            for (int i = damageEntries.Count - 1; i >= 0; --i)
+            {
+                if (i >= damageEntries.Count)
+                {
+                    continue;
+                }
+
+                DamageEntry de = damageEntries[i];
+
+                if (de.HasExpired)
+                {
+                    damageEntries.RemoveAt(i);
+                    continue;
+                }
+
+                int damage = de.DamageGiven;
+
+                var respList = de.Responsible;
+
+                if (respList != null)
+                {
+                    for (int j = 0; j < respList.Count; ++j)
+                    {
+                        DamageEntry subEntry = respList[j];
+                        Mobile master = subEntry.Damager;
+
+                        if (master == null || master.Deleted || !master.Player)
+                        {
+                            continue;
+                        }
+
+                        bool needNewSubEntry = true;
+
+                        for (int k = 0; needNewSubEntry && k < rights.Count; ++k)
+                        {
+                            DamageStore ds = rights[k];
+
+                            if (ds.m_Mobile == master)
+                            {
+                                ds.m_Damage += subEntry.DamageGiven;
+                                needNewSubEntry = false;
+                            }
+                        }
+
+                        if (needNewSubEntry)
+                        {
+                            rights.Add(new DamageStore(master, subEntry.DamageGiven));
+                        }
+
+                        damage -= subEntry.DamageGiven;
+                    }
+                }
+
+                Mobile m = de.Damager;
+
+                if (m == null || m.Deleted || !m.Player)
+                {
+                    continue;
+                }
+
+                if (damage <= 0)
+                {
+                    continue;
+                }
+
+                bool needNewEntry = true;
+
+                for (int j = 0; needNewEntry && j < rights.Count; ++j)
+                {
+                    DamageStore ds = rights[j];
+
+                    if (ds.m_Mobile == m)
+                    {
+                        ds.m_Damage += damage;
+                        needNewEntry = false;
+                    }
+                }
+
+                if (needNewEntry)
+                {
+                    rights.Add(new DamageStore(m, damage));
+                }
+            }
+
+            if (rights.Count > 0)
+            {
+                rights[0].m_Damage = (int)(rights[0].m_Damage * 1.25);
+                //This would be the first valid person attacking it.  Gets a 25% bonus.  Per 1/19/07 Five on Friday
+
+                if (rights.Count > 1)
+                {
+                    rights.Sort(); //Sort by damage
+                }
+
+                int topDamage = rights[0].m_Damage;
+                int minDamage;
+
+                if (hitsMax >= 3000)
+                {
+                    minDamage = topDamage / 16;
+                }
+                else if (hitsMax >= 1000)
+                {
+                    minDamage = topDamage / 8;
+                }
+                else if (hitsMax >= 200)
+                {
+                    minDamage = topDamage / 4;
+                }
+                else
+                {
+                    minDamage = topDamage / 2;
+                }
+
+                for (int i = 0; i < rights.Count; ++i)
+                {
+                    DamageStore ds = rights[i];
+
+                    ds.m_HasRight = (ds.m_Damage >= minDamage);
+                }
+            }
+
+            LootingRights = rights;
+            return rights;
+        }
+		#endregion
+		
+		/*
 		public static List<DamageStore> GetLootingRights(List<DamageEntry> damageEntries, int hitsMax)
 		{
 			List<DamageStore> rights = new List<DamageStore>();
@@ -5806,6 +5971,7 @@ namespace Server.Mobiles
 
 			return rights;
 		}
+		*/
 
 		#region Mondain's Legacy
 		private bool m_Allured;
@@ -6017,7 +6183,7 @@ namespace Server.Mobiles
 						totalKarma += ((totalKarma / 10) * 3);
 					}
 
-					List<DamageStore> list = GetLootingRights(this.DamageEntries, this.HitsMax);
+					List<DamageStore> list = GetLootingRights(/*this.DamageEntries, this.HitsMax*/);
 					List<Mobile> titles = new List<Mobile>();
 					List<int> fame = new List<int>();
 					List<int> karma = new List<int>();

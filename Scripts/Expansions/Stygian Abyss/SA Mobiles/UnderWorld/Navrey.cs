@@ -74,7 +74,7 @@ namespace Server.Mobiles
                 c.AddItem( new SpiderCarapace() );
 
             // distribute quest items for the 'Green with Envy' quest given by Vernix
-            List<DamageStore> rights = BaseCreature.GetLootingRights( this.DamageEntries, this.HitsMax );
+            List<DamageStore> rights = GetLootingRights();
             for ( int i = rights.Count - 1; i >= 0; --i )
             {
                 DamageStore ds = rights[i];
