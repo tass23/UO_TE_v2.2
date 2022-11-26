@@ -48,7 +48,7 @@ namespace Server.Misc
 		//	if ( !Directory.Exists( "web" ) )
 		//		Directory.CreateDirectory( "web" );
 
-			using ( StreamWriter op = new StreamWriter( "F:/The_Expanse_Public/Scripts/Customs/uo/output.txt" ) )
+			using ( StreamWriter op = new StreamWriter( "C:/UO_TE/Freeshard/Scripts/Customs/uo/output.txt" ) )
 			{
 				op.WriteLine("ServerName="+ "The Expanse");
 				op.WriteLine("ServerVersion=Ver : "+ "7.0.12.0");

@@ -21,7 +21,7 @@
 @DEL "%CURPATH%server.exe"
 @ECHO ON
 
-%CSCPATH%csc.exe /win32icon:"%SRVPATH%uo_te_v2.1_ser2.ico" /r:"%CURPATH%OpenUO.Core.dll" /r:"%CURPATH%OpenUO.Ultima.dll" /r:"%CURPATH%Ultima.dll" /r:"%CURPATH%OpenUO.Ultima.Windows.Forms.dll" /target:exe /out:"%CURPATH%server.exe" /recurse:"%SRVPATH%*.cs" /d:Framework_4_0 /d:server /nowarn:0618 /debug /nologo /optimize /unsafe
+%CSCPATH%csc.exe /win32icon:"%SRVPATH%uo_te_v2.2_ser2.ico" /r:"%CURPATH%OpenUO.Core.dll" /r:"%CURPATH%OpenUO.Ultima.dll" /r:"%CURPATH%Ultima.dll" /r:"%CURPATH%OpenUO.Ultima.Windows.Forms.dll" /target:exe /out:"%CURPATH%server.exe" /recurse:"%SRVPATH%*.cs" /d:Framework_4_0 /d:server /nowarn:0618 /debug /nologo /optimize /unsafe
 
 @ECHO OFF
 
