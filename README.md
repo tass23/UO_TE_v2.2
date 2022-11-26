@@ -1,17 +1,20 @@
-# UO_TE_v2.1
-UO-The Expanse Server engine v2.1
+# UO_TE_v2.2
+UO-The Expanse Server engine v2.2
 Maintained by: Raist
 
 # [UO-The Expanse]
 
-UO-The Expanse was an Ultima Online freeshard server emulator written in c# that was available to the public starting in 2011. July 2017 was the final month for UO-The Expanse and the server went offline. This version is an exact replica of the final, playable version of UO-The Expanse. A lot of time and work has gone in to creating content for this 'shard, but most importantly is the amount of support for staff members in places like Green Acres (Felucca/Trammel). Xmlspawners have been set up to offer training to new 'shard owners and the staff. In order to interact with all the content, you must also have the custom client for UO-The Expanse. All commands for staff are proceeded by a [, and then the Command. Visit all the custom content via the command [StaffRunebook, which will open a toolbar with each facet listed, as well as Runebooks for each expansion. Hope you enjoy it! - Raist/Tass23
+UO-The Expanse was an Ultima Online freeshard server emulator written in C#, utilizing a hybrid engine of RunUO, Orb3.0, and ServUO, that was available to the public beginning in 2011. July 2017 was the final month for UO-The Expanse and the freeshard went offline. This version is almost an exact replica of the final, playable version of UO-The Expanse, with a few new bells and whistles that never were released when the freeshard was live. A lot of time and work has gone into creating content for this 'shard, but most importantly is the amount of support for staff members in places like Green Acres (Felucca/Trammel). Xmlspawners have been set up to offer training to new 'shard owners and the staff. In order to interact with some of the content, you must have the custom client for UO-The Expanse. With the exception of the BUSHIDO and NINJITSU books, all other OSI Spellbooks have an updated user interface with extra buttons and spell icons that can be positioned and locked in place. Most of the OSI gumps have been replaced/altered by custom artwork, including the Spell Icons. A few new items have been added, like Flaming Trees created by Eri (Thank you, Eri!), Lightsaber hilt, Overcharged Moongates, 10 sets of Doors, 12 sets of Walls, Hues, and Fonts. Three animations were installed from the UO Brazilian Reborn Mount Patch, created by soulblighter666@hotmail.com (Thanks SB!): Raptor (204, 0xCC), Beetle (222, 0xDE), Chickenhawk (226, 0xE2). All commands for staff are proceeded by a [, and then the Command, like [ADD Xmlspawner.
+Hope you have fun with all this! - Raist/Tass23
 
 ### Installation
 
-Follow these instructions to install UO-The Expanse:
+Follow these instructions to install and run UO-The Expanse v2.2 BME Freeshard:
 
 #### Windows
-First, extract the free shard Client files into C:\UO_TE, and then just run `RecompileCore.bat` and follow the prompts. This script will compile both the server binary and Ultima binary for you and launch the server at end. After this you can run the server by executing `server.exe`. NOTE: If you change the file path for the free shard client file, please edit Scripts->Misc->DataPath.cs and enter the custom path, THEN run 'RecompileCore.bat'. Otherwise the free shard has no client files to load from and compiling it will cause it to crash.
+The Freeshard is set up to use the Client already installed (which is the same Client being used by the BME Freeshard) in the C:\UO_TE folder, but if any changes are made to the install location, the file path to the Client files has to be changed in Freeshard under Scripts->Misc->DataPath.cs (this must be repeated for the BME Freeshard as well!). To run the Freeshard, simply doubleclick UO-The Expanse v2.2 Freeshard icon on the Desktop (the Freeshard uses a RED icon, whereas the BME Freeshard uses a BLUE icon), and this launches server.exe inside the C:\UO_TE\Freeshard folder. This system also includes the Ultima and Server folders, so if any Core changes need to be made, the entire BME Freeshard can be compiled again by running `RecompileCore.bat` and follow the on-screen prompts. This will compile both the Server binary and Ultima binary and then launch the Freeshard at end. THE FIRST RUN will prompt for an account (no accounts exist!).
+** This is the OWNER account, so anyone with these credentials can log in and have FULL CONTROL of the Freeshard. **
+** It is advised to not have the same Username and Password for the Freeshard and the BME Freeshard. **
 
 #### OSX
 No solutions exist.
