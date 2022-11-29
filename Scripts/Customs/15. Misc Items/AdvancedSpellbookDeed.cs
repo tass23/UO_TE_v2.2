@@ -140,7 +140,7 @@ namespace Server.Misc
                     }
                 case 3:
                     {
-                        Item item = new ChivalrySpellbook();
+                        Item item = new ChivalrySpellbook( from );
                         from.AddToBackpack(item);
                         from.CloseGump(typeof(AdvancedSpellbookGump));
 						m_Deed.Delete();

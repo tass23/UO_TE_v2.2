@@ -155,11 +155,18 @@ namespace Server.Spells.Seventh
 
 			public InternalItem( Point3D target, Map map ) : base( target, map )
 			{
+				int Charged;
 				Map = map;
+				Charged = Utility.RandomMinMax( 1, 10 );
 
-				if ( ShowFeluccaWarning && map == Map.Felucca )
+				if ( ShowFeluccaWarning && map == Map.Felucca)
 					ItemID = 0xDDA;
-
+				
+				#region UO-The Expanse
+				if ( ShowFeluccaWarning && map == Map.Felucca && Charged > 2) //Red Charged Moongate
+					ItemID = 0x4A97;
+				#endregion
+				
 				Dispellable = true;
 
 				InternalTimer t = new InternalTimer( this );

@@ -79,8 +79,8 @@ namespace Server.Gumps
                     }
                 }
                 AddImage(70, 100, BGImage);
-                AddHtml(161, 115, 100, 20, String.Format("<basefont color=#{0}><Center>{1}</Center>", TextHue, Label1), false, false);
-                AddHtml(305, 115, 100, 20, String.Format("<basefont color=#{0}><Center>{1}</Center>", TextHue, Label2), false, false);
+                AddHtml(161, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont color>", TextHue, Label1), false, false);
+                AddHtml(305, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont color>", TextHue, Label2), false, false);
                 //End Hidden Buttons
 
                 //Prev/Next Buttons
@@ -103,8 +103,8 @@ namespace Server.Gumps
                             continue;
 
                         AddHtml((C > 6 ? 305 : 145), 155 + (C > 6 ? (C - 7) * 20 : C * 20), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", TextHue, info.Name), false, false);
-                        AddButton((C > 6 ? 290 : 130), 157 + (C > 6 ? (C - 7) * 20 : C * 20), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
-                        AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), 5411, 5411, j + 1000, GumpButtonType.Reply, 0);
+                        AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
+                        //AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), 5411, 5411, j + 1000, GumpButtonType.Reply, 0);
                     }
                 }
                 //End Spell Buttons/Labels
@@ -357,7 +357,7 @@ namespace Server.Gumps
 
         private int Pages;
         private int CurrentPage;
-
+		public string BookHue  { get{ return "999000"; } }
         public abstract string TextHue { get; }
         public abstract int BGImage { get; }
         public abstract int SpellBtn { get; }
@@ -374,21 +374,10 @@ namespace Server.Gumps
 
             m_Book = book;
             m_Spells = book.SchoolSpells;
-
             Pages = (int)Math.Ceiling((book.SpellCount / 14.0));
-
-			/*if( Pages > 1 && book.Mark > 0 )
-			{
-				ArrayList temp = new ArrayList();
-				for( int i = 0; i < book.Mark*16 && i < m_Spells.Count; i++ )
-					temp.Add( m_Spells[i] );
-				m_Spells.RemoveRange( 0, (book.Mark*16)-1 );
-				m_Spells.AddRange( temp );
-			}*/
 
             AddPage(0);
             AddImage(70, 100, BGImage);
-
             CurrentPage = 1;
 
             for (int i = 0; i < Pages; i++, CurrentPage++)
@@ -417,28 +406,15 @@ namespace Server.Gumps
 				AddButton(113, 268, 5102, 5102, 14, GumpButtonType.Reply, 0); //Arms lore skill left button
 				AddButton(113, 282, 5102, 5102, 15, GumpButtonType.Reply, 0); //Tracking skill left button
                 AddImage(70, 100, BGImage);
-                AddHtml(161, 115, 100, 20, String.Format("<basefont color=#{0}><Center>{1}</Center>", TextHue, Label1), false, false);
-                AddHtml(305, 115, 100, 20, String.Format("<basefont color=#{0}><Center>{1}</Center>", TextHue, Label2), false, false);
-				//AddImage(453, 244, 4000, 2976);
-				//AddImage(87, 198, 2708, 2976); //Food capsule left
-				//AddImage(87, 215, 2708, 2976); //Food capsule left
-				//AddImage(85, 140, 2643, 2976); //Make rune left
-				//AddImage(465, 200, 2708, 2976); //Water capsule right
-				//AddImage(465, 217, 2708, 2976); //Water capsule right
-				//AddImage(450, 140, 2643, 2976); //Master crafting right
-
-				//AddImage(113, 230, 5102, 2993); //Food capsule left
-				//AddImage(113, 243, 5102, 2993); //Make rune left
-				//AddImage(113, 255, 5102, 2993); //Inscription skill right
-				//AddImage(113, 268, 5102, 2993); //Arms lore skill right
-				//AddImage(113, 282, 5102, 2993); //Tracking skill right
+                AddHtml(161, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center>", BookHue, Label1), false, false);
+                AddHtml(305, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center>", BookHue, Label2), false, false);
                 //End Hidden Buttons
 
                 //Prev/Next Buttons
                 if (Pages > 1)
                 {
                     if (CurrentPage > 1)
-                        AddButton(142, 125, 2223, 2223, 0, GumpButtonType.Page, CurrentPage - 1);	//AddButton(124, 109, 2205, 2205, 0, GumpButtonType.Page, CurrentPage - 1);
+                        AddButton(142, 125, 2223, 2223, 0, GumpButtonType.Page, CurrentPage - 1);
                     if (CurrentPage < Pages)
                         AddButton(412, 125, 2224, 2224, 0, GumpButtonType.Page, CurrentPage + 1);
                 }
@@ -454,8 +430,8 @@ namespace Server.Gumps
                             continue;
 
                         AddHtml((C > 6 ? 305 : 145), 155 + (C > 6 ? (C - 7) * 20 : C * 20), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", TextHue, info.Name), false, false);
-                        AddButton((C > 6 ? 290 : 130), 157 + (C > 6 ? (C - 7) * 20 : C * 20), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
-                        AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), 5411, 5411, j + 1000, GumpButtonType.Reply, 0);
+                        AddButton((C > 6 ? 426 : 260), 157 + (C > 6 ? (C - 7) * 20 : C * 20), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
+                        //AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), 5411, 5411, j + 1000, GumpButtonType.Reply, 0);
                     }
                 }
                 //End Spell Buttons/Labels
@@ -1002,7 +978,8 @@ namespace Server.Gumps
         private int Pages;
         private int CurrentPage;
 		public BaseTool m_Tool;
-
+		
+		public string BookHue  { get{ return "999000"; } }
         public abstract string TextHue { get; }
         public abstract int BGImage { get; }
         public abstract int SpellBtn { get; }
@@ -1019,21 +996,10 @@ namespace Server.Gumps
 
             m_Book = book;
             m_Spells = book.SchoolSpells;
-
             Pages = (int)Math.Ceiling((book.SpellCount / 14.0));
-
-			/*if( Pages > 1 && book.Mark > 0 )
-			{
-				ArrayList temp = new ArrayList();
-				for( int i = 0; i < book.Mark*16 && i < m_Spells.Count; i++ )
-					temp.Add( m_Spells[i] );
-				m_Spells.RemoveRange( 0, (book.Mark*16)-1 );
-				m_Spells.AddRange( temp );
-			}*/
 
             AddPage(0);
             AddImage(70, 100, BGImage);
-
             CurrentPage = 1;
 
             for (int i = 0; i < Pages; i++, CurrentPage++)
@@ -1062,28 +1028,15 @@ namespace Server.Gumps
 				AddButton(450, 268, 5102, 5102, 14, GumpButtonType.Reply, 0); //Arms lore skill right button
 				AddButton(450, 281, 5102, 5102, 15, GumpButtonType.Reply, 0); //Tracking skill right button
                 AddImage(70, 100, BGImage);
-                AddHtml(161, 115, 100, 20, String.Format("<basefont color=#{0}><Center>{1}</Center>", TextHue, Label1), false, false);
-                AddHtml(305, 115, 100, 20, String.Format("<basefont color=#{0}><Center>{1}</Center>", TextHue, Label2), false, false);
-				//AddImage(89, 244, 4000, 2976);
-				//AddImage(87, 198, 2708, 2976); //Food capsule left
-				//AddImage(87, 215, 2708, 2976); //Food capsule left
-				//AddImage(85, 140, 2643, 2976); //Make rune left
-				//AddImage(465, 200, 2708, 2976); //Water capsule right
-				//AddImage(465, 217, 2708, 2976); //Water capsule right
-				//AddImage(450, 140, 2643, 2976); //Master crafting right
-
-				//AddImage(450, 230, 5102, 2993); //Food capsule right
-				//AddImage(450, 243, 5102, 2993); //Make rune right
-				//AddImage(450, 255, 5102, 2993); //Inscription skill right
-				//AddImage(450, 268, 5102, 2993); //Arms lore skill right
-				//AddImage(450, 281, 5102, 2993); //Tracking skill right
+                AddHtml(161, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center>", TextHue, Label1), false, false);
+                AddHtml(305, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center>", TextHue, Label2), false, false);
                 //End Hidden Buttons
 
                 //Prev/Next Buttons
                 if (Pages > 1)
                 {
                     if (CurrentPage > 1)
-                        AddButton(142, 125, 2223, 2223, 0, GumpButtonType.Page, CurrentPage - 1);	//AddButton(124, 109, 2205, 2205, 0, GumpButtonType.Page, CurrentPage - 1);
+                        AddButton(142, 125, 2223, 2223, 0, GumpButtonType.Page, CurrentPage - 1);
                     if (CurrentPage < Pages)
                         AddButton(412, 125, 2224, 2224, 0, GumpButtonType.Page, CurrentPage + 1);
                 }
@@ -1098,9 +1051,9 @@ namespace Server.Gumps
                         if (info == null)
                             continue;
 
-                        AddHtml((C > 6 ? 305 : 145), 155 + (C > 6 ? (C - 7) * 20 : C * 20), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", TextHue, info.Name), false, false);
-                        AddButton((C > 6 ? 290 : 130), 157 + (C > 6 ? (C - 7) * 20 : C * 20), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
-                        AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), 5411, 5411, j + 1000, GumpButtonType.Reply, 0);
+                        AddHtml((C > 6 ? 305 : 145), 155 + (C > 6 ? (C - 7) * 20 : C * 20), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
+                        AddButton((C > 6 ? 426 : 260), 157 + (C > 6 ? (C - 7) * 20 : C * 20), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
+                        //AddButton((C > 6 ? 426 : 260), 153 + (C > 6 ? (C - 7) * 20 : C * 20), 5411, 5411, j + 1000, GumpButtonType.Reply, 0);
                     }
                 }
                 //End Spell Buttons/Labels

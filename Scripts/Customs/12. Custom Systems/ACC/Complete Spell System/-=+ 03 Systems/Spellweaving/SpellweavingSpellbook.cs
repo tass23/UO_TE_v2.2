@@ -1,4 +1,5 @@
 using System;
+using Server.Gumps;
 using Server.Items;
 using Server.Spells;
 
@@ -43,6 +44,7 @@ namespace Server.ACC.CSS.Systems.Spellweaving
 			}
 
 			from.CloseGump( typeof( SpellweavingSpellbookGump ) );
+			from.CloseGump(typeof( SpellweavingMiniGump ));
 			from.SendGump( new SpellweavingSpellbookGump( this ) );
 		}
 

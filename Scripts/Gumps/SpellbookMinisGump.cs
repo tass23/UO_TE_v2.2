@@ -20,6 +20,8 @@ using Server.ACC.CSS.Systems.DarkForce;
 using Server.ACC.CSS.Systems.Mage;
 using Server.ACC.CSS.Systems.Necromancy;
 using Server.ACC.CSS.Systems.Chivalry;
+using Server.ACC.CSS.Systems.Mysticism;
+using Server.ACC.CSS.Systems.Spellweaving;
 
 namespace Server.Gumps
 {
@@ -345,6 +347,7 @@ namespace Server.Gumps
     {
 		public CSpellbook m_Book;
         public ArrayList m_Spells;
+		
 		public override string TextHue  { get{ return "CC3333"; } }
 		public override int    BGImage  { get{ return 2220; } }
 		public override int    SpellBtn { get{ return 2362; } }
@@ -379,7 +382,7 @@ namespace Server.Gumps
 			else if (info.ButtonID == 1)
 			{
                 state.Mobile.CloseGump(typeof(ChivMiniGump));
-                state.Mobile.SendGump(new ChivalrySpellbookGump(m_Book));
+                state.Mobile.SendGump(new ChivalrySpellbookGump(m_Book, m));
 			}
 
             object[] Params = new object[1] { m_Book };
@@ -437,7 +440,9 @@ namespace Server.Gumps
                 state.Mobile.SendGump(gump);
         }
     }
+	*/
 
+	/*
 	public class NinjitsuMiniGump : ACCMiniGump
     {
 		public CSpellbook m_Book;
@@ -486,4 +491,100 @@ namespace Server.Gumps
         }
     }
 	*/
+	
+	public class MysticismMiniGump : ACCMiniGump
+    {
+		public CSpellbook m_Book;
+        public ArrayList m_Spells;
+		public override string TextHue { get { return "670404"; } }
+        public override int BGImage { get { return 2220; } }
+        public override int SpellBtn { get { return 2104; } }
+        public override int SpellBtnP { get { return 2103; } }
+        public override string Label3 { get { return "Mysticism"; } }
+        public override string Label4 { get { return "Spells"; } }
+        public override Type GumpType { get { return typeof(MysticismSpellbookGump); } }
+		public override School School { get { return School.Mysticism; } }
+
+        public MysticismMiniGump(CSpellbook book) : base(book)
+		{
+			m_Book = book;
+            m_Spells = book.SchoolSpells;
+			AddPage(0);
+			AddButton(95, 0, 11056, 11056, 1, GumpButtonType.Reply, 0);	//Mysticism Spellbook
+			AddImage(95, 0, 11056, 0);	//Blue diamond button
+            AddLabel(60, 48, 1166, "Mysticism Spellbook" );
+		}
+
+		public bool HasSpell(Type type)
+        {
+            return (m_Book != null && m_Book.HasSpell(type));
+        }
+
+		public override void OnResponse(NetState state, RelayInfo info)
+        {
+			Mobile m = state.Mobile;
+
+            if (info.ButtonID == 0 || !CSS.Running)
+                return;
+
+			else if (info.ButtonID == 1)
+			{
+                state.Mobile.CloseGump(typeof(MysticismMiniGump));
+                state.Mobile.SendGump(new MysticismSpellbookGump(m_Book));
+			}
+
+            object[] Params = new object[1] { m_Book };
+            CSpellbookGump gump = Activator.CreateInstance(GumpType, Params) as CSpellbookGump;
+            if (gump != null)
+                state.Mobile.SendGump(gump);
+        }
+    }
+	
+	public class SpellweavingMiniGump : ACCMiniGump
+    {
+		public CSpellbook m_Book;
+        public ArrayList m_Spells;
+		public override string TextHue { get { return "670404"; } }
+        public override int BGImage { get { return 11056; } }
+        public override int SpellBtn { get { return 2104; } }
+        public override int SpellBtnP { get { return 2103; } }
+        public override string Label3 { get { return "Spellweaving"; } }
+        public override string Label4 { get { return "Spells"; } }
+        public override Type GumpType { get { return typeof(SpellweavingSpellbookGump); } }
+		public override School School { get { return School.Spellweaving; } }
+
+        public SpellweavingMiniGump(CSpellbook book) : base(book)
+		{
+			m_Book = book;
+            m_Spells = book.SchoolSpells;
+			AddPage(0);
+			AddButton(95, 0, 11056, 11053, 1, GumpButtonType.Reply, 0);	//Spellweaving Spellbook
+			AddImage(95, 0, 11053, 0);	//Blue diamond button
+            AddLabel(56, 48, 1166, "Spellweaving Spellbook" );
+		}
+
+		public bool HasSpell(Type type)
+        {
+            return (m_Book != null && m_Book.HasSpell(type));
+        }
+
+		public override void OnResponse(NetState state, RelayInfo info)
+        {
+			Mobile m = state.Mobile;
+
+            if (info.ButtonID == 0 || !CSS.Running)
+                return;
+
+			else if (info.ButtonID == 1)
+			{
+                state.Mobile.CloseGump(typeof(SpellweavingMiniGump));
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
+			}
+
+            object[] Params = new object[1] { m_Book };
+            CSpellbookGump gump = Activator.CreateInstance(GumpType, Params) as CSpellbookGump;
+            if (gump != null)
+                state.Mobile.SendGump(gump);
+        }
+    }
 }

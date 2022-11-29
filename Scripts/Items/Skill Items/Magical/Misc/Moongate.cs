@@ -71,6 +71,13 @@ namespace Server.Items
 		[Constructable]
 		public Moongate( Point3D target, Map targetMap ) : base( 0xF6C )
 		{
+			#region UO-The Expanse
+			int Charged;
+			Charged = Utility.RandomMinMax( 1, 10 ); //Blue Charged Moongate
+			if ( Charged > 2 )
+				ItemID = 0x4A9C;
+			#endregion
+			
 			Movable = false;
 			Light = LightType.Circle300;
 
@@ -116,6 +123,11 @@ namespace Server.Items
 
 		public virtual void OnGateUsed( Mobile m )
 		{
+			#region UO-The Expanse
+			if ( this.ItemID == 0x4A9C || this.ItemID == 0x4A97 )
+				m.Stam = m.StamMax;
+				m.SendMessage("Your Stamina has been refreshed after using an overcharged Moongate!");
+			#endregion
 		}
 
 		public virtual void UseGate( Mobile m )

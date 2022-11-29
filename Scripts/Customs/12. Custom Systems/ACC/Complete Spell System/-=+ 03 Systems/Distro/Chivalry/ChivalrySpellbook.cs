@@ -7,6 +7,7 @@ namespace Server.ACC.CSS.Systems.Chivalry
 {
 	public class ChivalrySpellbook : CSpellbook
 	{
+		
 		public override School School{ get{ return School.Chivalry; } }
 /*		public override Item Dupe( int amount )
 		{
@@ -16,17 +17,17 @@ namespace Server.ACC.CSS.Systems.Chivalry
 		}
 */
 		[Constructable]
-		public ChivalrySpellbook() : this( (ulong)0, CSSettings.FullSpellbooks )
+		public ChivalrySpellbook( Mobile from ) : this( from, (ulong)0, CSSettings.FullSpellbooks )
 		{
 		}
 
 		[Constructable]
-		public ChivalrySpellbook( bool full ) : this( (ulong)0, full )
+		public ChivalrySpellbook( Mobile from, bool full ) : this( from, (ulong)0, full )
 		{
 		}
 
 		[Constructable]
-		public ChivalrySpellbook( ulong content, bool full ) : base( content, 0xEFA, full )
+		public ChivalrySpellbook( Mobile from, ulong content, bool full ) : base( content, 0xEFA, full )
 		{
 			ItemID = 8786;
 			Name = "Chivalry Spellbook";
@@ -51,7 +52,7 @@ namespace Server.ACC.CSS.Systems.Chivalry
 
 			from.CloseGump(typeof( ChivalrySpellbookGump ));
 			from.CloseGump(typeof( ChivMiniGump ));
-			from.SendGump( new ChivalrySpellbookGump( this ) );
+			from.SendGump( new ChivalrySpellbookGump( this, from ) );
 		}
 
 		public ChivalrySpellbook( Serial serial ) : base( serial )

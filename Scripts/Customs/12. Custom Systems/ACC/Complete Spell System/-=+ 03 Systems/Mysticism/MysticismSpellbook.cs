@@ -1,4 +1,5 @@
 using System;
+using Server.Gumps;
 using Server.Items;
 using Server.Spells;
 
@@ -42,6 +43,7 @@ namespace Server.ACC.CSS.Systems.Mysticism
 			}
 
 			from.CloseGump( typeof( MysticismSpellbookGump ) );
+			from.CloseGump(typeof( MysticismMiniGump ));
 			from.SendGump( new MysticismSpellbookGump( this ) );
 		}
 

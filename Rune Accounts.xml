@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StaffRunebook Version="110">
+	<RuneAccount Username="Admin">
+		<Runebook Name="Felucca">
+			<Runebook Name="Factions">
+				<Runebook Name="Towns">
+					<Rune Name="Britain" TargetMap="Felucca" X="1592" Y="1680" Z="10" />
+					<Rune Name="Magincia" TargetMap="Felucca" X="3714" Y="2235" Z="20" />
+					<Rune Name="Minoc" TargetMap="Felucca" X="2471" Y="439" Z="15" />
+					<Rune Name="Moonglow" TargetMap="Felucca" X="4436" Y="1083" Z="0" />
+					<Rune Name="Skara Brae" TargetMap="Felucca" X="576" Y="2200" Z="0" />
+					<Rune Name="Trinsic" TargetMap="Felucca" X="1914" Y="2717" Z="20" />
+					<Rune Name="Vesper" TargetMap="Felucca" X="2982" Y="818" Z="0" />
+					<Rune Name="Yew" TargetMap="Felucca" X="548" Y="979" Z="0" />
+				</Runebook>
+				<Rune Name="Council of Mages" TargetMap="Felucca" X="3750" Y="2241" Z="20" />
+				<Rune Name="Minax" TargetMap="Felucca" X="1172" Y="2593" Z="0" />
+				<Rune Name="Shadowlords" TargetMap="Felucca" X="969" Y="768" Z="0" />
+				<Rune Name="True Britannians" TargetMap="Felucca" X="1419" Y="1622" Z="20" />
+			</Runebook>
+			<Runebook Name="Dungeons">
+				<Runebook Name="Blighted Grove">
+					<Rune Name="Entrance" TargetMap="Felucca" X="586" Y="1643" Z="-5" />
+				</Runebook>
+				<Runebook Name="Covetous">
+					<Rune Name="Entrance" TargetMap="Felucca" X="2499" Y="919" Z="0" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5456" Y="1863" Z="0" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5614" Y="1997" Z="0" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="5579" Y="1924" Z="0" />
+					<Rune Name="Lake Cave" TargetMap="Felucca" X="5467" Y="1805" Z="7" />
+					<Rune Name="Torture Chambers" TargetMap="Felucca" X="5552" Y="1807" Z="0" />
+				</Runebook>
+				<Runebook Name="Deceit">
+					<Rune Name="Entrance" TargetMap="Felucca" X="4111" Y="432" Z="5" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5188" Y="638" Z="0" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5305" Y="533" Z="2" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="5137" Y="650" Z="5" />
+					<Rune Name="Level 4" TargetMap="Felucca" X="5306" Y="652" Z="2" />
+				</Runebook>
+				<Runebook Name="Despise">
+					<Rune Name="Entrance" TargetMap="Felucca" X="1298" Y="1080" Z="0" />
+					<Rune Name="Entryway" TargetMap="Felucca" X="5587" Y="631" Z="30" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5501" Y="570" Z="59" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5519" Y="673" Z="20" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="5407" Y="859" Z="45" />
+				</Runebook>
+				<Runebook Name="Destard">
+					<Rune Name="Entrance" TargetMap="Felucca" X="1176" Y="2637" Z="0" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5243" Y="1006" Z="0" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5143" Y="801" Z="4" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="5137" Y="986" Z="5" />
+				</Runebook>
+				<Runebook Name="Hythloth">
+					<Rune Name="Entrance" TargetMap="Felucca" X="4721" Y="3822" Z="0" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5905" Y="20" Z="46" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5976" Y="169" Z="0" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="6083" Y="145" Z="-20" />
+					<Rune Name="Level 4" TargetMap="Felucca" X="6059" Y="89" Z="24" />
+				</Runebook>
+				<Runebook Name="Shame">
+					<Rune Name="Entrance" TargetMap="Felucca" X="514" Y="1561" Z="0" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5395" Y="126" Z="0" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5515" Y="11" Z="5" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="5514" Y="148" Z="25" />
+					<Rune Name="Level 4" TargetMap="Felucca" X="5875" Y="20" Z="-5" />
+					<Rune Name="Spellcrafter Fortress" TargetMap="Felucca" X="5752" Y="63" Z="0" />
+				</Runebook>
+				<Runebook Name="Newbie Haven">
+					<Rune Name="Level 1" TargetMap="Felucca" X="5825" Y="630" Z="0" />
+				</Runebook>
+				<Runebook Name="Miscellaneous">
+					<Rune Name="Hythloth Fire Pit" TargetMap="Felucca" X="4596" Y="3630" Z="30" />
+					<Rune Name="Yew-Britain Brigand Camp" TargetMap="Felucca" X="885" Y="1682" Z="0" />
+					<Rune Name="Yew Fort of the Damned" TargetMap="Felucca" X="972" Y="768" Z="0" />
+				</Runebook>
+				<Runebook Name="Terathan Keep">
+					<Rune Name="Entrance" TargetMap="Felucca" X="5451" Y="3143" Z="-60" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5342" Y="1601" Z="0" />
+					<Rune Name="Champion Room" TargetMap="Felucca" X="5205" Y="1585" Z="0" />
+					<Rune Name="Starroom" TargetMap="Felucca" X="5139" Y="1767" Z="0" />
+				</Runebook>
+				<Runebook Name="Fire">
+					<Rune Name="Entrance" TargetMap="Felucca" X="5760" Y="2908" Z="15" />
+					<Rune Name="Brit Entrance" TargetMap="Felucca" X="2923" Y="3407" Z="8" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5790" Y="1416" Z="40" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5702" Y="1316" Z="1" />
+				</Runebook>
+				<Runebook Name="Ice">
+					<Rune Name="Entrance" TargetMap="Felucca" X="5210" Y="2322" Z="30" />
+					<Rune Name="Brit Entrance" TargetMap="Felucca" X="1999" Y="81" Z="4" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5875" Y="150" Z="15" />
+					<Rune Name="Ratman Room" TargetMap="Felucca" X="5834" Y="327" Z="18" />
+					<Rune Name="Ice Demon Lair" TargetMap="Felucca" X="5700" Y="305" Z="0" />
+				</Runebook>
+				<Runebook Name="Orc Cave">
+					<Rune Name="Entrance" TargetMap="Felucca" X="1019" Y="1431" Z="0" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5137" Y="2014" Z="0" />
+					<Rune Name="Level 2" TargetMap="Felucca" X="5332" Y="1376" Z="0" />
+					<Rune Name="Level 3" TargetMap="Felucca" X="5272" Y="2036" Z="0" />
+				</Runebook>
+				<Runebook Name="Painted Caves">
+					<Rune Name="Entrance" TargetMap="Felucca" X="1716" Y="2993" Z="0" />
+				</Runebook>
+				<Runebook Name="Palace of Paroxysmus">
+					<Rune Name="Entrance" TargetMap="Felucca" X="5576" Y="3018" Z="25" />
+				</Runebook>
+				<Runebook Name="Prism of Light">
+					<Rune Name="Entrance" TargetMap="Felucca" X="3784" Y="1097" Z="14" />
+					<Rune Name="Inside" TargetMap="Felucca" X="6474" Y="188" Z="0" />
+				</Runebook>
+				<Runebook Name="Sanctuary">
+					<Rune Name="Entrance" TargetMap="Felucca" X="764" Y="1646" Z="0" />
+				</Runebook>
+				<Runebook Name="Solen Hives">
+					<Runebook Name="Area A">
+						<Rune Name="Entrance" TargetMap="Felucca" X="729" Y="1451" Z="0" />
+						<Rune Name="Level 1" TargetMap="Felucca" X="5658" Y="1795" Z="3" />
+						<Rune Name="Level 2" TargetMap="Felucca" X="5726" Y="1891" Z="1" />
+					</Runebook>
+					<Runebook Name="Area B">
+						<Rune Name="Entrance" TargetMap="Felucca" X="2607" Y="763" Z="0" />
+						<Rune Name="Level 1" TargetMap="Felucca" X="5921" Y="1797" Z="1" />
+						<Rune Name="Level 2" TargetMap="Felucca" X="5875" Y="1866" Z="2" />
+					</Runebook>
+					<Runebook Name="Area C">
+						<Rune Name="Entrance" TargetMap="Felucca" X="1689" Y="2789" Z="0" />
+						<Rune Name="Level 1" TargetMap="Felucca" X="5659" Y="2022" Z="0" />
+						<Rune Name="Level 2" TargetMap="Felucca" X="5708" Y="1955" Z="0" />
+					</Runebook>
+					<Runebook Name="Area D">
+						<Rune Name="Entrance" TargetMap="Felucca" X="1723" Y="814" Z="0" />
+						<Rune Name="Level 1" TargetMap="Felucca" X="5916" Y="2019" Z="3" />
+						<Rune Name="Level 2" TargetMap="Felucca" X="5813" Y="2012" Z="-1" />
+					</Runebook>
+					<Runebook Name="Area E">
+						<Rune Name="Entrance" TargetMap="Felucca" X="5732" Y="1858" Z="0" />
+					</Runebook>
+					<Rune Name="Central Area" TargetMap="Felucca" X="5774" Y="1896" Z="20" />
+				</Runebook>
+				<Runebook Name="Khaldun">
+					<Rune Name="Entrance 1" TargetMap="Felucca" X="6009" Y="3775" Z="19" />
+					<Rune Name="Entrance 2" TargetMap="Felucca" X="5882" Y="3819" Z="-1" />
+					<Rune Name="Level 1" TargetMap="Felucca" X="5571" Y="1302" Z="0" />
+				</Runebook>
+				<Runebook Name="Slender Man">
+					<Rune Name="Mysterious Stranger #1 (XmlQuest NPC)" TargetMap="Felucca" X="612" Y="2235" Z="1" />
+					<Rune Name="Malas Dig Site #2" TargetMap="Malas" X="1254" Y="1411" Z="-95" />
+					<Rune Name="Travek #3 (XmlQuest NPC)" TargetMap="Malas" X="2033" Y="1316" Z="-84" />
+					<Rune Name="Blood Fens #4" TargetMap="Felucca" X="2054" Y="1072" Z="0" />
+					<Rune Name="Slender Map #5 (Main Area)" TargetMap="Felucca" X="6204" Y="775" Z="4" />
+					<Rune Name="Final Destination #6 (End Scene)" TargetMap="Felucca" X="6327" Y="731" Z="0" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Internal">
+				<Runebook Name="Jail Cells">
+					<Rune Name="Cell 1" TargetMap="Felucca" X="5276" Y="1164" Z="0" />
+					<Rune Name="Cell 2" TargetMap="Felucca" X="5286" Y="1164" Z="0" />
+					<Rune Name="Cell 3" TargetMap="Felucca" X="5296" Y="1164" Z="0" />
+					<Rune Name="Cell 4" TargetMap="Felucca" X="5306" Y="1164" Z="0" />
+					<Rune Name="Cell 5" TargetMap="Felucca" X="5276" Y="1174" Z="0" />
+					<Rune Name="Cell 6" TargetMap="Felucca" X="5286" Y="1174" Z="0" />
+					<Rune Name="Cell 7" TargetMap="Felucca" X="5286" Y="1174" Z="0" />
+					<Rune Name="Cell 8" TargetMap="Felucca" X="5306" Y="1174" Z="0" />
+					<Rune Name="Cell 9" TargetMap="Felucca" X="5283" Y="1184" Z="0" />
+					<Rune Name="Cell 10" TargetMap="Felucca" X="5304" Y="1184" Z="0" />
+				</Runebook>
+				<Runebook Name="Hue List">
+					<Rune Name="NW Corner" TargetMap="Felucca" X="5550" Y="1155" Z="0" />
+					<Rune Name="SW Corner" TargetMap="Felucca" X="5550" Y="1216" Z="0" />
+					<Rune Name="SE Corner" TargetMap="Felucca" X="5750" Y="1216" Z="0" />
+					<Rune Name="NE Corner" TargetMap="Felucca" X="5750" Y="1155" Z="0" />
+					<Rune Name="New Hues" TargetMap="Felucca" X="5638" Y="1214" Z="0" />
+				</Runebook>
+				<Rune Name="Green Acres" TargetMap="Felucca" X="5445" Y="1153" Z="0" />
+				<Rune Name="Custom Doors" TargetMap="Felucca" X="5402" Y="1154" Z="0" />
+				<Rune Name="Custom Walls" TargetMap="Felucca" X="5402" Y="1179" Z="0" />
+				<Rune Name="Custom Items" TargetMap="Felucca" X="5390" Y="1205" Z="0" />
+			</Runebook>
+			<Runebook Name="Shrines">
+				<Rune Name="Chaos" TargetMap="Felucca" X="1456" Y="854" Z="0" />
+				<Rune Name="Compassion" TargetMap="Felucca" X="1856" Y="872" Z="-1" />
+				<Rune Name="Honesty" TargetMap="Felucca" X="4217" Y="564" Z="36" />
+				<Rune Name="Honor" TargetMap="Felucca" X="1730" Y="3528" Z="3" />
+				<Rune Name="Humility" TargetMap="Felucca" X="4276" Y="3699" Z="0" />
+				<Rune Name="Justice" TargetMap="Felucca" X="1301" Y="639" Z="16" />
+				<Rune Name="Sacrifice" TargetMap="Felucca" X="3355" Y="299" Z="9" />
+				<Rune Name="Spirituality" TargetMap="Felucca" X="1589" Y="2485" Z="5" />
+				<Rune Name="Valor" TargetMap="Felucca" X="2496" Y="3932" Z="0" />
+			</Runebook>
+			<Runebook Name="Towns">
+				<Runebook Name="Britain">
+					<Rune Name="Blackthorn Castle" TargetMap="Felucca" X="1533" Y="1415" Z="56" />
+					<Rune Name="Blackthorn Entrance" TargetMap="Felucca" X="1523" Y="1456" Z="15" />
+					<Rune Name="British Castle" TargetMap="Felucca" X="1323" Y="1624" Z="55" />
+					<Rune Name="British Entrance" TargetMap="Felucca" X="1401" Y="1625" Z="28" />
+					<Rune Name="Cemetery" TargetMap="Felucca" X="1384" Y="1497" Z="10" />
+					<Rune Name="Center" TargetMap="Felucca" X="1475" Y="1645" Z="20" />
+					<Rune Name="Farmlands" TargetMap="Felucca" X="1228" Y="1705" Z="0" />
+					<Rune Name="Park" TargetMap="Felucca" X="1614" Y="1641" Z="35" />
+					<Rune Name="Suburbs" TargetMap="Felucca" X="1662" Y="1572" Z="5" />
+				</Runebook>
+				<Runebook Name="Buccaneers Den">
+					<Rune Name="Bathhouse" TargetMap="Felucca" X="2667" Y="2084" Z="5" />
+					<Rune Name="Docks" TargetMap="Felucca" X="2736" Y="2166" Z="0" />
+					<Rune Name="Tunnels" TargetMap="Felucca" X="2667" Y="2069" Z="-20" />
+					<Rune Name="The Wolf And Sword" TargetMap="Felucca" X="2603" Y="2203" Z="0" />
+				</Runebook>
+				<Runebook Name="Cove">
+					<Rune Name="Cemetery" TargetMap="Felucca" X="2443" Y="1123" Z="5" />
+					<Rune Name="Gates" TargetMap="Felucca" X="2285" Y="1209" Z="0" />
+					<Rune Name="Guard Post" TargetMap="Felucca" X="2218" Y="1116" Z="19" />
+					<Rune Name="Orc Fort" TargetMap="Felucca" X="2171" Y="1332" Z="0" />
+				</Runebook>
+				<Runebook Name="Jhelom">
+					<Rune Name="Cemetery" TargetMap="Felucca" X="1296" Y="3719" Z="0" />
+					<Rune Name="East Docks" TargetMap="Felucca" X="1492" Y="3696" Z="-3" />
+					<Rune Name="Fighting Pit" TargetMap="Felucca" X="1398" Y="3742" Z="-21" />
+					<Rune Name="Main Island" TargetMap="Felucca" X="1414" Y="3816" Z="0" />
+					<Rune Name="Medium Island" TargetMap="Felucca" X="1124" Y="3623" Z="5" />
+					<Rune Name="Small Island" TargetMap="Felucca" X="1466" Y="4015" Z="5" />
+				</Runebook>
+				<Runebook Name="Magincia">
+					<Rune Name="Bank" TargetMap="Felucca" X="3730" Y="2161" Z="20" />
+					<Rune Name="Docks" TargetMap="Felucca" X="3675" Y="2259" Z="20" />
+					<Rune Name="Park" TargetMap="Felucca" X="3719" Y="2063" Z="25" />
+					<Rune Name="Parliament" TargetMap="Felucca" X="3792" Y="2248" Z="20" />
+					<Rune Name="Obstacle Course" TargetMap="Felucca" X="3694" Y="2168" Z="20" />
+					<Rune Name="Chickenatron" TargetMap="Felucca" X="3613" Y="2138" Z="86" />
+				</Runebook>
+				<Runebook Name="Minoc">
+					<Rune Name="Bridge" TargetMap="Felucca" X="2539" Y="501" Z="30" />
+					<Rune Name="Gypsy Camp" TargetMap="Felucca" X="2540" Y="651" Z="0" />
+					<Rune Name="Mining Camp" TargetMap="Felucca" X="2583" Y="528" Z="15" />
+					<Rune Name="North" TargetMap="Felucca" X="2475" Y="417" Z="15" />
+					<Rune Name="South" TargetMap="Felucca" X="2526" Y="583" Z="0" />
+				</Runebook>
+				<Runebook Name="Moonglow">
+					<Rune Name="Cemetery" TargetMap="Felucca" X="4546" Y="1338" Z="8" />
+					<Rune Name="Center" TargetMap="Felucca" X="4442" Y="1122" Z="5" />
+					<Rune Name="Docks" TargetMap="Felucca" X="4406" Y="1045" Z="-2" />
+					<Rune Name="Telescope" TargetMap="Felucca" X="4707" Y="1124" Z="0" />
+					<Rune Name="Zoo" TargetMap="Felucca" X="4549" Y="1378" Z="8" />
+				</Runebook>
+				<Runebook Name="Nujel'm">
+					<Rune Name="Cemetery" TargetMap="Felucca" X="3536" Y="1156" Z="20" />
+					<Rune Name="Chess Board" TargetMap="Felucca" X="3728" Y="1360" Z="5" />
+					<Rune Name="Docks" TargetMap="Felucca" X="3803" Y="1279" Z="5" />
+					<Rune Name="East" TargetMap="Felucca" X="3755" Y="1227" Z="0" />
+					<Rune Name="North" TargetMap="Felucca" X="3668" Y="1116" Z="0" />
+					<Rune Name="Palace" TargetMap="Felucca" X="3698" Y="1279" Z="20" />
+					<Rune Name="West" TargetMap="Felucca" X="3572" Y="1211" Z="0" />
+				</Runebook>
+				<Runebook Name="Ocllo">
+					<Rune Name="Docks" TargetMap="Felucca" X="3650" Y="2653" Z="0" />
+					<Rune Name="Farmlands" TargetMap="Felucca" X="3722" Y="2647" Z="20" />
+					<Rune Name="North" TargetMap="Felucca" X="3650" Y="2516" Z="0" />
+				</Runebook>
+				<Runebook Name="Serpents Hold">
+					<Rune Name="North" TargetMap="Felucca" X="3023" Y="3417" Z="15" />
+					<Rune Name="South" TargetMap="Felucca" X="2906" Y="3505" Z="10" />
+					<Rune Name="Guard Post" TargetMap="Felucca" X="3011" Y="3526" Z="15" />
+					<Rune Name="Bulat The Dragon Slayer" TargetMap="Felucca" X="2968" Y="3407" Z="15" />
+				</Runebook>
+				<Runebook Name="Skara Brae">
+					<Rune Name="East" TargetMap="Felucca" X="811" Y="2243" Z="0" />
+					<Rune Name="East Docks" TargetMap="Felucca" X="716" Y="2233" Z="-3" />
+					<Rune Name="North" TargetMap="Felucca" X="746" Y="2165" Z="0" />
+					<Rune Name="South" TargetMap="Felucca" X="899" Y="2381" Z="0" />
+					<Rune Name="West" TargetMap="Felucca" X="601" Y="2171" Z="0" />
+					<Rune Name="West Docks" TargetMap="Felucca" X="639" Y="2236" Z="-3" />
+				</Runebook>
+				<Runebook Name="Trinsic">
+					<Rune Name="Center" TargetMap="Felucca" X="1927" Y="2779" Z="0" />
+					<Rune Name="East Docks" TargetMap="Felucca" X="2071" Y="2855" Z="-3" />
+					<Rune Name="Island Park" TargetMap="Felucca" X="2108" Y="2793" Z="2" />
+					<Rune Name="North" TargetMap="Felucca" X="1894" Y="2666" Z="0" />
+					<Rune Name="South" TargetMap="Felucca" X="1891" Y="2850" Z="20" />
+					<Rune Name="South Gate" TargetMap="Felucca" X="2000" Y="2930" Z="0" />
+					<Rune Name="West Gate" TargetMap="Felucca" X="1832" Y="2779" Z="0" />
+				</Runebook>
+				<Runebook Name="Vesper">
+					<Rune Name="Cemetery" TargetMap="Felucca" X="2786" Y="867" Z="0" />
+					<Rune Name="Center" TargetMap="Felucca" X="2882" Y="788" Z="0" />
+					<Rune Name="Docks" TargetMap="Felucca" X="3013" Y="828" Z="-3" />
+					<Rune Name="East" TargetMap="Felucca" X="2760" Y="981" Z="0" />
+					<Rune Name="North" TargetMap="Felucca" X="2907" Y="603" Z="0" />
+				</Runebook>
+				<Runebook Name="Wind">
+					<Rune Name="Caves" TargetMap="Felucca" X="5166" Y="244" Z="15" />
+					<Rune Name="East" TargetMap="Felucca" X="5336" Y="88" Z="15" />
+					<Rune Name="Entrance" TargetMap="Felucca" X="1362" Y="896" Z="0" />
+					<Rune Name="Park" TargetMap="Felucca" X="5211" Y="22" Z="15" />
+					<Rune Name="South" TargetMap="Felucca" X="5223" Y="189" Z="5" />
+					<Rune Name="West" TargetMap="Felucca" X="5180" Y="90" Z="25" />
+				</Runebook>
+				<Runebook Name="Yew">
+					<Rune Name="Cemetery" TargetMap="Felucca" X="724" Y="1138" Z="0" />
+					<Rune Name="Center" TargetMap="Felucca" X="535" Y="992" Z="0" />
+					<Rune Name="Courts and Prisons" TargetMap="Felucca" X="354" Y="836" Z="20" />
+					<Rune Name="Empath Abbey" TargetMap="Felucca" X="635" Y="860" Z="0" />
+					<Rune Name="Hidden Cave" TargetMap="Felucca" X="313" Y="787" Z="-24" />
+					<Rune Name="Orc Fort" TargetMap="Felucca" X="633" Y="1499" Z="0" />
+				</Runebook>
+				<Runebook Name="Delucia">
+					<Rune Name="Watch Tower" TargetMap="Felucca" X="5276" Y="3945" Z="37" />
+					<Rune Name="Center" TargetMap="Felucca" X="5228" Y="3978" Z="37" />
+					<Rune Name="Orc Fort" TargetMap="Felucca" X="5210" Y="3636" Z="3" />
+				</Runebook>
+				<Runebook Name="Papua">
+					<Rune Name="The Just Inn" TargetMap="Felucca" X="5769" Y="3176" Z="0" />
+					<Rune Name="Center" TargetMap="Felucca" X="5730" Y="3208" Z="-4" />
+					<Rune Name="Docks" TargetMap="Felucca" X="5825" Y="3256" Z="2" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Sites">
+				<Runebook Name="Wolf and Sword">
+					<Rune Name="Main Entrance (ext)" TargetMap="Felucca" X="2598" Y="2200" Z="41" />
+					<Rune Name="Tournament Announcer (XmlQuest NPC)" TargetMap="Felucca" X="2566" Y="2200" Z="40" />
+					<Rune Name="Second Floor - Grubbs (XmlQuest NPC)" TargetMap="Felucca" X="2569" Y="2192" Z="60" />
+				</Runebook>
+			</Runebook>
+		</Runebook>
+		<Runebook Name="Trammel">
+			<Runebook Name="Dungeons">
+				<Runebook Name="Blighted Grove">
+					<Rune Name="Entrance" TargetMap="Trammel" X="586" Y="1643" Z="-5" />
+				</Runebook>
+				<Runebook Name="Covetous">
+					<Rune Name="Entrance" TargetMap="Trammel" X="2499" Y="919" Z="0" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5456" Y="1863" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5614" Y="1997" Z="0" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5579" Y="1924" Z="0" />
+					<Rune Name="Lake Cave" TargetMap="Trammel" X="5467" Y="1805" Z="7" />
+					<Rune Name="Torture Chambers" TargetMap="Trammel" X="5552" Y="1807" Z="0" />
+				</Runebook>
+				<Runebook Name="Deceit">
+					<Rune Name="Entrance" TargetMap="Trammel" X="4111" Y="432" Z="5" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5188" Y="638" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5305" Y="533" Z="2" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5137" Y="650" Z="5" />
+					<Rune Name="Level 4" TargetMap="Trammel" X="5306" Y="652" Z="2" />
+				</Runebook>
+				<Runebook Name="Despise">
+					<Rune Name="Entrance" TargetMap="Trammel" X="1298" Y="1080" Z="0" />
+					<Rune Name="Entryway" TargetMap="Trammel" X="5587" Y="631" Z="30" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5501" Y="570" Z="59" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5519" Y="673" Z="20" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5407" Y="859" Z="45" />
+				</Runebook>
+				<Runebook Name="Destard">
+					<Rune Name="Entrance" TargetMap="Trammel" X="1176" Y="2637" Z="0" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5243" Y="1006" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5143" Y="801" Z="4" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5137" Y="986" Z="5" />
+				</Runebook>
+				<Runebook Name="Hythloth">
+					<Rune Name="Entrance" TargetMap="Trammel" X="4721" Y="3822" Z="0" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5905" Y="20" Z="46" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5976" Y="169" Z="0" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="6083" Y="145" Z="-20" />
+					<Rune Name="Level 4" TargetMap="Trammel" X="6059" Y="89" Z="24" />
+				</Runebook>
+				<Runebook Name="Shame">
+					<Rune Name="Entrance" TargetMap="Trammel" X="514" Y="1561" Z="0" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5395" Y="126" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5515" Y="11" Z="5" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5514" Y="148" Z="25" />
+					<Rune Name="Level 4" TargetMap="Trammel" X="5875" Y="20" Z="-5" />
+					<Rune Name="Spellcrafter Fort" TargetMap="Trammel" X="5752" Y="64" Z="0" />
+				</Runebook>
+				<Runebook Name="Wrong">
+					<Rune Name="Entrance" TargetMap="Trammel" X="2043" Y="238" Z="10" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5825" Y="630" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5690" Y="569" Z="25" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5703" Y="639" Z="0" />
+				</Runebook>
+				<Runebook Name="Miscellaneous">
+					<Rune Name="Hythloth Fire Pit" TargetMap="Trammel" X="4596" Y="3630" Z="30" />
+					<Rune Name="Yew-Britain Brigand Camp" TargetMap="Trammel" X="885" Y="1682" Z="0" />
+					<Rune Name="Yew Fort of the Damned" TargetMap="Trammel" X="972" Y="768" Z="0" />
+				</Runebook>
+				<Runebook Name="Terathan Keep">
+					<Rune Name="Entrance" TargetMap="Trammel" X="5451" Y="3143" Z="-60" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5342" Y="1601" Z="0" />
+					<Rune Name="Champion Room" TargetMap="Trammel" X="5205" Y="1585" Z="0" />
+					<Rune Name="Starroom" TargetMap="Trammel" X="5139" Y="1767" Z="0" />
+				</Runebook>
+				<Runebook Name="Fire">
+					<Rune Name="Entrance" TargetMap="Trammel" X="5760" Y="2908" Z="15" />
+					<Rune Name="Brit Entrance" TargetMap="Trammel" X="2923" Y="3407" Z="8" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5790" Y="1416" Z="40" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5702" Y="1316" Z="1" />
+				</Runebook>
+				<Runebook Name="Ice">
+					<Rune Name="Entrance" TargetMap="Trammel" X="5210" Y="2322" Z="30" />
+					<Rune Name="Brit Entrance" TargetMap="Trammel" X="1999" Y="81" Z="4" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5875" Y="150" Z="15" />
+					<Rune Name="Ratman Room" TargetMap="Trammel" X="5834" Y="327" Z="18" />
+					<Rune Name="Ice Demon Lair" TargetMap="Trammel" X="5700" Y="305" Z="0" />
+				</Runebook>
+				<Runebook Name="Orc Cave">
+					<Rune Name="Entrance" TargetMap="Trammel" X="1019" Y="1431" Z="0" />
+					<Rune Name="Level 1" TargetMap="Trammel" X="5137" Y="2014" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5332" Y="1376" Z="0" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5272" Y="2036" Z="0" />
+				</Runebook>
+				<Runebook Name="Painted Caves">
+					<Rune Name="Entrance" TargetMap="Trammel" X="1716" Y="2993" Z="0" />
+				</Runebook>
+				<Runebook Name="Prism of Light">
+					<Rune Name="Entrance" TargetMap="Trammel" X="3784" Y="1097" Z="14" />
+				</Runebook>
+				<Runebook Name="Sanctuary">
+					<Rune Name="Entrance" TargetMap="Trammel" X="764" Y="1646" Z="0" />
+				</Runebook>
+				<Runebook Name="Solen Hives">
+					<Runebook Name="Area A">
+						<Rune Name="Entrance" TargetMap="Trammel" X="729" Y="1451" Z="0" />
+						<Rune Name="Level 1" TargetMap="Trammel" X="5658" Y="1795" Z="3" />
+						<Rune Name="Level 2" TargetMap="Trammel" X="5726" Y="1891" Z="1" />
+					</Runebook>
+					<Runebook Name="Area B">
+						<Rune Name="Entrance" TargetMap="Trammel" X="2607" Y="763" Z="0" />
+						<Rune Name="Level 1" TargetMap="Trammel" X="5921" Y="1797" Z="1" />
+						<Rune Name="Level 2" TargetMap="Trammel" X="5875" Y="1866" Z="2" />
+					</Runebook>
+					<Runebook Name="Area C">
+						<Rune Name="Entrance" TargetMap="Trammel" X="1689" Y="2789" Z="0" />
+						<Rune Name="Level 1" TargetMap="Trammel" X="5659" Y="2022" Z="0" />
+						<Rune Name="Level 2" TargetMap="Trammel" X="5708" Y="1955" Z="0" />
+					</Runebook>
+					<Runebook Name="Area D">
+						<Rune Name="Entrance" TargetMap="Trammel" X="1723" Y="814" Z="0" />
+						<Rune Name="Level 1" TargetMap="Trammel" X="5916" Y="2019" Z="3" />
+						<Rune Name="Level 2" TargetMap="Trammel" X="5813" Y="2012" Z="-1" />
+					</Runebook>
+					<Runebook Name="Area E">
+						<Rune Name="Entrance" TargetMap="Trammel" X="5732" Y="1858" Z="0" />
+					</Runebook>
+					<Rune Name="Central Area" TargetMap="Trammel" X="5774" Y="1896" Z="20" />
+				</Runebook>
+				<Runebook Name="The Six">
+					<Rune Name="Entrance" TargetMap="Trammel" X="5221" Y="1857" Z="0" />
+					<Rune Name="Level 2" TargetMap="Trammel" X="5155" Y="1507" Z="0" />
+					<Rune Name="Level 3" TargetMap="Trammel" X="5223" Y="1727" Z="0" />
+				</Runebook>
+				<Runebook Name="Indiana Jones Dungeons">
+					<Rune Name="Empty Dungeon 1" TargetMap="Trammel" X="5224" Y="1291" Z="0" />
+					<Rune Name="Golden Idol Entrance" TargetMap="Trammel" X="1931" Y="3409" Z="0" />
+					<Rune Name="Zento Sake Tavern" TargetMap="Tokuno" X="678" Y="1222" Z="25" />
+					<Rune Name="Marion Spawner" TargetMap="Trammel" X="2683" Y="2244" Z="2" />
+					<Rune Name="Gomzul" TargetMap="Trammel" X="5746" Y="654" Z="0" />
+					<Rune Name="Black Dragoon Camp" TargetMap="Trammel" X="2843" Y="2112" Z="0" />
+					<Rune Name="German Ship Dock" TargetMap="Trammel" X="2970" Y="2142" Z="20" />
+					<Rune Name="Indian Village" TargetMap="Trammel" X="3667" Y="1061" Z="0" />
+					<Rune Name="Willie's Room" TargetMap="Trammel" X="3681" Y="1239" Z="20" />
+					<Rune Name="Temple of Doom" TargetMap="Trammel" X="6359" Y="1682" Z="44" />
+					<Rune Name="Great Waterfall" TargetMap="Trammel" X="1338" Y="536" Z="30" />
+					<Rune Name="Jhelom Library Basement" TargetMap="Trammel" X="1379" Y="3774" Z="-20" />
+					<Rune Name="Jhelom Library Crypt" TargetMap="Trammel" X="1381" Y="3777" Z="-41" />
+					<Rune Name="Grail Temple Entrance" TargetMap="Trammel" X="4377" Y="3380" Z="0" />
+					<Rune Name="Southern Corner" TargetMap="Trammel" X="6377" Y="1683" Z="0" />
+				</Runebook>
+				<Runebook Name="Newbie">
+					<Rune Name="Newbie Dungeon (ext gate)" TargetMap="Trammel" X="3508" Y="2778" Z="26" />
+					<Rune Name="Newbie Dungeon (int)" TargetMap="Trammel" X="5571" Y="1301" Z="0" />
+					<Rune Name="Newbie Dungeon (adv)" TargetMap="Trammel" X="5530" Y="1371" Z="0" />
+				</Runebook>
+				<Runebook Name="Palace of Paroxysmus">
+					<Rune Name="Entrance" TargetMap="Trammel" X="5576" Y="3018" Z="25" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Internal">
+				<Runebook Name="Jail Cells">
+					<Rune Name="Cell 1" TargetMap="Trammel" X="5276" Y="1164" Z="0" />
+					<Rune Name="Cell 2" TargetMap="Trammel" X="5286" Y="1164" Z="0" />
+					<Rune Name="Cell 3" TargetMap="Trammel" X="5296" Y="1164" Z="0" />
+					<Rune Name="Cell 4" TargetMap="Trammel" X="5306" Y="1164" Z="0" />
+					<Rune Name="Cell 5" TargetMap="Trammel" X="5276" Y="1174" Z="0" />
+					<Rune Name="Cell 6" TargetMap="Trammel" X="5286" Y="1174" Z="0" />
+					<Rune Name="Cell 7" TargetMap="Trammel" X="5286" Y="1174" Z="0" />
+					<Rune Name="Cell 8" TargetMap="Trammel" X="5306" Y="1174" Z="0" />
+					<Rune Name="Cell 9" TargetMap="Trammel" X="5283" Y="1184" Z="0" />
+					<Rune Name="Cell 10" TargetMap="Trammel" X="5304" Y="1184" Z="0" />
+				</Runebook>
+				<Rune Name="Green Acres" TargetMap="Trammel" X="5445" Y="1153" Z="0" />
+				<Rune Name="Green Acres Siege Area" TargetMap="Trammel" X="5563" Y="1167" Z="0" />
+				<Rune Name="Newbie Champ Spawn 1" TargetMap="Trammel" X="5323" Y="1114" Z="5" />
+				<Rune Name="Newbie Champ Spawn 2" TargetMap="Trammel" X="5337" Y="1052" Z="2" />
+				<Rune Name="Rainbow Mount Return Room" TargetMap="Trammel" X="5337" Y="1217" Z="0" />
+				<Rune Name="New Quest Giver" TargetMap="Trammel" X="5535" Y="1130" Z="0" />
+				<Rune Name="Online Store" TargetMap="Trammel" X="5444" Y="1113" Z="0" />
+				<Rune Name="Xmlspawner Training" TargetMap="Trammel" X="5473" Y="1109" Z="0" />
+			</Runebook>
+			<Runebook Name="Shrines">
+				<Rune Name="Chaos" TargetMap="Trammel" X="1456" Y="854" Z="0" />
+				<Rune Name="Compassion" TargetMap="Trammel" X="1856" Y="872" Z="-1" />
+				<Rune Name="Honesty" TargetMap="Trammel" X="4217" Y="564" Z="36" />
+				<Rune Name="Honor" TargetMap="Trammel" X="1730" Y="3528" Z="3" />
+				<Rune Name="Humility" TargetMap="Trammel" X="4276" Y="3699" Z="0" />
+				<Rune Name="Justice" TargetMap="Trammel" X="1301" Y="639" Z="16" />
+				<Rune Name="Sacrifice" TargetMap="Trammel" X="3355" Y="299" Z="9" />
+				<Rune Name="Spirituality" TargetMap="Trammel" X="1589" Y="2485" Z="5" />
+				<Rune Name="Valor" TargetMap="Trammel" X="2496" Y="3932" Z="0" />
+				<Rune Name="Evil Druids 1" TargetMap="Trammel" X="1579" Y="775" Z="0" />
+				<Rune Name="Evil Druids 2" TargetMap="Trammel" X="1831" Y="3443" Z="10" />
+				<Rune Name="Snow Steed" TargetMap="Trammel" X="4151" Y="601" Z="0" />
+			</Runebook>
+			<Runebook Name="Towns">
+				<Runebook Name="Britain">
+					<Rune Name="Blackthorn Castle" TargetMap="Trammel" X="1533" Y="1415" Z="56" />
+					<Rune Name="Blackthorn Entrance" TargetMap="Trammel" X="1523" Y="1456" Z="15" />
+					<Rune Name="British Castle" TargetMap="Trammel" X="1323" Y="1624" Z="55" />
+					<Rune Name="British Entrance" TargetMap="Trammel" X="1401" Y="1625" Z="28" />
+					<Rune Name="Cemetery" TargetMap="Trammel" X="1384" Y="1497" Z="10" />
+					<Rune Name="Center" TargetMap="Trammel" X="1475" Y="1645" Z="20" />
+					<Rune Name="Farmlands" TargetMap="Trammel" X="1228" Y="1705" Z="0" />
+					<Rune Name="Park" TargetMap="Trammel" X="1614" Y="1641" Z="35" />
+					<Rune Name="Suburbs" TargetMap="Trammel" X="1662" Y="1572" Z="5" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="1430" Y="1729" Z="20" />
+					<Rune Name="Sewers" TargetMap="Trammel" X="6032" Y="1499" Z="31" />
+					<Rune Name="Pumpkins" TargetMap="Felucca" X="1751" Y="1556" Z="22" />
+					<Rune Name="West Brit Bank" TargetMap="Trammel" X="1442" Y="1693" Z="0" />
+				</Runebook>
+				<Runebook Name="Buccaneers Den">
+					<Rune Name="Bathhouse" TargetMap="Trammel" X="2667" Y="2084" Z="5" />
+					<Rune Name="Docks" TargetMap="Trammel" X="2736" Y="2166" Z="0" />
+					<Rune Name="Tunnels" TargetMap="Trammel" X="2667" Y="2069" Z="-20" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="2683" Y="2236" Z="2" />
+					<Rune Name="Gold Nugget Trader" TargetMap="Trammel" X="2657" Y="2191" Z="4" />
+					<Rune Name="Eastern Bucs Den" TargetMap="Trammel" X="2843" Y="2112" Z="0" />
+					<Rune Name="Eastern Buc's Island" TargetMap="Trammel" X="2982" Y="2168" Z="0" />
+					<Rune Name="Maryann Spawner" TargetMap="Trammel" X="2683" Y="2244" Z="2" />
+				</Runebook>
+				<Runebook Name="Cove">
+					<Rune Name="Cemetery" TargetMap="Trammel" X="2443" Y="1123" Z="5" />
+					<Rune Name="Gates" TargetMap="Trammel" X="2285" Y="1209" Z="0" />
+					<Rune Name="Guard Post" TargetMap="Trammel" X="2218" Y="1116" Z="19" />
+					<Rune Name="Orc Fort" TargetMap="Trammel" X="2171" Y="1332" Z="0" />
+					<Rune Name="Kashya" TargetMap="Trammel" X="2268" Y="1206" Z="0" />
+				</Runebook>
+				<Runebook Name="Heartwood">
+					<Rune Name="Entrance" TargetMap="Trammel" X="6986" Y="340" Z="0" />
+				</Runebook>
+				<Runebook Name="Jhelom">
+					<Rune Name="Cemetery" TargetMap="Trammel" X="1296" Y="3719" Z="0" />
+					<Rune Name="East Docks" TargetMap="Trammel" X="1492" Y="3696" Z="-3" />
+					<Rune Name="Fighting Pit" TargetMap="Trammel" X="1398" Y="3742" Z="-21" />
+					<Rune Name="Main Island" TargetMap="Trammel" X="1414" Y="3816" Z="0" />
+					<Rune Name="Medium Island" TargetMap="Trammel" X="1124" Y="3623" Z="5" />
+					<Rune Name="Small Island" TargetMap="Trammel" X="1466" Y="4015" Z="5" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="1444" Y="3774" Z="0" />
+					<Rune Name="Library Ground Floor" TargetMap="Trammel" X="1382" Y="3777" Z="-20" />
+					<Rune Name="Library Basement" TargetMap="Trammel" X="1382" Y="3775" Z="-41" />
+				</Runebook>
+				<Runebook Name="Magincia">
+					<Rune Name="Bank" TargetMap="Trammel" X="3730" Y="2161" Z="20" />
+					<Rune Name="Docks" TargetMap="Trammel" X="3675" Y="2259" Z="20" />
+					<Rune Name="Park" TargetMap="Trammel" X="3719" Y="2063" Z="25" />
+					<Rune Name="Parliament" TargetMap="Trammel" X="3792" Y="2248" Z="20" />
+					<Rune Name="Dirt Patch" TargetMap="Trammel" X="3564" Y="2140" Z="31" />
+				</Runebook>
+				<Runebook Name="Minoc">
+					<Rune Name="Bridge" TargetMap="Trammel" X="2539" Y="501" Z="30" />
+					<Rune Name="Gypsy Camp" TargetMap="Trammel" X="2540" Y="651" Z="0" />
+					<Rune Name="Mining Camp" TargetMap="Trammel" X="2583" Y="528" Z="15" />
+					<Rune Name="North" TargetMap="Trammel" X="2475" Y="417" Z="15" />
+					<Rune Name="South" TargetMap="Trammel" X="2526" Y="583" Z="0" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="2476" Y="400" Z="15" />
+					<Rune Name="Vampire Quest" TargetMap="Trammel" X="2535" Y="656" Z="0" />
+				</Runebook>
+				<Runebook Name="Moonglow">
+					<Rune Name="Cemetery" TargetMap="Trammel" X="4546" Y="1338" Z="8" />
+					<Rune Name="Center" TargetMap="Trammel" X="4442" Y="1122" Z="5" />
+					<Rune Name="Docks" TargetMap="Trammel" X="4406" Y="1045" Z="-2" />
+					<Rune Name="Telescope" TargetMap="Trammel" X="4707" Y="1124" Z="0" />
+					<Rune Name="Zoo" TargetMap="Trammel" X="4549" Y="1378" Z="8" />
+					<Rune Name="Sheep Pen" TargetMap="Trammel" X="4563" Y="1477" Z="0" />
+					<Rune Name="Gallin (Spellcraft)" TargetMap="Trammel" X="4455" Y="1096" Z="0" />
+				</Runebook>
+				<Runebook Name="Nujel'm">
+					<Rune Name="Cemetery" TargetMap="Trammel" X="3536" Y="1156" Z="20" />
+					<Rune Name="Chess Board" TargetMap="Trammel" X="3728" Y="1360" Z="5" />
+					<Rune Name="Docks" TargetMap="Trammel" X="3803" Y="1279" Z="5" />
+					<Rune Name="East" TargetMap="Trammel" X="3755" Y="1227" Z="0" />
+					<Rune Name="North" TargetMap="Trammel" X="3668" Y="1116" Z="0" />
+					<Rune Name="Palace" TargetMap="Trammel" X="3698" Y="1279" Z="20" />
+					<Rune Name="West" TargetMap="Trammel" X="3572" Y="1211" Z="0" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="3767" Y="1228" Z="0" />
+					<Rune Name="The Home Deco" TargetMap="Trammel" X="3778" Y="1202" Z="0" />
+				</Runebook>
+				<Runebook Name="Haven">
+					<Rune Name="Old Haven" TargetMap="Trammel" X="3650" Y="2592" Z="0" />
+					<Rune Name="Old Haven North" TargetMap="Trammel" X="3650" Y="2516" Z="0" />
+					<Rune Name="New Haven" TargetMap="Trammel" X="3506" Y="2570" Z="14" />
+					<Rune Name="New Haven North" TargetMap="Trammel" X="3502" Y="2475" Z="34" />
+					<Rune Name="Farmlands" TargetMap="Trammel" X="3722" Y="2647" Z="20" />
+					<Rune Name="XMLSpawner" TargetMap="Trammel" X="3451" Y="2734" Z="49" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="3504" Y="2519" Z="27" />
+					<Rune Name="New Player Dungeon" TargetMap="Trammel" X="5556" Y="1307" Z="0" />
+					<Rune Name="New Player Dung Entrance" TargetMap="Trammel" X="3518" Y="2772" Z="9" />
+				</Runebook>
+				<Runebook Name="Serpents Hold">
+					<Rune Name="North" TargetMap="Trammel" X="3023" Y="3417" Z="15" />
+					<Rune Name="South" TargetMap="Trammel" X="2906" Y="3505" Z="10" />
+					<Rune Name="Guard Post" TargetMap="Trammel" X="3011" Y="3526" Z="15" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="2971" Y="3427" Z="15" />
+				</Runebook>
+				<Runebook Name="Skara Brae">
+					<Rune Name="East" TargetMap="Trammel" X="811" Y="2243" Z="0" />
+					<Rune Name="East Docks" TargetMap="Trammel" X="716" Y="2233" Z="-3" />
+					<Rune Name="North" TargetMap="Trammel" X="746" Y="2165" Z="0" />
+					<Rune Name="South" TargetMap="Trammel" X="899" Y="2381" Z="0" />
+					<Rune Name="West" TargetMap="Trammel" X="601" Y="2171" Z="0" />
+					<Rune Name="West Docks" TargetMap="Trammel" X="639" Y="2236" Z="-3" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="558" Y="2179" Z="0" />
+				</Runebook>
+				<Runebook Name="Trinsic">
+					<Rune Name="Center" TargetMap="Trammel" X="1927" Y="2779" Z="0" />
+					<Rune Name="East Docks" TargetMap="Trammel" X="2071" Y="2855" Z="-3" />
+					<Rune Name="Island Park" TargetMap="Trammel" X="2108" Y="2793" Z="2" />
+					<Rune Name="North" TargetMap="Trammel" X="1894" Y="2666" Z="0" />
+					<Rune Name="South" TargetMap="Trammel" X="1891" Y="2850" Z="20" />
+					<Rune Name="South Gate" TargetMap="Trammel" X="2000" Y="2930" Z="0" />
+					<Rune Name="West Gate" TargetMap="Trammel" X="1832" Y="2779" Z="0" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="1932" Y="2792" Z="0" />
+					<Rune Name="Vendor Camp" TargetMap="Trammel" X="1781" Y="2831" Z="0" />
+				</Runebook>
+				<Runebook Name="Vesper">
+					<Rune Name="Cemetery" TargetMap="Trammel" X="2786" Y="867" Z="0" />
+					<Rune Name="Center" TargetMap="Trammel" X="2882" Y="788" Z="0" />
+					<Rune Name="Docks" TargetMap="Trammel" X="3013" Y="828" Z="-3" />
+					<Rune Name="East" TargetMap="Trammel" X="2760" Y="981" Z="0" />
+					<Rune Name="North" TargetMap="Trammel" X="2907" Y="603" Z="0" />
+					<Rune Name="Round Table Knight" TargetMap="Trammel" X="2907" Y="907" Z="0" />
+					<Rune Name="Akara" TargetMap="Trammel" X="2915" Y="852" Z="0" />
+					<Rune Name="Marcus Brody" TargetMap="Trammel" X="2911" Y="969" Z="-21" />
+				</Runebook>
+				<Runebook Name="Wind">
+					<Rune Name="Caves" TargetMap="Trammel" X="5166" Y="244" Z="15" />
+					<Rune Name="East" TargetMap="Trammel" X="5336" Y="88" Z="15" />
+					<Rune Name="Entrance" TargetMap="Trammel" X="1362" Y="896" Z="0" />
+					<Rune Name="Park" TargetMap="Trammel" X="5211" Y="22" Z="15" />
+					<Rune Name="South" TargetMap="Trammel" X="5223" Y="189" Z="5" />
+					<Rune Name="West" TargetMap="Trammel" X="5180" Y="90" Z="25" />
+				</Runebook>
+				<Runebook Name="Yew">
+					<Rune Name="Cemetery" TargetMap="Trammel" X="724" Y="1138" Z="0" />
+					<Rune Name="Center" TargetMap="Trammel" X="535" Y="992" Z="0" />
+					<Rune Name="Courts and Prisons" TargetMap="Trammel" X="354" Y="836" Z="20" />
+					<Rune Name="Empath Abbey" TargetMap="Trammel" X="635" Y="860" Z="0" />
+					<Rune Name="Hidden Cave" TargetMap="Trammel" X="313" Y="787" Z="-24" />
+					<Rune Name="Orc Fort" TargetMap="Trammel" X="633" Y="1499" Z="0" />
+				</Runebook>
+				<Runebook Name="Delucia">
+					<Rune Name="Watch Tower" TargetMap="Trammel" X="5276" Y="3945" Z="37" />
+					<Rune Name="Center" TargetMap="Trammel" X="5228" Y="3978" Z="37" />
+					<Rune Name="Orc Fort" TargetMap="Trammel" X="5210" Y="3636" Z="3" />
+				</Runebook>
+				<Runebook Name="Papua">
+					<Rune Name="The Just Inn" TargetMap="Trammel" X="5769" Y="3176" Z="0" />
+					<Rune Name="Center" TargetMap="Trammel" X="5730" Y="3208" Z="-4" />
+					<Rune Name="Docks" TargetMap="Trammel" X="5825" Y="3256" Z="2" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Sites">
+				<Runebook Name="Swamp Queen">
+					<Rune Name="Old Salty" TargetMap="Trammel" X="2664" Y="2236" Z="2" />
+					<Rune Name="Mother Nature" TargetMap="Trammel" X="5249" Y="81" Z="9" />
+					<Rune Name="Capt Jack" TargetMap="Trammel" X="2187" Y="1417" Z="-2" />
+					<Rune Name="Swamp Queen" TargetMap="Malas" X="576" Y="773" Z="-94" />
+				</Runebook>
+				<Runebook Name="Chuckles Candy Capers">
+					<Rune Name="Main" TargetMap="Trammel" X="3551" Y="2559" Z="14" />
+				</Runebook>
+				<Runebook Name="Seasonal Spawns">
+					<Rune Name="Humbug - Rare Tame" TargetMap="Trammel" X="1977" Y="266" Z="8" />
+					<Rune Name="Humbug #2 - Rare Tame" TargetMap="Trammel" X="4051" Y="440" Z="3" />
+					<Rune Name="Santa's Workshop" TargetMap="Trammel" X="4182" Y="420" Z="5" />
+				</Runebook>
+				<Rune Name="Player Vendor Mall" TargetMap="Trammel" X="4560" Y="2301" Z="-2" />
+			</Runebook>
+		</Runebook>
+		<Runebook Name="Ilshenar">
+			<Runebook Name="Cities">
+				<Runebook Name="Ancient Citadel">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1518" Y="568" Z="-14" />
+				</Runebook>
+				<Runebook Name="Gargoyle City">
+					<Rune Name="Bank" TargetMap="Ilshenar" X="852" Y="602" Z="-40" />
+					<Rune Name="Central Area" TargetMap="Ilshenar" X="836" Y="641" Z="-20" />
+				</Runebook>
+				<Runebook Name="Lakeshire">
+					<Rune Name="Central Area" TargetMap="Ilshenar" X="1203" Y="1124" Z="-25" />
+				</Runebook>
+				<Runebook Name="Mistas">
+					<Rune Name="Central Area" TargetMap="Ilshenar" X="820" Y="1073" Z="-30" />
+				</Runebook>
+				<Runebook Name="Montor">
+					<Rune Name="Central Area" TargetMap="Ilshenar" X="1643" Y="310" Z="48" />
+				</Runebook>
+				<Runebook Name="Req Volon">
+					<Rune Name="Central Area" TargetMap="Ilshenar" X="1362" Y="1073" Z="-13" />
+				</Runebook>
+				<Runebook Name="Savage Camp">
+					<Rune Name="Central Area" TargetMap="Ilshenar" X="1251" Y="743" Z="-80" />
+				</Runebook>
+				<Runebook Name="Terort Skitas">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="567" Y="437" Z="21" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Dungeons">
+				<Runebook Name="Ankh">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="576" Y="1150" Z="-100" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="155" Y="1482" Z="-28" />
+					<Rune Name="Kirin passage" TargetMap="Ilshenar" X="11" Y="874" Z="-28" />
+					<Rune Name="Serpentine Passage" TargetMap="Ilshenar" X="396" Y="1578" Z="-28" />
+				</Runebook>
+				<Runebook Name="Blood">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1747" Y="1228" Z="-1" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="2114" Y="834" Z="-28" />
+				</Runebook>
+				<Runebook Name="Exodus">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="835" Y="777" Z="-80" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="1974" Y="115" Z="-28" />
+				</Runebook>
+				<Runebook Name="Rock">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1788" Y="573" Z="70" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="2188" Y="318" Z="-7" />
+					<Rune Name="Level 2" TargetMap="Ilshenar" X="2188" Y="28" Z="-27" />
+				</Runebook>
+				<Runebook Name="Sorcerers">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="548" Y="462" Z="-53" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="428" Y="109" Z="-28" />
+					<Rune Name="Level 2" TargetMap="Ilshenar" X="240" Y="23" Z="-18" />
+					<Rune Name="Level 3" TargetMap="Ilshenar" X="272" Y="136" Z="-28" />
+					<Rune Name="Level 4" TargetMap="Ilshenar" X="132" Y="124" Z="-28" />
+					<Rune Name="Level 5" TargetMap="Ilshenar" X="236" Y="121" Z="-28" />
+				</Runebook>
+				<Runebook Name="Spectre">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1363" Y="1033" Z="-8" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="1982" Y="1103" Z="-28" />
+				</Runebook>
+				<Runebook Name="Wisp">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="651" Y="1302" Z="-58" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="627" Y="1525" Z="-28" />
+					<Rune Name="Level 2" TargetMap="Ilshenar" X="718" Y="1492" Z="-28" />
+					<Rune Name="Level 3" TargetMap="Ilshenar" X="832" Y="1551" Z="-28" />
+					<Rune Name="Level 4" TargetMap="Ilshenar" X="960" Y="1428" Z="-28" />
+					<Rune Name="Level 5" TargetMap="Ilshenar" X="942" Y="1465" Z="-33" />
+					<Rune Name="Level 6" TargetMap="Ilshenar" X="866" Y="1434" Z="-28" />
+					<Rune Name="Level 7" TargetMap="Ilshenar" X="807" Y="1548" Z="-28" />
+					<Rune Name="Level 8" TargetMap="Ilshenar" X="754" Y="1479" Z="-28" />
+				</Runebook>
+				<Runebook Name="Halloween">
+					<Rune Name="Brit Sewers Entrance" TargetMap="Trammel" X="6044" Y="1477" Z="5" />
+					<Rune Name="Main Entrance (int)" TargetMap="Ilshenar" X="1115" Y="1548" Z="-28" />
+					<Rune Name="Wigo Quest NPC" TargetMap="Ilshenar" X="1124" Y="1437" Z="12" />
+					<Rune Name="Wigo Dungeon (int)" TargetMap="Ilshenar" X="978" Y="1401" Z="44" />
+					<Rune Name="Wigo" TargetMap="Ilshenar" X="1033" Y="1401" Z="-26" />
+					<Rune Name="Friedy Quest NPC" TargetMap="Ilshenar" X="1105" Y="1412" Z="-23" />
+					<Rune Name="Friedy Dungeon (int)" TargetMap="Ilshenar" X="965" Y="1358" Z="42" />
+					<Rune Name="Friedy" TargetMap="Ilshenar" X="1019" Y="1358" Z="-28" />
+					<Rune Name="Sweety Person (ext gate)" TargetMap="Ilshenar" X="1063" Y="1514" Z="-21" />
+					<Rune Name="Sweety Person Dungeon (int)" TargetMap="Ilshenar" X="1711" Y="1390" Z="44" />
+					<Rune Name="Sweety Person" TargetMap="Ilshenar" X="1764" Y="1390" Z="-26" />
+					<Rune Name="The Horseman (ext gate)" TargetMap="Ilshenar" X="1083" Y="1514" Z="-21" />
+					<Rune Name="The Horseman Dungeon (int)" TargetMap="Ilshenar" X="1672" Y="1359" Z="44" />
+					<Rune Name="The Horseman" TargetMap="Ilshenar" X="1726" Y="1359" Z="-26" />
+				</Runebook>
+				<Runebook Name="Midnight Coven">
+					<Rune Name="Blood Dungeon (ext gate)" TargetMap="Ilshenar" X="2113" Y="1033" Z="-30" />
+					<Rune Name="Charmaine Dungeon (int)" TargetMap="Ilshenar" X="1661" Y="1515" Z="47" />
+					<Rune Name="Wisp Dungeon (ext)" TargetMap="Ilshenar" X="651" Y="1304" Z="-59" />
+					<Rune Name="Midnight Coven Dungeon (ext gate)" TargetMap="Ilshenar" X="835" Y="1516" Z="-28" />
+					<Rune Name="Midnight Coven (int)" TargetMap="Ilshenar" X="1899" Y="1375" Z="29" />
+					<Rune Name="Midnight Coven Boss" TargetMap="Ilshenar" X="1821" Y="1368" Z="-13" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Caves">
+				<Runebook Name="Ancient Lair">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="940" Y="504" Z="-30" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="85" Y="746" Z="-28" />
+				</Runebook>
+				<Runebook Name="Lizard Passage">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="314" Y="1334" Z="-36" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="329" Y="1589" Z="-18" />
+					<Rune Name="Level 2" TargetMap="Ilshenar" X="227" Y="1337" Z="-18" />
+				</Runebook>
+				<Runebook Name="Mushroom Cave">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1459" Y="1329" Z="-24" />
+				</Runebook>
+				<Runebook Name="Rat Cave">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1034" Y="1153" Z="-23" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="1348" Y="1510" Z="-3" />
+					<Rune Name="Level 2" TargetMap="Ilshenar" X="1247" Y="1511" Z="-28" />
+				</Runebook>
+				<Runebook Name="Spider Cave">
+					<Rune Name="Entrance" TargetMap="Ilshenar" X="1421" Y="913" Z="-19" />
+					<Rune Name="Level 1" TargetMap="Ilshenar" X="1786" Y="991" Z="-28" />
+					<Rune Name="Level 2" TargetMap="Ilshenar" X="1517" Y="877" Z="10" />
+					<Rune Name="Ethereal Keep" TargetMap="Ilshenar" X="1365" Y="1102" Z="-26" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Shrines">
+				<Rune Name="Compassion" TargetMap="Ilshenar" X="1217" Y="469" Z="-13" />
+				<Rune Name="Honesty" TargetMap="Ilshenar" X="720" Y="1356" Z="-60" />
+				<Rune Name="Honor" TargetMap="Ilshenar" X="748" Y="728" Z="-29" />
+				<Rune Name="Humility" TargetMap="Ilshenar" X="287" Y="1016" Z="0" />
+				<Rune Name="Justice" TargetMap="Ilshenar" X="987" Y="1007" Z="-35" />
+				<Rune Name="Sacrifice" TargetMap="Ilshenar" X="1175" Y="1287" Z="-30" />
+				<Rune Name="Spirituality" TargetMap="Ilshenar" X="1532" Y="1341" Z="-3" />
+				<Rune Name="Valor" TargetMap="Ilshenar" X="527" Y="218" Z="-44" />
+			</Runebook>
+			<Runebook Name="Sites">
+				<Runebook Name="Rentals">
+					<Rune Name="Mountain Townhouse" TargetMap="Ilshenar" X="1069" Y="1052" Z="66" />
+				</Runebook>
+			</Runebook>
+		</Runebook>
+		<Runebook Name="Malas">
+			<Runebook Name="Towns">
+				<Runebook Name="Luna">
+					<Rune Name="Luna Moongate" TargetMap="Malas" X="1015" Y="527" Z="-65" />
+					<Rune Name="Luna Bank" TargetMap="Malas" X="991" Y="519" Z="-50" />
+					<Rune Name="Clothier's Colors" TargetMap="Malas" X="976" Y="527" Z="-50" />
+					<Rune Name="Grand Arena" TargetMap="Malas" X="961" Y="638" Z="-90" />
+					<Rune Name="Hardwoods and More" TargetMap="Malas" X="1002" Y="512" Z="-50" />
+					<Rune Name="Paladin's Stopover" TargetMap="Malas" X="1005" Y="519" Z="-30" />
+					<Rune Name="Proud Bridle" TargetMap="Malas" X="1023" Y="503" Z="-70" />
+					<Rune Name="Open Market" TargetMap="Malas" X="992" Y="512" Z="-50" />
+					<Rune Name="Sage's Refuge" TargetMap="Malas" X="1002" Y="527" Z="-50" />
+					<Rune Name="Shining Blades" TargetMap="Malas" X="976" Y="512" Z="-50" />
+					<Rune Name="Shrine of Wisdom" TargetMap="Malas" X="976" Y="510" Z="-30" />
+					<Rune Name="Vault of Secrets" TargetMap="Malas" X="1072" Y="457" Z="-90" />
+				</Runebook>
+				<Runebook Name="Umbra">
+					<Rune Name="Umbra Moongate" TargetMap="Malas" X="1998" Y="1387" Z="-85" />
+					<Rune Name="Umbra Bridge" TargetMap="Malas" X="1941" Y="1321" Z="-88" />
+					<Rune Name="Armoury of Souls" TargetMap="Malas" X="1984" Y="1367" Z="-80" />
+					<Rune Name="Bloodletter's Guild" TargetMap="Malas" X="2084" Y="1372" Z="-75" />
+					<Rune Name="Critter Pens" TargetMap="Malas" X="1992" Y="1326" Z="-90" />
+					<Rune Name="Darkweave" TargetMap="Malas" X="2079" Y="1338" Z="-81" />
+					<Rune Name="Ghast Refectory" TargetMap="Malas" X="2017" Y="1354" Z="-90" />
+					<Rune Name="Gravedigger's Apparatus" TargetMap="Malas" X="2016" Y="1328" Z="-80" />
+					<Rune Name="Lich's Hoard" TargetMap="Malas" X="2051" Y="1398" Z="-90" />
+					<Rune Name="Necromancer Ampitheater" TargetMap="Malas" X="2024" Y="1383" Z="-80" />
+					<Rune Name="Skeleton Swill" TargetMap="Malas" X="2030" Y="1350" Z="-90" />
+					<Rune Name="Wailing Banshee Inn" TargetMap="Malas" X="2039" Y="1317" Z="-84" />
+					<Rune Name="Warped Woodworks" TargetMap="Malas" X="2066" Y="1288" Z="-80" />
+				</Runebook>
+				<Runebook Name="Gomzul">
+					<Rune Name="Entrance (ext gate)" TargetMap="Malas" X="932" Y="594" Z="-90" />
+					<Rune Name="Jonesy Ford" TargetMap="Trammel" X="5739" Y="712" Z="2" />
+					<Rune Name="Bank" TargetMap="Trammel" X="5757" Y="688" Z="0" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Dungeons">
+				<Runebook Name="Doom">
+					<Rune Name="Entrance" TargetMap="Malas" X="2367" Y="1268" Z="-85" />
+					<Rune Name="Tunnel" TargetMap="Malas" X="2352" Y="1267" Z="-110" />
+					<Rune Name="Inside" TargetMap="Malas" X="381" Y="133" Z="33" />
+					<Rune Name="Gauntlet" TargetMap="Malas" X="433" Y="331" Z="-2" />
+					<Rune Name="Guardian's Room" TargetMap="Malas" X="365" Y="15" Z="-1" />
+					<Rune Name="Lamp Room" TargetMap="Malas" X="470" Y="95" Z="-1" />
+					<Rune Name="Nix's Shop" TargetMap="Malas" X="486" Y="368" Z="-1" />
+				</Runebook>
+				<Runebook Name="Greek Underworld">
+					<Runebook Name="Res Points">
+						<Rune Name="#1" TargetMap="Malas" X="850" Y="1799" Z="-95" />
+						<Rune Name="#2" TargetMap="Malas" X="870" Y="1773" Z="-95" />
+						<Rune Name="#3" TargetMap="Malas" X="893" Y="1755" Z="-95" />
+						<Rune Name="#4" TargetMap="Malas" X="918" Y="1738" Z="-95" />
+						<Rune Name="#5" TargetMap="Malas" X="938" Y="1720" Z="-95" />
+						<Rune Name="#6" TargetMap="Malas" X="957" Y="1705" Z="-95" />
+					</Runebook>
+					<Rune Name="Entry" TargetMap="Malas" X="610" Y="1933" Z="-90" />
+					<Rune Name="Cocytus Area" TargetMap="Malas" X="791" Y="1913" Z="-90" />
+					<Rune Name="Lethe Area" TargetMap="Malas" X="927" Y="1878" Z="-90" />
+					<Rune Name="Pyriphlegethon Area" TargetMap="Malas" X="1065" Y="1823" Z="-90" />
+					<Rune Name="Tartarus Area" TargetMap="Malas" X="1167" Y="1815" Z="-90" />
+					<Rune Name="Hades Area" TargetMap="Malas" X="1319" Y="1993" Z="-95" />
+				</Runebook>
+				<Runebook Name="Black Pyramid">
+					<Rune Name="XmlQuest NPC" TargetMap="Malas" X="1639" Y="1509" Z="-110" />
+					<Rune Name="Pyramid Center" TargetMap="Malas" X="1623" Y="1510" Z="-104" />
+					<Rune Name="Crypt" TargetMap="Trammel" X="6204" Y="920" Z="1" />
+				</Runebook>
+				<Runebook Name="Death Maw">
+					<Rune Name="Teleporter Room" TargetMap="Felucca" X="5134" Y="1131" Z="1" />
+					<Rune Name="Spider Wing" TargetMap="Felucca" X="5231" Y="1076" Z="1" />
+					<Rune Name="Undead Wing" TargetMap="Felucca" X="5286" Y="1062" Z="0" />
+					<Rune Name="Elemental Wing" TargetMap="Felucca" X="5174" Y="1137" Z="1" />
+					<Rune Name="Gargoyle Wing" TargetMap="Felucca" X="5176" Y="1208" Z="0" />
+					<Rune Name="Dragon Wing" TargetMap="Felucca" X="5241" Y="1261" Z="0" />
+					<Rune Name="Fey Wing" TargetMap="Felucca" X="5327" Y="1176" Z="0" />
+					<Rune Name="Demon Wing" TargetMap="Felucca" X="5147" Y="1263" Z="0" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Sites">
+				<Runebook Name="Points of Interest">
+					<Rune Name="Broken Mountains" TargetMap="Malas" X="1111" Y="1461" Z="-90" />
+					<Rune Name="Corrupted Forest" TargetMap="Malas" X="2172" Y="1144" Z="-87" />
+					<Rune Name="Crumbling Continent" TargetMap="Malas" X="736" Y="1180" Z="-95" />
+					<Rune Name="Crystal Fens" TargetMap="Malas" X="1388" Y="616" Z="-85" />
+					<Rune Name="Divide of the Abyss" TargetMap="Malas" X="1545" Y="877" Z="-85" />
+					<Rune Name="Dry Highlands" TargetMap="Malas" X="2128" Y="1668" Z="-90" />
+					<Rune Name="Forgotten Pyramid" TargetMap="Malas" X="1825" Y="1799" Z="-50" />
+					<Rune Name="Gravewater Lake" TargetMap="Malas" X="1596" Y="1656" Z="-115" />
+					<Rune Name="Grimswind Ruins" TargetMap="Malas" X="2192" Y="330" Z="-90" />
+					<Rune Name="Northern Crags" TargetMap="Malas" X="1580" Y="384" Z="-50" />
+					<Rune Name="Orc Fortress" TargetMap="Malas" X="1340" Y="1226" Z="-90" />
+					<Rune Name="Hanse's Hostel" TargetMap="Malas" X="1065" Y="1435" Z="-90" />
+					<Rune Name="Rope Bridge" TargetMap="Malas" X="2103" Y="389" Z="-70" />
+					<Rune Name="Rainbow Mount Zoo (int)" TargetMap="Malas" X="694" Y="277" Z="-94" />
+					<Rune Name="Rainbow Mount Taming Area (int)" TargetMap="Malas" X="588" Y="311" Z="-95" />
+				</Runebook>
+				<Runebook Name="Caves and Mines">
+					<Rune Name="Mine 1" TargetMap="Malas" X="2082" Y="574" Z="-90" />
+					<Rune Name="Mine 2" TargetMap="Malas" X="2157" Y="456" Z="-90" />
+					<Rune Name="Mine 3" TargetMap="Malas" X="1811" Y="359" Z="-90" />
+					<Rune Name="Mine 4" TargetMap="Malas" X="1790" Y="475" Z="-90" />
+					<Rune Name="Mine 5" TargetMap="Malas" X="1628" Y="432" Z="-86" />
+					<Rune Name="Mine 6" TargetMap="Malas" X="1658" Y="304" Z="-90" />
+					<Rune Name="Mine 7" TargetMap="Malas" X="1071" Y="247" Z="-90" />
+					<Rune Name="Mine 8" TargetMap="Malas" X="1095" Y="197" Z="-90" />
+					<Rune Name="Mine 9" TargetMap="Malas" X="1195" Y="511" Z="-90" />
+				</Runebook>
+				<Runebook Name="Orc Forts">
+					<Rune Name="Fort 1" TargetMap="Malas" X="912" Y="193" Z="-79" />
+					<Rune Name="Fort 2" TargetMap="Malas" X="1666" Y="362" Z="-50" />
+					<Rune Name="Fort 3" TargetMap="Malas" X="1364" Y="599" Z="-86" />
+					<Rune Name="Fort 4" TargetMap="Malas" X="1205" Y="705" Z="-88" />
+					<Rune Name="Fort 5" TargetMap="Malas" X="1257" Y="1331" Z="-90" />
+					<Rune Name="Fort 6" TargetMap="Malas" X="1598" Y="1825" Z="-110" />
+				</Runebook>
+			</Runebook>
+		</Runebook>
+		<Runebook Name="Tokuno">
+			<Runebook Name="Towns">
+				<Runebook Name="Zento">
+					<Rune Name="Zento Moongate" TargetMap="Tokuno" X="802" Y="1204" Z="25" />
+					<Rune Name="Zento Bank" TargetMap="Tokuno" X="735" Y="1255" Z="30" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Dungeons">
+				<Runebook Name="Fan Dancer's Dojo">
+					<Rune Name="Entrance" TargetMap="Tokuno" X="977" Y="218" Z="23" />
+				</Runebook>
+				<Runebook Name="Yomotsu Mines">
+					<Rune Name="Entrance" TargetMap="Tokuno" X="259" Y="785" Z="64" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Sites">
+				<Runebook Name="Makoto-Jima">
+					<Rune Name="Moongate" TargetMap="Tokuno" X="802" Y="1204" Z="25" />
+					<Rune Name="Shrine" TargetMap="Tokuno" X="718" Y="1161" Z="25" />
+					<Rune Name="The Waste" TargetMap="Tokuno" X="724" Y="943" Z="42" />
+				</Runebook>
+				<Runebook Name="Isamu-Jima">
+					<Rune Name="Moongate" TargetMap="Tokuno" X="1169" Y="998" Z="41" />
+					<Rune Name="Shrine" TargetMap="Tokuno" X="1047" Y="512" Z="15" />
+					<Rune Name="Lotus Lakes" TargetMap="Tokuno" X="1066" Y="817" Z="20" />
+					<Rune Name="Mount Sho" TargetMap="Tokuno" X="1159" Y="696" Z="70" />
+					<Rune Name="Dragon Valley" TargetMap="Tokuno" X="948" Y="432" Z="8" />
+					<Rune Name="Winter Spur" TargetMap="Tokuno" X="926" Y="162" Z="34" />
+				</Runebook>
+				<Runebook Name="Homare-Jima">
+					<Rune Name="Moongate" TargetMap="Tokuno" X="270" Y="628" Z="15" />
+					<Rune Name="Shrine" TargetMap="Tokuno" X="295" Y="712" Z="55" />
+					<Rune Name="Field of Echoes" TargetMap="Tokuno" X="160" Y="654" Z="36" />
+					<Rune Name="Crane Marsh" TargetMap="Tokuno" X="232" Y="1107" Z="10" />
+					<Rune Name="Bushido Dojo" TargetMap="Tokuno" X="334" Y="407" Z="32" />
+					<Rune Name="Kitsune Woods" TargetMap="Tokuno" X="523" Y="520" Z="32" />
+				</Runebook>
+				<Rune Name="Travesty" TargetMap="Malas" X="97" Y="1877" Z="0" />
+			</Runebook>
+			<Rune Name="Reward Shop" TargetMap="Tokuno" X="777" Y="1329" Z="25" />
+		</Runebook>
+		<Runebook Name="TerMur">
+			<Runebook Name="Towns">
+				<Runebook Name="Royal City">
+					<Rune Name="Royal City Moongate" TargetMap="TerMur" X="855" Y="3526" Z="-43" />
+				</Runebook>
+				<Runebook Name="Holy City">
+					<Rune Name="Holy City Moongate" TargetMap="TerMur" X="928" Y="3989" Z="-40" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Dungeons">
+				<Runebook Name="Tomb of Kings">
+					<Rune Name="Enterance" TargetMap="TerMur" X="997" Y="3843" Z="-41" />
+					<Rune Name="Gate to Stygian Abyss" TargetMap="TerMur" X="38" Y="29" Z="0" />
+				</Runebook>
+				<Runebook Name="Stygian Abyss">
+					<Rune Name="Exit to Tomb of Kings" TargetMap="TerMur" X="946" Y="71" Z="72" />
+					<Rune Name="Exit to Underworld" TargetMap="TerMur" X="521" Y="921" Z="36" />
+					<Rune Name="Abyssal Lair Entrance" TargetMap="TerMur" X="985" Y="366" Z="-11" />
+					<Rune Name="Cavern of the Discarded" TargetMap="TerMur" X="912" Y="501" Z="-12" />
+					<Rune Name="Clan Scratch" TargetMap="TerMur" X="959" Y="548" Z="-14" />
+					<Rune Name="Crimson Veins" TargetMap="TerMur" X="974" Y="164" Z="-11" />
+					<Rune Name="Enslaved Goblins" TargetMap="TerMur" X="581" Y="815" Z="-45" />
+					<Rune Name="Fairy Dragon Lair" TargetMap="TerMur" X="888" Y="277" Z="3" />
+					<Rune Name="Fire Temple Ruins" TargetMap="TerMur" X="519" Y="765" Z="-92" />
+					<Rune Name="Hydra" TargetMap="TerMur" X="793" Y="753" Z="53" />
+					<Rune Name="Lands of the Lich" TargetMap="TerMur" X="538" Y="656" Z="8" />
+					<Rune Name="Lava Caldera" TargetMap="TerMur" X="587" Y="895" Z="-73" />
+					<Rune Name="Medusa's Lair" TargetMap="TerMur" X="818" Y="755" Z="50" />
+					<Rune Name="Passage of Tears" TargetMap="TerMur" X="685" Y="579" Z="-15" />
+					<Rune Name="Secret Garden" TargetMap="TerMur" X="462" Y="719" Z="22" />
+					<Rune Name="Serpent Lair" TargetMap="TerMur" X="711" Y="720" Z="-11" />
+					<Rune Name="Silver Sapling" TargetMap="TerMur" X="341" Y="619" Z="26" />
+					<Rune Name="Stygian Dragon Lair Entrance" TargetMap="TerMur" X="851" Y="279" Z="-12" />
+					<Rune Name="Sutek the Mage" TargetMap="TerMur" X="924" Y="595" Z="-14" />
+					<Rune Name="Medusa Lair" TargetMap="TerMur" X="776" Y="934" Z="-5" />
+				</Runebook>
+				<Runebook Name="Underworld">
+					<Rune Name="Enterance" TargetMap="TerMur" X="1128" Y="1211" Z="-2" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Sites">
+				<Runebook Name="Regions">
+					<Rune Name="Atoll Bend" TargetMap="TerMur" X="1118" Y="3408" Z="-42" />
+					<Rune Name="Chicken Chase" TargetMap="TerMur" X="560" Y="3412" Z="37" />
+					<Rune Name="City Residential" TargetMap="TerMur" X="952" Y="3531" Z="-43" />
+					<Rune Name="Coral Desert" TargetMap="TerMur" X="1047" Y="2980" Z="62" />
+					<Rune Name="Fishermans Reach" TargetMap="TerMur" X="631" Y="3035" Z="36" />
+					<Rune Name="Gated Isle" TargetMap="TerMur" X="703" Y="3934" Z="-31" />
+					<Rune Name="High Plain" TargetMap="TerMur" X="863" Y="2931" Z="38" />
+					<Rune Name="Holy City Island" TargetMap="TerMur" X="996" Y="3905" Z="-42" />
+					<Rune Name="Kepetch Waste" TargetMap="TerMur" X="447" Y="3188" Z="20" />
+					<Rune Name="Lava Lake" TargetMap="TerMur" X="407" Y="3010" Z="-24" />
+					<Rune Name="Lavapit Pyramid" TargetMap="TerMur" X="740" Y="3691" Z="-43" />
+					<Rune Name="Lost Settlement" TargetMap="TerMur" X="526" Y="3822" Z="-44" />
+					<Rune Name="Northern Steppes" TargetMap="TerMur" X="822" Y="3063" Z="61" />
+					<Rune Name="Raptor Island" TargetMap="TerMur" X="816" Y="3778" Z="-42" />
+					<Rune Name="Royal Park" TargetMap="TerMur" X="711" Y="3255" Z="38" />
+					<Rune Name="Shrine of Singularity" TargetMap="TerMur" X="995" Y="3814" Z="-23" />
+					<Rune Name="Slith Valley" TargetMap="TerMur" X="1078" Y="3331" Z="-42" />
+					<Rune Name="Spider Island" TargetMap="TerMur" X="1115" Y="3730" Z="-42" />
+					<Rune Name="Spiders Guarde" TargetMap="TerMur" X="1109" Y="3606" Z="-45" />
+					<Rune Name="Talon Point" TargetMap="TerMur" X="676" Y="3831" Z="-39" />
+					<Rune Name="Treefellow Course" TargetMap="TerMur" X="570" Y="2936" Z="39" />
+					<Rune Name="Void Isle" TargetMap="TerMur" X="440" Y="3577" Z="38" />
+					<Rune Name="Walled Circus" TargetMap="TerMur" X="370" Y="3273" Z="0" />
+					<Rune Name="Waterfall Point" TargetMap="TerMur" X="661" Y="2894" Z="39" />
+				</Runebook>
+			</Runebook>
+		</Runebook>
+		<Runebook Name="Quests">
+			<Runebook Name="The Search for Kitty">
+				<Rune Name="Melsy (Xml Quest NPC)" TargetMap="Felucca" X="643" Y="939" Z="0" />
+				<Rune Name="Kitty" TargetMap="Felucca" X="799" Y="1220" Z="1" />
+			</Runebook>
+			<Rune Name="Monty Python" TargetMap="Trammel" X="1329" Y="1623" Z="50" />
+		</Runebook>
+		<Runebook Name="Champ Spawns">
+			<Rune Name="Despise Level 3 (Baracoon)" TargetMap="Felucca" X="5556" Y="823" Z="50" />
+			<Rune Name="Ilshenar Forest Lord" TargetMap="Ilshenar" X="1645" Y="1107" Z="-5" />
+			<Rune Name="Twisted Weald Glade Spawn" TargetMap="Ilshenar" X="2212" Y="1260" Z="8" />
+			<Rune Name="Ilshenar Humility Champ" TargetMap="Ilshenar" X="462" Y="926" Z="-87" />
+			<Rune Name="Ilshenar Valor Champ" TargetMap="Ilshenar" X="329" Y="384" Z="-60" />
+			<Rune Name="Fire Dungeon Fel Champ" TargetMap="Felucca" X="5815" Y="1352" Z="-14" />
+			<Rune Name="Terathan Keep Fel Champ" TargetMap="Felucca" X="5204" Y="1582" Z="5" />
+			<Rune Name="Destard Fel Champ" TargetMap="Felucca" X="5259" Y="838" Z="44" />
+			<Rune Name="Deceit Level 3 Fel Champ" TargetMap="Felucca" X="5179" Y="705" Z="5" />
+			<Rune Name="Tokuno Champ Spawn" TargetMap="Tokuno" X="948" Y="432" Z="8" />
+			<Rune Name="Bedlam Champ Spawn" TargetMap="Malas" X="174" Y="1629" Z="-5" />
+			<Rune Name="Fel Forest Lord" TargetMap="Felucca" X="5559" Y="3757" Z="7" />
+			<Rune Name="Champ Near Ice Dungeon" TargetMap="Felucca" X="5511" Y="2361" Z="25" />
+			<Rune Name="T2A Champ" TargetMap="Felucca" X="5549" Y="2640" Z="0" />
+			<Rune Name="T2A Champ" TargetMap="Felucca" X="5637" Y="2917" Z="22" />
+			<Rune Name="T2A Champ" TargetMap="Felucca" X="6035" Y="2944" Z="37" />
+			<Rune Name="T2A Champ" TargetMap="Felucca" X="5954" Y="3475" Z="10" />
+			<Rune Name="Newbie Champ #2" TargetMap="Trammel" X="5337" Y="1051" Z="0" />
+		</Runebook>
+		<Runebook Name="Star Wars">
+			<Runebook Name="Jedi Locations">
+				<Runebook Name="Crystal Caves Quest">
+					<Rune Name="Spawner 1" TargetMap="Malas" X="973" Y="755" Z="-90" />
+					<Rune Name="Spawner 3" TargetMap="Malas" X="971" Y="892" Z="-90" />
+					<Rune Name="Spawner 4" TargetMap="Malas" X="1002" Y="928" Z="-90" />
+					<Rune Name="Spawner 5" TargetMap="Malas" X="1051" Y="961" Z="-90" />
+					<Rune Name="Spawner 6" TargetMap="Malas" X="1033" Y="963" Z="-90" />
+					<Rune Name="Spawner 8" TargetMap="Malas" X="1073" Y="986" Z="-90" />
+					<Rune Name="Spawner 9" TargetMap="Malas" X="1096" Y="1009" Z="-90" />
+					<Rune Name="Spawner 10" TargetMap="Malas" X="1101" Y="1047" Z="-90" />
+					<Rune Name="Spawner 11" TargetMap="Malas" X="1070" Y="1045" Z="-90" />
+					<Rune Name="Spawner 12" TargetMap="Malas" X="1073" Y="1027" Z="-89" />
+				</Runebook>
+				<Runebook Name="Jedi Temple">
+					<Rune Name="2nd Floor - Main Entry" TargetMap="Malas" X="2393" Y="1954" Z="-94" />
+					<Rune Name="1st Floor - Lightsaber Forge" TargetMap="Malas" X="2323" Y="1945" Z="-93" />
+					<Rune Name="3rd Floor - Peerless Entry" TargetMap="Malas" X="2332" Y="1960" Z="-28" />
+					<Rune Name="4th Floor - Council Chambers" TargetMap="Malas" X="2325" Y="1954" Z="3" />
+				</Runebook>
+				<Runebook Name="Jedi Training Area">
+					<Rune Name="Trial #1 - Force Projection" TargetMap="Malas" X="2212" Y="1968" Z="-68" />
+					<Rune Name="Trial #2 - Cleanse &amp; Healing" TargetMap="Malas" X="2199" Y="1943" Z="-70" />
+					<Rune Name="Trial #3 - Force Weapon, Battle Med &amp; Be" TargetMap="Malas" X="2216" Y="1924" Z="-90" />
+					<Rune Name="Trial #4 - Force Stealth" TargetMap="Malas" X="2191" Y="1936" Z="-90" />
+					<Rune Name="Trial #5 - Shield" TargetMap="Malas" X="2188" Y="1930" Z="-70" />
+					<Rune Name="Trial #6 - Force Kinesis" TargetMap="Malas" X="2210" Y="1915" Z="-69" />
+				</Runebook>
+				<Runebook Name="Crystal Caves">
+					<Rune Name="Cave #1" TargetMap="Malas" X="1026" Y="966" Z="-89" />
+					<Rune Name="Cave #2" TargetMap="Malas" X="1073" Y="1027" Z="-89" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Exile Locations">
+				<Runebook Name="Crystal Caves">
+					<Rune Name="Cave #1" TargetMap="Malas" X="1330" Y="501" Z="-90" />
+					<Rune Name="Cave #2" TargetMap="Malas" X="1462" Y="494" Z="-89" />
+				</Runebook>
+				<Runebook Name="Exile Camp">
+					<Rune Name="Main Camp" TargetMap="Malas" X="1948" Y="1374" Z="-90" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Sith Locations">
+				<Runebook Name="Crystal Caves">
+					<Rune Name="Cave #1" TargetMap="Malas" X="1205" Y="1190" Z="-86" />
+					<Rune Name="Cave #2" TargetMap="Malas" X="2119" Y="1772" Z="-89" />
+				</Runebook>
+				<Runebook Name="Sith Temple">
+					<Runebook Name="Quests">
+						<Runebook Name="Gone Walkabout">
+							<Rune Name="Start" TargetMap="Trammel" X="6210" Y="1901" Z="16" />
+							<Rune Name="Step 2" TargetMap="Malas" X="563" Y="2026" Z="12" />
+						</Runebook>
+						<Runebook Name="Mysterious Package">
+							<Rune Name="Start" TargetMap="Malas" X="579" Y="2019" Z="102" />
+							<Rune Name="End" TargetMap="Felucca" X="5783" Y="3376" Z="-10" />
+						</Runebook>
+						<Runebook Name="Tainted Rations">
+							<Rune Name="Start" TargetMap="Malas" X="578" Y="2023" Z="102" />
+							<Rune Name="End" TargetMap="Felucca" X="5133" Y="2853" Z="70" />
+						</Runebook>
+						<Runebook Name="Rotworm Bile">
+							<Rune Name="Start" TargetMap="Malas" X="578" Y="2027" Z="102" />
+							<Rune Name="End" TargetMap="Felucca" X="6478" Y="874" Z="0" />
+						</Runebook>
+						<Runebook Name="Emperor's New Clothes">
+							<Rune Name="Start" TargetMap="Malas" X="564" Y="2005" Z="11" />
+						</Runebook>
+					</Runebook>
+					<Runebook Name="Freeze Points">
+						<Rune Name="SW Corner" TargetMap="Malas" X="622" Y="2041" Z="-95" />
+						<Rune Name="NW Corner" TargetMap="Malas" X="539" Y="1976" Z="120" />
+					</Runebook>
+					<Rune Name="1st Floor - Main Entrance" TargetMap="Malas" X="617" Y="2014" Z="-89" />
+					<Rune Name="2nd Floor - Lightsaber Forge" TargetMap="Malas" X="561" Y="2012" Z="-63" />
+					<Rune Name="3rd Floor - Master's Quarters" TargetMap="Trammel" X="6211" Y="1916" Z="15" />
+					<Rune Name="1st Floor Hidden North" TargetMap="Malas" X="610" Y="2006" Z="-85" />
+					<Rune Name="2nd Floor Walkway" TargetMap="Malas" X="591" Y="1995" Z="-20" />
+				</Runebook>
+				<Runebook Name="Sith Training Area">
+					<Rune Name="Trial #1 - Kinesis" TargetMap="Malas" X="649" Y="2045" Z="-42" />
+					<Rune Name="Trial #2 - Fear" TargetMap="Malas" X="648" Y="2018" Z="-54" />
+					<Rune Name="Trial #2 - Hidden Solution" TargetMap="Malas" X="645" Y="2011" Z="-51" />
+					<Rune Name="Trial #3 - Poison" TargetMap="Malas" X="661" Y="1987" Z="-17" />
+					<Rune Name="Trial #4 - Cleanse" TargetMap="Malas" X="667" Y="1993" Z="-33" />
+					<Rune Name="Trial #5 - Mind Trick" TargetMap="Malas" X="677" Y="1973" Z="-52" />
+					<Rune Name="Trial #6 - Stealth" TargetMap="Malas" X="661" Y="1959" Z="-85" />
+					<Rune Name="Trial #7 - Rememberance" TargetMap="Malas" X="686" Y="1957" Z="-85" />
+					<Rune Name="Trial #7 - Ending" TargetMap="Malas" X="711" Y="1948" Z="-81" />
+					<Rune Name="Trial #8 - Choke and Wound" TargetMap="Malas" X="702" Y="1928" Z="-85" />
+				</Runebook>
+				<Runebook Name="Crystal Caves Quest">
+					<Rune Name="#1" TargetMap="Malas" X="1253" Y="1331" Z="-90" />
+					<Rune Name="#2" TargetMap="Malas" X="1245" Y="1300" Z="-90" />
+					<Rune Name="#3" TargetMap="Malas" X="1218" Y="1185" Z="-90" />
+					<Rune Name="#4" TargetMap="Malas" X="2064" Y="1754" Z="-90" />
+				</Runebook>
+				<Runebook Name="Sith Valley">
+					<Rune Name="Entrance" TargetMap="Malas" X="1713" Y="383" Z="-50" />
+					<Rune Name="Naga Shadow Entrance" TargetMap="Malas" X="1683" Y="358" Z="-50" />
+					<Rune Name="Marka Ragnos Entrance" TargetMap="Malas" X="1763" Y="393" Z="-50" />
+				</Runebook>
+			</Runebook>
+			<Runebook Name="Naga Shadow">
+				<Rune Name="Main Entrance" TargetMap="Malas" X="1683" Y="357" Z="-50" />
+				<Rune Name="Entry Way" TargetMap="Malas" X="241" Y="180" Z="1" />
+				<Rune Name="Tomb Area" TargetMap="Malas" X="189" Y="161" Z="-1" />
+				<Rune Name="Corridor" TargetMap="Malas" X="175" Y="205" Z="-1" />
+				<Rune Name="Power Room" TargetMap="Malas" X="145" Y="153" Z="11" />
+				<Rune Name="Guard Room" TargetMap="Malas" X="160" Y="236" Z="14" />
+				<Rune Name="Dark Vortex Machine" TargetMap="Malas" X="170" Y="95" Z="2" />
+			</Runebook>
+			<Runebook Name="Marka Ragnos (Peerless)">
+				<Rune Name="Entry (Sith Valley ext)" TargetMap="Malas" X="1763" Y="395" Z="-50" />
+				<Rune Name="Main Entry (int)" TargetMap="Malas" X="152" Y="370" Z="0" />
+				<Rune Name="Reliquary (int)" TargetMap="Malas" X="171" Y="352" Z="0" />
+				<Rune Name="Crypt (int)" TargetMap="Malas" X="151" Y="339" Z="0" />
+				<Rune Name="Acklay (Acklay Silk key)" TargetMap="Malas" X="103" Y="186" Z="17" />
+				<Rune Name="Charnal House (Unhallowed Ash key)" TargetMap="Malas" X="57" Y="197" Z="30" />
+				<Rune Name="Lore Room (Mandalorian Strategem key)" TargetMap="Malas" X="92" Y="174" Z="97" />
+				<Rune Name="Disciple Area (Unholy Receptacle key)" TargetMap="Malas" X="70" Y="240" Z="25" />
+				<Rune Name="Peerless Entry (int)" TargetMap="Malas" X="182" Y="310" Z="28" />
+				<Rune Name="Master Phanius (Jedi Academy int)" TargetMap="Malas" X="2334" Y="1951" Z="-49" />
+			</Runebook>
+			<Runebook Name="Infestation Quest">
+				<Rune Name="Captain Ronis (Jedi Academy int)" TargetMap="Malas" X="2334" Y="1957" Z="-49" />
+				<Rune Name="Talarn's House" TargetMap="Felucca" X="735" Y="1162" Z="0" />
+				<Rune Name="Hennessy" TargetMap="Felucca" X="572" Y="1129" Z="0" />
+				<Rune Name="Sheriff" TargetMap="Felucca" X="536" Y="983" Z="0" />
+				<Rune Name="Talarn + Solen Ambush (ext)" TargetMap="Felucca" X="1056" Y="1464" Z="0" />
+			</Runebook>
+			<Runebook Name="Benefactor Quest">
+				<Rune Name="Deliver Barenth Herbs (ext)" TargetMap="Felucca" X="5769" Y="3164" Z="14" />
+				<Rune Name="Jedi Benefactors (Jedi Academy int)" TargetMap="Malas" X="2317" Y="1957" Z="-27" />
+				<Rune Name="Hermit - Food Package (ext)" TargetMap="Felucca" X="5136" Y="2853" Z="71" />
+			</Runebook>
+			<Runebook Name="A Piece of Their Mind Quest">
+				<Rune Name="Arrakis (Sith Temple int)" TargetMap="Malas" X="574" Y="1998" Z="-85" />
+			</Runebook>
+			<Runebook Name="Jar Jar Say Bye Bye Quest">
+				<Rune Name="Abraxis" TargetMap="Malas" X="558" Y="2012" Z="-85" />
+				<Rune Name="Jar Jar (Luna Palms 2nd Floor ext)" TargetMap="Malas" X="1007" Y="635" Z="-48" />
+			</Runebook>
+			<Runebook Name="The Emporer's Clothes">
+				<Rune Name="Milva the Seamstress (XmlQuest NPC)" TargetMap="Malas" X="558" Y="2020" Z="-85" />
+			</Runebook>
+			<Runebook Name="Vader Pieces">
+				<Rune Name="Reginald (XmlQuest NPC)" TargetMap="Malas" X="576" Y="2026" Z="-65" />
+			</Runebook>
+			<Runebook Name="Dark Council">
+				<Rune Name="Council Chambers #1 (Sith Temple int)" TargetMap="Malas" X="579" Y="2022" Z="102" />
+				<Rune Name="Mysterious Package Delivery (ext)" TargetMap="Felucca" X="5789" Y="3376" Z="-10" />
+				<Rune Name="Hermit - Poison" TargetMap="Felucca" X="5136" Y="2853" Z="71" />
+			</Runebook>
+		</Runebook>
+		<Runebook Name="Events">
+			<Runebook Name="Infestation">
+				<Rune Name="Sheriff" TargetMap="Felucca" X="536" Y="983" Z="0" />
+				<Rune Name="Infestation" TargetMap="Felucca" X="1056" Y="1464" Z="0" />
+				<Rune Name="Hennessy" TargetMap="Felucca" X="575" Y="1124" Z="0" />
+				<Rune Name="Talarn House" TargetMap="Felucca" X="728" Y="1160" Z="0" />
+				<Rune Name="Captain Ronis" TargetMap="Malas" X="2334" Y="1957" Z="-49" />
+			</Runebook>
+			<Runebook Name="Rungrin's Obstacle Course">
+				<Rune Name="Entrance" TargetMap="Felucca" X="3686" Y="2167" Z="20" />
+			</Runebook>
+			<Runebook Name="Skullball">
+				<Rune Name="Skullball Stands" TargetMap="Felucca" X="3702" Y="2208" Z="21" />
+				<Rune Name="Team Entry" TargetMap="Felucca" X="3714" Y="2208" Z="21" />
+			</Runebook>
+			<Runebook Name="-A-Tron Event">
+				<Rune Name="Entrance" TargetMap="Felucca" X="3599" Y="2160" Z="48" />
+			</Runebook>
+			<Runebook Name="Capture the Flag">
+				<Rune Name="Green Base" TargetMap="Felucca" X="3712" Y="2040" Z="5" />
+				<Rune Name="Blue Base" TargetMap="Felucca" X="3726" Y="2089" Z="5" />
+			</Runebook>
+			<Runebook Name="Dragon Head Trophies">
+				<Rune Name="Main Room" TargetMap="Felucca" X="2964" Y="3406" Z="15" />
+			</Runebook>
+			<Runebook Name="Wishbone Races">
+				<Rune Name="Entrance" TargetMap="Felucca" X="3564" Y="2154" Z="26" />
+				<Rune Name="Treasury" TargetMap="Felucca" X="6266" Y="1660" Z="0" />
+			</Runebook>
+			<Runebook Name="Chuckle Pit">
+				<Rune Name="Throne" TargetMap="Felucca" X="3569" Y="2137" Z="62" />
+			</Runebook>
+			<Runebook Name="Moonshine Runners">
+				<Rune Name="Start #1 (Brit Farms ext)" TargetMap="Trammel" X="1205" Y="1708" Z="0" />
+				<Rune Name="End #2 (Skara Brae boats)" TargetMap="Trammel" X="716" Y="2236" Z="-2" />
+				<Rune Name="Grubbins (Xml Quest NPC)" TargetMap="Trammel" X="1241" Y="1842" Z="0" />
+			</Runebook>
+			<Runebook Name="Shadowlords">
+				<Rune Name="Falsehood" TargetMap="Felucca" X="4539" Y="1494" Z="0" />
+				<Rune Name="Cowardice" TargetMap="Felucca" X="1140" Y="3614" Z="0" />
+			</Runebook>
+			<Runebook Name="Castle Shop">
+				<Rune Name="Main Entrance" TargetMap="Tokuno" X="450" Y="906" Z="-5" />
+			</Runebook>
+			<Rune Name="Bomberman" TargetMap="Malas" X="995" Y="718" Z="-90" />
+			<Rune Name="Battle Chess" TargetMap="Malas" X="996" Y="690" Z="-90" />
+			<Rune Name="Luna Palms Casino (ext)" TargetMap="Malas" X="995" Y="661" Z="-88" />
+			<Rune Name="Monster Smasher" TargetMap="Malas" X="1628" Y="1680" Z="-114" />
+		</Runebook>
+		<Runebook Name="Vampires &amp; Werewolves">
+			<Rune Name="Werewolf Lair" TargetMap="Felucca" X="6103" Y="1416" Z="4" />
+			<Rune Name="Vampire Lair" TargetMap="Trammel" X="4426" Y="3533" Z="7" />
+			<Rune Name="Werewolf Boss - Dorval" TargetMap="Felucca" X="5243" Y="1369" Z="10" />
+			<Rune Name="Vampire Boss" TargetMap="Felucca" X="5589" Y="1961" Z="7" />
+			<Rune Name="Vampire Ship (Transport)" TargetMap="Trammel" X="4767" Y="3448" Z="-1" />
+			<Rune Name="Von Melling (XmlQuest NPC)" TargetMap="Trammel" X="1515" Y="1445" Z="15" />
+			<Rune Name="Fresh Garlic (Tram)" TargetMap="Trammel" X="848" Y="1545" Z="0" />
+			<Rune Name="Fresh Garlic (Fel)" TargetMap="Felucca" X="848" Y="1545" Z="0" />
+			<Rune Name="Silver Ore (Tram)" TargetMap="Trammel" X="5781" Y="1898" Z="4" />
+			<Rune Name="Silver Ore (Fel)" TargetMap="Felucca" X="5783" Y="1898" Z="4" />
+			<Rune Name="Holy Water (Grail Room int)" TargetMap="Trammel" X="6292" Y="1463" Z="0" />
+			<Rune Name="Wolf and Sword (Pit Fighting)" TargetMap="Felucca" X="2595" Y="2201" Z="41" />
+		</Runebook>
+		<Runebook Name="Jonesy Ford">
+			<Runebook Name="Raiders">
+				<Rune Name="Maryann (XmlQuest NPC)" TargetMap="Trammel" X="2684" Y="2244" Z="2" />
+				<Rune Name="Black Dragoon Pirate Camp" TargetMap="Trammel" X="2834" Y="2117" Z="0" />
+				<Rune Name="Forgotten Pyramid (Jonesy Meeting ext)" TargetMap="Malas" X="1834" Y="1811" Z="-70" />
+				<Rune Name="Forgotten Pyramid (int)" TargetMap="Malas" X="1822" Y="1799" Z="-70" />
+				<Rune Name="Ark Room (int)" TargetMap="Malas" X="1811" Y="1786" Z="-110" />
+			</Runebook>
+			<Runebook Name="Palace of Gloom">
+				<Rune Name="Shao Che (Zento 3rd Floor int)" TargetMap="Tokuno" X="691" Y="1202" Z="69" />
+				<Rune Name="Shao Che (Zento 1st Floor int)" TargetMap="Tokuno" X="690" Y="1225" Z="25" />
+				<Rune Name="Jonesy (Zento Tavern ext)" TargetMap="Tokuno" X="677" Y="1222" Z="25" />
+				<Rune Name="Golden Idol Temple (ext)" TargetMap="Trammel" X="1932" Y="3410" Z="0" />
+				<Rune Name="Golden Idol Temple (int)" TargetMap="Trammel" X="6421" Y="1554" Z="0" />
+				<Rune Name="Golden Idol Area (int)" TargetMap="Trammel" X="6454" Y="1597" Z="30" />
+				<Rune Name="Village Elder (XmlQuest NPC)" TargetMap="Trammel" X="3666" Y="1060" Z="0" />
+				<Rune Name="Millie Scots (XmlQuest NPC)" TargetMap="Trammel" X="3680" Y="1239" Z="20" />
+				<Rune Name="Palace of Gloom dungeon 1 (int)" TargetMap="Trammel" X="6358" Y="1682" Z="44" />
+				<Rune Name="Palace of Gloom dungeon 2 (int)" TargetMap="Trammel" X="6258" Y="1631" Z="46" />
+				<Rune Name="Molar Ham #1 (int)" TargetMap="Trammel" X="6343" Y="1631" Z="44" />
+				<Rune Name="Molar Ham #2 (int)" TargetMap="Trammel" X="6363" Y="1630" Z="0" />
+			</Runebook>
+			<Runebook Name="The Final Journey">
+				<Rune Name="Jonesy's Office" TargetMap="Malas" X="913" Y="453" Z="-90" />
+				<Rune Name="Melsa Schacter" TargetMap="Trammel" X="1445" Y="3773" Z="0" />
+				<Rune Name="Catacombs (basement int)" TargetMap="Trammel" X="1377" Y="3775" Z="-20" />
+				<Rune Name="Catacombs Exit (int)" TargetMap="Trammel" X="1371" Y="3795" Z="-41" />
+				<Rune Name="Henry Ford (captivity ext)" TargetMap="Trammel" X="1539" Y="1418" Z="55" />
+				<Rune Name="Grail Temple (Fire Island ext)" TargetMap="Trammel" X="4377" Y="3375" Z="0" />
+				<Rune Name="Grail Temple (int)" TargetMap="Trammel" X="6374" Y="1484" Z="75" />
+				<Rune Name="Grail Room (int)" TargetMap="Trammel" X="6293" Y="1474" Z="0" />
+			</Runebook>
+			<Rune Name="Jonesy's Camp (Gomzul int)" TargetMap="Trammel" X="5733" Y="711" Z="2" />
+			<Rune Name="Bradley Markus (Vesper Museum)" TargetMap="Trammel" X="2911" Y="969" Z="-21" />
+			<Rune Name="Grant the Guard (XmlQuest NPC)" TargetMap="Trammel" X="2914" Y="969" Z="0" />
+		</Runebook>
+		<Runebook Name="Deadly Evil">
+			<Rune Name="Wiseman John #1" TargetMap="Trammel" X="3471" Y="2601" Z="10" />
+			<Rune Name="Stairs to a Cabin" TargetMap="Malas" X="2227" Y="1273" Z="-49" />
+			<Rune Name="Cabin Basement (int)" TargetMap="Malas" X="2173" Y="1266" Z="-54" />
+			<Rune Name="Erik's Shield Spawn" TargetMap="Malas" X="2181" Y="1289" Z="-89" />
+			<Rune Name="Erik's Escape" TargetMap="Malas" X="2181" Y="1265" Z="-112" />
+			<Rune Name="Ash (Cabin ext)" TargetMap="Malas" X="2155" Y="1065" Z="-95" />
+			<Rune Name="Pitfall (int)" TargetMap="Trammel" X="6294" Y="1552" Z="0" />
+			<Rune Name="Bad Ash Champ Spawn" TargetMap="Malas" X="771" Y="1710" Z="-120" />
+		</Runebook>
+		<Runebook Name="Atlantis">
+			<Runebook Name="Quests">
+				<Rune Name="Underwater Retrieval-Will" TargetMap="Trammel" X="6508" Y="1618" Z="104" />
+				<Rune Name="Rest in Peace-Jimmy" TargetMap="Trammel" X="6521" Y="1620" Z="43" />
+			</Runebook>
+			<Runebook Name="Citizen Houses">
+				<Rune Name="House #1-West" TargetMap="Trammel" X="6541" Y="1669" Z="25" />
+				<Rune Name="House #2-South" TargetMap="Trammel" X="6565" Y="1670" Z="26" />
+				<Rune Name="House #3-Southeast" TargetMap="Trammel" X="6587" Y="1672" Z="7" />
+				<Rune Name="House #4-Far Southeast" TargetMap="Trammel" X="6606" Y="1679" Z="5" />
+				<Rune Name="House #5-East" TargetMap="Trammel" X="6591" Y="1638" Z="23" />
+			</Runebook>
+			<Rune Name="Gravewater Lake entry" TargetMap="Malas" X="1561" Y="1635" Z="-113" />
+			<Rune Name="Trifords Chest" TargetMap="Trammel" X="6509" Y="1628" Z="23" />
+			<Rune Name="Atlantis Tunnel" TargetMap="Trammel" X="6519" Y="1622" Z="2" />
+			<Rune Name="Public Moongate" TargetMap="Trammel" X="6540" Y="1622" Z="2" />
+			<Rune Name="Boss Area" TargetMap="Trammel" X="6553" Y="1621" Z="13" />
+		</Runebook>
+		<Rune Name="Staff House Green Acres (Tram)" TargetMap="Trammel" X="5616" Y="1148" Z="0" />
+		<Rune Name="Xml Siege Area" TargetMap="Trammel" X="6060" Y="591" Z="0" />
+		<Rune Name="City Structures" TargetMap="Trammel" X="5622" Y="1172" Z="0" />
+		<Rune Name="Bank Robberies" TargetMap="Trammel" X="5470" Y="1191" Z="0" />
+		<Rune Name="Screenshot Area" TargetMap="Trammel" X="5443" Y="1113" Z="0" />
+		<Rune Name="Artifact Area" TargetMap="Trammel" X="5424" Y="1132" Z="0" />
+		<Rune Name="Empty Valley (unused)" TargetMap="Ilshenar" X="467" Y="615" Z="-16" />
+		<Rune Name="Circular Dungeon (unused)" TargetMap="Trammel" X="5947" Y="1464" Z="10" />
+		<Rune Name="Vulcan Quest??" TargetMap="Trammel" X="2525" Y="572" Z="0" />
+		<Rune Name="Cave Dungeon (unused)" TargetMap="Felucca" X="5185" Y="1452" Z="0" />
+		<Rune Name="Wandering Vendor (Xml TalkingVendor)" TargetMap="Malas" X="981" Y="601" Z="-90" />
+		<Rune Name="SW Holding Area" TargetMap="Trammel" X="5573" Y="1192" Z="0" />
+		<Rune Name="Xmlspawner Training" TargetMap="Trammel" X="5473" Y="1109" Z="0" />
+	</RuneAccount>
+</StaffRunebook>
