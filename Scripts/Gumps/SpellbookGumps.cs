@@ -189,8 +189,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Werewolf Ability is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(Holocron));
-                state.Mobile.SendGump(new Holocron(m_Book, si, TextHue, state.Mobile));
+                state.Mobile.CloseGump(typeof(LycanScroll));
+                state.Mobile.SendGump(new LycanScroll(m_Book, si, TextHue, state.Mobile));
             }
 
             else if (info.ButtonID >= 2000 && info.ButtonID < (2000 + m_Spells.Count))
@@ -493,16 +493,17 @@ namespace Server.Gumps
 		}
     }
 
-	/*public class LycanScroll : Gump
+	public class LycanScroll : Gump
     {
         private CSpellInfo m_Info;
         private string m_TextHue;
+		public string BookHue  { get{ return "999000"; } }
         private CSpellbook m_Book;
         private CastInfo m_CastInfo;
         private CastCommandsModule m_CastCommandModule;
 
         public LycanScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
-            : base(485, 175)
+            : base(20, 24)
         {
             if (info == null || book == null || !CSS.Running)
                 return;
@@ -518,15 +519,22 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-            AddBackground(0, 0, 200, 265, 9380);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(20, 24, 1140, 1363);//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(63, 61, 71, 0);
+			AddImage(76, 69, 216, 1088);
+			AddImage(202, 69, 216, 1088);
+			AddImage(202, 189, 216, 1088);
+			AddImage(76, 189, 216, 1088);
+			AddImage(202, 87, 9792, 1088);
+			AddImage(202, 156, 9792, 1088);
 
             if (info.Name != null)
-                AddHtml(30, 3, 140, 20, String.Format("<basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(150, 213, 140, 20, String.Format("<big><basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
 
-            AddButton(30, 40, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
+            AddButton(91, 82, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
-            AddButton(90, 40, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
-            AddLabel(120, 38, 0, "Cast");
+            AddButton(366, 250, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
+            AddLabel(332, 236, 1088, "Cast");
 
             //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
             //AddLabel( 120, 63, 0, "Scribe" );
@@ -534,12 +542,12 @@ namespace Server.Gumps
             //Info
             string InfoString = "";
             if (info.Desc != null)
-                InfoString += String.Format("<basefont color=black>{0}</font><br><br>", info.Desc);
+                InfoString += String.Format("<basefont color=#{0}>{1}</font><br><br>", BookHue, info.Desc);
 
             if (info.Regs != null)
             {
                 string[] Regs = info.Regs.Split(';');
-                InfoString += String.Format("<basefont color=black>Reagents :</font><br><basefont color=#{0}>", textHue);
+                InfoString += String.Format("<basefont color=#{0}>Reagents :</font><br><basefont color=#{1}>", textHue, BookHue);
                 foreach (string r in Regs)
                     InfoString += String.Format("-{0}<br>", r.TrimStart());
                 InfoString += "</font><br>";
@@ -553,20 +561,21 @@ namespace Server.Gumps
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(30, 95, 140, 130, InfoString, false, true);
+            AddHtml(223, 68, 140, 130, InfoString, false, true);
             //End Info
 
             #region CastInfo
             if (CentralMemory.Running)
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
-
-                AddLabel(25, 242, 0, "Key :");
+				
+				AddImageTiled(46, 241, 100, 20, 1124);
+                AddLabel(80, 218, 1088, "Key :");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(70, 242, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(46, 241, 100, 20, 1088, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(70, 242, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(175, 247, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(46, 241, 100, 20, 1088, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(151, 246, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -580,19 +589,19 @@ namespace Server.Gumps
             {
                 if (SpellRestrictions.UseRestrictions && !SpellRestrictions.CheckRestrictions(state.Mobile, m_Info.School))
                 {
-                    state.Mobile.SendMessage("You are not allowed to use this Force Power.");
+                    state.Mobile.SendMessage("You are not allowed to use this Lycan Ability.");
                     return;
                 }
 
                 if (!CSpellbook.MobileHasSpell(state.Mobile, m_Info.School, m_Info.Type))
                 {
-                    state.Mobile.SendMessage("You do not have that Force Power.");
+                    state.Mobile.SendMessage("You do not have that Lycan Ability.");
                     return;
                 }
 
                 Spell spell = SpellInfoRegistry.NewSpell(m_Info.Type, m_Info.School, state.Mobile, null);
                 if (spell == null)
-                    state.Mobile.SendMessage("That Force Power is disabled.");
+                    state.Mobile.SendMessage("That Lycan Ability is disabled.");
                 else
                     spell.Cast();
             }
@@ -645,7 +654,7 @@ namespace Server.Gumps
                 }
             }
         }
-    }*/
+    }
 
 	public abstract class VampyGump : Gump
     {
@@ -3325,7 +3334,7 @@ namespace Server.Gumps
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
 				AddButton(437, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
-				AddButton(77, 238, 254, 254, 8, GumpButtonType.Reply, 0); //Tithe left button
+				AddButton(77, 238, 254, 254, 8, GumpButtonType.Reply, 0); //Wildfire left button
                 AddImage(70, 100, BGImage);
 				AddHtml(145, 112, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 112, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
@@ -3388,8 +3397,23 @@ namespace Server.Gumps
 
 			else if (info.ButtonID == 8)
 			{
-				if ( state.Mobile.CheckAlive() )
-					state.Mobile.SendGump( new TithingGump( state.Mobile, 0 ) );
+				if (SpellRestrictions.UseRestrictions && !SpellRestrictions.CheckRestrictions(state.Mobile, m_Book.School))
+                {
+                    state.Mobile.SendMessage("You are not allowed to use this Spell.");
+                    return;
+                }
+
+                if (!CSpellbook.MobileHasSpell(state.Mobile, m_Book.School, (Type)m_Spells[601]))
+                {
+                    state.Mobile.SendMessage("You do not have that Spell.");
+                    return;
+                }
+
+                Spell spell = SpellInfoRegistry.NewSpell((Type)m_Spells[601], m_Book.School, state.Mobile, null);
+                if (spell == null)
+                    state.Mobile.SendMessage("That Spell is disabled.");
+                else
+                    spell.Cast();
 			}
 
             else if (info.ButtonID >= 1000 && info.ButtonID < (1000 + m_Spells.Count))
