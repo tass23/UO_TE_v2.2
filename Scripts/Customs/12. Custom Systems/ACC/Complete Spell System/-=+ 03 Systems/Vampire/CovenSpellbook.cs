@@ -25,7 +25,7 @@ namespace Server.ACC.CSS.Systems.Vampire
         public CovenSpellbook(ulong content, bool full)
             : base(content, 0xEFA, full)
         {
-            Hue = 1464;
+            Hue = 2823;
             Name = "an Ancient Coven Spellbook";
         }
 

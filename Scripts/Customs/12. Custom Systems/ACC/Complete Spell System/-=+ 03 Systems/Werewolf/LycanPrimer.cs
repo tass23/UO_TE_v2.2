@@ -25,7 +25,7 @@ namespace Server.ACC.CSS.Systems.Werewolf
         public LycanPrimer(ulong content, bool full)
             : base(content, 0xEFA, full)
         {
-            Hue = 1095;
+            Hue = 2984;
             Name = "The Ancient Lycan Primer";
         }
 

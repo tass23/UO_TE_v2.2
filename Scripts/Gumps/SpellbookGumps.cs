@@ -76,7 +76,7 @@ namespace Server.Gumps
 				AddButton(84, 110, 2384, 2384, 7, GumpButtonType.Reply, 0);	//Wolf Form button
 				AddButton(84, 140, 2384, 2384, 8, GumpButtonType.Reply, 0);	//Werewolf Form button
 				AddButton(84, 170, 2384, 2384, 9, GumpButtonType.Reply, 0);	//Bite button
-				AddButton(450, 140, 2643, 2643, 10, GumpButtonType.Reply, 0); //Master crafting right button
+				AddButton(449, 140, 2643, 2643, 10, GumpButtonType.Reply, 0); //Master crafting right button
                 AddImage(70, 100, BGImage);
                 AddHtml(161, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
@@ -519,25 +519,23 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-			AddImage(20, 24, 1140, 1363);//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(20, 24, 1140, 1356);//AddBackground(0, 0, 200, 265, 9380);
 			AddImage(63, 61, 71, 0);
-			AddImage(76, 69, 216, 1088);
-			AddImage(202, 69, 216, 1088);
-			AddImage(202, 189, 216, 1088);
-			AddImage(76, 189, 216, 1088);
-			AddImage(202, 87, 9792, 1088);
-			AddImage(202, 156, 9792, 1088);
+			AddImage(76, 69, 216, 1089);
+			AddImage(202, 69, 216, 1089);
+			AddImage(202, 189, 216, 1089);
+			AddImage(76, 189, 216, 1089);
+			AddImage(202, 87, 9792, 1357);
+			AddImage(202, 158, 9792, 1357);
+			AddImage(150, 213, 2440, 1357); //text background
 
             if (info.Name != null)
-                AddHtml(150, 213, 140, 20, String.Format("<big><basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(150, 213, 166, 20, String.Format("<big><basefont color=white><center>{0}</center></font>", info.Name), false, false);
 
             AddButton(91, 82, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
             AddButton(366, 250, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
             AddLabel(332, 236, 1088, "Cast");
-
-            //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
-            //AddLabel( 120, 63, 0, "Scribe" );
 
             //Info
             string InfoString = "";
@@ -547,7 +545,7 @@ namespace Server.Gumps
             if (info.Regs != null)
             {
                 string[] Regs = info.Regs.Split(';');
-                InfoString += String.Format("<basefont color=#{0}>Reagents :</font><br><basefont color=#{1}>", textHue, BookHue);
+                InfoString += String.Format("<basefont color=black>Reagents :</font><br><basefont color=#{0}>", BookHue);
                 foreach (string r in Regs)
                     InfoString += String.Format("-{0}<br>", r.TrimStart());
                 InfoString += "</font><br>";
@@ -561,7 +559,7 @@ namespace Server.Gumps
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(223, 68, 140, 130, InfoString, false, true);
+            AddHtml(226, 68, 137, 130, InfoString, false, true);
             //End Info
 
             #region CastInfo
@@ -569,13 +567,13 @@ namespace Server.Gumps
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
 				
-				AddImageTiled(46, 241, 100, 20, 1124);
-                AddLabel(80, 218, 1088, "Key :");
+				AddImage(52, 241, 2444, 1357); //text background
+                AddLabel(73, 223, 1088, "Key");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(46, 241, 100, 20, 1088, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(52, 241, 58, 20, 1088, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(46, 241, 100, 20, 1088, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(151, 246, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(52, 241, 58, 20, 1088, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(118, 246, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -633,24 +631,24 @@ namespace Server.Gumps
                 {
                     if (m_CastCommandModule == null)
                     {
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new LycanScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.RemoveCommandByInfo(m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new LycanScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
                 else
                 {
                     if (m_CastCommandModule == null)
                     {
                         CentralMemory.AddModule(new CastCommandsModule(state.Mobile.Serial, command, m_CastInfo));
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new LycanScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.Add(command, m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new LycanScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
             }
         }
@@ -815,7 +813,7 @@ namespace Server.Gumps
                     return;
                 }
 				state.Mobile.CloseGump(typeof(CovenSpellbookGump));
-                state.Mobile.SendGump(new Holocron(m_Book, si, TextHue, state.Mobile));
+                state.Mobile.SendGump(new VampyScroll(m_Book, si, TextHue, state.Mobile));
             }
 
             else if (info.ButtonID >= 2000 && info.ButtonID < (2000 + m_Spells.Count))
@@ -1186,16 +1184,18 @@ namespace Server.Gumps
 		}
     }
 
-	/*public class VampyScroll : Gump
+	public class VampyScroll : Gump
     {
         private CSpellInfo m_Info;
         private string m_TextHue;
+		public string BookHue  { get{ return "990000"; } } //Red
+		public string TextHue2  { get{ return "955819"; } } //Orange
         private CSpellbook m_Book;
         private CastInfo m_CastInfo;
         private CastCommandsModule m_CastCommandModule;
 
         public VampyScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
-            : base(485, 175)
+            : base(20, 16)
         {
             if (info == null || book == null || !CSS.Running)
                 return;
@@ -1211,18 +1211,15 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-            AddBackground(0, 0, 200, 265, 9380);	//AddBackground(0, 0, 200, 265, 9380);
+            AddImage(20, 16, 1250, 2015);	//AddBackground(0, 0, 200, 265, 9380);
 
             if (info.Name != null)
-                AddHtml(30, 3, 140, 20, String.Format("<basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(130, 87, 140, 20, String.Format("<basefont color=black><center>{0}</center></font>", info.Name), false, false);
 
-            AddButton(30, 40, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
+            AddButton(66, 79, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
-            AddButton(90, 40, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
-            AddLabel(120, 38, 0, "Cast");
-
-            //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
-            //AddLabel( 120, 63, 0, "Scribe" );
+            AddButton(283, 382, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
+            AddLabel(247, 355, 2951, "Cast");
 
             //Info
             string InfoString = "";
@@ -1232,7 +1229,7 @@ namespace Server.Gumps
             if (info.Regs != null)
             {
                 string[] Regs = info.Regs.Split(';');
-                InfoString += String.Format("<basefont color=black>Reagents :</font><br><basefont color=#{0}>", textHue);
+                InfoString += String.Format("<basefont color=black>Reagents :</font><br><basefont color=white>");
                 foreach (string r in Regs)
                     InfoString += String.Format("-{0}<br>", r.TrimStart());
                 InfoString += "</font><br>";
@@ -1241,12 +1238,12 @@ namespace Server.Gumps
             if (info.Info != null)
             {
                 string[] Info = info.Info.Split(';');
-                InfoString += String.Format("<basefont color=#{0}>", textHue);
+                InfoString += String.Format("<basefont color=black>");
                 foreach (string s in Info)
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(30, 95, 140, 130, InfoString, false, true);
+            AddHtml(57, 139, 239, 210, InfoString, false, true);
             //End Info
 
             #region CastInfo
@@ -1254,12 +1251,13 @@ namespace Server.Gumps
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
 
-                AddLabel(25, 242, 0, "Key :");
+				AddImage(58, 380, 2445, 2015); //text background
+                AddLabel(88, 355, 2951, "Key");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(70, 242, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(58, 381, 100, 20, 2951, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(70, 242, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(175, 247, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(58, 381, 100, 20, 2951, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(166, 388, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -1273,19 +1271,19 @@ namespace Server.Gumps
             {
                 if (SpellRestrictions.UseRestrictions && !SpellRestrictions.CheckRestrictions(state.Mobile, m_Info.School))
                 {
-                    state.Mobile.SendMessage("You are not allowed to use this Force Power.");
+                    state.Mobile.SendMessage("You are not allowed to use this Vampiric Gift.");
                     return;
                 }
 
                 if (!CSpellbook.MobileHasSpell(state.Mobile, m_Info.School, m_Info.Type))
                 {
-                    state.Mobile.SendMessage("You do not have that Force Power.");
+                    state.Mobile.SendMessage("You do not have that Vampiric Gift.");
                     return;
                 }
 
                 Spell spell = SpellInfoRegistry.NewSpell(m_Info.Type, m_Info.School, state.Mobile, null);
                 if (spell == null)
-                    state.Mobile.SendMessage("That Force Power is disabled.");
+                    state.Mobile.SendMessage("That Vampiric Gift is disabled.");
                 else
                     spell.Cast();
             }
@@ -1317,28 +1315,28 @@ namespace Server.Gumps
                 {
                     if (m_CastCommandModule == null)
                     {
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new VampyScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.RemoveCommandByInfo(m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new VampyScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
                 else
                 {
                     if (m_CastCommandModule == null)
                     {
                         CentralMemory.AddModule(new CastCommandsModule(state.Mobile.Serial, command, m_CastInfo));
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new VampyScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.Add(command, m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new VampyScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
             }
         }
-    }*/
+    }
 
 	public abstract class MageryGump : Gump
     {
@@ -1386,13 +1384,11 @@ namespace Server.Gumps
                     }
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
-				AddButton(438, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
+				AddButton(437, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
 				AddButton(74, 239, 257, 257, 8, GumpButtonType.Reply, 0); //Food/Water left button
                 AddImage(70, 100, BGImage);
 				AddHtml(145, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
-				//AddImage(73, 202, 11400, 2976);	//Minimize button
-				//AddImage(74, 239, 257, 2976); //Food/Water left button
                 //End Hidden Buttons
 
                 //Prev/Next Buttons
@@ -1489,7 +1485,7 @@ namespace Server.Gumps
 
 			else if (info.ButtonID == 7)
 			{
-				//state.Mobile.CloseGump(typeof(MageryGump));	//Add Master Craft Menu to select specific crafting menu.
+				//Add Master Craft Menu to select specific crafting menu.
                 m.SendMessage( "What do you want to Craft?" );
 				m.SendGump( new MasterCraftGump(m) );
 			}
@@ -1756,7 +1752,7 @@ namespace Server.Gumps
                     }
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
-				AddButton(438, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
+				AddButton(437, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
                 AddImage(70, 100, BGImage);
 				AddHtml(145, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
@@ -1784,7 +1780,7 @@ namespace Server.Gumps
 
                         AddHtml((C > 7 ? 283 : 130), 146 + (C > 7 ? (C - 8) * 16 : C * 16), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
                         //AddButton((C > 7 ? 288 : 130), 138 + (C > 7 ? (C - 8) * 20 : C * 17), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
-                        AddButton((C > 7 ? 408 : 250), 149 + (C > 7 ? (C - 8) * 16 : C * 16), 0x4, 0x4, j + 2000, GumpButtonType.Reply, 0);
+                        AddButton((C > 7 ? 406 : 250), 149 + (C > 7 ? (C - 8) * 16 : C * 16), 0xFC0, 0xFC0, j + 2000, GumpButtonType.Reply, 0);
 						//AddImage((C > 7 ? 408 : 250), 149 + (C > 7 ? (C - 8) * 16 : C * 16), 0x4, 0x4);
                     }
                 }
@@ -1832,7 +1828,7 @@ namespace Server.Gumps
                     return;
                 }
                 state.Mobile.CloseGump(typeof(NecroGump));
-                state.Mobile.SendGump(new ScrollGump(m_Book, si, TextHue, state.Mobile));
+                state.Mobile.SendGump(new NecroScroll(m_Book, si, TextHue, state.Mobile));
             }
 
             else if (info.ButtonID >= 2000 && info.ButtonID < (2000 + m_Spells.Count))
@@ -1864,7 +1860,7 @@ namespace Server.Gumps
             //GumpUpTimer
         }
     }
-	/*public class NecroScroll : Gump
+	public class NecroScroll : Gump
     {
         private CSpellInfo m_Info;
         private string m_TextHue;
@@ -1873,7 +1869,7 @@ namespace Server.Gumps
         private CastCommandsModule m_CastCommandModule;
 
         public NecroScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
-            : base(485, 175)
+            : base(59, 32)
         {
             if (info == null || book == null || !CSS.Running)
                 return;
@@ -1889,15 +1885,24 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-            AddBackground(0, 0, 200, 265, 9380);	//AddBackground(0, 0, 200, 265, 9380);
+            AddImage(59, 32, 9, 1400);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(200, 32, 9, 1400);
+			AddImage(91, 122, 1803, 930);
+			AddImage(91, 136, 1803, 930);
+			AddImage(91, 150, 1803, 930);
+			AddImage(91, 163, 1803, 930);
+			AddImage(91, 176, 1803, 930);
+			AddImage(91, 189, 1803, 930);
+			AddImage(91, 202, 1803, 930);
+			AddImage(154, 92, 1208, 930);
 
             if (info.Name != null)
-                AddHtml(30, 3, 140, 20, String.Format("<basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(160, 90, 140, 20, String.Format("<basefont color=white><center>{0}</center></font>", info.Name), false, false);
 
-            AddButton(30, 40, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
+            AddButton(108, 53, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
-            AddButton(90, 40, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
-            AddLabel(120, 38, 0, "Cast");
+            AddButton(300, 46, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
+            AddLabel(309, 67, 1149, "Cast");
 
             //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
             //AddLabel( 120, 63, 0, "Scribe" );
@@ -1924,7 +1929,7 @@ namespace Server.Gumps
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(30, 95, 140, 130, InfoString, false, true);
+            AddHtml(106, 128, 200, 87, InfoString, false, true);
             //End Info
 
             #region CastInfo
@@ -1932,12 +1937,13 @@ namespace Server.Gumps
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
 
-                AddLabel(25, 242, 0, "Key :");
+				AddImage(137, 219, 2445, 930);
+                AddLabel(103, 221, 1149, "Key");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(70, 242, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(140, 221, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(70, 242, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(175, 247, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(140, 221, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(261, 228, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -1995,28 +2001,28 @@ namespace Server.Gumps
                 {
                     if (m_CastCommandModule == null)
                     {
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new NecroScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.RemoveCommandByInfo(m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new NecroScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
                 else
                 {
                     if (m_CastCommandModule == null)
                     {
                         CentralMemory.AddModule(new CastCommandsModule(state.Mobile.Serial, command, m_CastInfo));
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new NecroScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.Add(command, m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new NecroScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
             }
         }
-    }*/
+    }
 
 	public abstract class ChivGump : Gump
     {
@@ -2063,18 +2069,18 @@ namespace Server.Gumps
             CurrentPage = 1;
 			
 			AddHtml(130, 264, 100, 20, String.Format("<basefont color=#{0}>Tithing Points</basefont>", TextHue), false, false);
-			AddHtml(130, 279, 100, 20, String.Format("<basefont color=#{0}>Available: {1}</basefont>", BookHue, from.TithingPoints),  false, false);//AddHtml(130, 279, 100, 20, String.Format("<basefont color=#{0}>Available: {1}</basefont>", BookHue, Convert.ToString(m_TithingPoints)),  false, false);
+			AddHtml(130, 279, 100, 20, String.Format("<basefont color=#{0}>Available: {1}</basefont>", BookHue, from.TithingPoints),  false, false);
 
             for (int i = 0; i < Pages; i++, CurrentPage++)
             {
                 AddPage(CurrentPage);
 
                 //Hidden Buttons
-                for (int j = (CurrentPage - 1) * 5, C = 0; j < CurrentPage * 5 && j < m_Spells.Count; j++, C++)	//Each set of two pages is 16 spells, e.g. Pages 1 & 2 are spells 1 - 16, 3 & 4 are 17 - 32, etc., etc.
+                for (int j = (CurrentPage - 1) * 11, C = 0; j < CurrentPage * 11 && j < m_Spells.Count; j++, C++)	//Each set of two pages is 16 spells, e.g. Pages 1 & 2 are spells 1 - 16, 3 & 4 are 17 - 32, etc., etc.
                 {
                     if (HasSpell((Type)m_Spells[j]))
                     {
-                        AddButton((C > 7 ? 292 : 130), 129 + (C > 7 ? (C - 8) * 10: C * 10), 2482, 2482, j + 1000, GumpButtonType.Reply, 0);
+                        AddButton((C > 7 ? 292 : 130), 129 + (C > 7 ? (C - 8) * 13: C * 13), 2482, 2482, j + 1000, GumpButtonType.Reply, 0);
                     }
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
@@ -2096,7 +2102,7 @@ namespace Server.Gumps
                 //End Prev/Next Buttons
 
                 //Spell Buttons/Labels
-                for (int j = (CurrentPage - 1) * 10, C = 0; j < CurrentPage * 10 && j < m_Spells.Count; j++, C++)
+                for (int j = (CurrentPage - 1) * 11, C = 0; j < CurrentPage * 11 && j < m_Spells.Count; j++, C++)
                 {
                     if (HasSpell((Type)m_Spells[j]))
                     {
@@ -2105,10 +2111,8 @@ namespace Server.Gumps
                             continue;
 						
 
-                        AddHtml((C > 7 ? 282 : 128), 130 + (C > 7 ? (C - 8) * 16 : C * 16), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
-                        AddButton((C > 7 ? 405 : 248), 130 + (C > 7 ? (C - 8) * 17 : C * 17), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
-                        //AddButton((C > 7 ? 408 : 250), 129 + (C > 7 ? (C - 8) * 16 : C * 16), 9272, 9272, j + 2000, GumpButtonType.Reply, 0);
-						//AddImage((C > 7 ? 408 : 250), 129 + (C > 7 ? (C - 8) * 16 : C * 16), 9272, 2973);
+                        AddHtml((C > 7 ? 282 : 128), 130 + (C > 7 ? (C - 8) * 13 : C * 13), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
+                        AddButton((C > 7 ? 405 : 248), 130 + (C > 7 ? (C - 8) * 13 : C * 13), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
                     }
                 }
                 //End Spell Buttons/Labels
@@ -2161,7 +2165,7 @@ namespace Server.Gumps
                     return;
                 }
                 state.Mobile.CloseGump(typeof(ChivGump));
-                state.Mobile.SendGump(new ScrollGump(m_Book, si, TextHue, state.Mobile));
+                state.Mobile.SendGump(new ChivScroll(m_Book, si, TextHue, state.Mobile));
             }
 
             else if (info.ButtonID >= 2000 && info.ButtonID < (2000 + m_Spells.Count))
@@ -2193,7 +2197,8 @@ namespace Server.Gumps
             //GumpUpTimer
         }
     }
-	/*public class ChivScroll : Gump
+	
+	public class ChivScroll : Gump
     {
         private CSpellInfo m_Info;
         private string m_TextHue;
@@ -2202,7 +2207,7 @@ namespace Server.Gumps
         private CastCommandsModule m_CastCommandModule;
 
         public ChivScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
-            : base(485, 175)
+            : base(23, 24)
         {
             if (info == null || book == null || !CSS.Running)
                 return;
@@ -2218,18 +2223,26 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-            AddBackground(0, 0, 200, 265, 9380);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(137, 24, 9460, 1354);
+            AddImage(23, 24, 9460, 1354);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(205, 23, 10462, 1358);
+			AddImage(257, 23, 10462, 1358);
+			AddImage(309, 23, 10462, 1358);
+			AddImage(361, 23, 10460, 1358);
+			AddImage(205, 165, 10462, 1358);
+			AddImage(257, 165, 10462, 1358);
+			AddImage(309, 165, 10462, 1358);
+			AddImage(361, 165, 10460, 1358);
+			AddImageTiled(198, 50, 185, 118, 2081);
+			AddImage(56, 173, 2445, 1354);
 
             if (info.Name != null)
-                AddHtml(30, 3, 140, 20, String.Format("<basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(54, 105, 140, 20, String.Format("<basefont color=white><center>{0}</center></font>", info.Name), false, false);
 
-            AddButton(30, 40, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
+            AddButton(54, 56, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
-            AddButton(90, 40, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
-            AddLabel(120, 38, 0, "Cast");
-
-            //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
-            //AddLabel( 120, 63, 0, "Scribe" );
+            AddButton(33, 32, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
+            AddLabel(54, 29, 1150, "Cast");
 
             //Info
             string InfoString = "";
@@ -2253,7 +2266,7 @@ namespace Server.Gumps
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(30, 95, 140, 130, InfoString, false, true);
+            AddHtml(206, 51, 183, 110, InfoString, false, true);
             //End Info
 
             #region CastInfo
@@ -2261,12 +2274,12 @@ namespace Server.Gumps
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
 
-                AddLabel(25, 242, 0, "Key :");
+                AddLabel(53, 153, 1150, "Key");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(70, 242, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(56, 173, 100, 20, 1150, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(70, 242, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(175, 247, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(56, 173, 100, 20, 1150, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(170, 179, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -2324,28 +2337,28 @@ namespace Server.Gumps
                 {
                     if (m_CastCommandModule == null)
                     {
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new ChivScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.RemoveCommandByInfo(m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new ChivScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
                 else
                 {
                     if (m_CastCommandModule == null)
                     {
                         CentralMemory.AddModule(new CastCommandsModule(state.Mobile.Serial, command, m_CastInfo));
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new ChivScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.Add(command, m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new ChivScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
             }
         }
-    }*/
+    }
 
 	/*
 	public abstract class BushidoGump : Gump
@@ -3102,7 +3115,7 @@ namespace Server.Gumps
                     return;
                 }
                 state.Mobile.CloseGump(typeof(MysticismGump));
-                state.Mobile.SendGump(new ScrollGump(m_Book, si, TextHue, state.Mobile));
+                state.Mobile.SendGump(new MysticismScroll(m_Book, si, TextHue, state.Mobile));
             }
 
             else if (info.ButtonID >= 2000 && info.ButtonID < (2000 + m_Spells.Count))
@@ -3134,16 +3147,17 @@ namespace Server.Gumps
             //GumpUpTimer
         }
     }
-	/*public class MysticismScroll : Gump
+	public class MysticismScroll : Gump
     {
         private CSpellInfo m_Info;
         private string m_TextHue;
+		public string BookHue  { get{ return "333333"; } }
         private CSpellbook m_Book;
         private CastInfo m_CastInfo;
         private CastCommandsModule m_CastCommandModule;
 
         public MysticismScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
-            : base(485, 175)
+            : base(42, 39)
         {
             if (info == null || book == null || !CSS.Running)
                 return;
@@ -3159,23 +3173,36 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-            AddBackground(0, 0, 200, 265, 9380);	//AddBackground(0, 0, 200, 265, 9380);
+            AddImage(42, 39, 8000, 1392);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(62, 76, 8001, 0);
+			AddImage(61, 146, 8002, 0);
+			AddImage(61, 216, 8001, 0);
+			AddImage(63, 286, 8003, 1392);
+			AddImage(205, 77, 9790, 49);
+			AddImage(205, 103, 9790, 49);
+			AddImage(205, 130, 9791, 0);
+			AddImage(205, 157, 9790, 49);
+			AddImage(205, 183, 9790, 49);
+			AddImage(205, 210, 9791, 0);
+			AddImage(205, 237, 9790, 49);
+			AddImage(205, 263, 9790, 49);
+			AddImage(204, 290, 2095, 49);
+			AddImage(134, 46, 2440, 47);
+			AddImage(87, 248, 30074, 0);
+			AddImage(78, 236, 24030, 1193);
 
             if (info.Name != null)
-                AddHtml(30, 3, 140, 20, String.Format("<basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(139, 47, 156, 20, String.Format("<basefont color=black><center>{0}</center></font>", info.Name), false, false);
 
-            AddButton(30, 40, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
+            AddButton(81, 90, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
-            AddButton(90, 40, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
-            AddLabel(120, 38, 0, "Cast");
-
-            //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
-            //AddLabel( 120, 63, 0, "Scribe" );
+            AddButton(81, 296, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
+            AddLabel(103, 293, 0, "Cast");
 
             //Info
             string InfoString = "";
             if (info.Desc != null)
-                InfoString += String.Format("<basefont color=black>{0}</font><br><br>", info.Desc);
+                InfoString += String.Format("<basefont color=#{0}>{1}</font><br><br>", BookHue, info.Desc);
 
             if (info.Regs != null)
             {
@@ -3194,7 +3221,7 @@ namespace Server.Gumps
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(30, 95, 140, 130, InfoString, false, true);
+            AddHtml(231, 87, 127, 187, InfoString, false, true);
             //End Info
 
             #region CastInfo
@@ -3202,12 +3229,13 @@ namespace Server.Gumps
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
 
-                AddLabel(25, 242, 0, "Key :");
+				AddImage(277, 291, 2444, 1356);
+                AddLabel(245, 293, 0, "Key");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(70, 242, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(277, 293, 58, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(70, 242, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(175, 247, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(277, 293, 58, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(354, 298, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -3265,19 +3293,19 @@ namespace Server.Gumps
                 {
                     if (m_CastCommandModule == null)
                     {
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new MysticismScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.RemoveCommandByInfo(m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new MysticismScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
                 else
                 {
                     if (m_CastCommandModule == null)
                     {
                         CentralMemory.AddModule(new CastCommandsModule(state.Mobile.Serial, command, m_CastInfo));
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new MysticismScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
@@ -3286,7 +3314,8 @@ namespace Server.Gumps
                 }
             }
         }
-    }*/
+    }
+	
 	public abstract class SpellweavingGump : Gump
     {
         private CSpellbook m_Book;
@@ -3431,7 +3460,7 @@ namespace Server.Gumps
                     return;
                 }
                 state.Mobile.CloseGump(typeof(SpellweavingGump));
-                state.Mobile.SendGump(new ScrollGump(m_Book, si, TextHue, state.Mobile));
+                state.Mobile.SendGump(new SpellweavingScroll(m_Book, si, TextHue, state.Mobile));
             }
 
             else if (info.ButtonID >= 2000 && info.ButtonID < (2000 + m_Spells.Count))
@@ -3463,7 +3492,7 @@ namespace Server.Gumps
             //GumpUpTimer
         }
     }
-	/*public class SpellweavingScroll : Gump
+	public class SpellweavingScroll : Gump
     {
         private CSpellInfo m_Info;
         private string m_TextHue;
@@ -3471,8 +3500,8 @@ namespace Server.Gumps
         private CastInfo m_CastInfo;
         private CastCommandsModule m_CastCommandModule;
 
-        public MysticismScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
-            : base(485, 175)
+        public SpellweavingScroll(CSpellbook book, CSpellInfo info, string textHue, Mobile sender)
+            : base(20, 6)
         {
             if (info == null || book == null || !CSS.Running)
                 return;
@@ -3488,23 +3517,25 @@ namespace Server.Gumps
             Resizable = false;
 
             AddPage(0);
-            AddBackground(0, 0, 200, 265, 9380);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(37, 7, 11414, 2000);
+			AddImage(20, 6, 10420, 2950);	//AddBackground(0, 0, 200, 265, 9380);
+			AddImage(1, 18, 10421, 2950);
+			AddImage(109, 38, 2440, 2950);			
+			AddImage(18, 150, 2602, 2950);
+			AddImage(327, 107, 30081, 2950);
 
             if (info.Name != null)
-                AddHtml(30, 3, 140, 20, String.Format("<basefont color=#{0}><center>{1}</center></font>", textHue, info.Name), false, false);
+                AddHtml(120, 39, 140, 20, String.Format("<basefont color=black><center>{0}</center></font>", info.Name), false, false);
 
-            AddButton(30, 40, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
+            AddButton(51, 32, info.Icon, info.Icon, 3, GumpButtonType.Reply, 0);
 
-            AddButton(90, 40, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
-            AddLabel(120, 38, 0, "Cast");
-
-            //AddButton( 90, 65, 2338, 2331, 2, GumpButtonType.Reply, 0 );  //Scribe
-            //AddLabel( 120, 63, 0, "Scribe" );
+            AddButton(350, 21, 2331, 2338, 1, GumpButtonType.Reply, 0);  //Cast
+            AddLabel(313, 20, 1088, "Cast");
 
             //Info
             string InfoString = "";
             if (info.Desc != null)
-                InfoString += String.Format("<basefont color=black>{0}</font><br><br>", info.Desc);
+                InfoString += String.Format("<basefont color=#{0}>{1}</font><br><br>", textHue, info.Desc);
 
             if (info.Regs != null)
             {
@@ -3523,7 +3554,7 @@ namespace Server.Gumps
                     InfoString += String.Format("{0}<br>", s.TrimStart());
                 InfoString += "</font><br>";
             }
-            AddHtml(30, 95, 140, 130, InfoString, false, true);
+            AddHtml(143, 88, 214, 93, InfoString, true, true);
             //End Info
 
             #region CastInfo
@@ -3531,12 +3562,13 @@ namespace Server.Gumps
             {
                 m_CastCommandModule = (CastCommandsModule)CentralMemory.GetModule(sender.Serial, typeof(CastCommandsModule));
 
-                AddLabel(25, 242, 0, "Key :");
+				AddImage(67, 162, 2444, 2950);
+                AddLabel(87, 146, 1088, "Key");
                 if (m_CastCommandModule == null)
-                    AddTextEntry(70, 242, 100, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
+                    AddTextEntry(74, 162, 50, 20, 0, 5, "");  //Key	Loc,Size,Hue,ID
                 else
-                    AddTextEntry(70, 242, 100, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
-                AddButton(175, 247, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
+                    AddTextEntry(74, 162, 50, 20, 0, 5, m_CastCommandModule.GetCommandForInfo(m_CastInfo));  //Key		Loc,Size,Hue,ID
+                AddButton(33, 167, 2103, 2104, 4, GumpButtonType.Reply, 0);  //KeyButton
             }
             #endregion //CastInfo
         }
@@ -3594,26 +3626,26 @@ namespace Server.Gumps
                 {
                     if (m_CastCommandModule == null)
                     {
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new SpellweavingScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.RemoveCommandByInfo(m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new SpellweavingScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
                 else
                 {
                     if (m_CastCommandModule == null)
                     {
                         CentralMemory.AddModule(new CastCommandsModule(state.Mobile.Serial, command, m_CastInfo));
-                        state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                        state.Mobile.SendGump(new SpellweavingScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                         return;
                     }
 
                     m_CastCommandModule.Add(command, m_CastInfo);
-                    state.Mobile.SendGump(new Holocron(m_Book, m_Info, m_TextHue, state.Mobile));
+                    state.Mobile.SendGump(new SpellweavingScroll(m_Book, m_Info, m_TextHue, state.Mobile));
                 }
             }
         }
-    }*/
+    }
 }

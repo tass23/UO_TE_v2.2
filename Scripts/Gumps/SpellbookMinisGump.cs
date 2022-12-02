@@ -66,10 +66,11 @@ namespace Server.Gumps
 			m_Book = book;
             m_Spells = book.SchoolSpells;
 			AddPage(0);
-			AddButton(90, 0, 10450, 10450, 1, GumpButtonType.Reply, 0);	//Lycan Primer Mini
-			AddImage(90, 0, 10450, 1094);	//Gump image with gold dot
-            AddLabel( 65, 50, 1166, "Ancient Lycan" );
-			AddLabel( 85, 65, 1166, "Primer" );
+			AddItem(148, 20, 1492, 1357);
+			AddButton(151, 39, 10450, 10450, 1, GumpButtonType.Reply, 0);	//Lycan Primer Mini
+			AddImage(151, 39, 10450, 1357);
+            AddLabel( 126, 105, 1166, "Ancient Lycan" );
+			AddLabel( 147, 122, 1166, "Primer" );
 		}
 
 		public bool HasSpell(Type type)
@@ -118,9 +119,9 @@ namespace Server.Gumps
 			AddButton(95, 0, 9793, 9793, 1, GumpButtonType.Reply, 0);	//Ancient Coven Mini
 			AddButton(95, 27, 9792, 9793, 1, GumpButtonType.Reply, 0);	//Ancient Coven Mini
 			AddButton(95, 54, 9793, 9793, 1, GumpButtonType.Reply, 0);	//Ancient Coven Mini
-			AddImage(95, 0, 9793, 1463);	//Gump image with gold dot
-			AddImage(95, 27, 9792, 2984);	//Gump image with gold dot
-			AddImage(95, 54, 9793, 1463);	//Gump image with gold dot
+			AddImage(95, 0, 9793, 2871);	//Gump image with gold dot
+			AddImage(95, 27, 9792, 2822);	//Gump image with gold dot
+			AddImage(95, 54, 9793, 2871);	//Gump image with gold dot
             AddLabel(62, 79, 1166, "Ancient Coven" );
 			AddLabel(82, 94, 1166, "Spellbook" );
 		}
@@ -385,7 +386,7 @@ namespace Server.Gumps
                 state.Mobile.SendGump(new ChivalrySpellbookGump(m_Book, m));
 			}
 
-            object[] Params = new object[1] { m_Book };
+            object[] Params = new object[2] { m_Book, m };
             CSpellbookGump gump = Activator.CreateInstance(GumpType, Params) as CSpellbookGump;
             if (gump != null)
                 state.Mobile.SendGump(gump);

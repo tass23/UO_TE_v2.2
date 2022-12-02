@@ -44,13 +44,13 @@ namespace Server.Items
             }
         }
 
-		public override int DefaultGumpID{ get{ return 0x108; } }
+		public override int DefaultGumpID{ get{ return 0x3F; } }
 		public override int DefaultDropSound{ get{ return 0x4F; } }
 
-		public override Rectangle2D Bounds
-		{
-			get{ return new Rectangle2D( 19, 47, 163, 76 ); }
-		}
+		//public override Rectangle2D Bounds
+		//{
+			//get{ return new Rectangle2D( 19, 47, 163, 76 ); }
+		//}
 
 		[Constructable]
 		public SpellbookBasket() : base( 0x24D9 )
