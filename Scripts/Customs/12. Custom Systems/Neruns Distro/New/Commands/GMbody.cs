@@ -141,19 +141,11 @@ namespace Server.Commands
 						if(from.AccessLevel >= AccessLevel.Counselor)
 						{
 							EquipItem( new StaffRing() );
-							Spellbook book1 = new Spellbook( (ulong)18446744073709551615 );
-							Spellbook book2 = new NecromancerSpellbook( (ulong)0xffff );
-							Spellbook book3 = new BookOfChivalry();
-							Spellbook book4 = new BookOfBushido();
-                            Spellbook book5 = new BookOfNinjitsu();
+							PackItem( new AdvancedSpellbookDeed() );
+							PackItem( new AdvancedSpellbookDeed() );
+                            PackItem( new UltimateHider() );
+							PackItem( new RAFTRS() );
 
-                            PackItem(new GMHidingStone());
-
-							PackItem( book1 );
-							PackItem( book2 );
-							PackItem( book3 );
-							PackItem( book4 );
-							PackItem( book5 );
 							from.RawStr = 100;
 							from.RawDex = 100;
 							from.RawInt = 100;

@@ -1,8 +1,9 @@
 ServerName=The Expanse
 ServerVersion=Ver : 7.0.12.0
-UpdateTime=9/22/2021 7:03:40 PM
+UpdateTime=12/5/2022 5:02:50 PM
 Guilds=0
-Items=481430
-Mobiles=54648
-Online=0
-UpTime=00:00:03:23
+Items=349586
+Mobiles=40955
+Online=1
+UpTime=00:00:01:11
+Player=Raist,5618,1147,Trammel,Owner,Skills  :69600<br>

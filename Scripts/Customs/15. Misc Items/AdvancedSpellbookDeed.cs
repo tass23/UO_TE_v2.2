@@ -7,12 +7,16 @@ using Server.Guilds;
 using Server.Gumps;
 using Server.Mobiles;
 using Server.Targeting;
+using Server.ACC.CSS;
 using Server.ACC.CSS.Systems.Chivalry;
 using Server.ACC.CSS.Systems.Mage;
 using Server.ACC.CSS.Systems.Necromancy;
-//using Server.ACC.CSS.Systems.Bushido;
-//using Server.ACC.CSS.Systems.Ninja;
 using Server.ACC.CSS.Systems.Mysticism;
+using Server.ACC.CSS.Systems.Spellweaving;
+using Server.ACC.CSS.Systems.LightForce;
+using Server.ACC.CSS.Systems.DarkForce;
+using Server.ACC.CSS.Systems.Vampire;
+using Server.ACC.CSS.Systems.Werewolf;
 
 namespace Server.Misc
 {
@@ -76,21 +80,31 @@ namespace Server.Misc
                 this.Dragable = true;
                 this.Resizable = false;
                 this.AddPage(0);
-                this.AddBackground(34, 17, 350, 368, 5054);
+                this.AddBackground(34, 17, 350, 500, 5054);
                 this.AddLabel(128, 38, 0, @"Choose your Advanced Spellbook");
-                this.AddTextEntry(98, 132, 226, 20, 0, (int)Buttons.TextEntry1, @"  Spellbook                       Necromancy");
-                this.AddTextEntry(105, 212, 213, 20, 0, (int)Buttons.TextEntry2, @"   Chivalry                            Bushido");
-               // this.AddTextEntry(107, 301, 213, 20, 0, (int)Buttons.TextEntry3, @"   Ninjitsu                     Spellweaving");
-                this.AddButton(298, 347, 241, 248, 0,  GumpButtonType.Reply, 0);//Close
-                this.AddButton(118, 77, 2234, 248, 1, GumpButtonType.Reply, 0);//spellbook
-                this.AddButton(250, 78, 11011, 248, 2, GumpButtonType.Reply, 0);//Necormancy
-                this.AddButton(117, 160, 11012, 248, 3, GumpButtonType.Reply, 0);//Chivalry
-               //this.AddButton(250, 158, 11017, 248, 4, GumpButtonType.Reply, 0);//Bushido
-                //this.AddButton(117, 244, 11016, 248, 5, GumpButtonType.Reply, 0);//Ninjitsu
-                this.AddButton(249, 246, 11053, 248, 6, GumpButtonType.Reply, 0);//Mysticism
-                this.AddTextEntry(225, 132, 86, 19, 0, (int)Buttons.TextEntry4, @"  Necromancy");
-                //this.AddTextEntry(230, 214, 78, 20, 0, (int)Buttons.TextEntry5, @"    Bushido");
-                this.AddTextEntry(229, 301, 90, 20, 0, (int)Buttons.TextEntry6, @"  Mysticism");
+                this.AddTextEntry(100, 132, 226, 20, 0, (int)Buttons.TextEntry1, @"Magery       ");
+                this.AddTextEntry(100, 212, 213, 20, 0, (int)Buttons.TextEntry2, @"Chivalry    ");
+                this.AddTextEntry(100, 292, 213, 20, 0, (int)Buttons.TextEntry3, @"Mysticism    ");
+                this.AddTextEntry(100, 372, 213, 20, 0, (int)Buttons.TextEntry4, @"Vampire     ");
+                this.AddTextEntry(100, 452, 213, 20, 0, (int)Buttons.TextEntry5, @"Jedi        ");
+                this.AddTextEntry(225, 132, 90, 20, 0, (int)Buttons.TextEntry6, @"Necromancy   ");
+                this.AddTextEntry(225, 212, 90, 20, 0, (int)Buttons.TextEntry7, @"Spellweaving");
+                this.AddTextEntry(225, 372, 86, 19, 0, (int)Buttons.TextEntry8, @"Werewolf    ");
+                this.AddTextEntry(225, 452, 78, 20, 0, (int)Buttons.TextEntry9, @"Sith        ");
+                this.AddButton(118, 77, 2234, 248, 1, GumpButtonType.Reply, 0);//Magery
+                this.AddButton(250, 77, 11011, 248, 2, GumpButtonType.Reply, 0);//Necromancy
+                this.AddButton(118, 160, 11012, 248, 3, GumpButtonType.Reply, 0);//Chivalry
+                this.AddButton(118, 246, 11056, 248, 4, GumpButtonType.Reply, 0);//Mysticism
+                this.AddButton(250, 160, 11053, 248, 5, GumpButtonType.Reply, 0);//Spellweaving
+                this.AddButton(118, 326, 2234, 248, 6, GumpButtonType.Reply, 0);//Vampire
+                this.AddButton(118, 406, 2234, 248, 8, GumpButtonType.Reply, 0);//Jedi
+                this.AddButton(250, 326, 10450, 248, 7, GumpButtonType.Reply, 0);//Werewolf
+                this.AddButton(250, 406, 2234, 248, 9, GumpButtonType.Reply, 0);//Sith
+				this.AddImage(118, 326, 11011, 2983); //Vampire
+				this.AddImage(118, 406, 11011, 2941); //Jedi
+				this.AddImage(250, 326, 10450, 2983); //Werewolf
+				this.AddImage(250, 406, 2234, 2944); //Sith
+                this.AddButton(298, 460, 247, 248, 0,  GumpButtonType.Reply, 0);//Close
             }
         }
 
@@ -99,6 +113,12 @@ namespace Server.Misc
             TextEntry1,
             TextEntry2,
             TextEntry3,
+			TextEntry4,
+			TextEntry5,
+			TextEntry6,
+			TextEntry7,
+			TextEntry8,
+			TextEntry9,
             Button0,
             Button1,
             Button2,
@@ -106,9 +126,9 @@ namespace Server.Misc
             Button4,
             Button5,
             Button6,
-            TextEntry4,
-            TextEntry5,
-            TextEntry6,
+            Button7,
+            Button8,
+            Button9,
         }
         public override void OnResponse(NetState state, RelayInfo info)
         {
@@ -149,6 +169,46 @@ namespace Server.Misc
                 case 4:
                     {
                         Item item = new MysticismSpellbook();
+                        from.AddToBackpack(item);
+                        from.CloseGump(typeof(AdvancedSpellbookGump));
+						m_Deed.Delete();
+                        break;
+                    }
+                case 5:
+                    {
+                        Item item = new SpellweavingSpellbook();
+                        from.AddToBackpack(item);
+                        from.CloseGump(typeof(AdvancedSpellbookGump));
+						m_Deed.Delete();
+                        break;
+                    }
+                case 6:
+                    {
+                        Item item = new CovenSpellbook();
+                        from.AddToBackpack(item);
+                        from.CloseGump(typeof(AdvancedSpellbookGump));
+						m_Deed.Delete();
+                        break;
+                    }
+                case 7:
+                    {
+                        Item item = new LycanPrimer();
+                        from.AddToBackpack(item);
+                        from.CloseGump(typeof(AdvancedSpellbookGump));
+						m_Deed.Delete();
+                        break;
+                    }
+                case 8:
+                    {
+                        Item item = new JediHolocron();
+                        from.AddToBackpack(item);
+                        from.CloseGump(typeof(AdvancedSpellbookGump));
+						m_Deed.Delete();
+                        break;
+                    }
+                case 9:
+                    {
+                        Item item = new SithHolocron();
                         from.AddToBackpack(item);
                         from.CloseGump(typeof(AdvancedSpellbookGump));
 						m_Deed.Delete();

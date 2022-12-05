@@ -9,12 +9,16 @@ Hope you have fun with all this! - Raist/Tass23
 
 ### Installation
 
-Follow these instructions to install and run UO-The Expanse v2.2 BME Freeshard:
+Follow these instructions to install and run UO-The Expanse v2.2 Freeshard:
 
 #### Windows
-The Freeshard is set up to use the Client already installed (which is the same Client being used by the BME Freeshard) in the C:\UO_TE folder, but if any changes are made to the install location, the file path to the Client files has to be changed in Freeshard under Scripts->Misc->DataPath.cs (this must be repeated for the BME Freeshard as well!). To run the Freeshard, simply doubleclick UO-The Expanse v2.2 Freeshard icon on the Desktop (the Freeshard uses a RED icon, whereas the BME Freeshard uses a BLUE icon), and this launches server.exe inside the C:\UO_TE\Freeshard folder. This system also includes the Ultima and Server folders, so if any Core changes need to be made, the entire BME Freeshard can be compiled again by running `RecompileCore.bat` and follow the on-screen prompts. This will compile both the Server binary and Ultima binary and then launch the Freeshard at end. THE FIRST RUN will prompt for an account (no accounts exist!).
-** This is the OWNER account, so anyone with these credentials can log in and have FULL CONTROL of the Freeshard. **
-** It is advised to not have the same Username and Password for the Freeshard and the BME Freeshard. **
+The Freeshard is set up to use the Client already installed (which is the same Client being used by the BME Freeshard) in the C:\UO_TE folder, but if any changes are made to the install location, the file path to the Client files has to be changed in Freeshard under Scripts->Misc->DataPath.cs (this must be repeated for the BME Freeshard as well!). To run the Freeshard, simply doubleclick UO-The Expanse v2.2 Freeshard icon on the Desktop (the Freeshard uses a RED icon, whereas the BME Freeshard uses a BLUE icon), and this launches server.exe inside the C:\UO_TE\Freeshard folder. This system also includes the Ultima and Server folders, so if any Core changes need to be made, the entire Freeshard can be compiled again by running `RecompileCore.bat` and follow the on-screen prompts. This will compile both the Server binary and Ultima binary and then launch the Freeshard at end. Both Freeshards are set up with a SAVES folder, and a 'current' save (this is needed for some features to work without crashing the client). An Owner account already exists, with a character named Raist. Feel free to change it, and the current password! The login information for the Admin account is:
+** Username: Admin **
+** Password: admin **
+
+If you ever attempt to Recompile, and it fails, the server.exe file is DELETED.
+Extract the server.zip archive, which contains a backup of server.exe, into the ROOT folder.
+This helps to make sure a server.exe always exists, in case the launch one is deleted.
 
 #### OSX
 No solutions exist.

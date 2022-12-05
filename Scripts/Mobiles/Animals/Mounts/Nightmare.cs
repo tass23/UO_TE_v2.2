@@ -55,7 +55,7 @@ namespace Server.Mobiles
 			{
 				case 0:
 				{
-					BodyValue = 114;
+					BodyValue = 115;
 					ItemID = 16039;
 					break;
 				}
@@ -67,7 +67,7 @@ namespace Server.Mobiles
 				}
 				case 2:
 				{
-					BodyValue = 179;
+					BodyValue = 178;
 					ItemID = 16055;
 					break;
 				}
