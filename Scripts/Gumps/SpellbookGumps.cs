@@ -12,6 +12,7 @@ using Server.Spells;
 using Server.Accounting;
 using Server.Commands;
 using Server.Targeting;
+using Server.SkillHandlers;
 using Server.ACC.CM;
 using Server.ACC.CSS.Modules;
 using Server.ACC.CSS;
@@ -148,20 +149,23 @@ namespace Server.Gumps
 			else if (info.ButtonID == 7)
 			{
                 WerewolfForm(state.Mobile);
-				state.Mobile.CloseGump(typeof(LycanPrimerGump));
+				//state.Mobile.CloseGump(typeof(LycanPrimerGump));
+                state.Mobile.SendGump(new LycanPrimerGump(m_Book));
 				state.Mobile.SendGump( new WerewolfGump() );
 			}
 
 			else if (info.ButtonID == 8)
 			{
                 WerewolfForm2(state.Mobile);
-				state.Mobile.CloseGump(typeof(LycanPrimerGump));
+				//state.Mobile.CloseGump(typeof(LycanPrimerGump));
+                state.Mobile.SendGump(new LycanPrimerGump(m_Book));
 				state.Mobile.SendGump( new WerewolfGump() );
 			}
 
 			else if (info.ButtonID == 9)
 			{
-				state.Mobile.CloseGump(typeof(LycanPrimerGump));
+				//state.Mobile.CloseGump(typeof(LycanPrimerGump));
+                state.Mobile.SendGump(new LycanPrimerGump(m_Book));
                 WerewolfGump wwg = new WerewolfGump();
 				state.Mobile.SendMessage("Bite whom?");
 				state.Mobile.Target = new BiteTarget(wwg);
@@ -212,6 +216,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Werewolf Ability is disabled.");
                 else
                     spell.Cast();
+				
+				state.Mobile.SendGump(new LycanPrimerGump(m_Book));
             }
 
             object[] Params = new object[1] { m_Book };
@@ -764,27 +770,31 @@ namespace Server.Gumps
 			else if (info.ButtonID == 7)
 			{
                 VampireForm(state.Mobile);
-				state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+				//state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+                state.Mobile.SendGump(new CovenSpellbookGump(m_Book));
 				state.Mobile.SendGump( new VampireGump() );
 			}
 
 			else if (info.ButtonID == 8)
 			{
                 VampireForm2(state.Mobile);
-				state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+				//state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+                state.Mobile.SendGump(new CovenSpellbookGump(m_Book));
 				state.Mobile.SendGump( new VampireGump() );
 			}
 
 			else if (info.ButtonID == 9)
 			{
                 VampireForm3(state.Mobile);
-				state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+				//state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+                state.Mobile.SendGump(new CovenSpellbookGump(m_Book));
 				state.Mobile.SendGump( new VampireGump() );
 			}
 
 			else if (info.ButtonID == 10)
 			{
-				state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+				//state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+                state.Mobile.SendGump(new CovenSpellbookGump(m_Book));
                 VampireGump vg = new VampireGump();
 				state.Mobile.SendMessage("Bite whom?");
 				state.Mobile.Target = new BiteTarget(vg);
@@ -812,7 +822,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Vampire Ability is disabled.");
                     return;
                 }
-				state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+				//state.Mobile.CloseGump(typeof(CovenSpellbookGump));
+                state.Mobile.SendGump(new CovenSpellbookGump(m_Book));
                 state.Mobile.SendGump(new VampyScroll(m_Book, si, TextHue, state.Mobile));
             }
 
@@ -835,6 +846,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Vampire Ability is disabled.");
                 else
                     spell.Cast();
+				
+				state.Mobile.SendGump(new CovenSpellbookGump(m_Book));
             }
 
             object[] Params = new object[1] { m_Book };
@@ -1501,7 +1514,8 @@ namespace Server.Gumps
 					m.AddToBackpack(food);
 					m.AddToBackpack( new Pitcher( BeverageType.Water ) );
 					m.PlaySound( 0x1E2 );
-					state.Mobile.CloseGump(typeof(MageryGump));
+					//state.Mobile.CloseGump(typeof(MageryGump));
+					state.Mobile.SendGump(new MageSpellbookGump(m_Book));
 				}				
 			}
 
@@ -1519,7 +1533,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(MageryGump));
+                //state.Mobile.CloseGump(typeof(MageryGump));
+				state.Mobile.SendGump(new MageSpellbookGump(m_Book));
                 state.Mobile.SendGump(new ScrollGump(m_Book, si, TextHue, state.Mobile));
             }
 
@@ -1542,6 +1557,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                 else
                     spell.Cast();
+				
+				state.Mobile.SendGump(new MageSpellbookGump(m_Book));
             }
 
             object[] Params = new object[1] { m_Book };
@@ -1753,6 +1770,9 @@ namespace Server.Gumps
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
 				AddButton(437, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
+				AddButton(79, 232, 5210, 5210, 8, GumpButtonType.Reply, 0); //Spirit Speak left button
+				AddButton(79, 246, 5210, 5210, 8, GumpButtonType.Reply, 0); //Spirit Speak left button
+				AddButton(448, 208, 5102, 5102, 9, GumpButtonType.Reply, 0); //Poison right button
                 AddImage(70, 100, BGImage);
 				AddHtml(145, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
@@ -1780,7 +1800,7 @@ namespace Server.Gumps
 
                         AddHtml((C > 7 ? 283 : 130), 146 + (C > 7 ? (C - 8) * 16 : C * 16), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
                         //AddButton((C > 7 ? 288 : 130), 138 + (C > 7 ? (C - 8) * 20 : C * 17), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
-                        AddButton((C > 7 ? 406 : 250), 149 + (C > 7 ? (C - 8) * 16 : C * 16), 0xFC0, 0xFC0, j + 2000, GumpButtonType.Reply, 0);
+                        AddButton((C > 7 ? 406 : 250), 153 + (C > 7 ? (C - 8) * 16 : C * 16), 0x238D, 0x238D, j + 2000, GumpButtonType.Reply, 0);
 						//AddImage((C > 7 ? 408 : 250), 149 + (C > 7 ? (C - 8) * 16 : C * 16), 0x4, 0x4);
                     }
                 }
@@ -1811,6 +1831,22 @@ namespace Server.Gumps
 				//Add Master Craft Menu to select specific crafting menu.
                 m.SendMessage( "What do you want to Craft?" );
 				m.SendGump( new MasterCraftGump(m) );
+                state.Mobile.SendGump(new NecroSpellbookGump(m_Book));
+			}
+			
+			else if (info.ButtonID == 8)
+			{
+				//Spirit Speak.
+                //m.SendMessage( "You channel spiritual energies..." );
+				m.UseSkill( SkillName.SpiritSpeak );
+                state.Mobile.SendGump(new NecroSpellbookGump(m_Book));
+			}
+			
+			else if (info.ButtonID == 9)
+			{
+				//Poisoning.
+				m.UseSkill( SkillName.Poisoning );
+                state.Mobile.SendGump(new NecroSpellbookGump(m_Book));
 			}
 
             else if (info.ButtonID >= 1000 && info.ButtonID < (1000 + m_Spells.Count))
@@ -1827,7 +1863,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(NecroGump));
+                //state.Mobile.CloseGump(typeof(NecroGump));
+                state.Mobile.SendGump(new NecroSpellbookGump(m_Book));
                 state.Mobile.SendGump(new NecroScroll(m_Book, si, TextHue, state.Mobile));
             }
 
@@ -1850,6 +1887,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new NecroSpellbookGump(m_Book));
             }
 
             object[] Params = new object[1] { m_Book };
@@ -2076,11 +2115,11 @@ namespace Server.Gumps
                 AddPage(CurrentPage);
 
                 //Hidden Buttons
-                for (int j = (CurrentPage - 1) * 11, C = 0; j < CurrentPage * 11 && j < m_Spells.Count; j++, C++)	//Each set of two pages is 16 spells, e.g. Pages 1 & 2 are spells 1 - 16, 3 & 4 are 17 - 32, etc., etc.
+                for (int j = (CurrentPage - 1) * 10, C = 0; j < CurrentPage * 10 && j < m_Spells.Count; j++, C++)	//Each set of two pages is 16 spells, e.g. Pages 1 & 2 are spells 1 - 16, 3 & 4 are 17 - 32, etc., etc.
                 {
                     if (HasSpell((Type)m_Spells[j]))
                     {
-                        AddButton((C > 7 ? 292 : 130), 129 + (C > 7 ? (C - 8) * 13: C * 13), 2482, 2482, j + 1000, GumpButtonType.Reply, 0);
+                        AddButton((C > 4 ? 292 : 130), 129 + (C > 4 ? (C - 5) * 19: C * 19), 2482, 2482, j + 1000, GumpButtonType.Reply, 0);
                     }
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
@@ -2102,7 +2141,7 @@ namespace Server.Gumps
                 //End Prev/Next Buttons
 
                 //Spell Buttons/Labels
-                for (int j = (CurrentPage - 1) * 11, C = 0; j < CurrentPage * 11 && j < m_Spells.Count; j++, C++)
+                for (int j = (CurrentPage - 1) * 10, C = 0; j < CurrentPage * 10 && j < m_Spells.Count; j++, C++)
                 {
                     if (HasSpell((Type)m_Spells[j]))
                     {
@@ -2111,8 +2150,8 @@ namespace Server.Gumps
                             continue;
 						
 
-                        AddHtml((C > 7 ? 282 : 128), 130 + (C > 7 ? (C - 8) * 13 : C * 13), 110, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
-                        AddButton((C > 7 ? 405 : 248), 130 + (C > 7 ? (C - 8) * 13 : C * 13), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
+                        AddHtml((C > 4 ? 282 : 128), 130 + (C > 4 ? (C - 5) * 19 : C * 19), 120, 20, String.Format("<basefont color=#{0}>{1}</basefont>", BookHue, info.Name), false, false);
+                        AddButton((C > 4 ? 407 : 250), 130 + (C > 4 ? (C - 5) * 19 : C * 19), SpellBtn, SpellBtnP, j + 2000, GumpButtonType.Reply, 0);
                     }
                 }
                 //End Spell Buttons/Labels
@@ -2164,7 +2203,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(ChivGump));
+                //state.Mobile.CloseGump(typeof(ChivGump));
+                state.Mobile.SendGump(new ChivalrySpellbookGump(m_Book, m));
                 state.Mobile.SendGump(new ChivScroll(m_Book, si, TextHue, state.Mobile));
             }
 
@@ -2187,6 +2227,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new ChivalrySpellbookGump(m_Book, m));
             }
 
             object[] Params = new object[2] { m_Book, m };
@@ -3033,7 +3075,8 @@ namespace Server.Gumps
                 }
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
 				AddButton(437, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
-				AddButton(75, 230, 254, 254, 8, GumpButtonType.Reply, 0); //Tithe left button
+				AddButton(75, 230, 254, 254, 8, GumpButtonType.Reply, 0); //Detect Hidden left button
+				AddButton(78, 135, 87, 87, 9, GumpButtonType.Reply, 0); //Evaluating Intelligence left button
                 AddImage(70, 100, BGImage);
 				AddHtml(145, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 109, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
@@ -3096,8 +3139,14 @@ namespace Server.Gumps
 
 			else if (info.ButtonID == 8)
 			{
-				if ( state.Mobile.CheckAlive() )
-					state.Mobile.SendGump( new TithingGump( state.Mobile, 0 ) );
+				m.UseSkill( SkillName.DetectHidden );
+                state.Mobile.SendGump(new MysticismSpellbookGump(m_Book));
+			}
+			
+			else if (info.ButtonID == 9)
+			{
+				m.UseSkill( SkillName.EvalInt );
+                state.Mobile.SendGump(new MysticismSpellbookGump(m_Book));
 			}
 
             else if (info.ButtonID >= 1000 && info.ButtonID < (1000 + m_Spells.Count))
@@ -3114,7 +3163,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(MysticismGump));
+                //state.Mobile.CloseGump(typeof(MysticismGump));
+                state.Mobile.SendGump(new MysticismSpellbookGump(m_Book));
                 state.Mobile.SendGump(new MysticismScroll(m_Book, si, TextHue, state.Mobile));
             }
 
@@ -3137,6 +3187,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new MysticismSpellbookGump(m_Book));
             }
 
             object[] Params = new object[1] { m_Book };
@@ -3364,6 +3416,9 @@ namespace Server.Gumps
 				AddButton(73, 202, 11400, 11400, 6, GumpButtonType.Reply, 0);	//Minimize button
 				AddButton(437, 130, 2643, 2643, 7, GumpButtonType.Reply, 0); //Master crafting right button
 				AddButton(77, 238, 254, 254, 8, GumpButtonType.Reply, 0); //Wildfire left button
+				AddButton(100, 170, 254, 254, 9, GumpButtonType.Reply, 0); //Gift Of Life left button
+				AddButton(85, 142, 210, 210, 10, GumpButtonType.Reply, 0); //Summon Fiend left button
+				AddButton(435, 230, 210, 210, 11, GumpButtonType.Reply, 0); //Summon Fey left button
                 AddImage(70, 100, BGImage);
 				AddHtml(145, 112, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label1), false, false);
                 AddHtml(305, 112, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center></basefont>", TextHue, Label2), false, false);
@@ -3426,23 +3481,46 @@ namespace Server.Gumps
 
 			else if (info.ButtonID == 8)
 			{
-				if (SpellRestrictions.UseRestrictions && !SpellRestrictions.CheckRestrictions(state.Mobile, m_Book.School))
-                {
-                    state.Mobile.SendMessage("You are not allowed to use this Spell.");
-                    return;
-                }
-
-                if (!CSpellbook.MobileHasSpell(state.Mobile, m_Book.School, (Type)m_Spells[601]))
-                {
-                    state.Mobile.SendMessage("You do not have that Spell.");
-                    return;
-                }
-
-                Spell spell = SpellInfoRegistry.NewSpell((Type)m_Spells[601], m_Book.School, state.Mobile, null);
+                Server.Spells.Spellweaving.WildfireSpell spell = new Server.Spells.Spellweaving.WildfireSpell ( m, null );
                 if (spell == null)
                     state.Mobile.SendMessage("That Spell is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
+			}
+			
+			else if (info.ButtonID == 9)
+			{
+                Server.Spells.Spellweaving.GiftOfLifeSpell spell = new Server.Spells.Spellweaving.GiftOfLifeSpell ( m, null );
+                if (spell == null)
+                    state.Mobile.SendMessage("That Spell is disabled.");
+                else
+                    spell.Cast();
+				
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
+			}
+			
+			else if (info.ButtonID == 10)
+			{
+                Server.Spells.Spellweaving.SummonFiendSpell spell = new Server.Spells.Spellweaving.SummonFiendSpell ( m, null );
+                if (spell == null)
+                    state.Mobile.SendMessage("That Spell is disabled.");
+                else
+                    spell.Cast();
+				
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
+			}
+			
+			else if (info.ButtonID == 11)
+			{
+                Server.Spells.Spellweaving.SummonFeySpell spell = new Server.Spells.Spellweaving.SummonFeySpell ( m, null );
+                if (spell == null)
+                    state.Mobile.SendMessage("That Spell is disabled.");
+                else
+                    spell.Cast();
+				
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
 			}
 
             else if (info.ButtonID >= 1000 && info.ButtonID < (1000 + m_Spells.Count))
@@ -3459,7 +3537,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(SpellweavingGump));
+                //state.Mobile.CloseGump(typeof(SpellweavingGump));
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
                 state.Mobile.SendGump(new SpellweavingScroll(m_Book, si, TextHue, state.Mobile));
             }
 
@@ -3482,6 +3561,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Spell is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new SpellweavingSpellbookGump(m_Book));
             }
 
             object[] Params = new object[1] { m_Book };

@@ -400,8 +400,8 @@ namespace Server.Gumps
 				AddButton(465, 217, 2708, 2708, 9, GumpButtonType.Reply, 0); //Water capsule right button
 				AddButton(450, 140, 2643, 2643, 10, GumpButtonType.Reply, 0); //Master crafting right button
 
-				AddButton(113, 230, 5102, 5102, 11, GumpButtonType.Reply, 0); //Food capsule left button
-				AddButton(113, 243, 5102, 5102, 12, GumpButtonType.Reply, 0); //Make rune left button
+				AddButton(113, 230, 5102, 5102, 11, GumpButtonType.Reply, 0); //Lockpicking left button
+				AddButton(113, 243, 5102, 5102, 12, GumpButtonType.Reply, 0); //Taste Indentification left button
 				AddButton(113, 255, 5102, 5102, 13, GumpButtonType.Reply, 0); //Inscription skill left button
 				AddButton(113, 268, 5102, 5102, 14, GumpButtonType.Reply, 0); //Arms lore skill left button
 				AddButton(113, 282, 5102, 5102, 15, GumpButtonType.Reply, 0); //Tracking skill left button
@@ -482,7 +482,8 @@ namespace Server.Gumps
 					m.SendMessage("You dispense some food from the container.");
 					m.AddToBackpack(food);
 					m.PlaySound( 0x1E2 );
-					state.Mobile.CloseGump(typeof(JediHolocronGump));
+					//state.Mobile.CloseGump(typeof(JediHolocronGump));
+					state.Mobile.SendGump(new JediHolocronGump(m_Book));
 				}				
 			}
 
@@ -490,19 +491,21 @@ namespace Server.Gumps
 			{
 				m.SendMessage("You create a blank rune.");
 				m.AddToBackpack( new RecallRune() );
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 9)
 			{
 				m.SendMessage("You dispense some water from the container.");
 				m.AddToBackpack( new Pitcher( BeverageType.Water ) );
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 10)
 			{
-				state.Mobile.CloseGump(typeof(JediHolocronGump));	//Add Master Craft Menu to select specific crafting menu.
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));	//Add Master Craft Menu to select specific crafting menu.
                 m.SendMessage( "What would you like to Craft?" );
 				m.SendGump( new MasterCraftGump(m) );
 			}
@@ -521,40 +524,39 @@ namespace Server.Gumps
 				{
 					m.Target = new RTrapTarget();
 
-					m.SendLocalizedMessage( 502368 ); // Wich trap will you attempt to disarm?
+					m.SendLocalizedMessage( 502368 ); // Which trap will you attempt to disarm?
 				}
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
+				
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 12)
 			{
-				m.Target = new TasteInternalTarget();
-				m.SendMessage("What would you like to taste?");
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
+				m.UseSkill( SkillName.TasteID );
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 13)
 			{
-				m.SendMessage("What corpse do you wish to get information about?");
-				m.Target = new ForensicTarget();
-				m.RevealingAction();
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
+				m.UseSkill( SkillName.Forensics );
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 14)
 			{
-				m.SendMessage("What item, or Swamp Dragon, do you wish to get information about?");
-				m.Target = new InternalTarget();
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
+				m.UseSkill( SkillName.ItemID );
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 15)
 			{
-				state.Mobile.CloseGump(typeof(JediHolocronGump));
-                m.SendMessage( "What do you wish to Track?" );
-				m.CloseGump( typeof( TrackWhatGump ) );
-				m.CloseGump( typeof( TrackWhoGump ) );
-				m.SendGump( new TrackWhatGump( m ) );
+				m.UseSkill( SkillName.Tracking );
+				//state.Mobile.CloseGump(typeof(JediHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
 			}
 
             else if (info.ButtonID >= 1000 && info.ButtonID < (1000 + m_Spells.Count))
@@ -571,7 +573,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Force Power is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(JHolocronGump));
+                //state.Mobile.CloseGump(typeof(JHolocronGump));
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
                 state.Mobile.SendGump(new Holocron(m_Book, si, TextHue, state.Mobile));
                 //				m_Book.Mark = (info.ButtonID-1000)/16;
                 //				state.Mobile.SendMessage( "{0}", m_Book.Mark );
@@ -596,6 +599,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Force Power is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new JediHolocronGump(m_Book));
                 //				m_Book.Mark = (info.ButtonID-2000)/16;
                 //				state.Mobile.SendMessage( "{0}", m_Book.Mark );
             }
@@ -607,210 +612,7 @@ namespace Server.Gumps
 
             //GumpUpTimer
         }
-
-		public class ForensicTarget : Target
-		{
-			public ForensicTarget() : base( 10, false, TargetFlags.None )
-			{
-			}
-
-			protected override void OnTarget( Mobile from, object target )
-			{
-				if ( target is Mobile )
-				{
-					if ( from.CheckTargetSkill( SkillName.Forensics, target, 40.0, 100.0 ) )
-					{
-						if ( target is PlayerMobile && ((PlayerMobile)target).NpcGuild == NpcGuild.ThievesGuild )
-							from.SendLocalizedMessage( 501004 );//That individual is a thief!
-						else
-							from.SendLocalizedMessage( 501003 );//You notice nothing unusual.
-					}
-					else
-					{
-						from.SendLocalizedMessage( 501001 );//You cannot determain anything useful.
-					}
-				}
-				else if ( target is Corpse )
-				{
-					if ( from.CheckTargetSkill( SkillName.Forensics, target, 0.0, 100.0 ) )
-					{
-						Corpse c = (Corpse)target;
-
-						if ( ((Body)c.Amount).IsHuman )
-							c.LabelTo( from, 1042751, ( c.Killer == null ? "no one" : c.Killer.Name ) );//This person was killed by ~1_KILLER_NAME~
-
-						if ( c.Looters.Count > 0 )
-						{
-							StringBuilder sb = new StringBuilder();
-							for (int i=0;i<c.Looters.Count;i++)
-							{
-								if ( i>0 )
-									sb.Append( ", " );
-								sb.Append( ((Mobile)c.Looters[i]).Name );
-							}
-
-							c.LabelTo( from, 1042752, sb.ToString() );//This body has been distrubed by ~1_PLAYER_NAMES~
-						}
-						else
-						{
-							c.LabelTo( from, 501002 );//The corpse has not be desecrated.
-						}
-					}
-					else
-					{
-						from.SendLocalizedMessage( 501001 );//You cannot determain anything useful.
-					}
-				}
-				else if ( target is ILockpickable )
-				{
-					ILockpickable p = (ILockpickable)target;
-					if ( p.Picker != null )
-						from.SendLocalizedMessage( 1042749, p.Picker.Name );//This lock was opened by ~1_PICKER_NAME~
-					else
-						from.SendLocalizedMessage( 501003 );//You notice nothing unusual.
-				}
-			}
-		}
-
-		private class InternalTarget : Target
-		{
-			public InternalTarget() : base( 2, false, TargetFlags.None )
-			{
-				AllowNonlocal = true;
-			}
-
-			protected override void OnTarget( Mobile from, object targeted )
-			{
-				if ( targeted is BaseWeapon )
-				{
-					if ( from.CheckTargetSkill( SkillName.ArmsLore, targeted, 0, 100 ) )
-					{
-						BaseWeapon weap = (BaseWeapon)targeted;
-
-						if ( weap.MaxHitPoints != 0 )
-						{
-							int hp = (int)((weap.HitPoints / (double)weap.MaxHitPoints) * 10);
-
-							if ( hp < 0 )
-								hp = 0;
-							else if ( hp > 9 )
-								hp = 9;
-
-							from.SendLocalizedMessage( 1038285 + hp );
-						}
-
-						int damage = (weap.MaxDamage + weap.MinDamage) / 2;
-						int hand = (weap.Layer == Layer.OneHanded ? 0 : 1);
-
-						if ( damage < 3 )
-							damage = 0;
-						else
-							damage = (int)Math.Ceiling( Math.Min( damage, 30 ) / 5.0 );
-							/*
-						else if ( damage < 6 )
-							damage = 1;
-						else if ( damage < 11 )
-							damage = 2;
-						else if ( damage < 16 )
-							damage = 3;
-						else if ( damage < 21 )
-							damage = 4;
-						else if ( damage < 26 )
-							damage = 5;
-						else
-							damage = 6;
-							 * */
-
-						WeaponType type = weap.Type;
-
-						if ( type == WeaponType.Ranged )
-							from.SendLocalizedMessage( 1038224 + (damage * 9) );
-						else if ( type == WeaponType.Piercing )
-							from.SendLocalizedMessage( 1038218 + hand + (damage * 9) );
-						else if ( type == WeaponType.Slashing )
-							from.SendLocalizedMessage( 1038220 + hand + (damage * 9) );
-						else if ( type == WeaponType.Bashing )
-							from.SendLocalizedMessage( 1038222 + hand + (damage * 9) );
-						else
-							from.SendLocalizedMessage( 1038216 + hand + (damage * 9) );
-
-						if ( weap.Poison != null && weap.PoisonCharges > 0 )
-							from.SendLocalizedMessage( 1038284 ); // It appears to have poison smeared on it.
-					}
-					else
-					{
-						from.SendLocalizedMessage( 500353 ); // You are not certain...
-					}
-				}
-				else if(targeted is BaseArmor)
-				{
-					if( from.CheckTargetSkill(SkillName.ArmsLore, targeted, 0, 100) )
-					{
-						BaseArmor arm = (BaseArmor)targeted;
-
-						if ( arm.MaxHitPoints != 0 )
-						{
-							int hp = (int)((arm.HitPoints / (double)arm.MaxHitPoints) * 10);
-
-							if ( hp < 0 )
-								hp = 0;
-							else if ( hp > 9 )
-								hp = 9;
-
-							from.SendLocalizedMessage( 1038285 + hp );
-						}
-
-						from.SendLocalizedMessage( 1038295 + (int)Math.Ceiling( Math.Min( arm.ArmorRating, 35 ) / 5.0 ) );
-						/*
-						if ( arm.ArmorRating < 1 )
-							from.SendLocalizedMessage( 1038295 ); // This armor offers no defense against attackers.
-						else if ( arm.ArmorRating < 6 )
-							from.SendLocalizedMessage( 1038296 ); // This armor provides almost no protection.
-						else if ( arm.ArmorRating < 11 )
-							from.SendLocalizedMessage( 1038297 ); // This armor provides very little protection.
-						else if ( arm.ArmorRating < 16 )
-							from.SendLocalizedMessage( 1038298 ); // This armor offers some protection against blows.
-						else if ( arm.ArmorRating < 21 )
-							from.SendLocalizedMessage( 1038299 ); // This armor serves as sturdy protection.
-						else if ( arm.ArmorRating < 26 )
-							from.SendLocalizedMessage( 1038300 ); // This armor is a superior defense against attack.
-						else if ( arm.ArmorRating < 31 )
-							from.SendLocalizedMessage( 1038301 ); // This armor offers excellent protection.
-						else
-							from.SendLocalizedMessage( 1038302 ); // This armor is superbly crafted to provide maximum protection.
-						 * */
-					}
-					else
-					{
-						from.SendLocalizedMessage( 500353 ); // You are not certain...
-					}
-				}
-				else if ( targeted is SwampDragon && ((SwampDragon)targeted).HasBarding )
-				{
-					SwampDragon pet = (SwampDragon)targeted;
-
-					if ( from.CheckTargetSkill( SkillName.ArmsLore, targeted, 0, 100 ) )
-					{
-						int perc = (4 * pet.BardingHP) / pet.BardingMaxHP;
-
-						if ( perc < 0 )
-							perc = 0;
-						else if ( perc > 4 )
-							perc = 4;
-
-						pet.PrivateOverheadMessage( MessageType.Regular, 0x3B2, 1053021 - perc, from.NetState );
-					}
-					else
-					{
-						from.SendLocalizedMessage( 500353 ); // You are not certain...
-					}
-				}
-				else
-				{
-					from.SendLocalizedMessage( 500352 ); // This is neither weapon nor armor.
-				}
-			}
-		}
+		
 		private class RTrapTarget : Target
 		{
 			public RTrapTarget() :  base ( 2, false, TargetFlags.None )
@@ -901,74 +703,6 @@ namespace Server.Gumps
 				}
 			}
 		}
-		private class TasteInternalTarget : Target
-		{
-			public TasteInternalTarget() :  base ( 2, false, TargetFlags.None )
-			{
-				AllowNonlocal = true;
-			}
-
-			protected override void OnTarget( Mobile from, object targeted )
-			{
-				if ( targeted is Mobile )
-				{
-					from.SendLocalizedMessage( 502816 ); // You feel that such an action would be inappropriate.
-				}
-				else if ( targeted is Food )
-				{
-					Food food = (Food) targeted;
-
-					if ( from.CheckTargetSkill( SkillName.TasteID, food, 0, 100 ) )
-					{
-						if ( food.Poison != null )
-						{
-							food.SendLocalizedMessageTo( from, 1038284 ); // It appears to have poison smeared on it.
-						}
-						else
-						{
-							// No poison on the food
-							food.SendLocalizedMessageTo( from, 1010600 ); // You detect nothing unusual about this substance.
-						}
-					}
-					else
-					{
-						// Skill check failed
-						food.SendLocalizedMessageTo( from, 502823 ); // You cannot discern anything about this substance.
-					}
-				}
-				else if ( targeted is BasePotion )
-				{
-					BasePotion potion = (BasePotion) targeted;
-
-					potion.SendLocalizedMessageTo( from, 502813 ); // You already know what kind of potion that is.
-					potion.SendLocalizedMessageTo( from, potion.LabelNumber );
-				}
-				else if ( targeted is PotionKeg )
-				{
-					PotionKeg keg = (PotionKeg) targeted;
-
-					if ( keg.Held <= 0 )
-					{
-						keg.SendLocalizedMessageTo( from, 502228 ); // There is nothing in the keg to taste!
-					}
-					else
-					{
-						keg.SendLocalizedMessageTo( from, 502229 ); // You are already familiar with this keg's contents.
-						keg.SendLocalizedMessageTo( from, keg.LabelNumber );
-					}
-				}
-				else
-				{
-					// The target is not food or potion or potion keg.
-					from.SendLocalizedMessage( 502820 ); // That's not something you can taste.
-				}
-			}
-
-			protected override void OnTargetOutOfRange( Mobile from, object targeted )
-			{
-				from.SendLocalizedMessage( 502815 ); // You are too far away to taste that.
-			}
-		}
     }
 
 	public abstract class SHolocronGump : Gump	//CSpellbookGump
@@ -1022,11 +756,11 @@ namespace Server.Gumps
 				AddButton(465, 217, 2708, 2708, 9, GumpButtonType.Reply, 0); //Water capsule right button
 				AddButton(450, 140, 2643, 2643, 10, GumpButtonType.Reply, 0); //Master crafting right button
 
-				AddButton(450, 230, 5102, 5102, 11, GumpButtonType.Reply, 0); //Food capsule right button
-				AddButton(450, 243, 5102, 5102, 12, GumpButtonType.Reply, 0); //Make rune right button
-				AddButton(450, 255, 5102, 5102, 13, GumpButtonType.Reply, 0); //Inscription skill right button
-				AddButton(450, 268, 5102, 5102, 14, GumpButtonType.Reply, 0); //Arms lore skill right button
-				AddButton(450, 281, 5102, 5102, 15, GumpButtonType.Reply, 0); //Tracking skill right button
+				AddButton(450, 230, 5102, 5102, 11, GumpButtonType.Reply, 0); //Trap Disarm right button
+				AddButton(450, 243, 5102, 5102, 12, GumpButtonType.Reply, 0); //Taste Identification right button
+				AddButton(450, 255, 5102, 5102, 13, GumpButtonType.Reply, 0); //Forensics right button
+				AddButton(450, 268, 5102, 5102, 14, GumpButtonType.Reply, 0); //Item Identification right button
+				AddButton(450, 281, 5102, 5102, 15, GumpButtonType.Reply, 0); //Tracking right button
                 AddImage(70, 100, BGImage);
                 AddHtml(161, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center>", TextHue, Label1), false, false);
                 AddHtml(305, 115, 100, 20, String.Format("<big><basefont color=#{0}><Center>{1}</Center>", TextHue, Label2), false, false);
@@ -1104,7 +838,8 @@ namespace Server.Gumps
 					m.SendMessage("You dispense some food from the container.");
 					m.AddToBackpack(food);
 					m.PlaySound( 0x1E2 );
-					state.Mobile.CloseGump(typeof(SithHolocronGump));
+					//state.Mobile.CloseGump(typeof(SithHolocronGump));
+					state.Mobile.SendGump(new SithHolocronGump(m_Book));
 				}				
 			}
 
@@ -1112,19 +847,21 @@ namespace Server.Gumps
 			{
 				m.SendMessage("You create a blank rune.");
 				m.AddToBackpack( new RecallRune() );
-				state.Mobile.CloseGump(typeof(SithHolocronGump));
+				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 9)
 			{
 				m.SendMessage("You dispense some water from the container.");
 				m.AddToBackpack( new Pitcher( BeverageType.Water ) );
-				state.Mobile.CloseGump(typeof(SithHolocronGump));
+				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 10)
 			{
-				state.Mobile.CloseGump(typeof(SithHolocronGump));	//Add Master Craft Menu to select specific crafting menu.
+				//state.Mobile.CloseGump(typeof(SithHolocronGump));	//Add Master Craft Menu to select specific crafting menu.
                 m.SendMessage( "What do you want to Craft?" );
 				m.SendGump( new MasterCraftGump(m) );
 			}
@@ -1146,37 +883,35 @@ namespace Server.Gumps
 					m.SendLocalizedMessage( 502368 ); // Wich trap will you attempt to disarm?
 				}
 				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 12)
 			{
-				m.Target = new TasteInternalTarget();
-				m.SendMessage("What would you like to taste?");
+				m.UseSkill( SkillName.TasteID );
 				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 13)
 			{
-				m.SendMessage("What corpse do you wish to get information about?");
-				m.Target = new ForensicTarget();
-				m.RevealingAction();
+				m.UseSkill( SkillName.Forensics );
 				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 14)
 			{
-				m.SendMessage("What item, or Swamp Dragon, do you wish to get information about?");
-				m.Target = new InternalTarget();
+				m.UseSkill( SkillName.ItemID );
 				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
 			}
 
 			else if (info.ButtonID == 15)
 			{
-				state.Mobile.CloseGump(typeof(SithHolocronGump));
-                m.SendMessage( "What do you wish to Track?" );
-				m.CloseGump( typeof( TrackWhatGump ) );
-				m.CloseGump( typeof( TrackWhoGump ) );
-				m.SendGump( new TrackWhatGump( m ) );
+				//state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
+                m.UseSkill( SkillName.Tracking );
 			}
 
             else if (info.ButtonID >= 1000 && info.ButtonID < (1000 + m_Spells.Count))
@@ -1193,7 +928,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Force Power is disabled.");
                     return;
                 }
-                state.Mobile.CloseGump(typeof(SithHolocronGump));
+                //state.Mobile.CloseGump(typeof(SithHolocronGump));
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
                 state.Mobile.SendGump(new Holocron(m_Book, si, TextHue, state.Mobile));
                 //				m_Book.Mark = (info.ButtonID-1000)/16;
                 //				state.Mobile.SendMessage( "{0}", m_Book.Mark );
@@ -1218,6 +954,8 @@ namespace Server.Gumps
                     state.Mobile.SendMessage("That Force Power is disabled.");
                 else
                     spell.Cast();
+				
+                state.Mobile.SendGump(new SithHolocronGump(m_Book));
                 //				m_Book.Mark = (info.ButtonID-2000)/16;
                 //				state.Mobile.SendMessage( "{0}", m_Book.Mark );
             }
@@ -1229,210 +967,7 @@ namespace Server.Gumps
 
             //GumpUpTimer
         }
-
-		public class ForensicTarget : Target
-		{
-			public ForensicTarget() : base( 10, false, TargetFlags.None )
-			{
-			}
-
-			protected override void OnTarget( Mobile from, object target )
-			{
-				if ( target is Mobile )
-				{
-					if ( from.CheckTargetSkill( SkillName.Forensics, target, 40.0, 100.0 ) )
-					{
-						if ( target is PlayerMobile && ((PlayerMobile)target).NpcGuild == NpcGuild.ThievesGuild )
-							from.SendLocalizedMessage( 501004 );//That individual is a thief!
-						else
-							from.SendLocalizedMessage( 501003 );//You notice nothing unusual.
-					}
-					else
-					{
-						from.SendLocalizedMessage( 501001 );//You cannot determain anything useful.
-					}
-				}
-				else if ( target is Corpse )
-				{
-					if ( from.CheckTargetSkill( SkillName.Forensics, target, 0.0, 100.0 ) )
-					{
-						Corpse c = (Corpse)target;
-
-						if ( ((Body)c.Amount).IsHuman )
-							c.LabelTo( from, 1042751, ( c.Killer == null ? "no one" : c.Killer.Name ) );//This person was killed by ~1_KILLER_NAME~
-
-						if ( c.Looters.Count > 0 )
-						{
-							StringBuilder sb = new StringBuilder();
-							for (int i=0;i<c.Looters.Count;i++)
-							{
-								if ( i>0 )
-									sb.Append( ", " );
-								sb.Append( ((Mobile)c.Looters[i]).Name );
-							}
-
-							c.LabelTo( from, 1042752, sb.ToString() );//This body has been distrubed by ~1_PLAYER_NAMES~
-						}
-						else
-						{
-							c.LabelTo( from, 501002 );//The corpse has not be desecrated.
-						}
-					}
-					else
-					{
-						from.SendLocalizedMessage( 501001 );//You cannot determain anything useful.
-					}
-				}
-				else if ( target is ILockpickable )
-				{
-					ILockpickable p = (ILockpickable)target;
-					if ( p.Picker != null )
-						from.SendLocalizedMessage( 1042749, p.Picker.Name );//This lock was opened by ~1_PICKER_NAME~
-					else
-						from.SendLocalizedMessage( 501003 );//You notice nothing unusual.
-				}
-			}
-		}
-
-		private class InternalTarget : Target
-		{
-			public InternalTarget() : base( 2, false, TargetFlags.None )
-			{
-				AllowNonlocal = true;
-			}
-
-			protected override void OnTarget( Mobile from, object targeted )
-			{
-				if ( targeted is BaseWeapon )
-				{
-					if ( from.CheckTargetSkill( SkillName.ArmsLore, targeted, 0, 100 ) )
-					{
-						BaseWeapon weap = (BaseWeapon)targeted;
-
-						if ( weap.MaxHitPoints != 0 )
-						{
-							int hp = (int)((weap.HitPoints / (double)weap.MaxHitPoints) * 10);
-
-							if ( hp < 0 )
-								hp = 0;
-							else if ( hp > 9 )
-								hp = 9;
-
-							from.SendLocalizedMessage( 1038285 + hp );
-						}
-
-						int damage = (weap.MaxDamage + weap.MinDamage) / 2;
-						int hand = (weap.Layer == Layer.OneHanded ? 0 : 1);
-
-						if ( damage < 3 )
-							damage = 0;
-						else
-							damage = (int)Math.Ceiling( Math.Min( damage, 30 ) / 5.0 );
-							/*
-						else if ( damage < 6 )
-							damage = 1;
-						else if ( damage < 11 )
-							damage = 2;
-						else if ( damage < 16 )
-							damage = 3;
-						else if ( damage < 21 )
-							damage = 4;
-						else if ( damage < 26 )
-							damage = 5;
-						else
-							damage = 6;
-							 * */
-
-						WeaponType type = weap.Type;
-
-						if ( type == WeaponType.Ranged )
-							from.SendLocalizedMessage( 1038224 + (damage * 9) );
-						else if ( type == WeaponType.Piercing )
-							from.SendLocalizedMessage( 1038218 + hand + (damage * 9) );
-						else if ( type == WeaponType.Slashing )
-							from.SendLocalizedMessage( 1038220 + hand + (damage * 9) );
-						else if ( type == WeaponType.Bashing )
-							from.SendLocalizedMessage( 1038222 + hand + (damage * 9) );
-						else
-							from.SendLocalizedMessage( 1038216 + hand + (damage * 9) );
-
-						if ( weap.Poison != null && weap.PoisonCharges > 0 )
-							from.SendLocalizedMessage( 1038284 ); // It appears to have poison smeared on it.
-					}
-					else
-					{
-						from.SendLocalizedMessage( 500353 ); // You are not certain...
-					}
-				}
-				else if(targeted is BaseArmor)
-				{
-					if( from.CheckTargetSkill(SkillName.ArmsLore, targeted, 0, 100) )
-					{
-						BaseArmor arm = (BaseArmor)targeted;
-
-						if ( arm.MaxHitPoints != 0 )
-						{
-							int hp = (int)((arm.HitPoints / (double)arm.MaxHitPoints) * 10);
-
-							if ( hp < 0 )
-								hp = 0;
-							else if ( hp > 9 )
-								hp = 9;
-
-							from.SendLocalizedMessage( 1038285 + hp );
-						}
-
-						from.SendLocalizedMessage( 1038295 + (int)Math.Ceiling( Math.Min( arm.ArmorRating, 35 ) / 5.0 ) );
-						/*
-						if ( arm.ArmorRating < 1 )
-							from.SendLocalizedMessage( 1038295 ); // This armor offers no defense against attackers.
-						else if ( arm.ArmorRating < 6 )
-							from.SendLocalizedMessage( 1038296 ); // This armor provides almost no protection.
-						else if ( arm.ArmorRating < 11 )
-							from.SendLocalizedMessage( 1038297 ); // This armor provides very little protection.
-						else if ( arm.ArmorRating < 16 )
-							from.SendLocalizedMessage( 1038298 ); // This armor offers some protection against blows.
-						else if ( arm.ArmorRating < 21 )
-							from.SendLocalizedMessage( 1038299 ); // This armor serves as sturdy protection.
-						else if ( arm.ArmorRating < 26 )
-							from.SendLocalizedMessage( 1038300 ); // This armor is a superior defense against attack.
-						else if ( arm.ArmorRating < 31 )
-							from.SendLocalizedMessage( 1038301 ); // This armor offers excellent protection.
-						else
-							from.SendLocalizedMessage( 1038302 ); // This armor is superbly crafted to provide maximum protection.
-						 * */
-					}
-					else
-					{
-						from.SendLocalizedMessage( 500353 ); // You are not certain...
-					}
-				}
-				else if ( targeted is SwampDragon && ((SwampDragon)targeted).HasBarding )
-				{
-					SwampDragon pet = (SwampDragon)targeted;
-
-					if ( from.CheckTargetSkill( SkillName.ArmsLore, targeted, 0, 100 ) )
-					{
-						int perc = (4 * pet.BardingHP) / pet.BardingMaxHP;
-
-						if ( perc < 0 )
-							perc = 0;
-						else if ( perc > 4 )
-							perc = 4;
-
-						pet.PrivateOverheadMessage( MessageType.Regular, 0x3B2, 1053021 - perc, from.NetState );
-					}
-					else
-					{
-						from.SendLocalizedMessage( 500353 ); // You are not certain...
-					}
-				}
-				else
-				{
-					from.SendLocalizedMessage( 500352 ); // This is neither weapon nor armor.
-				}
-			}
-		}
+		
 		private class RTrapTarget : Target
 		{
 			public RTrapTarget() :  base ( 2, false, TargetFlags.None )
@@ -1521,74 +1056,6 @@ namespace Server.Gumps
 				{
 					from.SendLocalizedMessage( 502373 ); // That does'nt appear to be trapped
 				}
-			}
-		}
-		private class TasteInternalTarget : Target
-		{
-			public TasteInternalTarget() :  base ( 2, false, TargetFlags.None )
-			{
-				AllowNonlocal = true;
-			}
-
-			protected override void OnTarget( Mobile from, object targeted )
-			{
-				if ( targeted is Mobile )
-				{
-					from.SendLocalizedMessage( 502816 ); // You feel that such an action would be inappropriate.
-				}
-				else if ( targeted is Food )
-				{
-					Food food = (Food) targeted;
-
-					if ( from.CheckTargetSkill( SkillName.TasteID, food, 0, 100 ) )
-					{
-						if ( food.Poison != null )
-						{
-							food.SendLocalizedMessageTo( from, 1038284 ); // It appears to have poison smeared on it.
-						}
-						else
-						{
-							// No poison on the food
-							food.SendLocalizedMessageTo( from, 1010600 ); // You detect nothing unusual about this substance.
-						}
-					}
-					else
-					{
-						// Skill check failed
-						food.SendLocalizedMessageTo( from, 502823 ); // You cannot discern anything about this substance.
-					}
-				}
-				else if ( targeted is BasePotion )
-				{
-					BasePotion potion = (BasePotion) targeted;
-
-					potion.SendLocalizedMessageTo( from, 502813 ); // You already know what kind of potion that is.
-					potion.SendLocalizedMessageTo( from, potion.LabelNumber );
-				}
-				else if ( targeted is PotionKeg )
-				{
-					PotionKeg keg = (PotionKeg) targeted;
-
-					if ( keg.Held <= 0 )
-					{
-						keg.SendLocalizedMessageTo( from, 502228 ); // There is nothing in the keg to taste!
-					}
-					else
-					{
-						keg.SendLocalizedMessageTo( from, 502229 ); // You are already familiar with this keg's contents.
-						keg.SendLocalizedMessageTo( from, keg.LabelNumber );
-					}
-				}
-				else
-				{
-					// The target is not food or potion or potion keg.
-					from.SendLocalizedMessage( 502820 ); // That's not something you can taste.
-				}
-			}
-
-			protected override void OnTargetOutOfRange( Mobile from, object targeted )
-			{
-				from.SendLocalizedMessage( 502815 ); // You are too far away to taste that.
 			}
 		}
     }

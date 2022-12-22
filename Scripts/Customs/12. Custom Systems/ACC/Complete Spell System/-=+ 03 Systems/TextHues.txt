@@ -1,0 +1,23 @@
+ACC - Hues
+BookHue handles spell listing color.
+TextHue handles the title color.
+
+999999 - Gray
+333333 - Dark Gray
+999000 - Yellow
+990000 - Red
+333366 - Blue
+660066 - Purple
+670404 - Red
+126894 - Light Blue/Green
+126900 - Green
+800000 - Bright Red
+CC3333 - Brightly Red
+300000 - Dark Red
+400000 - Maroon
+336666 - Gray/Blue
+336633 - Light Green
+955819 - Orange
+149819 - Bright Green
+144898 - Blue
+100000 - Black

@@ -16,8 +16,8 @@ namespace Server.ACC.CSS.Systems.Vampire
         public override int BGImage { get { return 2404; } }
         public override int SpellBtn { get { return 1252; } }
         public override int SpellBtnP { get { return 1252; } }
-        public override string Label1 { get { return "VAMPIRIC"; } }
-        public override string Label2 { get { return "GIFTS"; } }
+        public override string Label1 { get { return "Vampiric"; } }
+        public override string Label2 { get { return "Gifts"; } }
         public override Type GumpType { get { return typeof(CovenSpellbookGump); } }
 		public override School School { get { return School.Vampire; } }
 
