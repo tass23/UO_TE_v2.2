@@ -544,8 +544,8 @@ namespace Server.Gumps
 			AddRadio(132, 165, 210, 209, false, 13);					//Reward Scroll Button
 			AddRadio(132, 185, 210, 209, false, 14);					//Token Check Button
 			AddRadio(132, 205, 210, 209, false, 15);					//Betting Slip Button
-			AddLabel(151, 125, 1160, @"Gold Check");					//Gold Check Label
-			AddLabel(151, 145, 1149, @"Silver Check");					//Silver Check Label
+			AddLabel(151, 125, 1160, @"Gold / Check");					//Gold / Check Label
+			AddLabel(151, 145, 1149, @"Silver / Check");					//Silver / Check Label
 			AddLabel(151, 165, 1164, @"Reward Scroll");					//Reward Scroll Label
 			AddLabel(151, 185, 1172, @"Tokens");						//Tokens Label
 			AddLabel(151, 205, 1370, @"Betting Slip");					//Betting Slip Label
@@ -618,7 +618,7 @@ namespace Server.Gumps
 
             switch (info.ButtonID)
             {
-                case 0: //Case uses the ActionIDs defenied above. Case 0 defenies the actions for the button with the action id 0 
+                case 0: //Case uses the ActionIDs definied above. Case 0 definies the actions for the button with the action id 0 
                 {
                     //Cancel 
 					//from.SendMessage("GoodLuck");
@@ -702,8 +702,15 @@ namespace Server.Gumps
 						}
 						else if( m_amt > 0 && m_book.m_BlankChecks != 0 )
 						{
-							from.AddToBackpack( new BankCheck(m_amt) );
-							m_book.m_BlankChecks -= 1;
+							if (m_amt < 2001 )
+							{
+								from.AddToBackpack( new Gold(m_amt) );
+							}
+							else
+							{
+								from.AddToBackpack( new BankCheck(m_amt) );
+								m_book.m_BlankChecks -= 1;
+							}
 							m_book.m_CurAmount -= m_amt;
 							m_amt = 0;
 							m_err = null;
@@ -723,8 +730,15 @@ namespace Server.Gumps
 						}
 						else if( m_amt > 0 && m_book.m_BlankChecks != 0 )
 						{
-							from.AddToBackpack( new SilverCheck(m_amt) );
-							m_book.m_BlankChecks -= 1;
+							if (m_amt < 2001 )
+							{
+								from.AddToBackpack( new Silver(m_amt) );
+							}
+							else
+							{
+								from.AddToBackpack( new SilverCheck(m_amt) );
+								m_book.m_BlankChecks -= 1;
+							}
 							m_book.m_CurSilver -= m_amt;
 							m_amt = 0;
 							m_err = null;
