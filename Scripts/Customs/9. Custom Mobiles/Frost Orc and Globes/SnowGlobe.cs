@@ -61,7 +61,7 @@ namespace Server.Gumps
 			AddPage(0);
 			AddBackground(0, 0, 450, 300, 5054);
 			AddImage(49, 96, 11414, 1152);
-			AddHtml( 30, 14, 390, 76, "<BASEFONT COLOR=#1C7BFF>You stare into the globe and lose all sense of time. Seconds feel like hours and your eyelids are starting to feel heavy.", (bool)false, (bool)false);
+			AddHtml( 30, 14, 390, 76, "<BASEFONT COLOR=#E3CC34>You stare into the globe and lose all sense of time. Seconds feel like hours and your eyelids are starting to feel heavy.", (bool)false, (bool)false);
 			AddImage(15, 95, 50, 1264);
 			AddImage(154, 95, 50, 1264);
 			AddImage(293, 95, 50, 1264);

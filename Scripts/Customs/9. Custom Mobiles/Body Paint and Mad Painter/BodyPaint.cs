@@ -56,12 +56,11 @@ namespace Server.Items
 				{
 					from.BodyMod = ( from.Female ? 184 : 183 );
 					from.HueMod = this.Hue;
-
+					
 					if ( from is PlayerMobile )
 						((PlayerMobile)from).SavagePaintExpiration = TimeSpan.FromDays( 7.0 );
 
 					from.SendMessage( "You now paint your body.  Your body paint will last about a week or you can remove it with an oil cloth.");
-
 					Consume();
 				}
 			}

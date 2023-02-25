@@ -226,16 +226,19 @@ namespace Server.Engines.Craft
 				index = AddCraft( typeof( NewHitchingPostEast3Deed ), "Misc.", "Hitching Post Addon (East)", 110.0, 120.0, typeof( Board ), "Boards", 15 );
 				AddSkill( index, SkillName.AnimalLore, 80.0, 100.0 );
 				AddRes( index, typeof( IronIngot ), "Iron Ingots", 25 );
+				AddRes( index, typeof( AnimalPheromone ), "Animal Pheromone", 1 );
 				//SetUseAllRes( index, true );
 
 				index = AddCraft( typeof( NewHitchingPostSouth3Deed ), "Misc.", "Hitching Post Addon (South)", 110.0, 120.0, typeof( Board ), "Boards", 15 );
 				AddSkill( index, SkillName.AnimalLore, 80.0, 100.0 );
 				AddRes( index, typeof( IronIngot ), "Iron Ingots", 25 );
+				AddRes( index, typeof( AnimalPheromone ), "Animal Pheromone", 1 );
 				//SetUseAllRes( index, true );
 
 				index = AddCraft( typeof( PetLeash3 ), "Misc.", "Pet Leash", 90.0, 120.0, typeof( Leather ), "Leather", 10 );
 				AddSkill( index, SkillName.AnimalLore, 80.0, 100.0 );
 				AddRes( index, typeof( IronIngot ), "Iron Ingots", 25 );
+				AddRes( index, typeof( AnimalPheromone ), "Animal Pheromone", 1 );
 				//SetUseAllRes( index, true );
 			}
 

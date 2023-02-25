@@ -55,6 +55,30 @@ namespace Server.Items
                 {
                     from.LocalOverheadMessage(MessageType.Regular, 0x3B2, 1019045); // I can't reach that.
                 }
+                else if (targeted is HitchingPost)
+                {
+                    HitchingPost postItem = (HitchingPost)targeted;
+
+                    if (postItem.UsesRemaining >= 1)
+                    {
+						from.SendMessage("Hitching Rope cannot be applied at this time.", 0x59);
+                    }
+                    else if (postItem.Charges <= 0 && postItem.UsesRemaining <= 0)
+                    {
+                        from.SendLocalizedMessage(1071157); // This hitching post is damaged. You can't use it any longer.
+                    }
+                    else
+                    {
+                        postItem.Charges -= 1;
+                        postItem.UsesRemaining += 15;
+                        m_Rope.Delete();
+
+                        if (postItem is Item)
+                        {
+							from.SendLocalizedMessage(1071158); // Supplied hitching rope.
+                        }
+                    }
+                }
                 else if (targeted is HitchingPost2)
                 {
                     HitchingPost2 postItem = (HitchingPost2)targeted;
