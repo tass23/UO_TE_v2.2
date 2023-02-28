@@ -13,7 +13,7 @@ namespace Server.Mobiles
         [Constructable]
 		public GuardianofNight() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
-			Name = "a Gaurdian of Night";
+			Name = "a Guardian of Night";
 			Body = 172;
 			Hue = 1156;
             BaseSoundID = 362;
