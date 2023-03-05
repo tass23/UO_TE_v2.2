@@ -4,8 +4,8 @@ using Server.Items;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "a sphinx corpse" )]
-	public class Sphinx : BaseCreature
+	[CorpseName( "a sphynx corpse" )]
+	public class Sphynx : BaseCreature
 	{
 		public override WeaponAbility GetWeaponAbility()
 		{
@@ -13,9 +13,9 @@ namespace Server.Mobiles
 		}
 
 		[Constructable]
-		public Sphinx() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public Sphynx() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
-			Name = "a sphinx";
+			Name = "a sphynx";
 			Body = 788;
 			BaseSoundID = 0x2A7;
 
@@ -72,7 +72,7 @@ namespace Server.Mobiles
 
 			c.DropItem(new RewardScroll());
         }
-		public Sphinx( Serial serial ) : base( serial )
+		public Sphynx( Serial serial ) : base( serial )
 		{
 		}
 

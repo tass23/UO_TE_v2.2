@@ -13,42 +13,40 @@ using Server.SpellCrafting.Items;
 
 namespace Server.Mobiles
 {
-	[CorpseName ( "Corpse of Balto ") ]
+	[CorpseName ( "the corpse of Balto ") ]
 	public class Balto : Mobile
 	{
 		[Constructable]
 		public Balto ()
 		{
 			Name = "Balto";
-			Title = "Apprentice spell crafter";
+			Title = "an Apprentice Spell Crafter";
 			Body = 400;
 			Hue = Utility.RandomSkinHue ();
 			
 			AddItem ( new Shoes ());
 			AddItem ( new Robe (1160) );
 			AddItem ( new GnarledStaff ());
-			AddItem ( new WizardsHat ());
-			
+			AddItem ( new WizardsHat ());			
 			Blessed = true;
-			
-			
 		}
-		public Balto ( Serial serial) : base ( serial )
 		
+		public Balto ( Serial serial) : base ( serial )		
 		{
 		}
 		
 		public override void GetContextMenuEntries ( Mobile from, List<ContextMenuEntry> list )
 		{
 			base.GetContextMenuEntries (from, list);
-			list.Add ( new BaltoEntry ( from, this ));
-			
+			list.Add ( new BaltoEntry ( from, this ));			
 		}
+		
 		public override void Serialize ( GenericWriter writer )
 		{
 			base.Serialize (writer);
 			writer.Write ( (int) 0);
 		}
+		
 		public override void Deserialize ( GenericReader reader)
 		{
 			base.Deserialize ( reader);
@@ -68,22 +66,17 @@ namespace Server.Mobiles
 
 			public override void OnClick()
 			{
-				
-
-                          if( !( m_Mobile is PlayerMobile ) )
+				if( !( m_Mobile is PlayerMobile ) )
 					return;
 				
 				PlayerMobile mobile = (PlayerMobile) m_Mobile;
-
 				{
 					if ( ! mobile.HasGump( typeof( BaltoGump ) ) )
 					{
 						mobile.SendGump( new BaltoGump( mobile ));
 					}
-				}
-		
+				}		
 			}
 		}
 	}
 }
-

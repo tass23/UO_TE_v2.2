@@ -9,7 +9,6 @@ namespace Server.Items
 		private DateTime m_DecayTime;
 		private Timer m_Timer;
 
-
 		[Constructable]
 		public OldSaltyGate() : this( true )
 		{
@@ -33,7 +32,6 @@ namespace Server.Items
 			{
 				m_Decays = true;
 				m_DecayTime = DateTime.Now + TimeSpan.FromSeconds( 30 );
-
 				m_Timer = new InternalTimer( this, m_DecayTime );
 				m_Timer.Start();
 			}
@@ -47,18 +45,14 @@ namespace Server.Items
 		{
 			if ( m_Timer != null )
 				m_Timer.Stop();
-
 			base.OnAfterDelete();
 		}
 
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-
-			writer.Write( (int) 0 ); 
-
+			writer.Write( (int) 0 );
 			writer.Write( m_Decays );
-
 			if ( m_Decays )
 				writer.WriteDeltaTime( m_DecayTime );
 		}
@@ -66,15 +60,12 @@ namespace Server.Items
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-
 			int version = reader.ReadInt();
-
 			switch ( version )
 			{
 				case 0:
 				{
 					m_Decays = reader.ReadBool();
-
 					if ( m_Decays )
 					{
 						m_DecayTime = reader.ReadDeltaTime();
@@ -82,7 +73,6 @@ namespace Server.Items
 						m_Timer = new InternalTimer( this, m_DecayTime );
 						m_Timer.Start();
 					}
-
 					break;
 				}
 			}

@@ -21,13 +21,11 @@ namespace Server.Mobiles
             Name = "Tristan Irons";
 
             {
-
                 AddItem(new FancyShirt(Utility.RandomNeutralHue()));
                 AddItem(new ShortPants());
                 AddItem(new ThighBoots());
                 AddItem(new TricorneHat());
                 AddItem(new Cutlass());
-
             }
 
             SetStr(96, 105);

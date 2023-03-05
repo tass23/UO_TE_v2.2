@@ -28,7 +28,6 @@ namespace Server.Mobiles
 			SetInt( 861, 975 );
 
 			SetDamage( 25, 43 );
-
 			SetSkill( SkillName.Fencing, 86.0, 107.5 );
 			SetSkill( SkillName.Macing, 95.0, 115.5 );
 			SetSkill( SkillName.MagicResist, 95.0, 117.5 );
@@ -64,24 +63,23 @@ namespace Server.Mobiles
 			switch (Utility.Random(5)) //Rarity 1031 
             {
                 case 0: PackItem(new PawsOfTheWerewolfBoss());
-                    break;
-
+                break;
             }
 			*/
 		}
-                
+		
         private static readonly double[] m_Offsets = new double[]
-			{
-				Math.Cos( 000.0 / 180.0 * Math.PI ), Math.Sin( 000.0 / 180.0 * Math.PI ),
-				Math.Cos( 040.0 / 180.0 * Math.PI ), Math.Sin( 040.0 / 180.0 * Math.PI ),
-				Math.Cos( 080.0 / 180.0 * Math.PI ), Math.Sin( 080.0 / 180.0 * Math.PI ),
-				Math.Cos( 120.0 / 180.0 * Math.PI ), Math.Sin( 120.0 / 180.0 * Math.PI ),
-				Math.Cos( 160.0 / 180.0 * Math.PI ), Math.Sin( 160.0 / 180.0 * Math.PI ),
-				Math.Cos( 200.0 / 180.0 * Math.PI ), Math.Sin( 200.0 / 180.0 * Math.PI ),
-				Math.Cos( 240.0 / 180.0 * Math.PI ), Math.Sin( 240.0 / 180.0 * Math.PI ),
-				Math.Cos( 280.0 / 180.0 * Math.PI ), Math.Sin( 280.0 / 180.0 * Math.PI ),
-				Math.Cos( 320.0 / 180.0 * Math.PI ), Math.Sin( 320.0 / 180.0 * Math.PI ),
-			};
+		{
+			Math.Cos( 000.0 / 180.0 * Math.PI ), Math.Sin( 000.0 / 180.0 * Math.PI ),
+			Math.Cos( 040.0 / 180.0 * Math.PI ), Math.Sin( 040.0 / 180.0 * Math.PI ),
+			Math.Cos( 080.0 / 180.0 * Math.PI ), Math.Sin( 080.0 / 180.0 * Math.PI ),
+			Math.Cos( 120.0 / 180.0 * Math.PI ), Math.Sin( 120.0 / 180.0 * Math.PI ),
+			Math.Cos( 160.0 / 180.0 * Math.PI ), Math.Sin( 160.0 / 180.0 * Math.PI ),
+			Math.Cos( 200.0 / 180.0 * Math.PI ), Math.Sin( 200.0 / 180.0 * Math.PI ),
+			Math.Cos( 240.0 / 180.0 * Math.PI ), Math.Sin( 240.0 / 180.0 * Math.PI ),
+			Math.Cos( 280.0 / 180.0 * Math.PI ), Math.Sin( 280.0 / 180.0 * Math.PI ),
+			Math.Cos( 320.0 / 180.0 * Math.PI ), Math.Sin( 320.0 / 180.0 * Math.PI ),
+		};
 		public override bool AlwaysMurderer{ get{ return true; } }
         public void Morph()
         {
@@ -90,7 +88,7 @@ namespace Server.Mobiles
 
             m_TrueForm = true;
 
-            Name = "A Were Wolf";
+            Name = "The Werewolf";
             Body = 719;
             //Hue = 2312;
             BaseSoundID = 0xE5;
@@ -101,27 +99,23 @@ namespace Server.Mobiles
             Mana = ManaMax;
 
             SetDamage(50, 67);
-
             SetDamageType(ResistanceType.Physical, 100);
-
             SetResistance(ResistanceType.Physical, 20, 25);
             SetResistance(ResistanceType.Fire, 10, 20);
             SetResistance(ResistanceType.Cold, 5, 10);
             SetResistance(ResistanceType.Poison, 5, 10);
             SetResistance(ResistanceType.Energy, 10, 15);
-
             SetSkill(SkillName.MagicResist, 57.6, 75.0);
             SetSkill(SkillName.Tactics, 50.1, 70.0);
             SetSkill(SkillName.Wrestling, 60.1, 80.0);
 
             Fame = 2500;
             Karma = -2500;
-
             VirtualArmor = 45;
             ProcessDelta();
-
             Say("AaRrrrooooooooo!"); 
         }
+		
 		[CommandProperty( AccessLevel.GameMaster )]
 		public override int HitsMax{ get{ return m_TrueForm ? 6000 : 12000; } }
 
@@ -149,14 +143,12 @@ namespace Server.Mobiles
 		{
 			base.Serialize( writer );
 			writer.Write( (int) 0 );
-
 			writer.Write( m_TrueForm );			
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-
 			int version = reader.ReadInt();
 
 			switch ( version )
@@ -164,11 +156,9 @@ namespace Server.Mobiles
 				case 0:
 				{
 					m_TrueForm = reader.ReadBool();
-
 					break;
 				}
 			}
-
         }
 	}
 }

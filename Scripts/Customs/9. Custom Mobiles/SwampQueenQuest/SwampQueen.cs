@@ -9,8 +9,7 @@ namespace Server.Mobiles
 	public class SwampQueen : BaseCreature
 	{
         [Constructable]
-        public SwampQueen()
-            : base(AIType.AI_Melee, FightMode.Evil, 10, 1, 0.075, 0.15)
+        public SwampQueen(): base(AIType.AI_Melee, FightMode.Evil, 10, 1, 0.075, 0.15)
         {
             Name = "Noxia the Swamp Queen";
             Body = 316;
@@ -20,7 +19,7 @@ namespace Server.Mobiles
             SetStr(180, 225);
             SetDex(120, 185);
             SetInt(200, 245);
-
+			
             SetHits(1700, 1850);
             SetMana(1000);
 
@@ -51,7 +50,6 @@ namespace Server.Mobiles
             Karma = -2500;
 
             VirtualArmor = 64;
-
             PackGold(2820, 3300);
 
             switch (Utility.Random(18))
@@ -111,15 +109,11 @@ namespace Server.Mobiles
 			foreach ( Mobile m in list )
 			{
 				DoHarmful( m );
-
 				m.PlaySound( 0x22F );
 				m.FixedParticles( 0x36CB, 1, 9, 9911, 67, 5, EffectLayer.Head );
 				m.FixedParticles( 0x374A, 1, 17, 9502, 1108, 4, (EffectLayer)255 );
-
-				m.SendMessage( "Your lungs singe as you breathe the noxious fumes!" );
-
+				m.SendMessage( "Your lungs burn as you inhale the noxious fumes!" );
 				int toStrike = Utility.RandomMinMax( 55, 77 ); 
-
 				Hits += toStrike;
 				m.Damage( toStrike, this );
 			}
@@ -128,7 +122,6 @@ namespace Server.Mobiles
 		public override void OnGaveMeleeAttack( Mobile defender )
 		{
 			base.OnGaveMeleeAttack( defender );
-
 			if ( 0.2 >= Utility.RandomDouble() )
 				FlameStrike();
 		}
@@ -136,7 +129,6 @@ namespace Server.Mobiles
 		public override void OnGotMeleeAttack( Mobile attacker )
 		{
 			base.OnGotMeleeAttack( attacker );
-
 			if ( 0.2 >= Utility.RandomDouble() )
 				FlameStrike();
 		}
@@ -155,7 +147,6 @@ namespace Server.Mobiles
 		{
 			base.Deserialize( reader );
 			int version = reader.ReadInt();
-
 			if ( BaseSoundID == 589 )
 				BaseSoundID = 594;
 		}

@@ -51,7 +51,6 @@ namespace Server.Mobiles
 		{
 		}
 
-
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );

@@ -6,56 +6,46 @@ using Server.SpellCrafting.Items;
 
 namespace Server.Mobiles
 {
-	[CorpseName( "Delhi's Corpse" )]
+	[CorpseName( "the corpse of Delhi" )]
 	public class Delhi : BaseCreature
 	{
 		[Constructable]
 		public Delhi() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "Delhi";
-			Title = "The Evil Spell Crafter";
+			Title = "the evil Spell Crafter";
 			Body = 400;
 			Hue = Utility.RandomSkinHue ();
 			
-
 	    	SetStr( 50 );
 			SetDex( 100,150 );
 			SetInt( 400 );
-
 			SetHits( 1500 );
-
 			SetDamage( 10, 16 );
 
-			SetDamageType( ResistanceType.Physical, 100 );
-			
-
+			SetDamageType( ResistanceType.Physical, 100 );	
 			SetResistance( ResistanceType.Physical, 60 );
 			SetResistance( ResistanceType.Fire, 60 );
 			SetResistance( ResistanceType.Cold, 60 );
 			SetResistance( ResistanceType.Poison, 60 );
 			SetResistance( ResistanceType.Energy, 60 );
-
 			SetSkill( SkillName.EvalInt, 90, 150 );
 			SetSkill( SkillName.Magery, 100,150);
-			SetSkill( SkillName.MagicResist, 70, 90 );
-			
+			SetSkill( SkillName.MagicResist, 70, 90 );			
 			SetSkill( SkillName.Meditation, 70, 110 );
 			
-
 			Fame = 0;
 			Karma = -10000;
-
 			VirtualArmor = 50;
 
 			AddItem (new Robe (1392));
 			AddItem (new StaffOfPower());
 			AddItem (new Shoes ());
-			int hairHue = 2018;
-			
+			int hairHue = 2018;			
 			switch (Utility.Random (1) )
 			{
-				case 0: AddItem (new LongHair ( hairHue ) ) ; break;
-				
+				case 0: AddItem (new LongHair ( hairHue ) ) ;
+				break;				
 			}
 			//PackItem( SpellCraft.RandomCraft( .35 ) );
 			PackItem (new MagicJewel ( 10));
@@ -107,8 +97,6 @@ namespace Server.Mobiles
 				case 21: PackItem (new HitLowerDefendJewel ()) ;break;
 				case 22: PackItem (new HitMagicArrowJewel ()) ;break;
 				case 23: PackItem (new HitPhysicalAreaJewel ()) ;break;
-				
-					
 			}
 			switch (Utility.Random (96))
 			{
@@ -138,29 +126,24 @@ namespace Server.Mobiles
 				case 23: PackItem (new UseBestSkillJewel ()); break;
 				case 24: PackItem (new WeaponDamageJewel ()); break;
 				case 25: PackItem (new WeaponSpeedJewel ()); break;
-				
-					
 			}
-			        
-			        
-			
 		}
 
 		public override void OnDeath( Container c )
 		{
 			base.OnDeath( c );
-			if ( Utility.RandomDouble() < 0.2 )			
-				c.DropItem(new RewardScroll());
 			if ( Utility.RandomDouble() < 0.2 )	
+				c.DropItem(new RewardScroll());
+			if ( Utility.RandomDouble() < 0.2 )
 				c.DropItem( new RainbowMountToken3() );
 		}
-		public override bool AlwaysMurderer{ get{ return true; } }
 		
+		public override bool AlwaysMurderer{ get{ return true; } }		
 
 		public Delhi( Serial serial ) : base( serial )
 		{
 		}
-
+		
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );

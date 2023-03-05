@@ -13,7 +13,7 @@ using Server.SpellCrafting.Items;
 
 namespace Server.Mobiles
 {
-	[CorpseName ( " Gallin's Corpse " )]
+	[CorpseName ( "the corpse of Gallin" )]
 	public class Gallin : Mobile
 	{
 		//public virtual bool IsInvulnerable ( get ( return true; ) )
@@ -21,7 +21,7 @@ namespace Server.Mobiles
 		public Gallin ()
 		{
 			Name = "Gallin";
-			Title = "The Arch Spell Crafter";
+			Title = "the Arch Spell Crafter";
 			Body = 400;
 			Hue = Utility.RandomSkinHue ();
 			CantWalk = true;
@@ -32,14 +32,14 @@ namespace Server.Mobiles
 			
 			switch (Utility.Random (1) )
 			{
-				case 0: AddItem (new LongHair ( hairHue ) ) ; break;
-				
+				case 0: AddItem (new LongHair ( hairHue ) ) ;
+				break;				
 			}
+			
 			Blessed = true;
 		}
 		
 		public Gallin ( Serial serial) : base ( serial )
-		
 		{
 		}
 		
@@ -48,11 +48,13 @@ namespace Server.Mobiles
 			base.GetContextMenuEntries (from, list );
 			list.Add ( new GallinEntry ( from, this ) ) ;
 		}
+		
 		public override void Serialize ( GenericWriter writer )
 		{
 			base.Serialize (writer);
 			writer.Write ( (int) 0);
 		}
+		
 		public override void Deserialize ( GenericReader reader)
 		{
 			base.Deserialize ( reader);
@@ -72,13 +74,10 @@ namespace Server.Mobiles
 
 			public override void OnClick()
 			{
-				
-
-                          if( !( m_Mobile is PlayerMobile ) )
+				if( !( m_Mobile is PlayerMobile ) )
 					return;
 				
 				PlayerMobile mobile = (PlayerMobile) m_Mobile;
-
 				{
 					if ( ! mobile.HasGump( typeof( GallinGump ) ) )
 					{
@@ -89,7 +88,7 @@ namespace Server.Mobiles
 		}
 		public override bool OnDragDrop( Mobile from, Item dropped )
 		{          		
-         	        Mobile m = from;
+         	Mobile m = from;
 			PlayerMobile mobile = m as PlayerMobile;
 
 			if ( mobile != null)
@@ -98,7 +97,7 @@ namespace Server.Mobiles
          		{
          			if(dropped.Amount!=1)
          			{
-					this.PrivateOverheadMessage( MessageType.Regular, 1153, false, "Here is your rewared!", mobile.NetState );
+						this.PrivateOverheadMessage( MessageType.Regular, 1153, false, "Here is your rewared!", mobile.NetState );
          				return false;
          			}
 
@@ -109,19 +108,15 @@ namespace Server.Mobiles
 					mobile.AddToBackpack( new TreasureMap( 5, Map.Trammel ) );
 					mobile.AddToBackpack( new ParrotItem() );
 					mobile.AddToBackpack( new BankCheck(5000) );
-					mobile.SendMessage( "Here are some rewards for your effort." );
-
-				
-					return true;
-         		
+					mobile.SendMessage( "Here are some rewards for your effort." );				
+					return true;         		
 				}
          		else
          		{
-					this.PrivateOverheadMessage( MessageType.Regular, 1153, false, "Why on earth would I want to have that?", mobile.NetState );
+					this.PrivateOverheadMessage( MessageType.Regular, 1153, false, "Why would I want that?", mobile.NetState );
      			}
 			}
 			return false;
 		}
 	}
 }
-

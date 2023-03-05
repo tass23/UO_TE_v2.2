@@ -9,7 +9,6 @@ namespace Server.Items
 		private DateTime m_DecayTime;
 		private Timer m_Timer;
 
-
 		[Constructable]
 		public CaptainJackSparrowGate() : this( true )
 		{
