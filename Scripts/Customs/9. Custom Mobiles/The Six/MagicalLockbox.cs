@@ -6,18 +6,17 @@ using System.Collections;
 using Server.Targeting;
 
 namespace Server.Items
-{
-	
+{	
 	public class MagicalLockbox : MetalBox
 	{
 		[Constructable]
 		public MagicalLockbox ()
 		{
             Name = "a magical lockbox"; 
-            Hue = 1165;
-			
+            Hue = 1165;			
 			TrapLevel = 5;
 			TrapPower = 5;
+			
 			TrapType = TrapType.PoisonTrap;
 			if ( Utility.RandomDouble() < 0.15 )
 				DropItem(new RewardScroll());
@@ -39,10 +38,8 @@ namespace Server.Items
 				DropItem( new Muculent() );
 			if ( Utility.RandomDouble() < 0.001 )
 				DropItem( new DiscountCoupon() );
-
 			if ( Utility.RandomDouble() < 0.9 )				
 				DropItem( new ParrotItem() );
-
 			if ( Utility.RandomDouble() < 0.9 )				
 				DropItem( new RandomTalisman() );
 
@@ -95,8 +92,7 @@ namespace Server.Items
 				}
 			}
 			
-			DropItem( new StrangeEmerald1(  ) );
-			
+			DropItem( new StrangeEmerald1(  ) );			
 			if ( 0.9 > Utility.RandomDouble() )
 			{
 				switch ( Utility.Random( 6 ) )
@@ -139,15 +135,12 @@ namespace Server.Items
 //Strange Gems End
 			
 			DropItem( new Gold( 2000, 5000 ) );
-
-           			if (Utility.RandomDouble() < 0.025)
-                			DropItem( new CrimsonCincture() );
-
-			//TODO:  Add in high level magic items and strange gems and make them spray all over the ground when opened
-                                                    
+			
+           	if (Utility.RandomDouble() < 0.025)
+                DropItem( new CrimsonCincture() );
+//TODO:  Add in high level magic items and strange gems and make them spray all over the ground when opened
 		}
-                                   
-                                                                                     
+		
 		public MagicalLockbox( Serial serial ) : base( serial )
 		{
 		}
@@ -155,14 +148,12 @@ namespace Server.Items
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-
 			writer.Write( (int) 0 ); // version
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-
 			int version = reader.ReadInt();
 		}
 	}

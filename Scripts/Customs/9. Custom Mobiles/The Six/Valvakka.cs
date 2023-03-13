@@ -1,20 +1,20 @@
-using System; 
-using System.Collections; 
-using Server; 
-using Server.Items; 
+using System;
+using System.Collections;
+using Server;
+using Server.Items;
 using Server.Engines.CannedEvil;
 using System.Collections.Generic;
-namespace Server.Mobiles 
-{ 
-   [CorpseName( "the remains of Valvakka" )] 
+
+namespace Server.Mobiles
+{
+   [CorpseName( "the remains of Valvakka" )]
    public class Valvakka : BaseCreature
    {
-      public override bool AlwaysMurderer { get { return true; } }
-      public override bool ShowFameTitle{ get{ return false; } }
-	public override bool DeleteCorpseOnDeath{ get{ return true; } }
-
-     public static TimeSpan TalkDelay = TimeSpan.FromSeconds( 30.0 );
-     public DateTime m_NextTalk;
+		public override bool AlwaysMurderer { get { return true; } }
+		public override bool ShowFameTitle{ get{ return false; } }
+		public override bool DeleteCorpseOnDeath{ get{ return true; } }
+		public static TimeSpan TalkDelay = TimeSpan.FromSeconds( 30.0 );
+		public DateTime m_NextTalk;
 
 		public override void OnMovement( Mobile m, Point3D oldLocation )
 		{
@@ -29,23 +29,18 @@ namespace Server.Mobiles
 					case 3: Say("You shall all face my wrath!"); break;
 					case 4: Say("Behold true terror!"); break;
 					case 5: Say("*laughs*"); break;
-				};
-		
+				};		
 			}
 		}
 
-      [Constructable]
-      public Valvakka()
-          : base( AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4 )
-      {
-          Name = "Valvakka";
-	Body = 0x190;
-
-	SpeechHue = 44;
-
-	Hue = 1175;
-
-          BaseSoundID = 362;
+		[Constructable]
+		public Valvakka(): base( AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4 )
+		{
+			Name = "Valvakka";
+			Body = 0x190;
+			SpeechHue = 44;
+			Hue = 1175;
+			BaseSoundID = 362;
 
           	SetStr( 3000 );
           	SetDex( 300 );
@@ -73,10 +68,10 @@ namespace Server.Mobiles
           	SetSkill( SkillName.Anatomy, 125.0 );
           	SetSkill(SkillName.DetectHidden, 120.0 );
           
-          Fame = 20000;
-          Karma = -20000;
+			Fame = 20000;
+			Karma = -20000;
 
-          VirtualArmor = 70;
+			VirtualArmor = 70;
 
 			AddItem( new ThighBoots( 1175 ) ); //black
 
@@ -109,23 +104,25 @@ namespace Server.Mobiles
 			legs.Movable = false;
 			AddItem( legs );
 
-        } 
-         public override int GetIdleSound()
-        {
-            return 0x2D3;
         }
+		
+        public override int GetIdleSound()
+        {
+			return 0x2D3;
+        }
+		
         public override int GetHurtSound()
         {
             return 0x2D1;
         }
-        		public override bool Unprovokable { get { return true; } }
-        		public override bool BardImmune { get { return true; } }
-        		public override bool GivesMinorArtifact{ get{ return true; } }
-        		public override bool ReacquireOnMovement{ get{ return true; } }
-        		public override bool Uncalmable{ get{ return true; } }
-        		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
-        		public override int TreasureMapLevel{ get{ return 5; } }
-
+		
+		public override bool Unprovokable { get { return true; } }
+		public override bool BardImmune { get { return true; } }
+		public override bool GivesMinorArtifact{ get{ return true; } }
+		public override bool ReacquireOnMovement{ get{ return true; } }
+		public override bool Uncalmable{ get{ return true; } }
+		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
+		public override int TreasureMapLevel{ get{ return 5; } }
 
         public override void OnGotMeleeAttack(Mobile attacker)
         {
@@ -151,10 +148,8 @@ namespace Server.Mobiles
                         Combatant = null;
                         attacker.Emote(String.Format("* {0} is being angered *", attacker.Name));
                     }
-
                 }
             }
-
             base.OnGotMeleeAttack(attacker);   //TODO:  Add fire shockwave
         }
 		
@@ -174,10 +169,10 @@ namespace Server.Mobiles
 					Ability.CrimsonMeteor( this, 15 );
 					m_Delay = DateTime.Now + TimeSpan.FromSeconds( Utility.RandomMinMax( 30, 45 ) );
 				}
-			}			
-
+			}
 			base.OnActionCombat();
 		}
+		
 		public override bool OnBeforeDeath()
 		{
 			MysteriousImage rm = new MysteriousImage();
@@ -197,9 +192,9 @@ namespace Server.Mobiles
 			return true;
 		}
 
-	public Valvakka( Serial serial ) : base( serial )
-	{
-	}
+		public Valvakka( Serial serial ) : base( serial )
+		{
+		}
 
         public override void Serialize(GenericWriter writer)
         {
@@ -211,11 +206,6 @@ namespace Server.Mobiles
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-        }
-      
+        }      
    }
-
 }
-
-      
-      

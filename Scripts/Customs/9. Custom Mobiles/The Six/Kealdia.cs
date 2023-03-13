@@ -4,18 +4,17 @@ using Server;
 using Server.Items; 
 using Server.Engines.CannedEvil;
 using System.Collections.Generic;
-namespace Server.Mobiles 
-{ 
-   [CorpseName( "the remains of Kealdia" )] 
+
+namespace Server.Mobiles
+{
+   [CorpseName( "the remains of Kealdia" )]
    public class Kealdia : BaseCreature
    {
-	
-	public override bool AlwaysMurderer { get { return true; } }
-	public override bool ShowFameTitle{ get{ return false; } }
-	public override bool DeleteCorpseOnDeath{ get{ return true; } }
-
-     	public static TimeSpan TalkDelay = TimeSpan.FromSeconds( 30.0 );
-     	public DateTime m_NextTalk;
+		public override bool AlwaysMurderer { get { return true; } }
+		public override bool ShowFameTitle{ get{ return false; } }
+		public override bool DeleteCorpseOnDeath{ get{ return true; } }
+		public static TimeSpan TalkDelay = TimeSpan.FromSeconds( 30.0 );
+		public DateTime m_NextTalk;
 
 		public override void OnMovement( Mobile m, Point3D oldLocation )
 		{
@@ -29,57 +28,53 @@ namespace Server.Mobiles
 					case 2: Say("Sweet Death, embrace mine enemies!"); break;
 					case 3: Say("You shall all face my wrath!"); break;
 					case 4: Say("Behold true terror!"); break;
-				};
-		
+				};	
 			}
 		}
 
-      [Constructable]
-      public Kealdia()
-          : base( AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4 )
-      {
-          Name = "Kealdia";
-	Body = 401;
-	Hue = 33792;
+		[Constructable]
+		public Kealdia(): base( AIType.AI_Mage, FightMode.Aggressor, 10, 1, 0.2, 0.4 )
+		{
+			Name = "Kealdia";
+			Body = 401;
+			Hue = 33792;
+			SpeechHue = 44;
+			Female = true;
+			HairItemID = 12239;
+			HairHue = 1617; //not entirely correct
 
-	SpeechHue = 44;
-	Female = true;
+			BaseSoundID = 362;
 
-	HairItemID = 12239;
-	HairHue = 1617; //not entirely correct
+			SetStr( 3000 );
+			SetDex( 300 );
+			SetInt( 1100 );
 
-          	BaseSoundID = 362;
+			SetHits( 35000 );
 
-          	SetStr( 3000 );
-          	SetDex( 300 );
-          	SetInt( 1100 );
+			SetDamage( 20, 25 );
 
-          	SetHits( 35000 );
+			SetDamageType( ResistanceType.Physical, 50 );
+			SetDamageType( ResistanceType.Fire, 50 );
 
-          	SetDamage( 20, 25 );
+			SetResistance( ResistanceType.Physical, 80, 85 );
+			SetResistance( ResistanceType.Fire, 100 );
+			SetResistance( ResistanceType.Cold, 60, 70 );
+			SetResistance( ResistanceType.Poison, 80, 85 );
+			SetResistance( ResistanceType.Energy, 80, 85 );
 
-          	SetDamageType( ResistanceType.Physical, 50 );
-          	SetDamageType( ResistanceType.Fire, 50 );
+			SetSkill( SkillName.EvalInt, 125.3 );
+			SetSkill( SkillName.Magery, 125.0 );
+			SetSkill( SkillName.MagicResist, 125.0 );
+			SetSkill( SkillName.Tactics, 130.0 );
+			SetSkill( SkillName.Wrestling, 130.0 );
+			SetSkill( SkillName.Meditation, 130.0 );
+			SetSkill( SkillName.Anatomy, 125.0 );
+			SetSkill(SkillName.DetectHidden, 120.0 );
+		  
+			Fame = 20000;
+			Karma = -20000;
 
-          	SetResistance( ResistanceType.Physical, 80, 85 );
-          	SetResistance( ResistanceType.Fire, 100 );
-          	SetResistance( ResistanceType.Cold, 60, 70 );
-          	SetResistance( ResistanceType.Poison, 80, 85 );
-          	SetResistance( ResistanceType.Energy, 80, 85 );
-
-          	SetSkill( SkillName.EvalInt, 125.3 );
-          	SetSkill( SkillName.Magery, 125.0 );
-          	SetSkill( SkillName.MagicResist, 125.0 );
-          	SetSkill( SkillName.Tactics, 130.0 );
-          	SetSkill( SkillName.Wrestling, 130.0 );
-          	SetSkill( SkillName.Meditation, 130.0 );
-          	SetSkill( SkillName.Anatomy, 125.0 );
-          	SetSkill(SkillName.DetectHidden, 120.0 );
-          
-          	Fame = 20000;
-          	Karma = -20000;
-
-          	VirtualArmor = 70;
+			VirtualArmor = 70;
 
 			AddItem( new Sandals( 1175 ) );
 
@@ -106,23 +101,23 @@ namespace Server.Mobiles
 			legs.Resource = CraftResource.BlackScales;
 			legs.Movable = false;
 			AddItem( legs );
-
-        } 
+		} 
 
         public override int GetIdleSound()
         {
             return 0x2D3;
         }
+		
         public override int GetHurtSound()
         {
             return 0x2D1;
         }
-        		public override bool Unprovokable { get { return true; } }
-        		public override bool BardImmune { get { return true; } }
-        		public override bool GivesMinorArtifact{ get{ return true; } }
-        		public override bool ReacquireOnMovement{ get{ return true; } }
-        		public override bool Uncalmable{ get{ return true; } }
-        		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
+		public override bool Unprovokable { get { return true; } }
+		public override bool BardImmune { get { return true; } }
+		public override bool GivesMinorArtifact{ get{ return true; } }
+		public override bool ReacquireOnMovement{ get{ return true; } }
+		public override bool Uncalmable{ get{ return true; } }
+		public override Poison PoisonImmune{ get{ return Poison.Lethal; } }
 
         public override void OnGotMeleeAttack(Mobile attacker)
         {
@@ -148,15 +143,12 @@ namespace Server.Mobiles
                         Combatant = null;
                         attacker.Emote(String.Format("* {0} is being angered *", attacker.Name));
                     }
-
                 }
             }
-
             base.OnGotMeleeAttack(attacker);
         }
 
 		private DateTime m_Delay;
-
 		public override void OnActionCombat()
 		{
 			if ( DateTime.Now > m_Delay )
@@ -166,12 +158,10 @@ namespace Server.Mobiles
 					Ability.FlameCross( this );
 					m_Delay = DateTime.Now + TimeSpan.FromSeconds( Utility.RandomMinMax( 30, 45 ) );
 				}
-
-			}			
-
+			}
 			base.OnActionCombat();
 		}
-		
+
 		public override bool OnBeforeDeath()
 		{
 			MysteriousImage rm = new MysteriousImage();
@@ -186,14 +176,13 @@ namespace Server.Mobiles
 
 			MagicalLockbox magicallockbox = new MagicalLockbox();
 			magicallockbox.MoveToWorld( Location, Map );
-
 			Effects.SendLocationEffect( Location, Map, 0x376A, 10, 1 );
 			return true;
 		}
 
-	public Kealdia( Serial serial ) : base( serial )
-	{
-	}
+		public Kealdia( Serial serial ) : base( serial )
+		{
+		}
 
         public override void Serialize(GenericWriter writer)
         {
@@ -205,11 +194,6 @@ namespace Server.Mobiles
         {
             base.Deserialize(reader);
             int version = reader.ReadInt();
-        }
-      
+        }      
    }
-
 }
-
-      
-      
