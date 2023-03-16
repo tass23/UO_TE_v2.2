@@ -60,10 +60,10 @@ namespace Server.Engines.Craft
 			int index = -1;
 			string skillNotice = "You have no idea how to craft wine with this type of grape.";
 
-			index = AddCraft( typeof( WineKeg ), "Wines", "Keg of Wine", 80.0, 105.6, typeof( CabernetSauvignonGrapes ), "Cabernet Sauvignon Grapes", 50 );
-			AddRes( index, typeof( Keg ), "Keg", 1 );
-			AddRes( index, typeof ( WinecrafterSugar ), "Sugar", 1 );
-			AddRes( index, typeof ( WinecrafterYeast ), "Yeast", 1 );
+			index = AddCraft( typeof( WineKeg ), "Wines", "Keg of Wine", 80.0, 105.6, typeof( CabernetSauvignonGrapes ), "Cabernet Sauvignon Grapes", 50, "You need more grapes." );
+			AddRes( index, typeof( Keg ), "Keg", 1, "You need a keg." );
+			AddRes( index, typeof( BagOfSugar ), "Bag of Sugar", 1, "You need more sugar." );
+			AddRes( index, typeof( BrewersYeast ), "Brewers Yeast", 1, "You need more Brewers Yeast." );
 
 			SetSubRes( typeof( CabernetSauvignonGrapes ), "Cabernet Sauvignon Grapes" );
 
