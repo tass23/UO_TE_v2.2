@@ -16,6 +16,8 @@
   <SpeechEntry>
     <EntryNumber>0</EntryNumber>
     <ID>0</ID>
+    <Keywords>This is from Shao.</Keywords>
+    <Action>TAKEBYTYPE,1,1,true/JonesyLetter</Action>
     <DependsOn>-2</DependsOn>
     <Pause>1</Pause>
     <PrePause>-1</PrePause>
@@ -24,12 +26,12 @@
     <AllowNPCTrigger>False</AllowNPCTrigger>
     <SpeechStyle>Regular</SpeechStyle>
     <SpeechHue>-1</SpeechHue>
+    <Gump>GUMP,Jonesy,0/Hmm, this letter says Shao found the location of Nurhaci's Temple. It says the entrance is SOUTH of the town of Trinsic, along the coast, near some ruins.</Gump>
   </SpeechEntry>
   <SpeechEntry>
     <EntryNumber>10</EntryNumber>
     <ID>10</ID>
-    <Keywords>This is from Lao.</Keywords>
-    <Action>TAKEBYTYPE,1,1,true/JonesyLetter ; SETONCARRIED,Nurhaci,0/Completed1/true/objective2/Travel to Nurhaci's Temple/Description2/Travel to Nurhaci's Temple. According to Shao's letter, the temple is somewhere SOUTH of the town of Trinsic, along the coast, near some ruins./addjournalentry/A hint to the whereabouts of the temple:Travel SOUTH from the Trinsic Moongate, through the Southern Jungle to the coast and find some ruins. The entrance to the temple is nearby.</Action>
+    <Condition>SETONCARRIED,Nurhaci,0/Completed1/true/objective2/Travel to Nurhaci's Temple/Description2/Travel to Nurhaci's Temple. According to Shao's letter, the temple is somewhere SOUTH of the town of Trinsic, along the coast, near some ruins./addjournalentry/A hint to the whereabouts of the temple:Travel SOUTH from the Trinsic Moongate, through the Southern Jungle to the coast and find some ruins. The entrance to the temple is nearby.</Condition>
     <DependsOn>0</DependsOn>
     <Pause>1</Pause>
     <PrePause>-1</PrePause>
@@ -38,6 +40,5 @@
     <AllowNPCTrigger>False</AllowNPCTrigger>
     <SpeechStyle>Regular</SpeechStyle>
     <SpeechHue>-1</SpeechHue>
-    <Gump>GUMP,Jonesy,0/Hmm, this letter says Shao found the location of Nurhaci's Temple. It says the entrance is SOUTH of the town of Trinsic, along the coast, near some ruins.</Gump>
   </SpeechEntry>
 </XmlQuestNPC>
