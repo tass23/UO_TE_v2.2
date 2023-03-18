@@ -257,27 +257,31 @@ namespace Server.Gumps
 			this.Dragable=true;
 			this.Resizable=false;
 			AddPage(0);
-			AddBackground(0, 0, 147, 117, 9200);
-			AddAlphaRegion(0, 0, 147, 117);
-			AddImageTiled(3, 3, 140, 21, 30074);
-			AddLabel(20, 4, 0, @"Vampire Abilities");
-			AddImage(5, 22, 9500);
-			AddImageTiled(16, 22, 115, 12, 9501);
-			AddImage(131, 22, 9502);
+			AddBackground(0, 0, 147, 125, 9200);
+			//AddAlphaRegion(0, 0, 147, 125);
+			AddImageTiled(3, 3, 140, 18, 5214);
+			AddLabel(20, 4, 2982, @"Vampire Abilities");
+			AddImage(5, 18, 9500);
+			AddImageTiled(16, 18, 115, 12, 9501);
+			AddImage(129, 18, 9502);
+			AddImage(129, 109, 9508);
 			AddImageTiled(5, 33, 135, 79, 9504);
-			AddImage(5, 103, 9506);
+			AddImageTiled(16, 108, 115, 12, 9507);
+			AddImage(5, 109, 9506);
 			AddImage(130, 103, 9508);
-			AddLabel(13, 26, 0, @"Forms");
-			AddLabel(90, 42, 0, @"Bite");
-			AddButton(78, 65, 2128, 2129, (int)Buttons.BiteButton, GumpButtonType.Reply, 0);
-			AddLabel(27, 43, 0, @"Bat");
+			AddLabel(13, 26, 1067, @"Forms");
+			AddLabel(90, 42, 1067, @"Bite");
+			AddButton(101, 65, 1209, 1210, (int)Buttons.BiteButton, GumpButtonType.Reply, 0);
+			AddLabel(27, 43, 1152, @"Bat");
 			AddButton(10, 47, 1209, 1210, (int)Buttons.FormButton, GumpButtonType.Reply, 0);
-			AddLabel(27, 65, 0, @"Fog");
+			AddLabel(27, 65, 1152, @"Fog");
 			AddButton(10, 69, 1209, 1210, (int)Buttons.FormButton2, GumpButtonType.Reply, 0);
-			AddLabel(27, 88, 0, @"Raven");
+			AddLabel(27, 88, 1152, @"Raven");
 			AddButton(10, 92, 1209, 1210, (int)Buttons.FormButton3, GumpButtonType.Reply, 0);
-			AddImageTiled(13, 42, 39, 1, 30002);
-			AddImageTiled(91, 58, 25, 1, 30002);
+			AddImageTiled(13, 42, 50, 1, 30002);
+			AddImageTiled(91, 58, 38, 1, 30002);
+			AddImage(88, 60, 2909, 7573);
+			AddImage(87, 60, 2909, 7960);
 		}
 		
 		public enum Buttons
