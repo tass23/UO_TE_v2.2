@@ -260,9 +260,9 @@ namespace Server.Gumps
 			AddBackground(0, 0, 147, 125, 9200);
 			//AddAlphaRegion(0, 0, 147, 125);
 			AddImageTiled(3, 3, 140, 18, 5214);
-			AddLabel(20, 4, 2982, @"Vampire Abilities");
+			AddLabel(20, 3, 2982, @"Vampire Abilities");
 			AddImage(5, 18, 9500);
-			AddImageTiled(16, 18, 115, 12, 9501);
+			AddImageTiled(16, 18, 116, 12, 9501);
 			AddImage(129, 18, 9502);
 			AddImage(129, 109, 9508);
 			AddImageTiled(5, 33, 135, 79, 9504);
@@ -271,7 +271,7 @@ namespace Server.Gumps
 			AddImage(130, 103, 9508);
 			AddLabel(13, 26, 1067, @"Forms");
 			AddLabel(90, 42, 1067, @"Bite");
-			AddButton(101, 65, 1209, 1210, (int)Buttons.BiteButton, GumpButtonType.Reply, 0);
+			AddButton(103, 76, 1209, 1210, (int)Buttons.BiteButton, GumpButtonType.Reply, 0);
 			AddLabel(27, 43, 1152, @"Bat");
 			AddButton(10, 47, 1209, 1210, (int)Buttons.FormButton, GumpButtonType.Reply, 0);
 			AddLabel(27, 65, 1152, @"Fog");
@@ -280,8 +280,7 @@ namespace Server.Gumps
 			AddButton(10, 92, 1209, 1210, (int)Buttons.FormButton3, GumpButtonType.Reply, 0);
 			AddImageTiled(13, 42, 50, 1, 30002);
 			AddImageTiled(91, 58, 38, 1, 30002);
-			AddImage(88, 60, 2909, 7573);
-			AddImage(87, 60, 2909, 7960);
+			AddImage(-5, 5, 2918, 1901);
 		}
 		
 		public enum Buttons
