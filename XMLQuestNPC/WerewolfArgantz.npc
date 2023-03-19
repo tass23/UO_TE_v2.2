@@ -9,7 +9,7 @@
     <AllowGhost>False</AllowGhost>
     <SpeechPace>10</SpeechPace>
     <ResetTime>1</ResetTime>
-    <ConfigFile>VampireCrease</ConfigFile>
+    <ConfigFile>WerewolfArgantz</ConfigFile>
     <SpeechEntries>7</SpeechEntries>
   </NPC>
   <SpeechEntry>
@@ -44,7 +44,7 @@
     <EntryNumber>20</EntryNumber>
     <ID>20</ID>
     <Keywords>yes</Keywords>
-    <Action>GIVE/&lt;questholder/name/Life Choices/titlestring/Life Choices/notestring/To become a werewolf is a simple thing. You must prove your worth for the cause however. Argantz has tasked you with bringing him the head of an innocent./Objective1/Bring Argantz the head of an innocent./Description1/Bring Argantz the head of an innocent./EchoAddJournalEntry/Tip:Kill any human and cut off their head./repeatable/true/AutoReward/false/CanSeeReward/False/Difficulty/1</Action>
+    <Action>GIVE/&lt;questholder/name/Life Choices/titlestring/Life Choices/notestring/To become a werewolf is a simple thing. You must prove your worth for the cause, however. Argantz has tasked you with bringing him the head of an errant initiate called Fenrick who was last seen in the Yew Graveyard./Objective1/Bring Argantz the head of Fenrick./Description1/Bring Argantz the head of Fenrick./EchoAddJournalEntry/repeatable/true/AutoReward/false/CanSeeReward/False/Difficulty/1</Action>
     <DependsOn>10</DependsOn>
     <Pause>1</Pause>
     <PrePause>-1</PrePause>
