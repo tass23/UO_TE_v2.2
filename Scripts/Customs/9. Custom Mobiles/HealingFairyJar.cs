@@ -88,10 +88,8 @@ namespace Server.Items
 				Name = "A Healing Fairy Jar: Empty";
 				Hue = 0x482;
 			}
-				
 		}
-				
-				
+	
 		public static void CheckRelease( Mobile owner )
         {
             if (owner != null && !owner.Deleted)
@@ -120,16 +118,14 @@ namespace Server.Items
 		
 		public override void Serialize( GenericWriter writer )
 		{
-			base.Serialize( writer );
-			
+			base.Serialize( writer );			
 			writer.Write( (int) 0 ); // version
 			writer.Write( (bool) m_HasFairy );
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
-			base.Deserialize( reader );
-			
+			base.Deserialize( reader );			
 			int version = reader.ReadInt();
 			m_HasFairy = reader.ReadBool();
 			if(LootType != LootType.Blessed)
@@ -174,7 +170,5 @@ namespace Server.Items
 				}
 			}
 		}
-	}
-	
-	
+	}	
 }

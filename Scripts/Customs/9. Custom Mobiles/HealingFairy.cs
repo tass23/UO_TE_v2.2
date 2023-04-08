@@ -18,16 +18,14 @@ namespace Server.Mobiles
 		[Constructable]
 		public HealingFairy()
 		{
-			Name = "a healing fairy";
-			
+			Name = "a healing fairy";			
 			Hue = 1150;  //Never found a hue I was very happy with... 2050 if you want an annoying white glow.
 
 			BodyValue=128;
             BaseSoundID = 1127; 
 			PassiveSpeed = .35;
 			ActiveSpeed = .175;
-			ControlSlots = 0;
-			
+			ControlSlots = 0;			
 			
 			SetStr( 21, 30 );
 			SetDex( 301, 400 );
@@ -36,7 +34,6 @@ namespace Server.Mobiles
 			SetHits( 13, 18 );
 
 			SetDamage( 9, 15 );
-
 			SetDamageType( ResistanceType.Physical, 100 );
 
 			SetResistance( ResistanceType.Physical, 80, 90 );
@@ -118,17 +115,14 @@ namespace Server.Mobiles
 			{
 				Say( 501224 ); // Thou hast strayed from the path of virtue, but thou still deservest a second chance.
 			}
-
 			return true;
 		}
 		
 		public override void OfferResurrection( Mobile m )
 		{
 			Direction = GetDirectionTo( m );
-
 			m.PlaySound(0x1F2);
 			m.FixedEffect( 0x376A, 10, 16 );
-
 			m.CloseGump( typeof( ResurrectGump ) );
 			m.SendGump( new ResurrectGump( m, ResurrectMessage.Healer ) );
 			Effects.SendLocationParticles( EffectItem.Create( this.Location, this.Map, EffectItem.DefaultDuration ), 0x3728, 1, 10, 0x26B6 );
@@ -165,14 +159,12 @@ namespace Server.Mobiles
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-
 			writer.Write( (int) 0 ); // version
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-
 			int version = reader.ReadInt();
 		}
 	}
@@ -180,8 +172,7 @@ namespace Server.Mobiles
 	public class SummonedHealingFairy : HealingFairy
 	{
 		public override bool Commandable{ get{ return false; } }
-		public override bool InitialInnocent{ get{ return true; } }
-		
+		public override bool InitialInnocent{ get{ return true; } }		
 		private DateTime m_HealTime;
 
 		[Constructable]
@@ -206,14 +197,12 @@ namespace Server.Mobiles
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-
 			writer.WriteEncodedInt( 0 ); // version
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-
 			int version = reader.ReadEncodedInt();
 		}
 	}

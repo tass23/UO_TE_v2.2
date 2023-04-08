@@ -10,7 +10,6 @@ namespace Server.Mobiles
 	{
 		public override double DispelDifficulty{ get{ return 145.0; } }
 		public override double DispelFocus{ get{ return 65.0; } }
-
 		public override Faction FactionAllegiance { get { return Shadowlords.Instance; } }
 		public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Evil; } }
 
@@ -54,49 +53,36 @@ namespace Server.Mobiles
 			VirtualArmor = 95;
 
 			PackItem( new Longsword() );
-        }
-            
+        }            
         // It only gives the armor upon killing the balron lord - GreyWolf.
         // to remove just remove from the next line til end of random drop  - GreyWolf.
         /*
 		public override void OnDeath( Container c )
 		{
             // added to drop the armor so it is not too common - GreyWolf.
-
 			base.OnDeath( c );
                 // idea is to drop the armor pieces - GreyWolf.
 			int drop = Utility.Random(1, 1);
-
             for (int i = 0; i < drop; i++)
-
                 if (Utility.RandomDouble() < 0.1) // 5% chance of getting this piece - GreyWolf.
-                    c.DropItem(new AngelsNeck()); 
-
+                    c.DropItem(new AngelsNeck());
                 else if (Utility.RandomDouble() < 0.2) // 10% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelsCrown());
-
                 else if (Utility.RandomDouble() < 0.3) // 17.5% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelHands());
-
                 else if (Utility.RandomDouble() < 0.4) // 25% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelArms());
-
                 else if (Utility.RandomDouble() < 0.5) // 40% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelLegs());
-
                 else if (Utility.RandomDouble() < 0.6) // 60% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelTunic());
-
                 else if (Utility.RandomDouble() < 0.75) // 60% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelSword());
-
                 else if (Utility.RandomDouble() < 1.0) // 60% chance of getting this piece - GreyWolf.
                     c.DropItem(new AngelShield());
-
             // end of random drop - GreyWolf.
 		}
 		*/
-
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.FilthyRich, 2 );

@@ -18,13 +18,13 @@ namespace Server.Mobiles
            	SetStr( 1900, 2100 ); //change this for more or less str
             SetDex( 1250, 1350 );  //change this for more or less dex
             SetInt( 700, 850 );  //change this for more or less int
-                                               
+
             SetHits( 2000, 2500 );  //change this for more or less hit points
             SetMana( 1000, 1250 ); // mana
             SetStam( 500, 750 );  //stamina
-                                               
+
            	SetDamage( 25, 35 );  //min damage, max damage
-                                               
+
             SetDamageType( ResistanceType.Physical, 50 );
             SetDamageType( ResistanceType.Cold, 50 );
             SetDamageType( ResistanceType.Energy, 40 );
@@ -34,14 +34,13 @@ namespace Server.Mobiles
             SetResistance( ResistanceType.Fire, 15, 30 );
             SetResistance( ResistanceType.Energy, 40, 60 );
             SetResistance( ResistanceType.Poison, 50, 60 );
-                                               
+
             SetSkill( SkillName.EvalInt, 110, 120 );
             SetSkill( SkillName.Magery, 110, 115 );
-            SetSkill( SkillName.EvalInt, 110, 115 );
             SetSkill( SkillName.Meditation, 110, 120 );
             SetSkill( SkillName.MagicResist, 95, 100 );
             SetSkill( SkillName.Wrestling, 110, 120 );
-                                               
+
             Fame = 2500;
             Karma = -2500;
             VirtualArmor = 70;
@@ -93,10 +92,9 @@ namespace Server.Mobiles
 
         public override void Deserialize( GenericReader reader )
         {
-             base.Deserialize( reader );
-             int version = reader.ReadInt();
-             
-             	Body = 38;
-         }
+            base.Deserialize( reader );
+            int version = reader.ReadInt();
+			Body = 38;
+        }
     }
 }

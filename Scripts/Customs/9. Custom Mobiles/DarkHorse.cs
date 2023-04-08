@@ -10,7 +10,6 @@ namespace Server.Mobiles
 		public DarkHorse() : base( "a dark horse", 222, 15973, AIType.AI_Animal, FightMode.Aggressor, 10, 1, 0.2, 0.4 )
 		{
 			BaseSoundID = 0xA8;
-
 			SetStr( 22, 98 );
 			SetDex( 56, 75 );
 			SetInt( 6, 10 );
@@ -19,7 +18,6 @@ namespace Server.Mobiles
 			SetMana( 0 );
 
 			SetDamage( 3, 4 );
-
 			SetDamageType( ResistanceType.Physical, 100 );
 
 			SetResistance( ResistanceType.Physical, 15, 20 );
@@ -47,14 +45,12 @@ namespace Server.Mobiles
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-
 			writer.Write( (int) 0 ); // version
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
-
 			int version = reader.ReadInt();
 		}
 	}

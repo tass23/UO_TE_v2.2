@@ -59,7 +59,6 @@ namespace Server.Mobiles
 		public override void OnDamage(int amount, Mobile from, bool willKill)
         {
             base.OnDamage(amount, from, willKill);
-
             if (Hits < 15000)
             {
                 TurnIntoAttacker(from);
@@ -79,21 +78,15 @@ namespace Server.Mobiles
 		public void TurnIntoAttacker(Mobile from)
 		{
 			if (from == null)
-				return;
-				
+				return;				
             Map map = Map;
-
             if (map == null)
                 return;
-
             if (from.Combatant == null)
                 return;
-
             Mobile m = from.Combatant;
-
             if (m.Body == 51)
                 m.Say("Your soul is now mine!");
-
             if (m.Body != from.Body)
             {
                 if (m.Mounted)
@@ -101,19 +94,14 @@ namespace Server.Mobiles
                     Item mount = m.FindItemOnLayer(Layer.Mount);
                     mount.Delete();
                 }
-
                 m.BoltEffect(0);
-
                 m.Body = from.Body;
-                m.Hue = from.Hue;
-                
+                m.Hue = from.Hue;                
                 Warmode = true;
-
                 m.BoltEffect(0);
             }
             switch (Utility.Random(5))
             {
-
                 case 0:
                     m.Say("Your existance shall be mine!!");
                     break;
@@ -201,7 +189,7 @@ namespace Server.Mobiles
                     this.Hue = 0;
                 }
 	//Start Ant monsters            
-		if (e.Speech == "change antlion")
+				if (e.Speech == "change antlion")
                 {
                     this.Say("As you wish!");
                     this.Body = 787;
@@ -222,7 +210,7 @@ namespace Server.Mobiles
                     this.Body = 805;
                 }
 	//Start AOS monsters
-		if (e.Speech == "change abyssmalhorror")
+				if (e.Speech == "change abyssmalhorror")
                 {
                     this.Say("As you wish!");
                     this.Body = 312;
@@ -257,7 +245,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 304;
                 }
-		if (e.Speech == "change fleshrenderer")
+				if (e.Speech == "change fleshrenderer")
                 {
                     this.Say("As you wish!");
                     this.Body = 315;
@@ -297,17 +285,17 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 311;
                 }
-		if (e.Speech == "change skitteringhopper")
+				if (e.Speech == "change skitteringhopper")
                 {
                     this.Say("As you wish!");
                     this.Body = 302;
                 }
-		if (e.Speech == "change treefellow")
+				if (e.Speech == "change treefellow")
                 {
                     this.Say("As you wish!");
                     this.Body = 301;
                 }
-		if (e.Speech == "change vampirebat")
+				if (e.Speech == "change vampirebat")
                 {
                     this.Say("As you wish!");
                     this.Body = 317;
@@ -348,7 +336,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 71;
                 }
-		if (e.Speech == "change terathranwarrior")
+				if (e.Speech == "change terathranwarrior")
                 {
                     this.Say("As you wish!");
                     this.Body = 70;
@@ -389,7 +377,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 130;
                 }
-		if (e.Speech == "change gargoyle")
+				if (e.Speech == "change gargoyle")
                 {
                     this.Say("As you wish!");
                     this.Body = 4;
@@ -424,7 +412,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 149;
                 }
-		if (e.Speech == "change titan")
+				if (e.Speech == "change titan")
                 {
                     this.Say("As you wish!");
                     this.Body = 76;
@@ -464,17 +452,17 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 776;
                 }
-		if (e.Speech == "change mongbat")
+				if (e.Speech == "change mongbat")
                 {
                     this.Say("As you wish!");
                     this.Body = 39;
                 }
-		if (e.Speech == "change mummy")
+				if (e.Speech == "change mummy")
                 {
                     this.Say("As you wish!");
                     this.Body = 154;
                 }
-		if (e.Speech == "change ogre")
+				if (e.Speech == "change ogre")
                 {
                     this.Say("As you wish!");
                     this.Body = 1;
@@ -514,7 +502,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 53;
                 }
-		if (e.Speech == "change zombie")
+				if (e.Speech == "change zombie")
                 {
                     this.Say("As you wish!");
                     this.Body = 3;
@@ -556,7 +544,7 @@ namespace Server.Mobiles
                     this.Body = 771;
                 }
 	//Start Misc monsters
-		if (e.Speech == "change etherealwarrior")
+				if (e.Speech == "change etherealwarrior")
                 {
                     this.Say("As you wish!");
                     this.Body = 123;
@@ -581,7 +569,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 574;
                 }
-		if (e.Speech == "change centaur")
+				if (e.Speech == "change centaur")
                 {
                     this.Say("As you wish!");
                     this.Body = 101;
@@ -623,7 +611,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 46;
                 }
-		if (e.Speech == "change dragon")
+				if (e.Speech == "change dragon")
                 {
                     this.Say("As you wish!");
                     this.Body = 12;
@@ -649,7 +637,7 @@ namespace Server.Mobiles
                     this.Body = 104;
                 }
 	//Start Special monsters
-		if (e.Speech == "change harrower")
+				if (e.Speech == "change harrower")
                 {
                     this.Say("As you wish!");
                     this.Body = 146;
@@ -690,7 +678,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 5;
                 }
-		if (e.Speech == "change direwolf")
+				if (e.Speech == "change direwolf")
                 {
                     this.Say("As you wish!");
                     this.Body = 23;
@@ -710,7 +698,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 214;
                 }
-		if (e.Speech == "change boar")
+				if (e.Speech == "change boar")
                 {
                     this.Say("As you wish!");
                     this.Body = 209;
@@ -730,7 +718,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 29;
                 }
-		if (e.Speech == "change greathart")
+				if (e.Speech == "change greathart")
                 {
                     this.Say("As you wish!");
                     this.Body = 234;
@@ -750,7 +738,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 207;
                 }
-		if (e.Speech == "change walrus")
+				if (e.Speech == "change walrus")
                 {
                     this.Say("As you wish!");
                     this.Body = 221;
@@ -770,7 +758,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 793;
                 }
-		if (e.Speech == "change horse")
+				if (e.Speech == "change horse")
                 {
                     this.Say("As you wish!");
                     this.Body = 23;
@@ -790,7 +778,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 214;
                 }
-		if (e.Speech == "change unicorn")
+				if (e.Speech == "change unicorn")
                 {
                     this.Say("As you wish!");
                     this.Body = 122;
@@ -810,7 +798,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 52;
                 }
-		if (e.Speech == "change giantrat")
+				if (e.Speech == "change giantrat")
                 {
                     this.Say("As you wish!");
                     this.Body = 215;
@@ -830,7 +818,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 6;
                 }
-		if (e.Speech == "change cat")
+				if (e.Speech == "change cat")
                 {
                     this.Say("As you wish!");
                     this.Body = 201;
@@ -840,7 +828,7 @@ namespace Server.Mobiles
                     this.Say("As you wish!");
                     this.Body = 217;
                 }
-		if (e.Speech == "change normal")
+				if (e.Speech == "change normal")
                 {
                     this.Say("As you wish!");
                     this.Body = 51;
@@ -871,31 +859,24 @@ namespace Server.Mobiles
             {
                 Item copy = from.FindItemOnLayer(layer);
                 Type t = copy.GetType();
-
                 ConstructorInfo[] info = t.GetConstructors();
-
                 foreach ( ConstructorInfo c in info )
                 {
                     ParameterInfo[] paramInfo = c.GetParameters();
-
                     if ( paramInfo.Length == 0 )
                     {
                         object[] objParams = new object[0];
-
                         try 
                         {
                             Item newItem=null;
                             object o = c.Invoke( objParams );
-
                             if ( o != null && o is Item )
                             {
                                 newItem = (Item)o;
                                 CopyProperties( newItem, copy );//copy.Dupe( item, copy.Amount );
                                 newItem.Parent = null;
-
                                 mimic.EquipItem(newItem);
-                            }
-                                
+                            }                                
                             if ( newItem!=null)
                             {
                                 /*
@@ -928,21 +909,18 @@ namespace Server.Mobiles
                 }
             }
             if (mimic.FindItemOnLayer(layer) != null && mimic.FindItemOnLayer(layer).LootType != LootType.Blessed)
-                mimic.FindItemOnLayer(layer).LootType = LootType.Newbied;
-        
+                mimic.FindItemOnLayer(layer).LootType = LootType.Newbied;        
         }
         /*
         private void DupeFromLayer( Mobile from, Mobile mimic, Layer layer ) 
         {
             if (mimic.FindItemOnLayer(layer) != null && mimic.FindItemOnLayer(layer).LootType != LootType.Blessed)
-                mimic.FindItemOnLayer(layer).LootType = LootType.Newbied;
-        
+                mimic.FindItemOnLayer(layer).LootType = LootType.Newbied;        
         }
         */
         private static void CopyProperties ( Item dest, Item src ) 
         { 
-            PropertyInfo[] props = src.GetType().GetProperties(); 
-
+            PropertyInfo[] props = src.GetType().GetProperties();
             for ( int i = 0; i < props.Length; i++ ) 
             { 
                 try

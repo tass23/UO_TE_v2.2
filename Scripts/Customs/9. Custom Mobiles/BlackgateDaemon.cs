@@ -10,12 +10,9 @@ namespace Server.Mobiles
 	{
 		public virtual double AMCLootableChance { get { return AMCLootable.LootChance; } }
 		public virtual double ArtifactMapChestChance { get { return ArtifactMapChest.LootChance; } }
-
 		public static double ChocolateIngredientChance = .65;	// Chance that a Blackgate Daemon will drop a chocolatiering ingredient
-
 		public override double DispelDifficulty{ get{ return 1555.0; } }
 		public override double DispelFocus{ get{ return 75.0; } }
-
 		public override Faction FactionAllegiance { get { return Shadowlords.Instance; } }
 		public override Ethics.Ethic EthicAllegiance { get { return Ethics.Ethic.Evil; } }
 
@@ -56,8 +53,7 @@ namespace Server.Mobiles
 
 			VirtualArmor = 90;
 
-        	PackItem( new HoodedShroudOfShadows( ) );      
-		 
+        	PackItem( new HoodedShroudOfShadows( ) );
 			PackGem();
 			PackGold( 4700, 6950 );
 			switch ( Utility.Random( 50 ) ) //Rarity 10
@@ -128,9 +124,7 @@ namespace Server.Mobiles
         }
 
 		public virtual bool GivesMinorArtifact { get { return true; } }
-
 		public virtual bool GivesSAArtifact { get { return true; } }
-
 		public override void GenerateLoot()
 		{
 			AddLoot( LootPack.FilthyRich, 2 );

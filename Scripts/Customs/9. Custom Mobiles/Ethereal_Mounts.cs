@@ -21,31 +21,23 @@ namespace Server.Items
         {
         }
 
-
-
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
-
             if (Name != "Ethereal Polar Bear Statuette")
                 Name = "Ethereal Polar Bear Statuette";
         }
-    }
-	
+    }	
     //__________________________________________________________________________________________________________________________
-
     public class EtherealSkeletalSteed : EtherealMount
     {
-
         [Constructable]
         public EtherealSkeletalSteed()
             : base(11669, 0x3E90)
@@ -65,26 +57,20 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
-
             if (Name != "Ethereal Skeletal Steed Statuette")
                 Name = "Ethereal Skeletal Steed Statuette";
         }
-    }
-	
+    }	
     //__________________________________________________________________________________________________________________________
-
     public class EtherealChimera : EtherealMount
     {
-
         [Constructable]
         public EtherealChimera()
             : base(11670, 0x3E91)
@@ -104,28 +90,20 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
-
             if (Name != "Ethereal Chimera Statuette")
                 Name = "Ethereal Chimera Statuette";
         }
-    }
-	
+    }	
     //_____________________________________________________________________________________________________________________________
-
-    //_____________________________________________________________________________________________________________________________________________________________________
-
     public class EtherealChargerOfTheFallen : EtherealMount
     {
-
         [Constructable]
         public EtherealChargerOfTheFallen()
             : base(11670, 0x3E91)
@@ -145,26 +123,20 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
-
             if (Name != "Ethereal Charger Of The Fallen Statuette")
                 Name = "Ethereal Charger Of The Fallen Statuette";
         }
     }
-	
-    //_____________________________________________________________________________________________________________________________________________________________________
-
+	//__________________________________________________________________________________________________________________________
     public class EtherealHiryu : EtherealMount
     {
-
         [Constructable]
         public EtherealHiryu()
             : base(10090, 16020)
@@ -184,16 +156,13 @@ namespace Server.Items
         public override void Serialize(GenericWriter writer)
         {
             base.Serialize(writer);
-
             writer.Write((int)0);
         }
 
         public override void Deserialize(GenericReader reader)
         {
             base.Deserialize(reader);
-
             int version = reader.ReadInt();
-
             if (Name != "Ethereal Hiryu Statuette")
                 Name = "Ethereal Hiryu Statuette";
         }
