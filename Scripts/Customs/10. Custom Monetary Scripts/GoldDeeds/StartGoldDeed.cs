@@ -7,21 +7,18 @@ using Server.Network;
 using Server.Mobiles;
 using Server.Accounting;
 using Server.Gumps;
+
 namespace Server.Items
 { 
 	public class StartGoldDeed : Item 
-	{ 
-		
-
-
+	{
 		[Constructable]
 		public StartGoldDeed() : this( 1 )
 		{
 			ItemID = 5360;
 			Movable = true;
 			Hue = 52;
-			Name = " A Deed for a 15k BankCheck";
-					
+			Name = " A Deed for a 15k BankCheck (New Players only)";					
 		}
 
         public override void OnDoubleClick(Mobile from)
@@ -41,7 +38,6 @@ namespace Server.Items
                     this.SendLocalizedMessageTo(from, 1042971, "You have Already Received your Starting Gold!");
                     from.PlaySound(1066); //giggle
                 }
-
             else
             {
                 from.AddToBackpack(new BankCheck(15000));
@@ -49,30 +45,26 @@ namespace Server.Items
                 this.Delete();
             }
         }
+		
 		[Constructable]
 		public StartGoldDeed( int amount ) 
         {
 		}
-		
-		
 
 		public StartGoldDeed( Serial serial ) : base( serial ) 
-		{ 
-		} 
-
-		public override void Serialize( GenericWriter writer ) 
-		{ 
-		base.Serialize( writer ); 
-
-		writer.Write( (int) 0 ); // version 
-		} 
-
-		public override void Deserialize( GenericReader reader ) 
-		{ 
-		base.Deserialize( reader ); 
-
-		int version = reader.ReadInt(); 
+		{
 		}
 
-	} 
-} 
+		public override void Serialize( GenericWriter writer ) 
+		{
+			base.Serialize( writer );
+			writer.Write( (int) 0 ); // version
+		}
+
+		public override void Deserialize( GenericReader reader ) 
+		{
+			base.Deserialize( reader );
+			int version = reader.ReadInt();
+		}
+	}
+}
