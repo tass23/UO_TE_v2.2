@@ -53,7 +53,7 @@ namespace Server.Gumps
             m_Book = book;
             m_Spells = book.SchoolSpells;
 
-            Pages = (int)Math.Ceiling((book.SpellCount / 12.0));
+            Pages = (int)Math.Ceiling((book.SpellCount / 11.0));
 
             AddPage(0);
             AddImage(70, 100, BGImage);

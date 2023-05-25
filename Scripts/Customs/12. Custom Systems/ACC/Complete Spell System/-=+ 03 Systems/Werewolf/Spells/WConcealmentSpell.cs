@@ -28,8 +28,8 @@ namespace Server.ACC.CSS.Systems.Werewolf
 		206,
 		9002,
 		false,
-		Reagent.Bloodmoss,
-		Reagent.Nightshade
+		Reagent.MandrakeRoot,
+		Reagent.BlackPearl
 		);
 
 		public override SpellCircle Circle

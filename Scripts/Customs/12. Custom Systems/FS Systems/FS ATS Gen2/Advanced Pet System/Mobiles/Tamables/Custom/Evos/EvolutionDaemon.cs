@@ -4,10 +4,10 @@ using Server.Mobiles;
 namespace Server.Mobiles
 {
 	[CorpseName( "a demon corpse" )]
-	public class EvolutionDeamon : BaseCreature
+	public class EvolutionDaemon : BaseCreature
 	{
 		[Constructable]
-		public EvolutionDeamon() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public EvolutionDaemon() : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
 			Name = "a demon baby";
 			Body = 317;
@@ -91,7 +91,7 @@ namespace Server.Mobiles
 		public override int Meat{ get{ return 1; } }
 		public override FoodType FavoriteFood{ get{ return FoodType.Meat; } }
 
-		public EvolutionDeamon(Serial serial) : base(serial)
+		public EvolutionDaemon(Serial serial) : base(serial)
 		{
 		}
 
