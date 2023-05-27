@@ -84,95 +84,99 @@ namespace Server.Engines.Craft
 			int index = -1;
 
 			/* Begin Resources */
-			index = AddCraft( typeof( CandleWick ), "Resources", "Candle Wick", 50.0, 80.0, typeof( Beeswax ), "Wax", 1, "You don't have enough wax." );
-			AddRes( index, typeof( Cloth ), "Cloth", 1, "You dont have enough cloth." );
+			index = AddCraft( typeof( CandleWick ), "Resources", "Candle Wick", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 1, "You do not have enough Beeswax." );
+			AddRes( index, typeof( Cloth ), "Cloth", 1, "You do not have enough cloth." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( BlankCandle ), "Resources", "Blank Candle", 50.0, 80.0, typeof( Beeswax ), "Wax", 2, "You don't have enough wax." );
+			index = AddCraft( typeof( BlankCandle ), "Resources", "Blank Candle", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 2, "You do not have enough Beeswax." );
+			SetNeedHeat( index, true );
+			
+			index = AddCraft( typeof( SealingWax ), "Resources", "Sealing Wax", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 1, "You do not have enough Beeswax." );
+			AddRes( index, typeof( CandleShort ), "Small Candle", 2, "You do not have enough Small Candles." );
 			SetNeedHeat( index, true );
 			/* End Resources */
 
 			/* Begin Candles */
-			index = AddCraft( typeof( CandleShort ), "Candles", "Small candle", 80.0, 105.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank candle." );
-			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a candle wick." );
+			index = AddCraft( typeof( CandleShort ), "Candles", "Small Candle", 80.0, 105.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank Candle." );
+			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a Candle Wick." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( CandleShortColor ), "Candles", "Small colored candle", 80.0, 105.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank candle." );
+			index = AddCraft( typeof( CandleShortColor ), "Candles", "Small colored Candle", 80.0, 105.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a Blank Candle." );
 			AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
-			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a candle wick." );
+			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a Candle Wick." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( CandleLong ), "Candles", "Large candle", 80.0, 110.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank candle." );
-			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a candle wick." );
+			index = AddCraft( typeof( CandleLong ), "Candles", "Large Candle", 80.0, 110.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank Candle." );
+			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a Candle Wick." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( CandleLongColor ), "Candles", "Large colored candle", 80.0, 110.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank candle." );
+			index = AddCraft( typeof( CandleLongColor ), "Candles", "Large colored Candle", 80.0, 110.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank Candle." );
 			AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
-			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a candle wick." );
+			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a Candle Wick." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( CandleSkull ), "Candles", "Skull candle", 100.0, 100.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank candle." );
-			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a candle wick." );
-			AddRes( index, typeof( CandleFitSkull ), "A candle fit skull", 1, "You need a candle fit skull." );
+			index = AddCraft( typeof( CandleSkull ), "Candles", "Skull Candle", 100.0, 100.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank Candle." );
+			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a Candle Wick." );
+			AddRes( index, typeof( CandleFitSkull ), "Candle for a skull", 1, "You need a Candle for a skull." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( CandleOfLove ), "Candles", "Candle of love", 100.0, 100.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank candle." );
-			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a candle wick." );
-			AddRes( index, typeof( EssenceOfLove ), "Essence Of Love", 1, "You need essence of love." );
+			index = AddCraft( typeof( CandleOfLove ), "Candles", "Candle of love", 100.0, 100.0, typeof( BlankCandle ), "Blank Candle", 1, "You need a blank Candle." );
+			AddRes( index, typeof( CandleWick ), "Candle Wick", 1, "You need a Candle Wick." );
+			AddRes( index, typeof( EssenceOfLove ), "Essence Of Love", 1, "You need Essence Of Love." );
 			SetNeedHeat( index, true );
 			/* End Candles */
 
 			/* Begin Decorative */
-			index = AddCraft( typeof( DippingStick ), "Decorative", "Dipping Stick", 75.0, 115.0, typeof( BlankCandle ), "Blank Candle", 3, "you need more blank candles." );
+			index = AddCraft( typeof( DippingStick ), "Decorative", "Dipping Stick", 75.0, 115.0, typeof( BlankCandle ), "Blank Candle", 3, "You need more Blank Candles." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( PileOfBlankCandles ), "Decorative", "Pile of Blank Candles", 75.0, 115.0, typeof( BlankCandle ), "Blank Candle", 5, "You need more blank candles." );
+			index = AddCraft( typeof( PileOfBlankCandles ), "Decorative", "Pile of Blank Candles", 75.0, 115.0, typeof( BlankCandle ), "Blank Candle", 5, "You need more Blank Candles." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( SomeBlankCandles ), "Decorative", "Some Blank Candles", 75.0, 115.0, typeof( BlankCandle ), "Blank Candle", 3, "You need more blank candles." );
+			index = AddCraft( typeof( SomeBlankCandles ), "Decorative", "Some Blank Candles", 75.0, 115.0, typeof( BlankCandle ), "Blank Candle", 3, "You need more Blank Candles." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof( RawWaxBust ), "Decorative", "Raw Wax Bust", 50.0, 80.0, typeof( Beeswax ), "Wax", 4, "You don't have enough wax." );
-			SetNeedHeat( index, true );
-			
-			index = AddCraft( typeof(  WaxCatStatue ), "Decorative", "Wax Cat Statue", 50.0, 80.0, typeof( Beeswax ), "Wax", 4, "You don't have enough wax." );
-            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes" );
-			SetNeedHeat( index, true );
-
-            index = AddCraft( typeof(  WaxPumpkin ), "Decorative", "Wax Pumpkin", 50.0, 80.0, typeof( Beeswax ), "Wax", 4, "You don't have enough wax." );
-            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes" );
+			index = AddCraft( typeof( RawWaxBust ), "Decorative", "Raw Wax Bust", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 4, "You do not have enough Raw Beeswax." );
 			SetNeedHeat( index, true );
 			
-			index = AddCraft( typeof(  WaxCornucopia ), "Decorative", "Wax Cornucopia", 50.0, 80.0, typeof( Beeswax ), "Wax", 6, "You don't have enough wax." );
-            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes" );
+			index = AddCraft( typeof(  WaxCatStatue ), "Decorative", "Wax Cat Statue", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 4, "You do not have enough Raw Beeswax." );
+            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
 			SetNeedHeat( index, true );
 
-			index = AddCraft( typeof(  WaxBrazier  ), "Decorative", "Wax Brazier", 50.0, 80.0, typeof( Beeswax ), "Wax", 6, "You don't have enough wax." );
-            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes" );
+            index = AddCraft( typeof(  WaxPumpkin ), "Decorative", "Wax Pumpkin", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 4, "You do not have enough Raw Beeswax." );
+            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
+			SetNeedHeat( index, true );
+			
+			index = AddCraft( typeof(  WaxCornucopia ), "Decorative", "Wax Cornucopia", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 6, "You do not have enough Raw Beeswax." );
+            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
 			SetNeedHeat( index, true );
 
-            index = AddCraft( typeof(  WaxCampfire  ), "Decorative", "Wax Campfire", 50.0, 80.0, typeof( Beeswax ), "Wax", 5, "You don't have enough wax." );
-            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes" );
+			index = AddCraft( typeof(  WaxBrazier  ), "Decorative", "Wax Brazier", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 6, "You do not have enough Raw Beeswax." );
+            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
 			SetNeedHeat( index, true );
 
-            index = AddCraft(typeof( WaxLargeMushroom1 ), "Decorative", "Wax Large Mushroom", 50.0, 80.0, typeof(Beeswax), "Wax", 6, "You don't have enough wax.");
-            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes");
+            index = AddCraft( typeof(  WaxCampfire  ), "Decorative", "Wax Campfire", 50.0, 80.0, typeof( Beeswax ), "Raw Beeswax", 5, "You do not have enough Raw Beeswax." );
+            AddRes( index, typeof( Dyes ), "Dyes", 1, "You need dyes." );
+			SetNeedHeat( index, true );
+
+            index = AddCraft(typeof( WaxLargeMushroom1 ), "Decorative", "Wax Large Mushroom", 50.0, 80.0, typeof(Beeswax), "Raw Beeswax", 6, "You do not have enough Raw Beeswax.");
+            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes.");
             SetNeedHeat(index, true);
 
-            index = AddCraft(typeof( WaxLargeMushroom2 ), "Decorative", "Wax Medium Mushroom", 50.0, 80.0, typeof(Beeswax), "Wax", 6, "You don't have enough wax.");
-            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes");
+            index = AddCraft(typeof( WaxLargeMushroom2 ), "Decorative", "Wax Medium Mushroom", 50.0, 80.0, typeof(Beeswax), "Raw Beeswax", 6, "You do not have enough Raw Beeswax.");
+            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes.");
             SetNeedHeat(index, true);
 
-            index = AddCraft(typeof( WaxLadderSouth ), "Decorative", "Wax Ladder S", 50.0, 80.0, typeof(Beeswax), "Wax", 10, "You don't have enough wax.");
-            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes");
+            index = AddCraft(typeof( WaxLadderSouth ), "Decorative", "Wax Ladder S", 50.0, 80.0, typeof(Beeswax), "Raw Beeswax", 10, "You do not have enough Raw Beeswax.");
+            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes.");
             SetNeedHeat(index, true);
 
-            index = AddCraft(typeof( WaxLadderEast ), "Decorative", "Wax Ladder E", 50.0, 80.0, typeof(Beeswax), "Wax", 10, "You dont have enough wax");
-            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes");
+            index = AddCraft(typeof( WaxLadderEast ), "Decorative", "Wax Ladder E", 50.0, 80.0, typeof(Beeswax), "Raw Beeswax", 10, "You do not have enough Raw Beeswax.");
+            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes.");
             SetNeedHeat(index, true);
 
-            index = AddCraft(typeof( WaxSpider ), "Decorative", "Wax Spider", 50.0, 80.0, typeof(Beeswax), "Wax", 5, "You dont have enough wax");
-            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes");
+            index = AddCraft(typeof( WaxSpider ), "Decorative", "Wax Spider", 50.0, 80.0, typeof(Beeswax), "Raw Beeswax", 5, "You do not have enough Raw Beeswax.");
+            AddRes(index, typeof(Dyes), "Dyes", 1, "You need dyes.");
             SetNeedHeat(index, true);
 			/* End Decorative */
 
