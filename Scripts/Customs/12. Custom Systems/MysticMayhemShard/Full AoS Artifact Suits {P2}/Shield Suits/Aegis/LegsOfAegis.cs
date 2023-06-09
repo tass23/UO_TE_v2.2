@@ -6,6 +6,8 @@ namespace Server.Items
 	public class LeggingsOfAegis : PlateLegs
 	{
 		public override int LabelNumber{ get{ return 1061602; } } // Leggings of Ægis
+		public override SetItem SetID{ get{ return SetItem.Aegis; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 18; } }
@@ -16,12 +18,13 @@ namespace Server.Items
 		[Constructable]
 		public LeggingsOfAegis()
 		{
-			Name = "Leggings of Aegis";
+			Name = "Leggings of Ægis";
 			Hue = 0x47E;
-			ArmorAttributes.SelfRepair = 5;
-			Attributes.ReflectPhysical = 18;
-			Attributes.DefendChance = 18;
-			Attributes.LowerManaCost = 14;
+			
+			SetSelfRepair = 5;
+			SetAttributes.ReflectPhysical = 10;
+			SetAttributes.DefendChance = 10;
+			SetAttributes.LowerManaCost = 4;
 		}
 
 		public LeggingsOfAegis( Serial serial ) : base( serial )

@@ -6,6 +6,8 @@ namespace Server.Items
 	public class MidnightTunic : BoneChest
 	{
 		public override int LabelNumber{ get{ return 1061093; } } // Midnight Tunic
+		public override SetItem SetID{ get{ return SetItem.Midnights; } }
+		public override int Pieces{ get{ return 4; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 25; } }
@@ -16,10 +18,11 @@ namespace Server.Items
 		[Constructable]
 		public MidnightTunic()
 		{
-			Name = "Midnight Tunic";
+			Name = "Midnight's Tunic";
 			Hue = 0x455;
-			SkillBonuses.SetValues( 0, SkillName.Necromancy, 15.0 );
-			Attributes.SpellDamage = 10;
+			
+			SetSkillBonuses.SetValues( 0, SkillName.Necromancy, 15.0 );
+			SetAttributes.SpellDamage = 10;
 			ArmorAttributes.MageArmor = 1;
 		}
 

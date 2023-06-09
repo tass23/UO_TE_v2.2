@@ -6,6 +6,8 @@ namespace Server.Items
 	public class HuntersLeggings : LeatherLegs
 	{
 		public override int LabelNumber{ get{ return 1061595; } } // Hunter's Leggings
+		public override SetItem SetID{ get{ return SetItem.Hunters; } }
+		public override int Pieces{ get{ return 5; } }
 
 		public override int ArtifactRarity{ get{ return 11; } }
 
@@ -19,10 +21,11 @@ namespace Server.Items
 		{
 			Name = "Hunter's Leggings";
 			Hue = 0x594;
-			SkillBonuses.SetValues( 0, SkillName.Archery, 10 );
-			Attributes.BonusDex = 8;
-			Attributes.NightSight = 1;
-			Attributes.AttackChance = 16;
+			
+			SetSkillBonuses.SetValues( 0, SkillName.Archery, 5 );
+			SetAttributes.BonusDex = 4;
+			SetAttributes.NightSight = 1;
+			SetAttributes.AttackChance = 10;
 
 		}
 

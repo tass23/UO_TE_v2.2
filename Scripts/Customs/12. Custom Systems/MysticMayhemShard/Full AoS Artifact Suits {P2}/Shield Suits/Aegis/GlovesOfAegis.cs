@@ -6,6 +6,8 @@ namespace Server.Items
 	public class GlovesOfAegis : PlateGloves
 	{
 		public override int LabelNumber{ get{ return 1061602; } } // Gloves of Ægis
+		public override SetItem SetID{ get{ return SetItem.Aegis; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 8; } }
@@ -16,12 +18,13 @@ namespace Server.Items
 		[Constructable]
 		public GlovesOfAegis()
 		{
-			Name = "Gloves of Aegis";
+			Name = "Gloves of Ægis";
 			Hue = 0x47E;
-			ArmorAttributes.SelfRepair = 5;
-			Attributes.ReflectPhysical = 10;
-			Attributes.DefendChance = 10;
-			Attributes.LowerManaCost = 4;
+			
+			SetSelfRepair = 5;
+			SetAttributes.ReflectPhysical = 10;
+			SetAttributes.DefendChance = 10;
+			SetAttributes.LowerManaCost = 4;
 		}
 
 		public GlovesOfAegis( Serial serial ) : base( serial )

@@ -6,6 +6,8 @@ namespace Server.Items
 	public class ShadowDancerTunic : LeatherChest
 	{
 		public override int LabelNumber{ get{ return 1061598; } } // Shadow Dancer Tunic
+		public override SetItem SetID{ get{ return SetItem.Shadow; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 19; } }
@@ -20,8 +22,9 @@ namespace Server.Items
 		{
 			Name = "Shadow Dancer Tunic";
 			Hue = 0x455;
-			SkillBonuses.SetValues( 0, SkillName.Stealth, 15.0 );
-			SkillBonuses.SetValues( 1, SkillName.Stealing, 15.0 );
+			
+			SetSkillBonuses.SetValues( 0, SkillName.Stealth, 5.0 );
+			SetSkillBonuses.SetValues( 1, SkillName.Stealing, 5.0 );
 		}
 
 		public ShadowDancerTunic( Serial serial ) : base( serial )

@@ -6,6 +6,8 @@ namespace Server.Items
 	public class ArmsOfAegis : PlateArms
 	{
 		public override int LabelNumber{ get{ return 1061602; } } // Arms of Ægis
+		public override SetItem SetID{ get{ return SetItem.Aegis; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 12; } }
@@ -16,7 +18,7 @@ namespace Server.Items
 		[Constructable]
 		public ArmsOfAegis()
 		{
-			Name = "Arms of Aegis";
+			Name = "Arms of Ægis";
 			Hue = 0x47E;
 			ArmorAttributes.SelfRepair = 5;
 			Attributes.ReflectPhysical = 12;

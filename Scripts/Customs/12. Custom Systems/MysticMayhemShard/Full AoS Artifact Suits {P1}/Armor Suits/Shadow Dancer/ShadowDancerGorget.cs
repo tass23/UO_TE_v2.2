@@ -6,6 +6,8 @@ namespace Server.Items
 	public class ShadowDancerGorget : LeatherGorget
 	{
 		public override int LabelNumber{ get{ return 1061598; } } // Shadow Dancer Gorget
+		public override SetItem SetID{ get{ return SetItem.Shadow; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 15; } }
@@ -20,8 +22,9 @@ namespace Server.Items
 		{
 			Name = "Shadow Dancer Gorget";
 			Hue = 0x455;
-			SkillBonuses.SetValues( 0, SkillName.Stealth, 5.0 );
-			SkillBonuses.SetValues( 1, SkillName.Stealing, 5.0 );
+			
+			SetSkillBonuses.SetValues( 0, SkillName.Stealth, 5.0 );
+			SetSkillBonuses.SetValues( 1, SkillName.Stealing, 5.0 );
 		}
 
 		public ShadowDancerGorget( Serial serial ) : base( serial )

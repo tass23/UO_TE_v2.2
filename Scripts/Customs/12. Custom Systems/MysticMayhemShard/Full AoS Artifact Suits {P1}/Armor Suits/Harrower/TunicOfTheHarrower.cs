@@ -6,6 +6,8 @@ namespace Server.Items
 	public class TunicOfTheHarrower : BoneChest
 	{
 		public override int LabelNumber{ get{ return 1061095; } } // Tunic of the Harrower
+		public override SetItem SetID{ get{ return SetItem.Harrower; } }
+		public override int Pieces{ get{ return 4; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePoisonResistance{ get{ return 25; } }
@@ -18,9 +20,10 @@ namespace Server.Items
 		{
 			Name = "Tunic of the Harrower";
 			Hue = 0x4F6;
-			Attributes.RegenHits = 7;
-			Attributes.RegenStam = 7;
-			Attributes.WeaponDamage = 35;
+			
+			SetAttributes.RegenHits = 3;
+			SetAttributes.RegenStam = 2;
+			SetAttributes.WeaponDamage = 15;
 		}
 
 		public TunicOfTheHarrower( Serial serial ) : base( serial )

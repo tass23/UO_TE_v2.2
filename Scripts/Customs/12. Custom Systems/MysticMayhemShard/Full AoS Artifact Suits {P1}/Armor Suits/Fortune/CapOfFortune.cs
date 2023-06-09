@@ -6,6 +6,8 @@ namespace Server.Items
 	public class CapOfFortune : LeatherCap
 	{
 		public override int LabelNumber{ get{ return 1061098; } } // Cap of Fortune
+		public override SetItem SetID{ get{ return SetItem.Fortune; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int InitMinHits{ get{ return 255; } }
@@ -16,10 +18,11 @@ namespace Server.Items
 		{
 			Name = "Cap of Fortune";
 			Hue = 0x501;
-			Attributes.Luck = 200;
-			Attributes.DefendChance = 15;
-			Attributes.LowerRegCost = 40;
 			ArmorAttributes.MageArmor = 1;
+			
+			SetAttributes.Luck = 200;
+			SetAttributes.DefendChance = 15;
+			SetAttributes.LowerRegCost = 40;
 		}
 
 		public CapOfFortune( Serial serial ) : base( serial )

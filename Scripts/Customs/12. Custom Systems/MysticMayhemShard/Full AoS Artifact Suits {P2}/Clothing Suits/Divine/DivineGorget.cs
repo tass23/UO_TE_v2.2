@@ -6,6 +6,8 @@ namespace Server.Items
 	public class DivineGorget : LeatherGorget
 	{
 		public override int LabelNumber{ get{ return 1061289; } } // Divine Gorget
+		public override SetItem SetID{ get{ return SetItem.Divine; } }
+		public override int Pieces{ get{ return 5; } }
 
 		public override int ArtifactRarity{ get{ return 11; } }
 
@@ -22,10 +24,11 @@ namespace Server.Items
 		{
 			Name = "Divine Gorget";
 			Hue = 0x482;
-			Attributes.BonusInt = 6;
-			Attributes.RegenMana = 1;
-			Attributes.ReflectPhysical = 12;
-			Attributes.LowerManaCost = 5;
+			
+			SetAttributes.BonusInt = 6;
+			SetAttributes.RegenMana = 1;
+			SetAttributes.ReflectPhysical = 8;
+			SetAttributes.LowerManaCost = 4;
 		}
 
 		public DivineGorget( Serial serial ) : base( serial )

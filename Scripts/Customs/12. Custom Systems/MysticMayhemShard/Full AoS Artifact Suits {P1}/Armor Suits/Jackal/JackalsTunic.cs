@@ -6,6 +6,8 @@ namespace Server.Items
 	public class JackalsTunic : PlateChest
 	{
 		public override int LabelNumber{ get{ return 1061594; } } // Jackal's Tunic
+		public override SetItem SetID{ get{ return SetItem.Jackal; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BaseFireResistance{ get{ return 23; } }
@@ -19,8 +21,9 @@ namespace Server.Items
 		{
 			Name = "Jackal's Tunic";
 			Hue = 0x6D1;
-			Attributes.BonusDex = 15;
-			Attributes.RegenHits = 2;
+			
+			SetAttributes.BonusDex = 15;
+			SetAttributes.RegenHits = 2;
 		}
 
 		public JackalsTunic( Serial serial ) : base( serial )

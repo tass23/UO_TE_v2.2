@@ -6,6 +6,8 @@ namespace Server.Items
 	public class JackalsArms : PlateArms
 	{
 		public override int LabelNumber{ get{ return 1061594; } } // Jackal's Arms
+		public override SetItem SetID{ get{ return SetItem.Jackal; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BaseFireResistance{ get{ return 12; } }
@@ -19,8 +21,9 @@ namespace Server.Items
 		{
 			Name = "Jackal's Arms";
 			Hue = 0x6D1;
-			Attributes.BonusDex = 15;
-			Attributes.RegenHits = 2;
+			
+			SetAttributes.BonusDex = 15;
+			SetAttributes.RegenHits = 2;
 		}
 
 		public JackalsArms( Serial serial ) : base( serial )

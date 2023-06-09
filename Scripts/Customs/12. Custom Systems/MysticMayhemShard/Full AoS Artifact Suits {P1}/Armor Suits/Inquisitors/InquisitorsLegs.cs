@@ -6,6 +6,8 @@ namespace Server.Items
 	public class InquisitorsLeggings : PlateLegs
 	{
 		public override int LabelNumber{ get{ return 1060206; } } // The Inquisitor's Leggings
+		public override SetItem SetID{ get{ return SetItem.Inquisitor; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 10; } }
 
 		public override int BaseColdResistance{ get{ return 24; } }
@@ -19,8 +21,9 @@ namespace Server.Items
 		{
 			Name = "The Inquisitor's Leggings";
 			Hue = 0x4F2;
-			Attributes.CastRecovery = 3;
-			Attributes.LowerManaCost = 8;
+			
+			SetAttributes.CastRecovery = 3;
+			SetAttributes.LowerManaCost = 8;
 			ArmorAttributes.MageArmor = 1;
 		}
 

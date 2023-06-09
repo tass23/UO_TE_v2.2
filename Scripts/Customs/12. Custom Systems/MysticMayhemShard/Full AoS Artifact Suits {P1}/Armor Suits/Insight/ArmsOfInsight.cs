@@ -6,6 +6,8 @@ namespace Server.Items
 	public class ArmsOfInsight : PlateArms
 	{
 		public override int LabelNumber{ get{ return 1061096; } } // Arms of Insight
+		public override SetItem SetID{ get{ return SetItem.Insight; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BaseEnergyResistance{ get{ return 15; } }
@@ -18,10 +20,11 @@ namespace Server.Items
 		{
 			Name = "Arms of Insight";
 			Hue = 0x554;
-			Attributes.BonusInt = 8;
-			Attributes.BonusMana = 15;
-			Attributes.RegenMana = 2;
-			Attributes.LowerManaCost = 8;
+			
+			SetAttributes.BonusInt = 8;
+			SetAttributes.BonusMana = 15;
+			SetAttributes.RegenMana = 2;
+			SetAttributes.LowerManaCost = 8;
 		}
 
 		public ArmsOfInsight( Serial serial ) : base( serial )

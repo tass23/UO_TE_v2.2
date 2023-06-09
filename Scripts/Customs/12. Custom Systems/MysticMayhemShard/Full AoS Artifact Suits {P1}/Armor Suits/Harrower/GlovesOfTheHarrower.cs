@@ -6,6 +6,8 @@ namespace Server.Items
 	public class GlovesOfTheHarrower : BoneGloves
 	{
 		public override int LabelNumber{ get{ return 1061095; } } // Gloves Of The Harrower
+		public override SetItem SetID{ get{ return SetItem.Harrower; } }
+		public override int Pieces{ get{ return 4; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePoisonResistance{ get{ return 17; } }
@@ -18,9 +20,10 @@ namespace Server.Items
 		{
 			Name = "Gloves of the Harrower";
 			Hue = 0x4F6;
-			Attributes.RegenHits = 3;
-			Attributes.RegenStam = 2;
-			Attributes.WeaponDamage = 15;
+			
+			SetAttributes.RegenHits = 3;
+			SetAttributes.RegenStam = 2;
+			SetAttributes.WeaponDamage = 15;
 		}
 
 		public GlovesOfTheHarrower( Serial serial ) : base( serial )

@@ -6,6 +6,8 @@ namespace Server.Items
 	public class GorgetOfAegis : PlateGorget
 	{
 		public override int LabelNumber{ get{ return 1061602; } } // Gorget of Ægis
+		public override SetItem SetID{ get{ return SetItem.Aegis; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 10; } }
@@ -16,12 +18,13 @@ namespace Server.Items
 		[Constructable]
 		public GorgetOfAegis()
 		{
-			Name = "Gorget of Aegis";
+			Name = "Gorget of Ægis";
 			Hue = 0x47E;
-			ArmorAttributes.SelfRepair = 5;
-			Attributes.ReflectPhysical = 12;
-			Attributes.DefendChance = 12;
-			Attributes.LowerManaCost = 6;
+			
+			SetSelfRepair = 5;
+			SetAttributes.ReflectPhysical = 10;
+			SetAttributes.DefendChance = 10;
+			SetAttributes.LowerManaCost = 4;
 		}
 
 		public GorgetOfAegis( Serial serial ) : base( serial )

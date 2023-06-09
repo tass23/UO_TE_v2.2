@@ -5,7 +5,9 @@ namespace Server.Items
 {
 	public class ArcaneLeggings : LeatherLegs
 	{
-		public override int LabelNumber{ get{ return 1061101; } } // Arcane Leggings 
+		public override int LabelNumber{ get{ return 1061101; } } // Arcane Leggings
+		public override SetItem SetID{ get{ return SetItem.Arcane; } }
+		public override int Pieces{ get{ return 6; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int InitMinHits{ get{ return 255; } }
@@ -16,10 +18,11 @@ namespace Server.Items
 		{
 			Name = "Arcane Leggings";
 			Hue = 0x556;
-			Attributes.NightSight = 1;
-			Attributes.SpellChanneling = 1;
-			Attributes.DefendChance = 14;
-			Attributes.CastSpeed = 1;
+			
+			SetAttributes.NightSight = 1;
+			SetAttributes.SpellChanneling = 1;
+			SetAttributes.DefendChance = 14;
+			SetAttributes.CastSpeed = 1;
 		}
 
 		public ArcaneLeggings( Serial serial ) : base( serial )

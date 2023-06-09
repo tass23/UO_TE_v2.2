@@ -6,6 +6,8 @@ namespace Server.Items
 	public class HolyKnightsArmPlates : PlateArms
 	{
 		public override int LabelNumber{ get{ return 1061097; } } // Holy Knight's ArmPlates
+		public override SetItem SetID{ get{ return SetItem.Fire; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 15; } }
@@ -18,8 +20,9 @@ namespace Server.Items
 		{
 			Name = "Holy Knight's Arm Plates";
 			Hue = 0x47E;
-			Attributes.BonusHits = 10;
-			Attributes.ReflectPhysical = 15;
+			
+			SetAttributes.BonusHits = 10;
+			SetAttributes.ReflectPhysical = 15;
 		}
 
 		public HolyKnightsArmPlates( Serial serial ) : base( serial )

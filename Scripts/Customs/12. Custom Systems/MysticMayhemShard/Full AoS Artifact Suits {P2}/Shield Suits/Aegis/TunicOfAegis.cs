@@ -6,6 +6,8 @@ namespace Server.Items
 	public class TunicOfAegis : PlateChest
 	{
 		public override int LabelNumber{ get{ return 1061602; } } // Tunic of Ægis
+		public override SetItem SetID{ get{ return SetItem.Aegis; } }
+		public override int Pieces{ get{ return 5; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 16; } }
@@ -16,12 +18,13 @@ namespace Server.Items
 		[Constructable]
 		public TunicOfAegis()
 		{
-			Name = "Tunic of Aegis";
+			Name = "Tunic of Ægis";
 			Hue = 0x47E;
-			ArmorAttributes.SelfRepair = 5;
-			Attributes.ReflectPhysical = 18;
-			Attributes.DefendChance = 18;
-			Attributes.LowerManaCost = 10;
+			
+			SetSelfRepair = 5;
+			SetAttributes.ReflectPhysical = 10;
+			SetAttributes.DefendChance = 10;
+			SetAttributes.LowerManaCost = 4;
 		}
 
 		public TunicOfAegis( Serial serial ) : base( serial )

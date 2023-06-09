@@ -6,6 +6,8 @@ namespace Server.Items
 	public class LegsOfNobility : RingmailLegs
 	{
 		public override int LabelNumber{ get{ return 1061092; } } // Legs of Nobility
+		public override SetItem SetID{ get{ return SetItem.Nobility; } }
+		public override int Pieces{ get{ return 3; } }
 		public override int ArtifactRarity{ get{ return 11; } }
 
 		public override int BasePhysicalResistance{ get{ return 15; } }
@@ -19,9 +21,10 @@ namespace Server.Items
 		{
 			Name = "Legs of Nobility";
 			Hue = 0x4FE;
-			Attributes.BonusStr = 8;
-			Attributes.Luck = 100;
-			Attributes.WeaponDamage = 20;
+			
+			SetAttributes.BonusStr = 8;
+			SetAttributes.Luck = 100;
+			SetAttributes.WeaponDamage = 20;
 		}
 
 		public LegsOfNobility( Serial serial ) : base( serial )

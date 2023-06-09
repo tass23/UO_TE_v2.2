@@ -6,6 +6,8 @@ namespace Server.Items
 	public class TotemTunic : LeatherChest
 	{
 		public override int LabelNumber{ get{ return 1061599; } } // Totem Tunic
+		public override SetItem SetID{ get{ return SetItem.Totemic; } }
+		public override int Pieces{ get{ return 5; } }
 
 		public override int ArtifactRarity{ get{ return 11; } }
 
@@ -19,9 +21,10 @@ namespace Server.Items
 		{
 			Name = "Totemic Tunic";
 			Hue = 0x455;
-			Attributes.BonusStr = 15;
-			Attributes.ReflectPhysical = 10;
-			Attributes.AttackChance = 10;
+			
+			SetAttributes.BonusStr = 8;
+			SetAttributes.ReflectPhysical = 8;
+			SetAttributes.AttackChance = 8;
 		}
 
 		public TotemTunic( Serial serial ) : base( serial )
