@@ -108,7 +108,7 @@ namespace Server.Mobiles
 			}
 		}
 		[Constructable]
-		public BioMount() : this( "a bio-engineered clone" )
+		public BioMount() : this( "a bio-engienered clone" )
 		{
 		}
 

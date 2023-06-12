@@ -11,7 +11,7 @@ namespace Server.Mobiles
 {
 
 	[CorpseName( "a corpse" )]
-	public class BioMount : BaseMount
+	public class BaseBioCreature : BaseCreature
 	{
 		private Mobile m_Craftedby;
 		private bool m_HasDNA;
@@ -107,14 +107,11 @@ namespace Server.Mobiles
 				case 1: return WeaponAbility.WhirlwindAttack;
 			}
 		}
-		[Constructable]
-		public BioMount() : this( "a bio-engineered clone" )
-		{
-		}
 
 		[Constructable]
-		public BioMount( string name ) : base( name, 775, 0x3EA0, AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public BaseBioCreature() : base( AIType.AI_Animal, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
+			Name = "a bio-engienered clone";
 			Body = 775;
 
 			SetStr( 1 );
@@ -134,9 +131,9 @@ namespace Server.Mobiles
 
 			VirtualArmor = 1;
 
-			Tamable = false;
+			Tamable = true;
 			ControlSlots = 3;
-			MinTameSkill = 1000.0;
+			MinTameSkill = 100.0;
 
 			Container pack = Backpack;
 
@@ -149,18 +146,251 @@ namespace Server.Mobiles
 			AddItem( pack );
 		}
 
+		public void CheckResistances()
+		{
+			if ( this.BodyValue == 400 || this.BodyValue == 401 )
+			{
+				if ( this.PhysicalResistanceSeed >= 0 )
+					this.PhysicalResistanceSeed = 0;
+
+				if ( this.FireResistSeed >= 0 )
+					this.FireResistSeed = 0;
+
+				if ( this.ColdResistSeed >= 0 )
+					this.ColdResistSeed = 0;
+
+				if ( this.PoisonResistSeed >= 0 )
+					this.PoisonResistSeed = 0;
+
+				if ( this.EnergyResistSeed >= 0 )
+					this.EnergyResistSeed = 0;
+
+				if ( this.PhysicalResistanceSeed <= 0 )
+					this.PhysicalResistanceSeed = 0;
+
+				if ( this.FireResistSeed <= 0 )
+					this.FireResistSeed = 0;
+
+				if ( this.ColdResistSeed <= 0 )
+					this.ColdResistSeed = 0;
+
+				if ( this.PoisonResistSeed <= 0 )
+					this.PoisonResistSeed = 0;
+
+				if ( this.EnergyResistSeed <= 0 )
+					this.EnergyResistSeed = 0;
+
+				if ( this.PhysicalResistance >= 70 )
+				{
+					int neg = this.PhysicalResistance - 70;
+					this.PhysicalResistanceSeed -= neg;
+				}
+
+				if ( this.FireResistance >= 70 )
+				{
+					int neg = this.FireResistance - 70;
+					this.FireResistSeed -= neg;
+				}
+
+				if ( this.ColdResistance >= 70 )
+				{
+					int neg = this.ColdResistance - 70;
+					this.ColdResistSeed -= neg;
+				}
+
+				if ( this.PoisonResistance >= 70 )
+				{
+					int neg = this.PoisonResistance - 70;
+					this.PoisonResistSeed -= neg;
+				}
+
+				if ( this.EnergyResistance >= 70 )
+				{
+					int neg = this.EnergyResistance - 70;
+					this.EnergyResistSeed -= neg;
+				}
+			}
+		}
+
 		public override bool OnDragDrop( Mobile from, Item item )
 		{
 			if ( CheckFeed( from, item ) )
 				return true;
 
-			if ( PackAnimal.CheckAccess( this, from ) )
+			if ( this.BodyValue == 400 || this.BodyValue == 401 && from == this.ControlMaster )
 			{
-				AddToBackpack( item );
-				return true;
+				if ( item is BaseClothing && from == this.ControlMaster )
+				{
+					BaseClothing bc = (BaseClothing)item;
+					Item equ = this.FindItemOnLayer( bc.Layer );
+					
+					if ( bc.LootType == LootType.Blessed || bc.LootType == LootType.Newbied )
+						from.SendMessage( 53, "WARNING!!! If your pet dies while holding a blessed, insured, or newbied item. It will be lost forever." );
+
+					if ( equ != null)
+						from.AddToBackpack( equ );
+
+					this.EquipItem( bc );
+					this.CheckResistances();
+
+					return true;
+					
+				}
+				else if ( item is BaseArmor && from == this.ControlMaster )
+				{
+					BaseArmor ba = (BaseArmor)item;
+
+					Item equ = this.FindItemOnLayer( ba.Layer );
+
+					if ( ba.LootType == LootType.Blessed || ba.LootType == LootType.Newbied )
+						from.SendMessage( 53, "WARNING!!! If your pet dies while holding a blessed, insured, or newbied item. It will be lost forever." );
+
+					if ( equ != null)
+						from.AddToBackpack( equ );
+
+					if ( this.Str <= ba.StrRequirement )
+					{
+						from.SendMessage( "Your pet is not strong enough to wear this." );
+						from.AddToBackpack( ba );
+					}
+					else
+					{
+						this.EquipItem( ba );
+						this.CheckResistances();
+					}
+
+					return true;
+				}
+				else if ( item is BaseWeapon && from == this.ControlMaster )
+				{
+					BaseWeapon bw = (BaseWeapon)item;
+
+					Item weap = this.FindItemOnLayer( Layer.OneHanded );
+					Item shield = this.FindItemOnLayer( Layer.TwoHanded );
+
+					if ( bw.LootType == LootType.Blessed || bw.LootType == LootType.Newbied )
+						from.SendMessage( 53, "WARNING!!! If your pet dies while holding a blessed, insured, or newbied item. It will be lost forever." );
+
+					if ( weap != null)
+						from.AddToBackpack( weap );
+
+					if ( shield != null)
+						from.AddToBackpack( shield );
+
+					if ( this.Str <= bw.StrRequirement )
+					{
+						from.SendMessage( "Your pet is not strong enough to wear this." );
+						from.AddToBackpack( bw );
+					}
+					else
+					{
+						this.EquipItem( bw );
+						this.CheckResistances();
+					}
+
+					this.EquipItem( bw );
+					
+					return true;
+				}
+				else if ( item is BaseJewel && from == this.ControlMaster )
+				{
+					BaseJewel bj = (BaseJewel)item;
+
+					Item equ = this.FindItemOnLayer( bj.Layer );
+
+					if ( bj.LootType == LootType.Blessed || bj.LootType == LootType.Newbied )
+						from.SendMessage( 53, "Warning: The item you have droped on your pet is either blessed or newbied. If this pet is unbonded and dies you will lose this item." );
+
+					if ( equ != null)
+						from.AddToBackpack( equ );
+
+					this.EquipItem( bj );
+					this.CheckResistances();
+	
+					return true;
+				}
+				else if ( item is Lantern && from == this.ControlMaster )
+				{
+					Lantern l = (Lantern)item;
+
+					Item equ = this.FindItemOnLayer( l.Layer );
+
+					if ( l.LootType == LootType.Blessed || l.LootType == LootType.Newbied )
+						from.SendMessage( 53, "Warning: The item you have droped on your pet is either blessed or newbied. If this pet is unbonded and dies you will lose this item." );
+
+					if ( equ != null)
+						from.AddToBackpack( equ );
+
+					this.EquipItem( l );
+					this.CheckResistances();
+	
+					return true;
+				}
+				else if ( item is FishingPole && from == this.ControlMaster )
+				{
+					FishingPole fp = (FishingPole)item;
+
+					Item equ = this.FindItemOnLayer( fp.Layer );
+
+					if ( fp.LootType == LootType.Blessed || fp.LootType == LootType.Newbied )
+						from.SendMessage( 53, "Warning: The item you have droped on your pet is either blessed or newbied. If this pet is unbonded and dies you will lose this item." );
+
+					if ( equ != null)
+						from.AddToBackpack( equ );
+
+					this.EquipItem( fp );
+					this.CheckResistances();
+	
+					return true;
+				}
+				else if ( item is Torch && from == this.ControlMaster )
+				{
+					Torch t = (Torch)item;
+
+					Item equ = this.FindItemOnLayer( t.Layer );
+
+					if ( t.LootType == LootType.Blessed || t.LootType == LootType.Newbied )
+						from.SendMessage( 53, "Warning: The item you have droped on your pet is either blessed or newbied. If this pet is unbonded and dies you will lose this item." );
+
+					if ( equ != null)
+						from.AddToBackpack( equ );
+
+					this.EquipItem( t );
+					this.CheckResistances();
+	
+					return true;
+				}
+				else
+				{
+					if ( PackAnimal.CheckAccess( this, from ) )
+					{
+						AddToBackpack( item );
+						return true;
+					}
+				}
+			}
+			else
+			{
+				if ( PackAnimal.CheckAccess( this, from ) )
+				{
+					AddToBackpack( item );
+					return true;
+				}
 			}
 
 			return base.OnDragDrop( from, item );
+		}
+
+		public override void OnThink()
+		{
+			base.OnThink();
+
+			if ( this.Controlled == false )
+			{
+				this.Delete();
+			}
+
+			this.CheckResistances();
 		}
 
 		public override void AddNameProperties( ObjectPropertyList list )
@@ -171,6 +401,307 @@ namespace Server.Mobiles
 				list.Add( 1060658, "Bio-engineered by\t{0}", m_Craftedby.Name.ToString() );
 		}
 
+		public override void OnSpeech(SpeechEventArgs e)
+		{
+			if ( e.Speech.ToLower().IndexOf( "status" ) > -1 )
+			{
+				e.Handled = true;
+				Mobile m = (Mobile)e.Mobile;
+				if ( m == this.ControlMaster )
+				{
+					m.SendGump( new AnimalLoreGump( this, m ) );
+				}
+				else
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						this.SayTo( m, "You are not my master" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				
+			}
+
+			if ( e.Speech.ToLower().IndexOf( "skills" ) > -1 )
+			{
+				e.Handled = true;
+				Mobile m = (Mobile)e.Mobile;
+				if ( m == this.ControlMaster )
+				{
+					m.SendGump( new PetSkillsGump( this ) );
+				}
+				else
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						this.SayTo( m, "You are not my master" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				
+			}
+
+			if ( e.Speech.ToLower().IndexOf( "ride" ) > -1 )
+			{
+				e.Handled = true;
+				Mobile m = (Mobile)e.Mobile;
+				if ( m == this.ControlMaster )
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						if ( this.Mounted == true )
+						{
+							this.SayTo( m, "I am already mounted" );
+						}
+						else
+						{
+							m.Target = new MountTarget( this, m );
+							m.SendMessage( "Select the mount you wish your bio human to ride" );
+						}
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				else
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						this.SayTo( m, "You are not my master" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				
+			}
+
+			if ( e.Speech.ToLower().IndexOf( "dismount" ) > -1 )
+			{
+				e.Handled = true;
+				Mobile m = (Mobile)e.Mobile;
+				if ( m == this.ControlMaster )
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401 )
+					{
+						if ( this.Mounted == true )
+						{
+							IMount mount = this.Mount;
+							if ( mount != null )
+								mount.Rider = null;
+						}
+						else
+						{
+							this.SayTo( m, "I am not mounted." );
+						}
+
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				else
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						this.SayTo( m, "You are not my master" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				
+			}
+
+			if ( e.Speech.ToLower().IndexOf( "morph" ) > -1 )
+			{
+				e.Handled = true;
+				Mobile m = (Mobile)e.Mobile;
+				if ( m == this.ControlMaster )
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401 || this.BodyValue == 469 || this.BodyValue == 447 )
+					{
+						if ( this.BodyValue == 400 )
+						{
+							if ( this.Mounted == true )
+							{
+								IMount mount = this.Mount;
+								if ( mount != null )
+									mount.Rider = null;
+							}
+
+							this.BodyValue = 469;
+						}
+						else if ( this.BodyValue == 401 )
+						{
+							if ( this.Mounted == true )
+							{
+								IMount mount = this.Mount;
+								if ( mount != null )
+									mount.Rider = null;
+							}
+
+							this.BodyValue = 447;
+						}
+						else if ( this.BodyValue == 469 )
+						{
+							this.BodyValue = 400;
+						}
+						else if ( this.BodyValue == 447 )
+						{
+							this.BodyValue = 401;
+						}
+					
+						m.SendMessage( "Your pet has morphed" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				else
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						this.SayTo( m, "You are not my master" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				
+			}
+
+			if ( e.Speech.ToLower().IndexOf( "undress" ) > -1 )
+			{
+				e.Handled = true;
+				Mobile m = (Mobile)e.Mobile;
+				if ( m == this.ControlMaster )
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401 )
+					{
+						Item one = this.FindItemOnLayer( Layer.OneHanded );
+						Item two = this.FindItemOnLayer( Layer.TwoHanded );
+						Item shoes = this.FindItemOnLayer( Layer.Shoes );
+						Item pants = this.FindItemOnLayer( Layer.Pants );
+						Item shirt = this.FindItemOnLayer( Layer.Shirt );
+						Item helm = this.FindItemOnLayer( Layer.Helm );
+						Item gloves = this.FindItemOnLayer( Layer.Gloves );
+						Item ring = this.FindItemOnLayer( Layer.Ring );
+						Item neck = this.FindItemOnLayer( Layer.Neck );
+						Item waist = this.FindItemOnLayer( Layer.Waist );
+						Item innert = this.FindItemOnLayer( Layer.InnerTorso );
+						Item bracelet = this.FindItemOnLayer( Layer.Bracelet );
+						Item middlet = this.FindItemOnLayer( Layer.MiddleTorso );
+						Item earrings = this.FindItemOnLayer( Layer.Earrings );
+						Item arms = this.FindItemOnLayer( Layer.Arms );
+						Item cloak = this.FindItemOnLayer( Layer.Cloak );
+						Item outtert = this.FindItemOnLayer( Layer.OuterTorso );
+						Item outterl = this.FindItemOnLayer( Layer.OuterLegs );
+						Item innerl = this.FindItemOnLayer( Layer.InnerLegs );
+
+						if ( one == null && two == null && shoes == null && pants == null && shirt == null && helm == null && gloves == null && ring == null && neck == null && waist == null && innert == null && bracelet == null && middlet == null && earrings == null && arms == null && cloak == null && outtert == null && outterl == null && innerl == null )
+						{
+							this.SayTo( m, "I am already naked." );
+						}
+						else
+						{
+							if ( one != null)
+								this.AddToBackpack( one );
+
+							if ( two != null)
+								this.AddToBackpack( two );
+
+							if ( shoes != null)
+								this.AddToBackpack( shoes );
+
+							if ( pants != null)
+								this.AddToBackpack( pants );
+
+							if ( shirt != null)
+								this.AddToBackpack( shirt );
+
+							if ( helm != null)
+								this.AddToBackpack( helm );
+
+							if ( gloves != null)
+								this.AddToBackpack( gloves );
+
+							if ( ring != null)
+								this.AddToBackpack( ring );
+
+							if ( neck != null)
+								this.AddToBackpack( neck );
+
+							if ( waist != null)
+								this.AddToBackpack( waist );
+
+							if ( innert != null)
+								this.AddToBackpack( innert );
+
+							if ( bracelet != null)
+								this.AddToBackpack( bracelet );
+
+							if ( middlet != null)
+								this.AddToBackpack( middlet );
+	
+							if ( earrings != null)
+								this.AddToBackpack( earrings );
+
+							if ( arms != null)
+								this.AddToBackpack( arms );
+	
+							if ( cloak != null)
+								this.AddToBackpack( cloak );
+
+							if ( outtert != null)
+								this.AddToBackpack( outtert );
+
+							if ( outterl != null)
+								this.AddToBackpack( outterl );
+
+							if ( innerl != null)
+								this.AddToBackpack( innerl );
+
+							this.SayTo( m, "Ok if you insist." );
+							this.SayTo( m, "Everything i was wearing is in my backpack." );
+
+							this.CheckResistances();
+						}
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+				else
+				{
+					if ( this.BodyValue == 400 || this.BodyValue == 401  )
+					{
+						this.SayTo( m, "You are not my master" );
+					}
+					else
+					{
+						this.SayTo( m, "*looks confused*" );
+					}
+				}
+			}
+
+			base.OnSpeech (e);
+		}
+
+		public override bool AutoDispel{ get{ return true; } }
 		public override Poison HitPoison{ get{ return (0.8 >= Utility.RandomDouble() ? Poison.Lesser : Poison.Regular); } }
 		public override FoodType FavoriteFood{ get{ return FoodType.Fish | FoodType.FruitsAndVegies | FoodType.Meat; } }
 
@@ -210,6 +741,71 @@ namespace Server.Mobiles
 			PackAnimal.GetContextMenuEntries( this, from, list );
 		}
 		#endregion
+
+		public void DoCure()
+		{
+			if ( this.BodyValue == 400 || this.BodyValue == 401 && this.Backpack != null )
+			{
+				if ( this == null || this.IsDeadPet )
+				{
+				}
+				else if ( this.ControlMaster != null )
+				{
+					if ( Utility.Random( 100 ) < 45 )
+					{
+						Item[] Bandage = this.Backpack.FindItemsByType( typeof( Bandage ) );
+						Item[] BaseCurePotion = this.Backpack.FindItemsByType( typeof( BaseCurePotion ) );
+		   				if ( this.Backpack.ConsumeTotal( typeof( Bandage ), 1 ) )
+						{
+							this.PlaySound( 0x57 );
+							this.Poison = null;
+						}
+		   				else if ( this.Backpack.ConsumeTotal( typeof( BaseCurePotion ), 1 ) )
+						{
+							this.Poison = null;
+							BasePotion.PlayDrinkEffect( this );
+							this.FixedParticles( 0x373A, 10, 15, 5012, EffectLayer.Waist );
+							this.PlaySound( 0x1E0 );
+						}
+					}
+				}	
+			}
+		}
+
+		public void DoHeal()
+		{
+			if ( this.BodyValue == 400 || this.BodyValue == 401 && this.Backpack != null )
+			{
+				if ( this == null || this.IsDeadPet )
+				{
+				}
+				else if ( this.ControlMaster != null )
+				{
+					if ( Utility.Random( 100 ) < 45 )
+					{
+						if ( this.Poisoned || MortalStrike.IsWounded( this ) )
+						{
+							this.ControlMaster.SendMessage( "Your pet attempted to heal its self but could not due to its current status." );
+						}
+						else
+						{
+							Item[] Bandage = this.Backpack.FindItemsByType( typeof( Bandage ) );
+							Item[] BaseHealPotion = this.Backpack.FindItemsByType( typeof( BaseHealPotion ) );
+		   					if ( this.Backpack.ConsumeTotal( typeof( Bandage ), 1 ) )
+							{
+								this.PlaySound( 0x57 );
+								this.Heal( Utility.RandomMinMax( 25, 65 ) );
+							}
+		   					else if ( this.Backpack.ConsumeTotal( typeof( BaseHealPotion ), 1 ) )
+							{
+								BasePotion.PlayDrinkEffect( this );
+								this.Heal( Utility.RandomMinMax( 25, 65 ) );
+							}
+						}
+					}
+				}
+			}
+		}
 
 		public override void OnActionCombat()
 		{
@@ -580,6 +1176,16 @@ namespace Server.Mobiles
 				int damagemin = this.Hits / 20;
 				int damagemax = this.Hits / 25;
 
+				if ( this.Poison != null )
+				{
+					this.DoCure();
+				}
+				else if ( this.Hits <= this.HitsMax )
+				{
+					this.DoHeal();
+				}	
+
+
 				if ( m_BluntAttack == true )
 				{ 
 					if( Utility.Random( 100 ) < 15 )
@@ -674,6 +1280,15 @@ namespace Server.Mobiles
 				int damagemin = this.Hits / 20;
 				int damagemax = this.Hits / 25;
 
+				if ( this.Poison != null )
+				{
+					this.DoCure();
+				}
+				else if ( this.Hits <= this.HitsMax )
+				{
+					this.DoHeal();
+				}
+
 				if ( m_BluntAttack == true )
 				{ 
 					if( Utility.Random( 100 ) < 15 )
@@ -755,7 +1370,7 @@ namespace Server.Mobiles
 			}
 		}
 
-		public BioMount( Serial serial ) : base( serial )
+		public BaseBioCreature( Serial serial ) : base( serial )
 		{
 		}
 
@@ -763,7 +1378,21 @@ namespace Server.Mobiles
 		{
 			if ( this.BaseSoundID == 0 )
 			{
-				return 768;
+				if ( this.BodyValue == 400 || this.BodyValue == 401 )
+				{
+					if ( this.Female == true )
+					{
+						return 824;
+					}	
+					else
+					{
+						return 1098;
+					}
+				}
+				else
+				{
+					return 768;
+				}
 			}
 			else
 			{
@@ -775,7 +1404,21 @@ namespace Server.Mobiles
 		{
 			if ( this.BaseSoundID == 0 )
 			{
-				return 769;
+				if ( this.BodyValue == 400 || this.BodyValue == 401 )
+				{
+					if ( this.Female == true )
+					{
+						return 822;
+					}
+					else
+					{
+						return 1096;
+					}
+				}
+				else
+				{
+					return 769;
+				}
 			}
 			else
 			{
@@ -787,7 +1430,21 @@ namespace Server.Mobiles
 		{
 			if ( this.BaseSoundID == 0 )
 			{
-				return 770;
+				if ( this.BodyValue == 400 || this.BodyValue == 401 )
+				{
+					if ( this.Female == true )
+					{
+						return 796;
+					}
+					else
+					{
+						return 1081;
+					}
+				}
+				else
+				{
+					return 770;
+				}
 			}
 			else
 			{
@@ -799,7 +1456,21 @@ namespace Server.Mobiles
 		{
 			if ( this.BaseSoundID == 0 )
 			{
-				return 771;
+				if ( this.BodyValue == 400 || this.BodyValue == 401 )
+				{
+					if ( this.Female == true )
+					{
+						return 804;
+					}
+					else
+					{
+						return 1078;
+					}
+				}
+				else
+				{
+					return 771;
+				}
 			}
 			else
 			{
@@ -811,7 +1482,21 @@ namespace Server.Mobiles
 		{
 			if ( this.BaseSoundID == 0 )
 			{
-				return 772;
+				if ( this.BodyValue == 400 || this.BodyValue == 401 )
+				{
+					if ( this.Female == true )
+					{
+						return 336;
+					}
+					else
+					{
+						return 346;
+					}
+				}
+				else
+				{
+					return 772;
+				}
 			}
 			else
 			{
@@ -822,7 +1507,7 @@ namespace Server.Mobiles
 		public override void Serialize( GenericWriter writer )
 		{
 			base.Serialize( writer );
-			writer.Write( (int) 0 );
+			writer.Write( (int) 2 );
 
 			writer.Write( m_AcidRain );
 
@@ -852,10 +1537,18 @@ namespace Server.Mobiles
 
 			switch ( version )
 			{
-				case 0:
+				case 2:
 				{
 					m_AcidRain = reader.ReadBool();
+					goto case 1;
+				}
+				case 1:
+				{
 					m_CallOfNature = reader.ReadBool();
+					goto case 0;
+				}
+				case 0:
+				{
 					m_HasDNA = reader.ReadBool();
 					m_Craftedby = reader.ReadMobile();
 					m_BluntAttack = reader.ReadBool();
@@ -866,6 +1559,38 @@ namespace Server.Mobiles
 					m_CometAttack = reader.ReadBool();
 
 					break;
+				}
+			}
+		}
+
+  		private class MountTarget : Target 
+      		{
+			private Mobile m_Bio;
+			private Mobile m_From;
+
+         		public MountTarget( Mobile bio, Mobile from ) : base ( 10, false, TargetFlags.None ) 
+         		{ 
+				m_Bio = bio;
+				m_From = from;
+         		} 
+          
+         		protected override void OnTarget( Mobile from, object target ) 
+         		{
+				if ( target is BaseMount )
+				{
+					BaseMount bm = (BaseMount)target;
+					if ( bm.ControlMaster == m_From )
+					{
+						bm.Rider = m_Bio;
+					}
+					else
+					{
+						m_From.SendMessage( "This is not your pet." );
+					}
+				}
+				else
+				{
+					m_From.SendMessage( "That is not a mount" );
 				}
 			}
 		}

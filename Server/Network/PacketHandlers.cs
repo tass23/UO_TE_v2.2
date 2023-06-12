@@ -151,6 +151,10 @@ namespace Server.Network
 			Register( 0xEF,  21, false, new OnPacketReceive( LoginServerSeed ) );
 			Register( 0xF8, 106, false, new OnPacketReceive( CreateCharacter70160 ) );
 
+			#region UO-The Expanse
+			Register(0xF4, 0, false, new OnPacketReceive( CrashReport ) );
+			#endregion
+			
 			Register6017( 0x08, 15, true, new OnPacketReceive( DropReq6017 ) );
 
 			RegisterExtended( 0x05, false, new OnPacketReceive( ScreenSize ) );
@@ -2497,6 +2501,42 @@ namespace Server.Network
 
             state.Version = new ClientVersion( clientMaj, clientMin, clientRev, clientPat );
         }
+		
+		#region UO-The Expanse
+		public static void CrashReport(NetState state, PacketReader pvSrc)
+		{
+			var clientMaj = pvSrc.ReadByte();
+			var clientMin = pvSrc.ReadByte();
+			var clientRev = pvSrc.ReadByte();
+			var clientPat = pvSrc.ReadByte();
+
+			var x = pvSrc.ReadUInt16();
+			var y = pvSrc.ReadUInt16();
+			var z = pvSrc.ReadSByte();
+			var map = pvSrc.ReadByte();
+
+			var account = pvSrc.ReadString(32);
+			var character = pvSrc.ReadString(32);
+			var ip = pvSrc.ReadString(15);
+
+			var unk1 = pvSrc.ReadInt32();
+			var exception = pvSrc.ReadInt32();
+
+			var process = pvSrc.ReadString(100);
+			var report = pvSrc.ReadString(100);
+
+			pvSrc.ReadByte(); // 0x00
+
+			var offset = pvSrc.ReadInt32();
+
+			int count = pvSrc.ReadByte();
+
+			for (var i = 0; i < count; i++)
+			{
+				var address = pvSrc.ReadInt32();
+			}
+		}
+		#endregion
 
 		public static void AccountLogin( NetState state, PacketReader pvSrc )
 		{

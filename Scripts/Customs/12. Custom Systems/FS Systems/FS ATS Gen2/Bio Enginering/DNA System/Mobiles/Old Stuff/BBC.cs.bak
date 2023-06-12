@@ -11,7 +11,7 @@ namespace Server.Mobiles
 {
 
 	[CorpseName( "a corpse" )]
-	public class BioMount : BaseMount
+	public class BBC : BaseCreature
 	{
 		private Mobile m_Craftedby;
 		private bool m_HasDNA;
@@ -107,14 +107,11 @@ namespace Server.Mobiles
 				case 1: return WeaponAbility.WhirlwindAttack;
 			}
 		}
-		[Constructable]
-		public BioMount() : this( "a bio-engineered clone" )
-		{
-		}
 
 		[Constructable]
-		public BioMount( string name ) : base( name, 775, 0x3EA0, AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public BBC() : base( AIType.AI_Animal, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
+			Name = "a bio-engienered clone";
 			Body = 775;
 
 			SetStr( 1 );
@@ -147,6 +144,18 @@ namespace Server.Mobiles
 			pack.Movable = false;
 
 			AddItem( pack );
+		}
+
+		public override void OnThink()
+		{
+			base.OnThink();
+
+			Mobile m = this.ControlMaster;
+
+			if ( m != null )
+				m.SendMessage( "Your pet was removed due to a bug." );
+
+			this.Delete();
 		}
 
 		public override bool OnDragDrop( Mobile from, Item item )
@@ -755,7 +764,7 @@ namespace Server.Mobiles
 			}
 		}
 
-		public BioMount( Serial serial ) : base( serial )
+		public BBC( Serial serial ) : base( serial )
 		{
 		}
 

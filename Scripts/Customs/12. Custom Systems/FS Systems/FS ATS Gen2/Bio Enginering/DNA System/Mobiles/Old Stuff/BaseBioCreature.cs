@@ -111,7 +111,7 @@ namespace Server.Mobiles
 		[Constructable]
 		public BaseBioCreature() : base( AIType.AI_Animal, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
-			Name = "a bio-engienered clone";
+			Name = "a bio-engineered clone";
 			Body = 775;
 
 			SetStr( 1 );

@@ -9,9 +9,8 @@ using System.Collections.Generic;
 
 namespace Server.Mobiles
 {
-
 	[CorpseName( "a corpse" )]
-	public class BioMount : BaseMount
+	public class BioCreature : BaseCreature
 	{
 		private Mobile m_Craftedby;
 		private bool m_HasDNA;
@@ -107,14 +106,11 @@ namespace Server.Mobiles
 				case 1: return WeaponAbility.WhirlwindAttack;
 			}
 		}
-		[Constructable]
-		public BioMount() : this( "a bio-engineered clone" )
-		{
-		}
 
 		[Constructable]
-		public BioMount( string name ) : base( name, 775, 0x3EA0, AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
+		public BioCreature() : base( AIType.AI_Animal, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
+			Name = "a bio-engienered clone";
 			Body = 775;
 
 			SetStr( 1 );
@@ -755,7 +751,7 @@ namespace Server.Mobiles
 			}
 		}
 
-		public BioMount( Serial serial ) : base( serial )
+		public BioCreature( Serial serial ) : base( serial )
 		{
 		}
 
