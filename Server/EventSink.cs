@@ -1036,7 +1036,7 @@ namespace Server
 			if ( AggressiveAction != null )
 				AggressiveAction( e );
 		}
-
+		
 		public static void InvokeProfileRequest( ProfileRequestEventArgs e )
 		{
 			if ( ProfileRequest != null )

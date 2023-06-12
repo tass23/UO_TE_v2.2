@@ -436,6 +436,9 @@ namespace Server.Misc
 				if ( !from.Player || (skills.Total + toGain) <= skills.Cap )
 				{
 					skill.BaseFixedPoint += toGain;
+					#region ServUO Pub 57 Mythik Achievement System
+					EventSink.InvokeSkillGain(new SkillGainEventArgs(from, skill, toGain));
+					#endregion
 				}
 			}
 

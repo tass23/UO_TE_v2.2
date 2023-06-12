@@ -1,0 +1,10 @@
+Neophyte 	0-39
+Novice 		40-49
+Apprentice 	50-59
+Journeyman 	60-69
+Expert 		70-79
+Adpet 		80-89
+Master 		90-99
+Grandmaster 	100-109
+Elder 		110-119
+Legendary 	120+

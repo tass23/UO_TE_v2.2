@@ -150,6 +150,11 @@ namespace Server
 
 						if ( (version & 0x4) != 0 )
 							m_Lock = (SkillLock)reader.ReadByte();
+
+						if ((version & 0x10) != 0)
+							{
+								NextGGSGain = reader.ReadDateTime();	//UO-The Expanse
+							}
 					}
 
 					break;
@@ -182,7 +187,7 @@ namespace Server
 
 		public void Serialize( GenericWriter writer )
 		{
-			if ( m_Base == 0 && m_Cap == 1000 && m_Lock == SkillLock.Up )
+			if ( m_Base == 0 && m_Cap == 1000 && m_Lock == SkillLock.Up && NextGGSGain == DateTime.MinValue )	//UO-The Expanse
 			{
 				writer.Write( (byte) 0xFF ); // default
 			}
@@ -198,6 +203,10 @@ namespace Server
 
 				if ( m_Lock != SkillLock.Up )
 					flags |= 0x4;
+				if (NextGGSGain != DateTime.MinValue)
+				{
+					flags |= 0x10;
+				}
 
 				writer.Write( (byte) flags ); // version
 
@@ -209,6 +218,11 @@ namespace Server
 
 				if ( m_Lock != SkillLock.Up )
 					writer.Write( (byte) m_Lock );
+
+				if (NextGGSGain != DateTime.MinValue)	//UO-The Expanse
+				{
+					writer.Write(NextGGSGain);
+				}
 			}
 		}
 
@@ -260,6 +274,13 @@ namespace Server
 			{
 				return m_Lock;
 			}
+		}
+
+		[CommandProperty(AccessLevel.Counselor)]	//UO-The Expanse
+		public DateTime NextGGSGain
+		{
+			get;
+			set;
 		}
 
 		public int BaseFixedPoint
@@ -331,6 +352,7 @@ namespace Server
 				}
 			}
 		}
+		
 
 		[CommandProperty( AccessLevel.Counselor, AccessLevel.GameMaster )]
 		public double Cap

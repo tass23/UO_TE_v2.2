@@ -709,6 +709,10 @@ namespace Server
 			return true;
 		}
 
+		public virtual double SkillGain(Mobile from)	//UO-The Expanse
+		{
+			return 0.1;
+		}
 		public virtual bool OnBeginSpellCast( Mobile m, ISpell s )
 		{
 			if ( m_Parent != null )

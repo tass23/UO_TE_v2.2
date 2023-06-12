@@ -1,4 +1,5 @@
 ﻿using Server;
+using Server.SkillHandlers;
 using Server.Mobiles;
 using System;
 using System.Collections.Generic;
@@ -6,16 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Scripts.Mythik.Systems.Achievements.AchieveTypes
+namespace Scripts.Mythik.Systems.Achievements	//namespace Scripts.Mythik.Systems.Achievements.AchieveTypes
 {
     /// <summary>
     /// Achievement to handle hitting X in skill Y
     /// Comment out if you are missing the SkillGain eventsink
     /// </summary>
-    class SkillProgressAchievement : BaseAchievement
+    class SkillGainAchievement : BaseAchievement
     {
         private SkillName m_Skill;
-        public SkillProgressAchievement(int id, int catid, int itemIcon, bool hiddenTillComplete, BaseAchievement prereq, int total, string title, string desc, SkillName skill, short RewardPoints, params Type[] rewards)
+        public SkillGainAchievement(int id, int catid, int itemIcon, bool hiddenTillComplete, BaseAchievement prereq, int total, string title, string desc, SkillName skill, short RewardPoints, params Type[] rewards)
             : base(id, catid, itemIcon, hiddenTillComplete, prereq, title, desc, RewardPoints, total, rewards)
         {
             m_Skill = skill;
