@@ -352,7 +352,6 @@ namespace Server
 				}
 			}
 		}
-		
 
 		[CommandProperty( AccessLevel.Counselor, AccessLevel.GameMaster )]
 		public double Cap
@@ -364,6 +363,10 @@ namespace Server
 			set
 			{
 				CapFixedPoint = (int)(value * 10.0);
+				if (old != value && Owner.Owner != null)
+				{
+					EventSink.InvokeSkillCapChange(new SkillCapChangeEventArgs(Owner.Owner, this, old, value));
+				}
 			}
 		}
 

@@ -81,6 +81,8 @@ namespace Server
 	public delegate void CraftSuccessEventHandler(CraftSuccessEventArgs e);
 	public delegate void SkillGainEventHandler(SkillGainEventArgs e);
 
+	public delegate void SkillCapChangeEventHandler(SkillCapChangeEventArgs e);
+
 	public class OnEnterRegionEventArgs : EventArgs
 	{
 		private readonly Mobile m_From;
@@ -861,6 +863,20 @@ namespace Server
 		}
 	}
 
+	public class SkillGainEventArgs : EventArgs	//UO-The Expanse
+	{
+		public int Gained { get; }
+		public Mobile From { get; }
+		public Skill Skill { get; }
+
+		public SkillGainEventArgs(Mobile from, Skill skill, int toGain)
+		{
+			From = from;
+			Skill = skill;
+			Gained = toGain;
+		}
+	}
+
 	public class FastWalkEventArgs
 	{
 		private NetState m_State;
@@ -914,6 +930,7 @@ namespace Server
 		public static event WorldLoadEventHandler WorldLoad;
 		public static event WorldSaveEventHandler WorldSave;
 		public static event SetAbilityEventHandler SetAbility;
+		public static event SkillGainEventHandler SkillGain;	//UO-The Expanse
 		public static event FastWalkEventHandler FastWalk;
 		public static event CreateGuildHandler CreateGuild;
 		public static event ServerStartedEventHandler ServerStarted;
@@ -1037,6 +1054,14 @@ namespace Server
 				AggressiveAction( e );
 		}
 		
+		public static void InvokeSkillGain(SkillGainEventArgs e)	//UO-The Expanse
+		{
+			if (SkillGain != null)
+			{
+				SkillGain(e);
+			}
+		}
+
 		public static void InvokeProfileRequest( ProfileRequestEventArgs e )
 		{
 			if ( ProfileRequest != null )
