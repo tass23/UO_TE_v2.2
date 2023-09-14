@@ -328,6 +328,7 @@ namespace Server.Items
 		[Constructable]
 		public CreatureBackpack( string name )
 		{
+			GumpID = 0x3C;
 			Name = name;
 			Layer = Layer.Backpack;
 			Hue = 5;
@@ -454,6 +455,7 @@ namespace Server.Items
 		[Constructable]
 		public Backpack() : base( 0xE75 )
 		{
+			GumpID = 0x3C;
 			Layer = Layer.Backpack;
 			Weight = 3.0;
 		}
@@ -509,6 +511,7 @@ namespace Server.Items
 		[Constructable]
 		public Pouch() : base( 0xE79 )
 		{
+			GumpID = 0x3D;
 			Weight = 1.0;
 		}
 
@@ -535,6 +538,7 @@ namespace Server.Items
 	{
 		public BaseBagBall( int itemID ) : base( itemID )
 		{
+			GumpID = 0x3D;
 			Weight = 1.0;
 		}
 
@@ -624,6 +628,7 @@ namespace Server.Items
 		[Constructable]
 		public Bag() : base( 0xE76 )
 		{
+			GumpID = 0x3D;
 			Weight = 2.0;
 		}
 
@@ -654,12 +659,15 @@ namespace Server.Items
 			int version = reader.ReadInt();
 		}
 	}
-
+	
+	
+	
 	public class Barrel : BaseContainer
 	{
 		[Constructable]
 		public Barrel() : base( 0xE77 )
 		{
+			GumpID = 0x3E;
 			Weight = 25.0;
 		}
 
@@ -690,6 +698,7 @@ namespace Server.Items
 		[Constructable]
 		public Keg() : base( 0xE7F )
 		{
+			GumpID = 0x3E;
 			Weight = 15.0;
 		}
 
@@ -717,6 +726,7 @@ namespace Server.Items
 		[Constructable]
 		public PicnicBasket() : base( 0xE7A )
 		{
+			GumpID = 0x3F;
 			Weight = 2.0; // Stratics doesn't know weight
 		}
 
@@ -744,6 +754,7 @@ namespace Server.Items
 		[Constructable]
 		public Basket() : base( 0x990 )
 		{
+			GumpID = 0x3F;
 			Weight = 1.0; // Stratics doesn't know weight
 		}
 
@@ -773,6 +784,7 @@ namespace Server.Items
 		[Constructable]
 		public WoodenBox() : base( 0x9AA )
 		{
+			GumpID = 0x43;
 			Weight = 4.0;
 		}
 
@@ -802,6 +814,7 @@ namespace Server.Items
 		[Constructable]
 		public SmallCrate() : base( 0x9A9 )
 		{
+			GumpID = 0x44;
 			Weight = 2.0;
 		}
 
@@ -834,6 +847,7 @@ namespace Server.Items
 		[Constructable]
 		public MediumCrate() : base( 0xE3F )
 		{
+			GumpID = 0x44;
 			Weight = 2.0;
 		}
 
@@ -866,6 +880,7 @@ namespace Server.Items
 		[Constructable]
 		public LargeCrate() : base( 0xE3D )
 		{
+			GumpID = 0x44;
 			Weight = 1.0;
 		}
 
@@ -898,6 +913,7 @@ namespace Server.Items
 		[Constructable]
 		public MetalBox() : base( 0x9A8 )
 		{
+			GumpID = 0x4B;
 		}
 
 		public MetalBox( Serial serial ) : base( serial )
@@ -926,9 +942,15 @@ namespace Server.Items
 	[Flipable( 0x9AB, 0xE7C )]
 	public class MetalChest : LockableContainer
 	{
+		private static int[] bg_IDs = new int[]
+		{
+			0x49, 0x4A
+		};
+			
 		[Constructable]
 		public MetalChest() : base( 0x9AB )
 		{
+			GumpID = Utility.RandomList( bg_IDs );
 		}
 
 		public MetalChest( Serial serial ) : base( serial )
@@ -960,6 +982,7 @@ namespace Server.Items
 		[Constructable]
 		public MetalGoldenChest() : base( 0xE41 )
 		{
+			GumpID = 0x42;
 		}
 
 		public MetalGoldenChest( Serial serial ) : base( serial )
@@ -991,6 +1014,7 @@ namespace Server.Items
 		[Constructable]
 		public WoodenChest() : base( 0xe43 )
 		{
+			GumpID = 0x42;
 			Weight = 2.0;
 		}
 
@@ -1023,6 +1047,7 @@ namespace Server.Items
 		[Constructable]
 		public PlainWoodenChest() : base( 0x280B )
 		{
+			GumpID = 0x42;
 		}
 
 		public PlainWoodenChest( Serial serial ) : base( serial )
@@ -1054,6 +1079,7 @@ namespace Server.Items
 		[Constructable]
 		public OrnateWoodenChest() : base( 0x280D )
 		{
+			GumpID = 0x42;
 		}
 
 		public OrnateWoodenChest( Serial serial ) : base( serial )
@@ -1085,6 +1111,7 @@ namespace Server.Items
 		[Constructable]
 		public GildedWoodenChest() : base( 0x280F )
 		{
+			GumpID = 0x42;
 		}
 
 		public GildedWoodenChest( Serial serial ) : base( serial )
@@ -1151,6 +1178,7 @@ namespace Server.Items
 		[Constructable]
 		public FinishedWoodenChest() : base( 0x2813 )
 		{
+			GumpID = 0x10D;
 		}
 
 		public FinishedWoodenChest( Serial serial ) : base( serial )
@@ -1182,6 +1210,7 @@ namespace Server.Items
 		[Constructable]
 		public PirateChest() : base( 0x4102 )
 		{
+			GumpID = 0x3C;
 			Name = "Pirate Chest";
 		}
 
@@ -1214,6 +1243,7 @@ namespace Server.Items
 		[Constructable]
 		public GargoyleChest() : base( 0x4025 )
 		{
+			GumpID = 0x43;
 			Name = "Gargoyle Chest";
 		}
 
