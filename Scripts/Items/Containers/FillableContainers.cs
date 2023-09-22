@@ -296,6 +296,7 @@ namespace Server.Items
 		public LibraryBookcase() : base( 0xA97 )
 		{
 			Weight = 1.0;
+			GumpID = 0x4D;
 		}
 
 		public LibraryBookcase( Serial serial ) : base( serial )
@@ -327,6 +328,7 @@ namespace Server.Items
 		public FillableLargeCrate() : base( 0xE3D )
 		{
 			Weight = 1.0;
+			GumpID = 0x44;
 		}
 
 		public FillableLargeCrate( Serial serial ) : base( serial )
@@ -355,6 +357,7 @@ namespace Server.Items
 		public FillableSmallCrate() : base( 0x9A9 )
 		{
 			Weight = 1.0;
+			GumpID = 0x44;
 		}
 
 		public FillableSmallCrate( Serial serial ) : base( serial )
@@ -383,6 +386,7 @@ namespace Server.Items
 		public FillableWoodenBox() : base( 0x9AA )
 		{
 			Weight = 4.0;
+			GumpID = 0x40;
 		}
 
 		public FillableWoodenBox( Serial serial ) : base( serial )
@@ -410,6 +414,7 @@ namespace Server.Items
 		[Constructable]
 		public FillableMetalBox() : base( 0x9A8 )
 		{
+			GumpID = 0x43;
 		}
 
 		public FillableMetalBox( Serial serial ) : base( serial )
@@ -441,6 +446,7 @@ namespace Server.Items
 		[Constructable]
 		public FillableBarrel() : base( 0xE77 )
 		{
+			GumpID = 0x3E;
 		}
 
 		public FillableBarrel( Serial serial ) : base( serial )
@@ -471,6 +477,7 @@ namespace Server.Items
 		[Constructable]
 		public FillableMetalChest() : base( 0x9AB )
 		{
+			GumpID = 0x4A;
 		}
 
 		public FillableMetalChest( Serial serial ) : base( serial )
@@ -501,6 +508,7 @@ namespace Server.Items
 		[Constructable]
 		public FillableMetalGoldenChest() : base( 0xE41 )
 		{
+			GumpID = 0x49;
 		}
 
 		public FillableMetalGoldenChest( Serial serial ) : base( serial )
@@ -531,6 +539,7 @@ namespace Server.Items
 		[Constructable]
 		public FillableWoodenChest() : base( 0xE43 )
 		{
+			GumpID = 0x42;
 		}
 
 		public FillableWoodenChest( Serial serial ) : base( serial )

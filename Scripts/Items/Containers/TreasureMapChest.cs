@@ -97,6 +97,8 @@ namespace Server.Items
             m_Spawn = true; //allow the spawning of gardians
 
             Fill( this, level, IsThemed, type );
+			
+			GumpID = 0x4A;
         }
 		private static object[] m_Arguments = new object[1];
 

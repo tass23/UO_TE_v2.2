@@ -11,7 +11,8 @@ namespace Server.Items
 	{ 
 		[Constructable] 
 		public WoodenTreasureChest() : base( 0xE43 ) 
-		{ 
+		{
+			GumpID = 0x4A;
 		} 
 
 		public WoodenTreasureChest( Serial serial ) : base( serial ) 
@@ -38,7 +39,8 @@ namespace Server.Items
 	{
 		[Constructable] 
 		public MetalGoldenTreasureChest() : base( 0xE41 ) 
-		{ 
+		{
+			GumpID = 0x42;
 		} 
 
 		public MetalGoldenTreasureChest( Serial serial ) : base( serial ) 
@@ -65,7 +67,8 @@ namespace Server.Items
 	{
 		[Constructable] 
 		public MetalTreasureChest() : base( 0x9AB ) 
-		{ 
+		{
+			GumpID = 0x49;
 		} 
 
 		public MetalTreasureChest( Serial serial ) : base( serial ) 
