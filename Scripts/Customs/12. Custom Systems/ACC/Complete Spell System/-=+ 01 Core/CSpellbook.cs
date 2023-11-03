@@ -170,11 +170,14 @@ namespace Server.ACC.CSS
 
 			#region SpellbookBasket
 			Container pack2 = m.Backpack.FindItemByType( typeof( SpellbookBasket )) as Container;
-			foreach( Item i in pack2.FindItemsByType( typeof( CSpellbook ), true ) )
+			if (pack2 != null)
 			{
-				CSpellbook book = (CSpellbook)i;
-				if (book.School == school && book.HasSpell(type))
-					return true;
+				foreach( Item i in pack2.FindItemsByType( typeof( CSpellbook ), true ) )
+				{
+					CSpellbook book = (CSpellbook)i;
+					if (book.School == school && book.HasSpell(type))
+						return true;
+				}
 			}
 			#endregion
 
