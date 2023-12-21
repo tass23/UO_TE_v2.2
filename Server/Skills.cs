@@ -363,10 +363,10 @@ namespace Server
 			set
 			{
 				CapFixedPoint = (int)(value * 10.0);
-				if (old != value && Owner.Owner != null)
+				/*if (old != value && Owner.Owner != null)
 				{
 					EventSink.InvokeSkillCapChange(new SkillCapChangeEventArgs(Owner.Owner, this, old, value));
-				}
+				}*/
 			}
 		}
 
