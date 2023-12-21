@@ -81,7 +81,7 @@ namespace Server
 	public delegate void CraftSuccessEventHandler(CraftSuccessEventArgs e);
 	public delegate void SkillGainEventHandler(SkillGainEventArgs e);
 
-	public delegate void SkillCapChangeEventHandler(SkillCapChangeEventArgs e);
+	//public delegate void SkillCapChangeEventHandler(SkillCapChangeEventArgs e);
 
 	public class OnEnterRegionEventArgs : EventArgs
 	{
@@ -863,7 +863,7 @@ namespace Server
 		}
 	}
 
-	public class SkillGainEventArgs : EventArgs	//UO-The Expanse
+	/*public class SkillGainEventArgs : EventArgs	//UO-The Expanse
 	{
 		public int Gained { get; }
 		public Mobile From { get; }
@@ -875,7 +875,7 @@ namespace Server
 			Skill = skill;
 			Gained = toGain;
 		}
-	}
+	}*/
 
 	public class FastWalkEventArgs
 	{
@@ -943,7 +943,7 @@ namespace Server
 		public static event ResourceHarvestSuccessEventHandler ResourceHarvestSuccess;
 		public static event OnKilledByEventHandler OnKilledBy;
 		public static event CraftSuccessEventHandler CraftSuccess;
-		public static event SkillGainEventHandler SkillGain;
+		//public static event SkillGainEventHandler SkillGain;
 
 		public static void InvokeOnEnterRegion(OnEnterRegionEventArgs e)
 		{
@@ -977,13 +977,13 @@ namespace Server
 			}
 		}
 
-		public static void InvokeSkillGain(SkillGainEventArgs e)
+		/*public static void InvokeSkillGain(SkillGainEventArgs e)
 		{
 			if (SkillGain != null)
 			{
 				SkillGain(e);
 			}
-		}
+		}*/
 		#endregion
 
 		public static void InvokeClientVersionReceived( ClientVersionReceivedArgs e )
