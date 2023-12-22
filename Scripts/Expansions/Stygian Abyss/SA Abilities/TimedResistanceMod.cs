@@ -9,7 +9,12 @@ namespace Server
 {
 	public class TimedResistanceMod
 	{
-		private static Dictionary<string, ResistanceModTimer> m_Table = new Dictionary<string, ResistanceModTimer>();
+		private static readonly Dictionary<string, ResistanceModTimer> m_Table = new Dictionary<string, ResistanceModTimer>();
+
+		public static bool HasMod( Mobile m, string name )
+		{
+			return m_Table.ContainsKey( name + ":" + m.Serial.ToString() );
+		}
 
 		public static void AddMod( Mobile m, string name, ResistanceMod[] mods, TimeSpan duration )
 		{
@@ -55,19 +60,18 @@ namespace Server
 				m_Mods = mods;
 			}
 
-			protected override void OnTick()
-			{
-				RemoveMod( m_Mobile, m_Name );
-			}
-
 			public void End()
 			{
-				for ( int i = 0; i < m_Mods.Length; ++i )
-					m_Mobile.RemoveResistanceMod( m_Mods[i] );
+				for ( int i = 0; i < this.m_Mods.Length; i++ )
+					this.m_Mobile.RemoveResistanceMod( this.m_Mods[i] );
 
-				Stop();
+				this.Stop();
+			}
+
+			protected override void OnTick()
+			{
+				RemoveMod( this.m_Mobile, this.m_Name );
 			}
 		}
-
 	}
 }
