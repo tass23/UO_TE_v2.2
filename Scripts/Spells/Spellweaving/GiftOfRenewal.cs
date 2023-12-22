@@ -88,9 +88,9 @@ namespace Server.Spells.Spellweaving
 			FinishSequence();
 		}
 
-		private static Dictionary<Mobile, GiftOfRenewalInfo> m_Table = new Dictionary<Mobile, GiftOfRenewalInfo>();
+        public static Dictionary<Mobile, GiftOfRenewalInfo> m_Table = new Dictionary<Mobile, GiftOfRenewalInfo>();
 
-		private class GiftOfRenewalInfo
+        public class GiftOfRenewalInfo
 		{
 			public Mobile m_Caster;
 			public Mobile m_Mobile;
@@ -108,7 +108,7 @@ namespace Server.Spells.Spellweaving
 			}
 		}
 
-		private class InternalTimer : Timer
+		public class InternalTimer : Timer
 		{
 			public GiftOfRenewalInfo m_Info;
 
@@ -166,7 +166,7 @@ namespace Server.Spells.Spellweaving
 
 		public class InternalTarget : Target
 		{
-			private GiftOfRenewalSpell m_Owner;
+			private readonly GiftOfRenewalSpell m_Owner;
 
 			public InternalTarget( GiftOfRenewalSpell owner )
 				: base( 10, false, TargetFlags.Beneficial )
