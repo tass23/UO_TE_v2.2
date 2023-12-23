@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<accounts count="1">
+<accounts count="2">
 	<account>
 		<username>Admin</username>
 		<newCryptPassword>2B-94-98-D5-8C-A0-10-1D-31-03-57-13-4A-82-B0-DF-FB-07-96-06</newCryptPassword>
 		<accessLevel>Owner</accessLevel>
+		<flags>2</flags>
 		<created>2022-12-04T17:11:12.2442589-05:00</created>
-		<lastLogin>2022-12-05T12:44:06.8469486-05:00</lastLogin>
-		<totalGameTime>PT3H39M5.2178633S</totalGameTime>
+		<lastLogin>2023-11-02T07:42:07.9155312-04:00</lastLogin>
+		<totalGameTime>P4DT23H3M3.1035509S</totalGameTime>
 		<chars>
 			<char index="0">1</char>
+		</chars>
+		<addressList count="1">
+			<ip>127.0.0.1</ip>
+		</addressList>
+	</account>
+	<account>
+		<username>Jackson</username>
+		<newCryptPassword>B4-4A-28-33-2E-6B-69-E4-1F-7A-CB-30-7C-AE-39-20-91-08-E6-66</newCryptPassword>
+		<flags>2</flags>
+		<created>2023-11-02T07:45:43.6968732-04:00</created>
+		<lastLogin>2023-11-03T06:41:45.8943308-04:00</lastLogin>
+		<totalGameTime>PT44M51.7299581S</totalGameTime>
+		<chars>
+			<char index="0">17205</char>
 		</chars>
 		<addressList count="1">
 			<ip>127.0.0.1</ip>

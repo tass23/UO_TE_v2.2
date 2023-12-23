@@ -1390,5 +1390,6 @@
 		</Runebook>
 		<Rune Name="Staff House Green Acres (Tram)" TargetMap="Trammel" X="5616" Y="1148" Z="0" />
 		<Rune Name="LUNA HOUSE" TargetMap="Malas" X="1031" Y="460" Z="-83" />
+		<Rune Name="House Testing" TargetMap="Trammel" X="5575" Y="1163" Z="0" />
 	</RuneAccount>
 </StaffRunebook>
