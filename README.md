@@ -27,8 +27,7 @@ No solutions exist.
 No solutions exist.
 
 ### Development
-You can submit a pull request. Each request will be reviewed on a first come, first serve basis.
-New updates will be included, which means updating any forks, so backup your changes if you fork the main trunk!
+New updates will be included, which means updating any Clones, so backup your changes if you Clone the main trunk!
 
 License
 ----
