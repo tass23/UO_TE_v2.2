@@ -5,7 +5,7 @@
     <Running>True</Running>
     <ProximityRange>3</ProximityRange>
     <ResetRange>16</ResetRange>
-    <TriggerOnCarried>Sith Holocron</TriggerOnCarried>
+    <TriggerOnCarried></TriggerOnCarried>
     <NoTriggerOnCarried>The Price of Admittance | Attachment,The Price of Admittance,XmlQuestAttachment</NoTriggerOnCarried>
     <AllowGhost>False</AllowGhost>
     <SpeechPace>10</SpeechPace>
